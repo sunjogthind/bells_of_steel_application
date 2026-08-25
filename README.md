@@ -54,3 +54,18 @@ feed never ships.
 
 See [CLAUDE.md](./CLAUDE.md) for the conventions and the Bells of Steel domain notes, and
 the **Build Log** page on the site for the six things that broke along the way.
+
+## MCP server
+
+`mcp/` is a Model Context Protocol server that exposes the catalog to Claude Code, so anyone
+at the company could query products, compatibility and spare parts from the terminal without
+knowing the SKU scheme or the `hgb_` tag grammar.
+
+```bash
+cd mcp && npm install
+claude mcp add bells-of-steel -- node "$(pwd)/server.mjs"
+```
+
+Four tools: `search_products`, `check_compatibility`, `find_spare_part`, `catalog_health`.
+It reads the committed snapshot — no network calls, no API keys. `check_compatibility`
+reports "not published" rather than guessing when an attachment carries no compatibility tags.

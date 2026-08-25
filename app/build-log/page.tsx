@@ -143,6 +143,22 @@ copilot        →  retrieval index + IDF table             →  data/copilot.js
         </pre>
 
         <div className="mt-10 rounded-lg border border-line bg-panel p-5">
+          <h2 className="text-sm font-semibold">An MCP server, too</h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted">
+            The repo ships a Model Context Protocol server that puts the same catalog behind four
+            tools in Claude Code — <code className="text-steel">search_products</code>,{' '}
+            <code className="text-steel">check_compatibility</code>,{' '}
+            <code className="text-steel">find_spare_part</code> and{' '}
+            <code className="text-steel">catalog_health</code> — so someone at Bells of Steel could
+            ask &ldquo;does the batwing storage fit a Manticore four post&rdquo; from a terminal
+            without knowing the hgb_ tag grammar. It answers that one correctly, including the
+            reason: Hydra is ⅝&Prime; holes, Manticore is 1&Prime;, and the hardware does not
+            interchange. Same escalation rule as the copilot — no tags means &ldquo;not
+            published&rdquo;, not a guess.
+          </p>
+        </div>
+
+        <div className="mt-4 rounded-lg border border-line bg-panel p-5">
           <h2 className="text-sm font-semibold">CLAUDE.md</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted">
             The repo has one, and it is specific to this project rather than a generic template. It carries

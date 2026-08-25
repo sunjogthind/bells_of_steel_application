@@ -1,0 +1,8 @@
+{
+  "name": "bells-of-steel-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "bin": { "bells-of-steel-mcp": "./server.mjs" },
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0" }
+}
