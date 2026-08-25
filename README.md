@@ -4,6 +4,7 @@ Four working internal tools built on the live Bells of Steel product catalog, fo
 **AI & Internal Tools Developer** application.
 
 **Live:** _(deploy URL)_
+**Source:** https://github.com/sunjogthind/bells_of_steel_application
 
 > Independent demonstration by Rana Thind. Not affiliated with, endorsed by, or an official
 > property of Bells of Steel Inc. Product data is a read-only snapshot of the public
@@ -38,6 +39,8 @@ Everything below is against the real catalog and verified live:
 ## Running it
 
 ```bash
+git clone https://github.com/sunjogthind/bells_of_steel_application.git
+cd bells_of_steel_application
 npm install
 npm run dev            # http://localhost:3111
 npm run refresh-catalog # re-pull the feed and re-derive everything

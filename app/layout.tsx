@@ -61,7 +61,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               relying on any number here. All product names, images and copy belong to Bells of Steel Inc.
             </p>
             <p className="mt-4 font-mono">
-              ranasunj@ualberta.ca · github.com/sunjogthind
+              <a href="mailto:ranasunj@ualberta.ca" className="hover:text-bright">ranasunj@ualberta.ca</a>
+              {' · '}
+              <a href="https://github.com/sunjogthind/bells_of_steel_application" target="_blank" rel="noopener noreferrer" className="hover:text-bright">
+                source on GitHub
+              </a>
             </p>
           </div>
         </footer>

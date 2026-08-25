@@ -68,6 +68,10 @@ export default function Home() {
           <Link href="/build-log" className="rounded border border-line px-5 py-2.5 text-sm font-medium text-bright transition-colors hover:border-muted">
             How it was built
           </Link>
+          <a href="https://github.com/sunjogthind/bells_of_steel_application" target="_blank" rel="noopener noreferrer"
+             className="rounded border border-line px-5 py-2.5 text-sm font-medium text-muted transition-colors hover:border-muted hover:text-bright">
+            Source ↗
+          </a>
         </div>
 
         <dl className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4">

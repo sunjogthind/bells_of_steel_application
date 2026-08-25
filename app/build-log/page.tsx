@@ -159,7 +159,12 @@ copilot        →  retrieval index + IDF table             →  data/copilot.js
         </div>
 
         <div className="mt-4 rounded-lg border border-line bg-panel p-5">
-          <h2 className="text-sm font-semibold">CLAUDE.md</h2>
+          <h2 className="text-sm font-semibold">
+            <a href="https://github.com/sunjogthind/bells_of_steel_application/blob/main/CLAUDE.md" target="_blank" rel="noopener noreferrer"
+               className="underline decoration-line underline-offset-4 hover:decoration-steel">
+              CLAUDE.md ↗
+            </a>
+          </h2>
           <p className="mt-2 text-sm leading-relaxed text-muted">
             The repo has one, and it is specific to this project rather than a generic template. It carries
             the rule the whole codebase is organised around (never invent a fact about someone else&rsquo;s
