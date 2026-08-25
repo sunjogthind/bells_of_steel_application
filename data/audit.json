@@ -1,0 +1,915 @@
+{
+  "generated_at": "2026-08-25T22:57:06.127Z",
+  "snapshot": "2026-08-25T22:29:34.728Z",
+  "scanned": 476,
+  "variants": 1640,
+  "findings": [
+    {
+      "id": "duplicate-pricing",
+      "severity": "critical",
+      "title": "The same product is listed twice, at two different prices",
+      "count": 16,
+      "unit": "of 16 duplicated listings",
+      "summary": "(5 further duplicated titles were excluded because their listings have different variant structures and are not comparable on price.) Every prebuilt rack exists as two separate live product pages — one plain handle and one ending in \"-hgb\" (their Home Gym Builder copy). 16 of the 16 duplicated pairs are priced differently, and both pages return HTTP 200 and are purchasable.",
+      "impact": "A customer's price depends on which of two identical pages they land on. The widest gap is $162.84. The cheaper copy is sometimes the \"-hgb\" one and sometimes not, so this does not look like an intentional bundle discount — it looks like two listings drifting apart over time.",
+      "fix": "Pick one canonical page per rack, 301 the other, and have the builder app read the canonical variant instead of holding its own copy.",
+      "evidence": [
+        {
+          "label": "Manticore Half Rack - Prebuilt",
+          "detail": "$1787.83 — /manticore-half-rack-prebuilt   vs   $1624.99 — /manticore-half-rack-prebuilt-hgb",
+          "delta": "$162.84 apart",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-half-rack-prebuilt",
+            "https://bellsofsteel.com/products/manticore-half-rack-prebuilt-hgb"
+          ]
+        },
+        {
+          "label": "Manticore Flat Foot Power Rack - Prebuilt",
+          "detail": "$1644.89 — /manticore-flat-foot-power-rack-prebuilt   vs   $1549.99 — /manticore-flat-foot-power-rack-prebuilt-hgb",
+          "delta": "$94.90 apart",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt",
+            "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt-hgb"
+          ]
+        },
+        {
+          "label": "Manticore Folding Power Rack - Prebuilt",
+          "detail": "$1441.89 — /manctiore-folding-power-rack-prebuilt   vs   $1349.99 — /manctiore-folding-power-rack-prebuilt-hgb",
+          "delta": "$91.90 apart",
+          "links": [
+            "https://bellsofsteel.com/products/manctiore-folding-power-rack-prebuilt",
+            "https://bellsofsteel.com/products/manctiore-folding-power-rack-prebuilt-hgb"
+          ]
+        },
+        {
+          "label": "Roc Foldable 4 Post Cage - Prebuilt",
+          "detail": "$1265.87 — /roc-foldable-four-post-cage-prebuilt   vs   $1174.99 — /roc-foldable-four-post-cage-prebuilt-hgb",
+          "delta": "$90.88 apart",
+          "links": [
+            "https://bellsofsteel.com/products/roc-foldable-four-post-cage-prebuilt",
+            "https://bellsofsteel.com/products/roc-foldable-four-post-cage-prebuilt-hgb"
+          ]
+        },
+        {
+          "label": "Manticore Four Post Power Rack - Prebuilt",
+          "detail": "$1500.87 — /manticore-four-post-power-rack-prebuilt   vs   $1444.99 — /manticore-four-post-power-rack-prebuilt-hgb",
+          "delta": "$55.88 apart",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt",
+            "https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt-hgb"
+          ]
+        },
+        {
+          "label": "Hydra Half Rack - Prebuilt",
+          "detail": "$952.89 — /hydra-half-rack-prebuilt   vs   $999.99 — /hydra-half-rack-prebuilt-hgb",
+          "delta": "$47.10 apart",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-half-rack-prebuilt",
+            "https://bellsofsteel.com/products/hydra-half-rack-prebuilt-hgb"
+          ]
+        },
+        {
+          "label": "Hydra Four Post Power Rack - Prebuilt",
+          "detail": "$1301.86 — /hydra-four-post-power-rack-prebuilt   vs   $1339.99 — /hydra-four-post-power-rack-prebuilt-hgb",
+          "delta": "$38.13 apart",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-four-post-power-rack-prebuilt",
+            "https://bellsofsteel.com/products/hydra-four-post-power-rack-prebuilt-hgb"
+          ]
+        },
+        {
+          "label": "Hydra Squat Stand - Prebuilt",
+          "detail": "$634.95 — /hydra-squat-stand-prebuilt   vs   $599.99 — /hydra-squat-stand-prebuilt-hgb",
+          "delta": "$34.96 apart",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-squat-stand-prebuilt",
+            "https://bellsofsteel.com/products/hydra-squat-stand-prebuilt-hgb"
+          ]
+        },
+        {
+          "label": "Manticore Squat Stand - Prebuilt",
+          "detail": "$874.94 — /manticore-squat-stand-prebuilt   vs   $849.99 — /manticore-squat-stand-prebuilt-hgb",
+          "delta": "$24.95 apart",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-squat-stand-prebuilt",
+            "https://bellsofsteel.com/products/manticore-squat-stand-prebuilt-hgb"
+          ]
+        },
+        {
+          "label": "Hydra Six Post Power Rack - Prebuilt",
+          "detail": "$2176.79 — /hydra-six-post-power-rack-prebuilt   vs   $2199.99 — /hydra-six-post-power-rack-prebuilt-hgb",
+          "delta": "$23.20 apart",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-six-post-power-rack-prebuilt",
+            "https://bellsofsteel.com/products/hydra-six-post-power-rack-prebuilt-hgb"
+          ]
+        },
+        {
+          "label": "Hydra Collegiate Power Rack - Prebuilt",
+          "detail": "$1421.86 — /hydra-collegiate-power-rack-prebuilt   vs   $1399.99 — /hydra-collegiate-power-rack-prebuilt-hgb",
+          "delta": "$21.87 apart",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-collegiate-power-rack-prebuilt",
+            "https://bellsofsteel.com/products/hydra-collegiate-power-rack-prebuilt-hgb"
+          ]
+        },
+        {
+          "label": "Hydra Flat Foot Power Rack - Prebuilt",
+          "detail": "$1309.89 — /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt   vs   $1329.99 — /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "delta": "$20.10 apart",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb"
+          ]
+        }
+      ],
+      "verified": "Both URLs fetched live on 25 Aug 2026 — HTTP 200, prices confirmed from each page’s own .json endpoint."
+    },
+    {
+      "id": "zero-price",
+      "severity": "high",
+      "title": "Products priced at $0.00 or $0.01 are exposed in the public feed",
+      "count": 33,
+      "unit": "products",
+      "summary": "41 purchasable variants across 33 products carry a price of $1.00 or less. 16 of them are recognisably deliberate — \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
+      "impact": "Deliberate or not, nothing in the feed distinguishes these from real products. Anything reading products.json inherits them: Google Shopping and marketplace feeds, analytics, price monitoring, and any internal tool built on the catalog. The handful that are not obviously scaffolding are worth confirming are genuinely not orderable on their own.",
+      "fix": "Move builder scaffolding to a dedicated product type or unpublish it from the online-store channel so it stops appearing in the feed at all.",
+      "evidence": [
+        {
+          "label": "Hydra Storage Builder",
+          "detail": "$0.00 — variant \"Default Title\"",
+          "delta": "worth checking",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-storage-builder"
+          ]
+        },
+        {
+          "label": "Manticore Folding Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "detail": "$0.00 — variant \"Default Title\"",
+          "delta": "worth checking",
+          "links": [
+            "https://bellsofsteel.com/products/manctiore-folding-power-rack-builder"
+          ]
+        },
+        {
+          "label": "Kraken Cable Tower Rack Attachment",
+          "detail": "$0.00 — variant \"Variant for price 0\"",
+          "delta": "likely intentional",
+          "links": [
+            "https://bellsofsteel.com/products/kraken-cable-tower-rack-attachment-1"
+          ]
+        },
+        {
+          "label": "Hydra Bumper Plate Tree Builder",
+          "detail": "$0.00 — variant \"Default Title\"",
+          "delta": "worth checking",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-bumper-plate-tree-builder"
+          ]
+        },
+        {
+          "label": "Hydra Storage Builder",
+          "detail": "$0.00 — variant \"Variant for price 0\"",
+          "delta": "likely intentional",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-storage-builder-1"
+          ]
+        },
+        {
+          "label": "Manticore Pair of M24 130mm Long Bolts (FREE FOR BUILDERS)",
+          "detail": "$0.00 — variant \"Default Title\"",
+          "delta": "likely intentional",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-pr-m24-130-free"
+          ]
+        },
+        {
+          "label": "Manticore BOS Logo Tag (FREE FOR BUILDERS)",
+          "detail": "$0.00 — variant \"Default Title\"",
+          "delta": "likely intentional",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-logo-tag-free"
+          ]
+        },
+        {
+          "label": "Hydra BOS Logo Tag - FREE FOR BUILDERS",
+          "detail": "$0.00 — variant \"Default Title\"",
+          "delta": "likely intentional",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-logo-tag-free"
+          ]
+        },
+        {
+          "label": "Commercial Interchangeable Weight Rack",
+          "detail": "$0.01 — variant \"Default Title\"",
+          "delta": "worth checking",
+          "links": [
+            "https://bellsofsteel.com/products/commercial-interchangeable-weight-rack"
+          ]
+        },
+        {
+          "label": "Commercial Interchangeable Weight Rack",
+          "detail": "$0.00 — variant \"Variant for price 0\"",
+          "delta": "likely intentional",
+          "links": [
+            "https://bellsofsteel.com/products/commercial-interchangeable-weight-rack"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zero-weight",
+      "severity": "high",
+      "title": "Physical products ship with no weight recorded",
+      "count": 29,
+      "unit": "products",
+      "summary": "279 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
+      "impact": "For a company moving squat racks and plate sets on LTL freight, weight is the input to the rate. A zero there means the carrier calculation is running on a default, and the gap between the quoted rate and the real one is absorbed by the business on every one of these orders.",
+      "fix": "Backfill weights from the packing data, then add a Shopify validation that refuses to publish a shipped product with a zero weight.",
+      "evidence": [
+        {
+          "label": "Kolossyem Rack",
+          "detail": "$5314.99 — Default Title",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/kolossyem-rack"
+          ]
+        },
+        {
+          "label": "Hydra Trident Station",
+          "detail": "$4582.34 — Variant for price 4582.34",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-trident-station-1"
+          ]
+        },
+        {
+          "label": "Hydra Trident Station",
+          "detail": "$4222.36 — Variant for price 4222.36",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-trident-station-1"
+          ]
+        },
+        {
+          "label": "All-in-One Trainer - OLD Version on Clearance",
+          "detail": "$1999.99 — Default Title",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/all-in-one-trainer-old"
+          ]
+        },
+        {
+          "label": "Pandemonium Squat – 3-in-1 Pendulum Squat / Calf Press / Viking Press Machine",
+          "detail": "$1599.99 — Default Title",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/pandemonium-squat"
+          ]
+        },
+        {
+          "label": "Hydra Storage Builder",
+          "detail": "$1549.91 — Variant for price 1549.91",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-storage-builder-1"
+          ]
+        },
+        {
+          "label": "Hydra Storage Builder",
+          "detail": "$1499.94 — Variant for price 1499.94",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-storage-builder-1"
+          ]
+        },
+        {
+          "label": "All-in-One Trainer",
+          "detail": "$1349.99 — Plate Loaded v2 (with Footplate)",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/all-in-one-trainer"
+          ]
+        },
+        {
+          "label": "Hydra Storage Builder",
+          "detail": "$1319.93 — Variant for price 1319.93",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-storage-builder-1"
+          ]
+        },
+        {
+          "label": "Hydra Storage Builder",
+          "detail": "$1309.94 — Variant for price 1309.94",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-storage-builder-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vendor-corrupt",
+      "severity": "high",
+      "title": "A broken sync is writing product IDs into the vendor field",
+      "count": 9,
+      "unit": "products",
+      "summary": "9 products have a vendor of \"related_to_<numeric id>\" instead of a brand name. The rest of the catalog correctly reads \"Bells of Steel\".",
+      "impact": "Vendor is a customer-facing field and a required attribute in Google Shopping and most marketplace feeds. These products are advertising a database key as their brand.",
+      "fix": "Find the app writing this — the value shape suggests a related-products integration reusing the field — and reset the affected products to the correct vendor.",
+      "evidence": [
+        {
+          "label": "Kraken Cable Tower Rack Attachment",
+          "detail": "vendor = \"related_to_7678798430260\"",
+          "delta": "corrupt",
+          "links": [
+            "https://bellsofsteel.com/products/kraken-cable-tower-rack-attachment-1"
+          ]
+        },
+        {
+          "label": "Hydra Storage Builder",
+          "detail": "vendor = \"related_to_7562480451636\"",
+          "delta": "corrupt",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-storage-builder-1"
+          ]
+        },
+        {
+          "label": "Commercial Interchangeable Weight Rack",
+          "detail": "vendor = \"related_to_7412175011892\"",
+          "delta": "corrupt",
+          "links": [
+            "https://bellsofsteel.com/products/commercial-interchangeable-weight-rack"
+          ]
+        },
+        {
+          "label": "Barbell And Plate Custom Set",
+          "detail": "vendor = \"related_to_7425783726132\"",
+          "delta": "corrupt",
+          "links": [
+            "https://bellsofsteel.com/products/barbell-and-plate-custom-set-1"
+          ]
+        },
+        {
+          "label": "Hydra Trident Station",
+          "detail": "vendor = \"related_to_7424212697140\"",
+          "delta": "corrupt",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-trident-station-1"
+          ]
+        },
+        {
+          "label": "Dumbbell Bench Combo",
+          "detail": "vendor = \"related_to_7424043286580\"",
+          "delta": "corrupt",
+          "links": [
+            "https://bellsofsteel.com/products/dumbbell-bench-combo-1"
+          ]
+        },
+        {
+          "label": "3 Packs Of Bars",
+          "detail": "vendor = \"related_to_7422453186612\"",
+          "delta": "corrupt",
+          "links": [
+            "https://bellsofsteel.com/products/3-packs-of-bars-1"
+          ]
+        },
+        {
+          "label": "Partner Bar Bumper Set",
+          "detail": "vendor = \"related_to_7422084743220\"",
+          "delta": "corrupt",
+          "links": [
+            "https://bellsofsteel.com/products/partner-bar-bumper-set-1"
+          ]
+        },
+        {
+          "label": "Apartment Gym Combo",
+          "detail": "vendor = \"related_to_7422040277044\"",
+          "delta": "corrupt",
+          "links": [
+            "https://bellsofsteel.com/products/apartment-gym-combo-2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compat-graph",
+      "severity": "high",
+      "title": "The compatibility tags contradict the product titles",
+      "count": 5,
+      "unit": "products",
+      "summary": "The hgb_ tag scheme is what drives the Home Gym Builder's compatibility logic — 148 products carry it. But 1 product says in its own title that it fits both rack families while carrying tags for only one, and 4 more name both families and carry no compatibility tags at all.",
+      "impact": "These attachments are invisible to the builder for the family they were left out of. A customer configuring that rack is never shown a part that physically fits it — the tags are the only thing the builder consults, and the title it contradicts is the thing the customer reads.",
+      "fix": "Reconcile the hgb_ tags against product titles as a scheduled check. The comparison is cheap and it is exactly the sort of drift nobody notices by hand.",
+      "evidence": [
+        {
+          "label": "Utility Seat for Hydra/Manticore",
+          "detail": "7 hydra tags, 0 manticore tags",
+          "delta": "title says both",
+          "links": [
+            "https://bellsofsteel.com/products/utility-seat-for-hydra-manticore"
+          ]
+        },
+        {
+          "label": "Safety Straps for Hydra & Manticore Racks",
+          "detail": "no hgb_ compatibility tags at all",
+          "delta": "invisible to builder",
+          "links": [
+            "https://bellsofsteel.com/products/safety-straps"
+          ]
+        },
+        {
+          "label": "Hydra / Manticore Lat Pulldown Plate Loaded to Selectorized Upgrade Kit",
+          "detail": "no hgb_ compatibility tags at all",
+          "delta": "invisible to builder",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-manticore-lat-pulldown-plate-loaded-to-selectorized-upgrade-kit"
+          ]
+        },
+        {
+          "label": "End Cap for Hydra / Manticore Uprights (Single)",
+          "detail": "no hgb_ compatibility tags at all",
+          "delta": "invisible to builder",
+          "links": [
+            "https://bellsofsteel.com/products/end-cap-for-hydra-manticore-uprights-single"
+          ]
+        },
+        {
+          "label": "Seal Row Pad for 60mm/ Hydra/ Manticore",
+          "detail": "no hgb_ compatibility tags at all",
+          "delta": "invisible to builder",
+          "links": [
+            "https://bellsofsteel.com/products/seal-row-pad-for-60mm-hydra-manticore"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fake-sale",
+      "severity": "medium",
+      "title": "Compare-at price equals the selling price",
+      "count": 8,
+      "unit": "variants",
+      "summary": "8 variants set a compare-at price identical to what the customer actually pays.",
+      "impact": "Shopify renders compare-at as a struck-through \"was\" price. A struck-through number that matches the real one is a discount claim with no discount behind it — which is both a conversion problem and the kind of thing consumer-protection rules care about.",
+      "fix": "Clear compare_at_price wherever it is less than or equal to price, and add it to the same publish-time validation as the weight check.",
+      "evidence": [
+        {
+          "label": "Roc Foldable 2 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "detail": "price $719.95 · compare-at $719.95",
+          "delta": "no actual discount",
+          "links": [
+            "https://bellsofsteel.com/products/roc-foldable-two-post-cage-prebuilt"
+          ]
+        },
+        {
+          "label": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "detail": "price $934.95 · compare-at $934.95",
+          "delta": "no actual discount",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-folding-half-rack-prebuilt"
+          ]
+        },
+        {
+          "label": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "detail": "price $1309.89 · compare-at $1309.89",
+          "delta": "no actual discount",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt"
+          ]
+        },
+        {
+          "label": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "detail": "price $874.94 · compare-at $874.94",
+          "delta": "no actual discount",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-squat-stand-prebuilt"
+          ]
+        },
+        {
+          "label": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "detail": "price $1644.89 · compare-at $1644.89",
+          "delta": "no actual discount",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt"
+          ]
+        },
+        {
+          "label": "Hydra Squat Stand - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "detail": "price $634.95 · compare-at $634.95",
+          "delta": "no actual discount",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-squat-stand-prebuilt"
+          ]
+        },
+        {
+          "label": "Hip Thrust Machine",
+          "detail": "price $1199.99 · compare-at $1199.99",
+          "delta": "no actual discount",
+          "links": [
+            "https://bellsofsteel.com/products/hip-thrust-machine"
+          ]
+        },
+        {
+          "label": "Mark Wildman Adjustable Kettlebell",
+          "detail": "price $239.99 · compare-at $239.99",
+          "delta": "no actual discount",
+          "links": [
+            "https://bellsofsteel.com/products/mark-wildman-adjustable-kettlebells"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oos-published",
+      "severity": "medium",
+      "title": "Products are published with every variant out of stock",
+      "count": 56,
+      "unit": "products",
+      "summary": "56 products have no purchasable variant but remain live in the storefront feed.",
+      "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
+      "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
+      "evidence": [
+        {
+          "label": "Basilisk Stack Loaded Leg Extension / Leg Curl",
+          "detail": "3 variants, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/basilisk-stack-loaded-leg-extension-leg-curl"
+          ]
+        },
+        {
+          "label": "Fat Bar - Lat Pulldown Bar",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/fat-bar-lat-pulldown-bar"
+          ]
+        },
+        {
+          "label": "Manticore Two Post Converter Bench",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-two-post-converter-bench"
+          ]
+        },
+        {
+          "label": "Specialty Bar Bundle",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/specialty-bar-bundle"
+          ]
+        },
+        {
+          "label": "Rack Junctions - 3\" x 3\"",
+          "detail": "2 variants, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/rack-junctions-3-x-3"
+          ]
+        },
+        {
+          "label": "Die-Cut Sticker Upgrade / Sticker Pack",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/die-cut-sticker-upgrade-sticker-pack"
+          ]
+        },
+        {
+          "label": "Flat-Iron Tricep Press Cable Attachment",
+          "detail": "2 variants, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/flat-iron-tricep-press-cable-attachment"
+          ]
+        },
+        {
+          "label": "Footplate for Cable Tower/All In One Trainer",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/footplate-for-cable-tower"
+          ]
+        },
+        {
+          "label": "48KG Extension Kit for Adjustable Kettlebell - Wildman Poison Pill",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/wildman-poison-pill"
+          ]
+        },
+        {
+          "label": "StrongArm Combo Rack - Squat Stand & Bench Press",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/strongarm-combo-rack"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "taxonomy",
+      "severity": "medium",
+      "title": "A fifth of the catalog has no product type",
+      "count": 107,
+      "unit": "products",
+      "summary": "89 products have an empty product_type and a further 18 use the literal string \"Hidden\" as their type.",
+      "impact": "product_type is what automated collections, storefront filters and any BigQuery or Looker grouping key off. Every product without one is invisible to that machinery, and \"Hidden\" is a visibility flag wearing a taxonomy field’s clothes.",
+      "fix": "Most of these are inferable from the title alone — the demo’s own classifier types 60 of them with a dozen rules. Backfill, then make type required at publish.",
+      "evidence": [
+        {
+          "label": "Oblivyon Tower - 3x3\" Cable Tower - Back Upright",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/oblivyon-tower-3x3-cable-tower-back-upright"
+          ]
+        },
+        {
+          "label": "Blitz Indoor Cycling Bike Spare Parts",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/blitz-indoor-cycling-bike-spare-parts"
+          ]
+        },
+        {
+          "label": "FID Bench Spare Parts",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/fid-bench-spare-parts"
+          ]
+        },
+        {
+          "label": "Hero Pad Spare Parts",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/hero-pad-spare-parts"
+          ]
+        },
+        {
+          "label": "Pandemonium Squat Machine Spare Parts",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/pandemonium-squat-machine-spare-parts"
+          ]
+        },
+        {
+          "label": "Ripcords Premium Resistance Bands",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/ripcords-premium-resistance-bands"
+          ]
+        },
+        {
+          "label": "Human Trainer Bodyweight Suspension System",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/human-trainer-bodyweight-suspension-system"
+          ]
+        },
+        {
+          "label": "Leg Cords",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/leg-cords"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "specs-hidden",
+      "severity": "medium",
+      "title": "Spec tables are switched off on 90 products — including entry-level racks",
+      "count": 90,
+      "unit": "products",
+      "summary": "90 products carry the hide:specs tag. Separately, the Residential rack line publishes no dimensions anywhere in its copy: Manticore Folding Power Rack Builder (3\" x 3\", 1\" Holes), Manticore Flat Foot Power Rack Builder (3\" x 3\", 1\" Holes), Manticore Four Post Power Rack Builder (3\" x 3\", 1\" Holes).",
+      "impact": "The Residential racks are the cheapest and most beginner-facing in the range — exactly the buyer most likely to be working around a low basement ceiling, and the one with the least tolerance for guessing. The Gym Builder demo cannot verify fit for any of them, and neither can a customer.",
+      "fix": "Publish height, width and depth on every rack. It is the single highest-volume pre-sales question in this category.",
+      "evidence": [
+        {
+          "label": "Manticore Folding Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "detail": "no dimensions found anywhere in the product copy",
+          "delta": "unverifiable",
+          "links": [
+            "https://bellsofsteel.com/products/manctiore-folding-power-rack-builder"
+          ]
+        },
+        {
+          "label": "Manticore Flat Foot Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "detail": "no dimensions found anywhere in the product copy",
+          "delta": "unverifiable",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-builder"
+          ]
+        },
+        {
+          "label": "Manticore Four Post Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "detail": "no dimensions found anywhere in the product copy",
+          "delta": "unverifiable",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-four-post-power-rack-builder"
+          ]
+        },
+        {
+          "label": "Manticore Six Post Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "detail": "no dimensions found anywhere in the product copy",
+          "delta": "unverifiable",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-six-post-power-rack-builder"
+          ]
+        },
+        {
+          "label": "Hydra Four Post Power Rack Builder (3\" x 3\", ⅝\" Holes)",
+          "detail": "no dimensions found anywhere in the product copy",
+          "delta": "unverifiable",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-four-post-power-rack-builder"
+          ]
+        },
+        {
+          "label": "Hydra Six Post Power Rack Builder (3\" x 3\", ⅝\" Holes)",
+          "detail": "no dimensions found anywhere in the product copy",
+          "delta": "unverifiable",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-six-post-power-rack-builder"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "missing-sku",
+      "severity": "low",
+      "title": "Variants with no SKU",
+      "count": 11,
+      "unit": "products",
+      "summary": "11 products have at least one variant with an empty SKU.",
+      "impact": "SKU is the join key between Shopify, the warehouse and any reporting built on top. A blank one breaks the join silently.",
+      "fix": "Assign SKUs and make the field required.",
+      "evidence": [
+        {
+          "label": "Ultimate Backyard Training Bundle",
+          "detail": "variant missing SKU",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/ultimate-backyard-gym-bundle"
+          ]
+        },
+        {
+          "label": "Kraken Cable Tower Rack Attachment",
+          "detail": "variant missing SKU",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/kraken-cable-tower-rack-attachment-1"
+          ]
+        },
+        {
+          "label": "Hydra Storage Builder",
+          "detail": "variant missing SKU",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-storage-builder-1"
+          ]
+        },
+        {
+          "label": "Commercial Interchangeable Weight Rack",
+          "detail": "variant missing SKU",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/commercial-interchangeable-weight-rack"
+          ]
+        },
+        {
+          "label": "Barbell And Plate Custom Set",
+          "detail": "variant missing SKU",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/barbell-and-plate-custom-set-1"
+          ]
+        },
+        {
+          "label": "Hydra Trident Station",
+          "detail": "variant missing SKU",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-trident-station-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thin-description",
+      "severity": "low",
+      "title": "Thin or empty product descriptions",
+      "count": 36,
+      "unit": "products",
+      "summary": "36 products have under 120 characters of description.",
+      "impact": "Weak organic ranking, and nothing for a support rep or an AI assistant to ground an answer in.",
+      "fix": "Prioritise the ones that are actually in stock and getting traffic.",
+      "evidence": [
+        {
+          "label": "FID Bench Spare Parts",
+          "detail": "117 characters",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/fid-bench-spare-parts"
+          ]
+        },
+        {
+          "label": "Hero Pad Spare Parts",
+          "detail": "26 characters",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/hero-pad-spare-parts"
+          ]
+        },
+        {
+          "label": "Competition Flat Bench Pad Spare Parts",
+          "detail": "39 characters",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/competition-flat-bench-pad-spare-parts"
+          ]
+        },
+        {
+          "label": "Buzzsaw Bench Spare Parts",
+          "detail": "71 characters",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/buzzsaw-bench-spare-parts"
+          ]
+        },
+        {
+          "label": "Functional Trainer Spare Parts",
+          "detail": "101 characters",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/functional-trainer-spare-parts"
+          ]
+        },
+        {
+          "label": "Utility Adjustable Bench Spare Parts",
+          "detail": "91 characters",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/utility-adjustable-bench-spare-parts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "no-images",
+      "severity": "low",
+      "title": "Products with no image at all",
+      "count": 2,
+      "unit": "products",
+      "summary": "2 products ship zero images.",
+      "impact": "An image-less product page effectively does not convert, and image is a required field in most shopping feeds.",
+      "fix": "Add photography or unpublish.",
+      "evidence": [
+        {
+          "label": "3 Layer Band Peg - Deadlift Platform",
+          "detail": "0 images",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/3-layer-band-peg-deadlift-platform"
+          ]
+        },
+        {
+          "label": "1 Layer Band Peg - Deadlift Platform",
+          "detail": "0 images",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/1-layer-band-peg-deadlift-platform"
+          ]
+        }
+      ]
+    }
+  ],
+  "clean": [
+    {
+      "label": "No SKU collisions",
+      "detail": "1379 SKUs checked, 0 reused across different products."
+    },
+    {
+      "label": "Discontinued products are genuinely unbuyable",
+      "detail": "17 tagged Discontinued, 0 still purchasable."
+    },
+    {
+      "label": "Vendor is consistent everywhere else",
+      "detail": "460 products correctly attributed."
+    }
+  ]
+}

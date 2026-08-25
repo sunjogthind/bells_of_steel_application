@@ -1,0 +1,970 @@
+{
+  "generated_at": "2026-08-25T22:53:27.234Z",
+  "productCount": 29,
+  "partCount": 68,
+  "parts": [
+    {
+      "id": "8825166135348-47826802016308",
+      "name": "Tall Cycling Bike Seat Post",
+      "ref": null,
+      "sku": "SP-TALLPOST-SPIN-BTZ",
+      "priceCents": 3899,
+      "available": true,
+      "machine": "Blitz Indoor Cycling Bike",
+      "parentTitle": "Blitz Indoor Cycling Bike Spare Parts",
+      "url": "https://bellsofsteel.com/products/blitz-indoor-cycling-bike-spare-parts"
+    },
+    {
+      "id": "8825166135348-47826802049076",
+      "name": "Spin Bike Left Crank",
+      "ref": null,
+      "sku": "SP-SPINBK-LCRANK",
+      "priceCents": 1599,
+      "available": true,
+      "machine": "Blitz Indoor Cycling Bike",
+      "parentTitle": "Blitz Indoor Cycling Bike Spare Parts",
+      "url": "https://bellsofsteel.com/products/blitz-indoor-cycling-bike-spare-parts"
+    },
+    {
+      "id": "8825166135348-47826802081844",
+      "name": "Spin Bike Right Crank",
+      "ref": null,
+      "sku": "SP-SPINBK-RCRANK",
+      "priceCents": 1599,
+      "available": true,
+      "machine": "Blitz Indoor Cycling Bike",
+      "parentTitle": "Blitz Indoor Cycling Bike Spare Parts",
+      "url": "https://bellsofsteel.com/products/blitz-indoor-cycling-bike-spare-parts"
+    },
+    {
+      "id": "8825166135348-47826802114612",
+      "name": "Pedals SPIN-BTZ",
+      "ref": "1",
+      "sku": "SP-SPIN-BTZ-PEDALS",
+      "priceCents": 4099,
+      "available": true,
+      "machine": "Blitz Indoor Cycling Bike",
+      "parentTitle": "Blitz Indoor Cycling Bike Spare Parts",
+      "url": "https://bellsofsteel.com/products/blitz-indoor-cycling-bike-spare-parts"
+    },
+    {
+      "id": "8825166135348-47826802147380",
+      "name": "Monitor for SPIN-BTZ",
+      "ref": "78",
+      "sku": "SP-SPIN-BTZ-MONI",
+      "priceCents": 4199,
+      "available": true,
+      "machine": "Blitz Indoor Cycling Bike",
+      "parentTitle": "Blitz Indoor Cycling Bike Spare Parts",
+      "url": "https://bellsofsteel.com/products/blitz-indoor-cycling-bike-spare-parts"
+    },
+    {
+      "id": "8825166069812-47826801885236",
+      "name": "FID Bench Back Pad",
+      "ref": null,
+      "sku": "SP-FID-BACKPAD",
+      "priceCents": 4999,
+      "available": true,
+      "machine": "FID Bench",
+      "parentTitle": "FID Bench Spare Parts",
+      "url": "https://bellsofsteel.com/products/fid-bench-spare-parts"
+    },
+    {
+      "id": "8825166069812-47826801918004",
+      "name": "FID Bench Seatpad",
+      "ref": null,
+      "sku": "SP-FID-SEATPAD",
+      "priceCents": 2999,
+      "available": true,
+      "machine": "FID Bench",
+      "parentTitle": "FID Bench Spare Parts",
+      "url": "https://bellsofsteel.com/products/fid-bench-spare-parts"
+    },
+    {
+      "id": "8825166037044-47826801819700",
+      "name": "Hero Pad",
+      "ref": null,
+      "sku": "SP-HERO-BEN-PAD",
+      "priceCents": 9899,
+      "available": true,
+      "machine": "Hero Pad",
+      "parentTitle": "Hero Pad Spare Parts",
+      "url": "https://bellsofsteel.com/products/hero-pad-spare-parts"
+    },
+    {
+      "id": "8825166266420-47826802311220",
+      "name": "Pandemonium Squat Back Pad",
+      "ref": null,
+      "sku": "SP-PSM-MA-BACKPAD",
+      "priceCents": 4499,
+      "available": true,
+      "machine": "Pandemonium Squat Machine",
+      "parentTitle": "Pandemonium Squat Machine Spare Parts",
+      "url": "https://bellsofsteel.com/products/pandemonium-squat-machine-spare-parts"
+    },
+    {
+      "id": "8825166266420-47826802343988",
+      "name": "Pandemonium Squat Safety Mag Pin",
+      "ref": null,
+      "sku": "SP-PSM-MA-SFTYMAG",
+      "priceCents": 1999,
+      "available": true,
+      "machine": "Pandemonium Squat Machine",
+      "parentTitle": "Pandemonium Squat Machine Spare Parts",
+      "url": "https://bellsofsteel.com/products/pandemonium-squat-machine-spare-parts"
+    },
+    {
+      "id": "8825166266420-47826802376756",
+      "name": "Pandemonium Squat Shoulder Pad",
+      "ref": null,
+      "sku": "SP-PSM-MA-SHLDRPAD",
+      "priceCents": 1299,
+      "available": true,
+      "machine": "Pandemonium Squat Machine",
+      "parentTitle": "Pandemonium Squat Machine Spare Parts",
+      "url": "https://bellsofsteel.com/products/pandemonium-squat-machine-spare-parts"
+    },
+    {
+      "id": "8825166266420-47826802409524",
+      "name": "Pandemonium Squat Safety Rung",
+      "ref": null,
+      "sku": "SP-PSM-MA-SFTYRUNG",
+      "priceCents": 999,
+      "available": true,
+      "machine": "Pandemonium Squat Machine",
+      "parentTitle": "Pandemonium Squat Machine Spare Parts",
+      "url": "https://bellsofsteel.com/products/pandemonium-squat-machine-spare-parts"
+    },
+    {
+      "id": "8825166692404-47826804867124",
+      "name": "Cables for New Version Weight Stack Cable Tower STK-PULT4-MA",
+      "ref": null,
+      "sku": "SP-STK-PULT4-CBL-TPU",
+      "priceCents": 2099,
+      "available": true,
+      "machine": "Cable Tower",
+      "parentTitle": "Cable Tower Spare Parts (STK-PULT4-MA / PULT5-MA)",
+      "url": "https://bellsofsteel.com/products/cable-tower-spare-parts"
+    },
+    {
+      "id": "8825166692404-47826804899892",
+      "name": "Cables for New Version Plate Loaded Cable Tower PULT5-MA",
+      "ref": null,
+      "sku": "SP-PULT5-CBL-TPU",
+      "priceCents": 2099,
+      "available": true,
+      "machine": "Cable Tower",
+      "parentTitle": "Cable Tower Spare Parts (STK-PULT4-MA / PULT5-MA)",
+      "url": "https://bellsofsteel.com/products/cable-tower-spare-parts"
+    },
+    {
+      "id": "8825166692404-47826804932660",
+      "name": "Height Selector Knob for New Version Cable Towers PULT5-MA, STK-PULT4-MA",
+      "ref": null,
+      "sku": "SP-NEW-PULT-MA-SEL",
+      "priceCents": 999,
+      "available": true,
+      "machine": "Cable Tower",
+      "parentTitle": "Cable Tower Spare Parts (STK-PULT4-MA / PULT5-MA)",
+      "url": "https://bellsofsteel.com/products/cable-tower-spare-parts"
+    },
+    {
+      "id": "8825166692404-47826804965428",
+      "name": "Cable Tower Handle Bushing PULT-MA, STK-PULT-MA",
+      "ref": "17",
+      "sku": "SP-CBLTWR-HNDL-BUSH",
+      "priceCents": 599,
+      "available": true,
+      "machine": "Cable Tower",
+      "parentTitle": "Cable Tower Spare Parts (STK-PULT4-MA / PULT5-MA)",
+      "url": "https://bellsofsteel.com/products/cable-tower-spare-parts"
+    },
+    {
+      "id": "8825166594100-47826804637748",
+      "name": "Competition Flat Bench Pad",
+      "ref": null,
+      "sku": "SP-FLT2-PAD",
+      "priceCents": 7299,
+      "available": true,
+      "machine": "Competition Flat Bench Pad",
+      "parentTitle": "Competition Flat Bench Pad Spare Parts",
+      "url": "https://bellsofsteel.com/products/competition-flat-bench-pad-spare-parts"
+    },
+    {
+      "id": "8825166561332-47826804539444",
+      "name": "Buzzsaw Seat Pad",
+      "ref": null,
+      "sku": "SP-BZ-SEAT",
+      "priceCents": 2299,
+      "available": true,
+      "machine": "Buzzsaw Bench",
+      "parentTitle": "Buzzsaw Bench Spare Parts",
+      "url": "https://bellsofsteel.com/products/buzzsaw-bench-spare-parts"
+    },
+    {
+      "id": "8825166561332-47826804572212",
+      "name": "Buzzsaw Back Pad",
+      "ref": null,
+      "sku": "SP-BZ-BACK",
+      "priceCents": 4699,
+      "available": true,
+      "machine": "Buzzsaw Bench",
+      "parentTitle": "Buzzsaw Bench Spare Parts",
+      "url": "https://bellsofsteel.com/products/buzzsaw-bench-spare-parts"
+    },
+    {
+      "id": "8825166528564-47826804375604",
+      "name": "3x3 Cable Tower Weight Stack Cable Set",
+      "ref": null,
+      "sku": "SP-STK-3X3-CT-CBL",
+      "priceCents": 3699,
+      "available": true,
+      "machine": "Oblivyon Cable Tower",
+      "parentTitle": "Oblivyon Cable Tower Spare Parts",
+      "url": "https://bellsofsteel.com/products/oblivyon-cable-tower-spare-parts"
+    },
+    {
+      "id": "8825166528564-47826804408372",
+      "name": "3x3 Cable Tower Plate Loaded Cable Set",
+      "ref": null,
+      "sku": "SP-PLT-3X3-CT-CBL",
+      "priceCents": 3899,
+      "available": true,
+      "machine": "Oblivyon Cable Tower",
+      "parentTitle": "Oblivyon Cable Tower Spare Parts",
+      "url": "https://bellsofsteel.com/products/oblivyon-cable-tower-spare-parts"
+    },
+    {
+      "id": "8825166528564-47826804441140",
+      "name": "3x3 Cable Tower Height Selector Handle",
+      "ref": null,
+      "sku": "SP-3X3-CT-HANDLE",
+      "priceCents": 4999,
+      "available": true,
+      "machine": "Oblivyon Cable Tower",
+      "parentTitle": "Oblivyon Cable Tower Spare Parts",
+      "url": "https://bellsofsteel.com/products/oblivyon-cable-tower-spare-parts"
+    },
+    {
+      "id": "8825166528564-47826804473908",
+      "name": "3x3 Cable Tower Height Selector Knob",
+      "ref": null,
+      "sku": "SP-3X3-CT-KNOB",
+      "priceCents": 1899,
+      "available": true,
+      "machine": "Oblivyon Cable Tower",
+      "parentTitle": "Oblivyon Cable Tower Spare Parts",
+      "url": "https://bellsofsteel.com/products/oblivyon-cable-tower-spare-parts"
+    },
+    {
+      "id": "8825166299188-47826802475060",
+      "name": "PLT-LAT-MA Cables Part #37, #38",
+      "ref": null,
+      "sku": "SP-PLT-LAT-MA-CBL",
+      "priceCents": 2199,
+      "available": true,
+      "machine": "Lat Pulldown / Low Row Machine",
+      "parentTitle": "Lat Pulldown / Low Row Machine Spare Parts",
+      "url": "https://bellsofsteel.com/products/lat-pulldown-low-row-machine-spare-parts"
+    },
+    {
+      "id": "8825166299188-47826802507828",
+      "name": "LAT-MA Cables Part #40, #41",
+      "ref": null,
+      "sku": "SP-LAT-MA-CBL",
+      "priceCents": 2099,
+      "available": true,
+      "machine": "Lat Pulldown / Low Row Machine",
+      "parentTitle": "Lat Pulldown / Low Row Machine Spare Parts",
+      "url": "https://bellsofsteel.com/products/lat-pulldown-low-row-machine-spare-parts"
+    },
+    {
+      "id": "8825166299188-47826802540596",
+      "name": "Knee Pad LAT-MA (#44), PLT-LAT-MA",
+      "ref": "44",
+      "sku": "SP-KNEEPAD-LAT-MA",
+      "priceCents": 1699,
+      "available": true,
+      "machine": "Lat Pulldown / Low Row Machine",
+      "parentTitle": "Lat Pulldown / Low Row Machine Spare Parts",
+      "url": "https://bellsofsteel.com/products/lat-pulldown-low-row-machine-spare-parts"
+    },
+    {
+      "id": "8825166299188-47826802573364",
+      "name": "Seat Pad LAT-MA (#43), PLT-LAT-MA",
+      "ref": "43",
+      "sku": "SP-LAT-MA-SEATPAD",
+      "priceCents": 2399,
+      "available": true,
+      "machine": "Lat Pulldown / Low Row Machine",
+      "parentTitle": "Lat Pulldown / Low Row Machine Spare Parts",
+      "url": "https://bellsofsteel.com/products/lat-pulldown-low-row-machine-spare-parts"
+    },
+    {
+      "id": "8825166299188-47826802606132",
+      "name": "Cable Machine Weight Stack Stickers, up to 310lbs",
+      "ref": null,
+      "sku": "SP-LAT-MA-STICKERS",
+      "priceCents": 905,
+      "available": true,
+      "machine": "Lat Pulldown / Low Row Machine",
+      "parentTitle": "Lat Pulldown / Low Row Machine Spare Parts",
+      "url": "https://bellsofsteel.com/products/lat-pulldown-low-row-machine-spare-parts"
+    },
+    {
+      "id": "8825166299188-47826802638900",
+      "name": "Selector knob for bos-fct(#17) , lat-ma",
+      "ref": "17",
+      "sku": "SP-KNOB",
+      "priceCents": 699,
+      "available": true,
+      "machine": "Lat Pulldown / Low Row Machine",
+      "parentTitle": "Lat Pulldown / Low Row Machine Spare Parts",
+      "url": "https://bellsofsteel.com/products/lat-pulldown-low-row-machine-spare-parts"
+    },
+    {
+      "id": "8825166004276-47826801655860",
+      "name": "Legacy Plate-Loaded Leg Extension Back Pad",
+      "ref": null,
+      "sku": "SP-PLELC-MA-BACKPAD",
+      "priceCents": 5999,
+      "available": true,
+      "machine": "Plate-Loaded Leg Extension",
+      "parentTitle": "Plate-Loaded Leg Extension Spare Parts",
+      "url": "https://bellsofsteel.com/products/plate-loaded-leg-extension-spare-parts"
+    },
+    {
+      "id": "8825166004276-47826801688628",
+      "name": "Legacy Plate-Loaded Leg Extension Seat Pad",
+      "ref": null,
+      "sku": "SP-PLELC-MA-SEATPAD",
+      "priceCents": 5999,
+      "available": true,
+      "machine": "Plate-Loaded Leg Extension",
+      "parentTitle": "Plate-Loaded Leg Extension Spare Parts",
+      "url": "https://bellsofsteel.com/products/plate-loaded-leg-extension-spare-parts"
+    },
+    {
+      "id": "8825166004276-47826801721396",
+      "name": "Legacy Plate-Loaded Leg Extension Knee Pad",
+      "ref": null,
+      "sku": "SP-PLELC-MA-KNEEPAD",
+      "priceCents": 2499,
+      "available": true,
+      "machine": "Plate-Loaded Leg Extension",
+      "parentTitle": "Plate-Loaded Leg Extension Spare Parts",
+      "url": "https://bellsofsteel.com/products/plate-loaded-leg-extension-spare-parts"
+    },
+    {
+      "id": "8825166004276-47826801754164",
+      "name": "Legacy Plate-Loaded Leg Extension Foot Pad",
+      "ref": null,
+      "sku": "SP-PLELC-MA-FOOTPAD",
+      "priceCents": 4999,
+      "available": true,
+      "machine": "Plate-Loaded Leg Extension",
+      "parentTitle": "Plate-Loaded Leg Extension Spare Parts",
+      "url": "https://bellsofsteel.com/products/plate-loaded-leg-extension-spare-parts"
+    },
+    {
+      "id": "8825165971508-47826801459252",
+      "name": "60mm LA-RA Cable (2.3\"x2.3\" Racks)",
+      "ref": null,
+      "sku": "SP-LA-RA-SKRP-CBL",
+      "priceCents": 2199,
+      "available": true,
+      "machine": "Lat Pulldown / Row Rack Attachment",
+      "parentTitle": "Lat Pulldown / Row Rack Attachment Spare Parts",
+      "url": "https://bellsofsteel.com/products/lat-pulldown-row-rack-attachment-spare-parts"
+    },
+    {
+      "id": "8825165971508-47826801492020",
+      "name": "72 LA-RA-HDR Cable (HDR/MTC)",
+      "ref": null,
+      "sku": "SP-72LA-RA-HDR-CBL",
+      "priceCents": 2099,
+      "available": true,
+      "machine": "Lat Pulldown / Row Rack Attachment",
+      "parentTitle": "Lat Pulldown / Row Rack Attachment Spare Parts",
+      "url": "https://bellsofsteel.com/products/lat-pulldown-row-rack-attachment-spare-parts"
+    },
+    {
+      "id": "8825165971508-47826801524788",
+      "name": "84 LA-RA-HDR Cable (HDR/MTC)",
+      "ref": null,
+      "sku": "SP-84LA-RA-HDR-CBL",
+      "priceCents": 2199,
+      "available": true,
+      "machine": "Lat Pulldown / Row Rack Attachment",
+      "parentTitle": "Lat Pulldown / Row Rack Attachment Spare Parts",
+      "url": "https://bellsofsteel.com/products/lat-pulldown-row-rack-attachment-spare-parts"
+    },
+    {
+      "id": "8825165971508-47826801557556",
+      "name": "90 LA-RA-HDR Cable (HDR/MTC)",
+      "ref": null,
+      "sku": "SP-90LA-RA-HDR-CBL",
+      "priceCents": 2299,
+      "available": true,
+      "machine": "Lat Pulldown / Row Rack Attachment",
+      "parentTitle": "Lat Pulldown / Row Rack Attachment Spare Parts",
+      "url": "https://bellsofsteel.com/products/lat-pulldown-row-rack-attachment-spare-parts"
+    },
+    {
+      "id": "8825165938740-47826801360948",
+      "name": "BOS-FCT / BOS-FCT2 Cable Part #27",
+      "ref": null,
+      "sku": "SP-BOS-FCT-CBL",
+      "priceCents": 2699,
+      "available": true,
+      "machine": "Functional Trainer",
+      "parentTitle": "Functional Trainer Spare Parts",
+      "url": "https://bellsofsteel.com/products/functional-trainer-spare-parts"
+    },
+    {
+      "id": "8825165938740-47826801393716",
+      "name": "Cable for Plate Loaded Functional Trainer",
+      "ref": null,
+      "sku": "SP-WPL-BOS-FCT-CBL",
+      "priceCents": 2199,
+      "available": true,
+      "machine": "Functional Trainer",
+      "parentTitle": "Functional Trainer Spare Parts",
+      "url": "https://bellsofsteel.com/products/functional-trainer-spare-parts"
+    },
+    {
+      "id": "8825165873204-47826801164340",
+      "name": "Blitz Bike Monitor",
+      "ref": null,
+      "sku": "SP-BTZBK-MONI",
+      "priceCents": 4199,
+      "available": false,
+      "machine": "Air Bike",
+      "parentTitle": "Air Bike Spare Parts",
+      "url": "https://bellsofsteel.com/products/air-bike-spare-parts"
+    },
+    {
+      "id": "8825165873204-47826801197108",
+      "name": "Pedals BTZBK2 (#1), AIRBK2-RES",
+      "ref": "1",
+      "sku": "SP-BTZBK2-PEDALS",
+      "priceCents": 3999,
+      "available": true,
+      "machine": "Air Bike",
+      "parentTitle": "Air Bike Spare Parts",
+      "url": "https://bellsofsteel.com/products/air-bike-spare-parts"
+    },
+    {
+      "id": "8825165873204-47826801229876",
+      "name": "Left Crank BTZBK2 (#33), AIRBK2-RES",
+      "ref": "33",
+      "sku": "SP-BTZBK2-LCRANK",
+      "priceCents": 1599,
+      "available": true,
+      "machine": "Air Bike",
+      "parentTitle": "Air Bike Spare Parts",
+      "url": "https://bellsofsteel.com/products/air-bike-spare-parts"
+    },
+    {
+      "id": "8825165873204-47826801262644",
+      "name": "Right Crank BTZBK2 (#36), AIRBK2-RES",
+      "ref": "36",
+      "sku": "SP-BTZBK2-RCRANK",
+      "priceCents": 1599,
+      "available": true,
+      "machine": "Air Bike",
+      "parentTitle": "Air Bike Spare Parts",
+      "url": "https://bellsofsteel.com/products/air-bike-spare-parts"
+    },
+    {
+      "id": "8825166430260-47826807586868",
+      "name": "Adjustable Kettlebell Tools",
+      "ref": null,
+      "sku": "SP-ADJKB-TOOL",
+      "priceCents": 799,
+      "available": true,
+      "machine": "Adjustable Kettlebell & Macebell",
+      "parentTitle": "Adjustable Kettlebell & Macebell Spare Parts",
+      "url": "https://bellsofsteel.com/products/adjustable-kettlebell-macebell-spare-parts"
+    },
+    {
+      "id": "8825166430260-47826807619636",
+      "name": "External Bolt for all ADJKB",
+      "ref": null,
+      "sku": "SP-ADJKB-BOLT",
+      "priceCents": 599,
+      "available": true,
+      "machine": "Adjustable Kettlebell & Macebell",
+      "parentTitle": "Adjustable Kettlebell & Macebell Spare Parts",
+      "url": "https://bellsofsteel.com/products/adjustable-kettlebell-macebell-spare-parts"
+    },
+    {
+      "id": "8825166430260-47826804146228",
+      "name": "Internal Nut for all ADJKB",
+      "ref": null,
+      "sku": "SP-NUT-ADJKB",
+      "priceCents": 799,
+      "available": true,
+      "machine": "Adjustable Kettlebell & Macebell",
+      "parentTitle": "Adjustable Kettlebell & Macebell Spare Parts",
+      "url": "https://bellsofsteel.com/products/adjustable-kettlebell-macebell-spare-parts"
+    },
+    {
+      "id": "8825166626868-47826804703284",
+      "name": "Utility Adjustable Bench Back Pad",
+      "ref": null,
+      "sku": "SP-UTIL-ADJ-BEN-BACKPAD",
+      "priceCents": 3199,
+      "available": true,
+      "machine": "Utility Adjustable Bench",
+      "parentTitle": "Utility Adjustable Bench Spare Parts",
+      "url": "https://bellsofsteel.com/products/utility-adjustable-bench-spare-parts"
+    },
+    {
+      "id": "8825166626868-47826804736052",
+      "name": "Utility Adjustable Bench Seat Pad",
+      "ref": null,
+      "sku": "SP-UTIL-ADJ-BEN-SEATPAD",
+      "priceCents": 1699,
+      "available": true,
+      "machine": "Utility Adjustable Bench",
+      "parentTitle": "Utility Adjustable Bench Spare Parts",
+      "url": "https://bellsofsteel.com/products/utility-adjustable-bench-spare-parts"
+    },
+    {
+      "id": "8825165840436-47826800967732",
+      "name": "Weight Stack All-in-One Trainer 2.0 Cables #44, #45, #46",
+      "ref": null,
+      "sku": "SP-SEL-SS-FCT2-CBL",
+      "priceCents": 1999,
+      "available": true,
+      "machine": "All-in-One Trainer 2.0",
+      "parentTitle": "All-in-One Trainer 2.0 Spare Parts",
+      "url": "https://bellsofsteel.com/products/all-in-one-trainer-spare-parts"
+    },
+    {
+      "id": "8825165840436-47826801000500",
+      "name": "Plate Loaded All-in-One Trainer 2.0 Cables #43, #45, #46",
+      "ref": null,
+      "sku": "SP-SS-FCT2-CBL",
+      "priceCents": 1999,
+      "available": true,
+      "machine": "All-in-One Trainer 2.0",
+      "parentTitle": "All-in-One Trainer 2.0 Spare Parts",
+      "url": "https://bellsofsteel.com/products/all-in-one-trainer-spare-parts"
+    },
+    {
+      "id": "8825165840436-47826801033268",
+      "name": "All-in-One Trainer 2.0 Common Cables #47, #48",
+      "ref": null,
+      "sku": "SP-SS-FCT2-CMN-CBL",
+      "priceCents": 3099,
+      "available": true,
+      "machine": "All-in-One Trainer 2.0",
+      "parentTitle": "All-in-One Trainer 2.0 Spare Parts",
+      "url": "https://bellsofsteel.com/products/all-in-one-trainer-spare-parts"
+    },
+    {
+      "id": "8825165840436-47826801066036",
+      "name": "All-in-One Trainer 2.0 Height Selector Handle Pin #23",
+      "ref": null,
+      "sku": "SP-SS-FCT2-HNDL-PIN-23",
+      "priceCents": 899,
+      "available": true,
+      "machine": "All-in-One Trainer 2.0",
+      "parentTitle": "All-in-One Trainer 2.0 Spare Parts",
+      "url": "https://bellsofsteel.com/products/all-in-one-trainer-spare-parts"
+    },
+    {
+      "id": "8825165840436-47826801098804",
+      "name": "All-in-One Trainer 2.0 Foot Plate Pin #24",
+      "ref": null,
+      "sku": "SP-SS-FCT2-FP-PIN-24",
+      "priceCents": 899,
+      "available": true,
+      "machine": "All-in-One Trainer 2.0",
+      "parentTitle": "All-in-One Trainer 2.0 Spare Parts",
+      "url": "https://bellsofsteel.com/products/all-in-one-trainer-spare-parts"
+    },
+    {
+      "id": "8825165807668-47826800902196",
+      "name": "Utility Flat Bench Pad",
+      "ref": null,
+      "sku": "SP-UTIL-FLT-BEN-PAD",
+      "priceCents": 3399,
+      "available": true,
+      "machine": "Utility Flat Bench Pad",
+      "parentTitle": "Utility Flat Bench Pad Spare Parts",
+      "url": "https://bellsofsteel.com/products/utility-flat-bench-pad-spare-parts"
+    },
+    {
+      "id": "7945957179444-46194448334900",
+      "name": "Chest Expander Replacement Springs",
+      "ref": null,
+      "sku": "SP-EXPSPRNGS-7PK",
+      "priceCents": 1699,
+      "available": true,
+      "machine": "Chest Expander Replacement Springs",
+      "parentTitle": "Chest Expander Replacement Springs",
+      "url": "https://bellsofsteel.com/products/chest-expander-replacement-springs"
+    },
+    {
+      "id": "7756326371380-45932902776884",
+      "name": "Blitz Air Bike Seat Adjustment Assembly",
+      "ref": null,
+      "sku": "SP-BTZBK2-POST-ASSMBLY",
+      "priceCents": 5999,
+      "available": true,
+      "machine": "Blitz Air Bike Seat Adjustment Assembly",
+      "parentTitle": "Blitz Air Bike Seat Adjustment Assembly",
+      "url": "https://bellsofsteel.com/products/blitz-air-bike-adjustment-assembly"
+    },
+    {
+      "id": "7742130159668-45883450392628",
+      "name": "Nylon",
+      "ref": null,
+      "sku": "SP-PULT-CBL-NYL",
+      "priceCents": 5099,
+      "available": true,
+      "machine": "Cables for Plate-Loaded Cable Tower",
+      "parentTitle": "Cables for Plate-Loaded Cable Tower",
+      "url": "https://bellsofsteel.com/products/cables-for-plate-loaded-cable-tower"
+    },
+    {
+      "id": "7742130159668-45883450425396",
+      "name": "TPU",
+      "ref": null,
+      "sku": "SP-PULT-CBL-TPU",
+      "priceCents": 2199,
+      "available": true,
+      "machine": "Cables for Plate-Loaded Cable Tower",
+      "parentTitle": "Cables for Plate-Loaded Cable Tower",
+      "url": "https://bellsofsteel.com/products/cables-for-plate-loaded-cable-tower"
+    },
+    {
+      "id": "7742066065460-45883266334772",
+      "name": "Nylon",
+      "ref": null,
+      "sku": "SP-STK-PULT-CBL-NYL",
+      "priceCents": 4999,
+      "available": true,
+      "machine": "Cables for Weight Stack Cable Tower",
+      "parentTitle": "Cables for Weight Stack Cable Tower",
+      "url": "https://bellsofsteel.com/products/cables-for-weight-stack-cable-tower"
+    },
+    {
+      "id": "7742066065460-45883452751924",
+      "name": "TPU",
+      "ref": null,
+      "sku": "SP-STK-PULT-CBL-TPU",
+      "priceCents": 2099,
+      "available": true,
+      "machine": "Cables for Weight Stack Cable Tower",
+      "parentTitle": "Cables for Weight Stack Cable Tower",
+      "url": "https://bellsofsteel.com/products/cables-for-weight-stack-cable-tower"
+    },
+    {
+      "id": "7731777044532-45840061562932",
+      "name": "V1 Selectorized All-in-One Trainer Cables Part #30, #31, #32",
+      "ref": null,
+      "sku": "SP-SEL-SS-FCT-CBL",
+      "priceCents": 3899,
+      "available": true,
+      "machine": "V1 Selectorized All-in-One Trainer Cables Part #30, #31, #32",
+      "parentTitle": "V1 Selectorized All-in-One Trainer Cables Part #30, #31, #32",
+      "url": "https://bellsofsteel.com/products/selectorized-all-in-one-trainer-cables"
+    },
+    {
+      "id": "7731783041076-45840103079988",
+      "name": "Height Selector Knob for Cable Tower",
+      "ref": null,
+      "sku": "SP-PULT-SEL",
+      "priceCents": 699,
+      "available": true,
+      "machine": "Height Selector Knob for Cable Tower",
+      "parentTitle": "Height Selector Knob for Cable Tower",
+      "url": "https://bellsofsteel.com/products/height-selector-knob-for-cable-tower"
+    },
+    {
+      "id": "7731794313268-45840225173556",
+      "name": "End Cap for Hydra / Manticore Uprights",
+      "ref": null,
+      "sku": "SP-EC-UPRT-HDRMTC",
+      "priceCents": 499,
+      "available": true,
+      "machine": "End Cap for Hydra / Manticore Uprights",
+      "parentTitle": "End Cap for Hydra / Manticore Uprights (Single)",
+      "url": "https://bellsofsteel.com/products/end-cap-for-hydra-manticore-uprights-single"
+    },
+    {
+      "id": "7737397116980-45866545217588",
+      "name": "Pad for Safety Squat Bar",
+      "ref": null,
+      "sku": "SP-L-SS4-PAD",
+      "priceCents": 4899,
+      "available": true,
+      "machine": "Pad for Safety Squat Bar",
+      "parentTitle": "Pad for Safety Squat Bar",
+      "url": "https://bellsofsteel.com/products/pad-for-safety-squat-bar"
+    },
+    {
+      "id": "7731778486324-45840070705204",
+      "name": "Plate-Loaded All-in-One Trainer Cables Part #30, #31, #32",
+      "ref": null,
+      "sku": "SP-SS-FCT-CBL",
+      "priceCents": 3899,
+      "available": true,
+      "machine": "Plate-Loaded All-in-One Trainer Cables Part #30, #31, #32",
+      "parentTitle": "Plate-Loaded All-in-One Trainer Cables Part #30, #31, #32",
+      "url": "https://bellsofsteel.com/products/plate-loaded-all-in-one-trainer-cables"
+    },
+    {
+      "id": "7733300756532-45846182035508",
+      "name": "Seal Row Pad for 60mm/ Hydra/ Manticore",
+      "ref": null,
+      "sku": "SP-SEALPAD",
+      "priceCents": 4499,
+      "available": true,
+      "machine": "Seal Row Pad for 60mm/ Hydra/ Manticore",
+      "parentTitle": "Seal Row Pad for 60mm/ Hydra/ Manticore",
+      "url": "https://bellsofsteel.com/products/seal-row-pad-for-60mm-hydra-manticore"
+    },
+    {
+      "id": "7731792707636-45840208494644",
+      "name": "End Cap for 60mm Uprights",
+      "ref": null,
+      "sku": "SP-UPRT-SKRP-EC",
+      "priceCents": 499,
+      "available": true,
+      "machine": "End Cap for 60mm Uprights",
+      "parentTitle": "End Cap for 60mm Uprights (Single)",
+      "url": "https://bellsofsteel.com/products/end-cap-for-60mm-uprights-single"
+    },
+    {
+      "id": "7613393403956-44937813098548",
+      "name": "Deadlift Pad - Replacement Cover",
+      "ref": null,
+      "sku": "SP-PAD-BBP-COVER",
+      "priceCents": 4699,
+      "available": true,
+      "machine": "Deadlift Pad - Replacement Cover",
+      "parentTitle": "Deadlift Pad - Replacement Cover",
+      "url": "https://bellsofsteel.com/products/deadlift-pad-replacement-cover"
+    }
+  ],
+  "skuGrammar": {
+    "total": 68,
+    "prefixed": 68,
+    "topMachineCodes": [
+      [
+        "SS",
+        5
+      ],
+      [
+        "PSM",
+        4
+      ],
+      [
+        "STK",
+        4
+      ],
+      [
+        "PLELC",
+        4
+      ],
+      [
+        "BTZBK2",
+        4
+      ],
+      [
+        "LAT",
+        3
+      ],
+      [
+        "UTIL",
+        3
+      ],
+      [
+        "PULT",
+        3
+      ],
+      [
+        "SPINBK",
+        2
+      ],
+      [
+        "SPIN",
+        2
+      ],
+      [
+        "FID",
+        2
+      ],
+      [
+        "BZ",
+        2
+      ]
+    ]
+  },
+  "uncovered": [
+    {
+      "title": "Blitz Magnetic Resistance Manual Treadmill",
+      "type": "Cardio Machine",
+      "priceCents": 499999,
+      "url": "https://bellsofsteel.com/products/blitz-manual-treadmill"
+    },
+    {
+      "title": "Blitz Mountain Climber Treadmill",
+      "type": "Cardio Machine",
+      "priceCents": 255997,
+      "url": "https://bellsofsteel.com/products/blitz-mountain-climber-treadmill"
+    },
+    {
+      "title": "Sisyphean Stepper - Manual Stair Climber",
+      "type": "Cardio Machine",
+      "priceCents": 239997,
+      "url": "https://bellsofsteel.com/products/sisyphean-stepper"
+    },
+    {
+      "title": "Wooden Residential Manual Treadmill",
+      "type": "Cardio Machine",
+      "priceCents": 219999,
+      "url": "https://bellsofsteel.com/products/residential-manual-treadmill"
+    },
+    {
+      "title": "The Dreadmill",
+      "type": "Cardio Machine",
+      "priceCents": 199999,
+      "url": "https://bellsofsteel.com/products/the-dreadmill"
+    },
+    {
+      "title": "Leg Press Hack Squat Machine",
+      "type": "Strength Machine",
+      "priceCents": 189999,
+      "url": "https://bellsofsteel.com/products/leg-press-hack-squat-set"
+    },
+    {
+      "title": "Blitz Stepper",
+      "type": "Cardio Machine",
+      "priceCents": 149999,
+      "url": "https://bellsofsteel.com/products/blitz-stepper"
+    },
+    {
+      "title": "Reverse Hammer 2 In 1 GHD And Reverse Back Extension",
+      "type": "Strength Machine",
+      "priceCents": 134999,
+      "url": "https://bellsofsteel.com/products/reverse-hammer"
+    },
+    {
+      "title": "Belt Squat Machine",
+      "type": "Strength Machine",
+      "priceCents": 114999,
+      "url": "https://bellsofsteel.com/products/belt-squat-machine"
+    },
+    {
+      "title": "Manticore Four Post Converter Bench",
+      "type": "Bench",
+      "priceCents": 109999,
+      "url": "https://bellsofsteel.com/products/manticore-four-post-converter-bench"
+    },
+    {
+      "title": "Blitz Air Rower",
+      "type": "Cardio Machine",
+      "priceCents": 109999,
+      "url": "https://bellsofsteel.com/products/blitz-air-rower"
+    },
+    {
+      "title": "Hydra Four Post Converter Bench",
+      "type": "Bench",
+      "priceCents": 99999,
+      "url": "https://bellsofsteel.com/products/hydra-four-post-converter-bench"
+    },
+    {
+      "title": "Lat Pulldown Low Row Machine",
+      "type": "Cable Machine",
+      "priceCents": 89996,
+      "url": "https://bellsofsteel.com/products/lat-pulldown-low-row-machine"
+    },
+    {
+      "title": "Hydra Two Post Converter Bench",
+      "type": "Bench",
+      "priceCents": 80999,
+      "url": "https://bellsofsteel.com/products/hydra-two-post-converter-bench"
+    },
+    {
+      "title": "Buzz-Saw Heavy-Duty Adjustable Bench",
+      "type": "Bench",
+      "priceCents": 55999,
+      "url": "https://bellsofsteel.com/products/buzz-saw-bench"
+    }
+  ],
+  "symptoms": [
+    {
+      "say": "the pad is torn",
+      "match": [
+        "pad",
+        "upholstery",
+        "cushion",
+        "seat"
+      ]
+    },
+    {
+      "say": "a bolt is stripped",
+      "match": [
+        "bolt",
+        "screw",
+        "hardware",
+        "nut"
+      ]
+    },
+    {
+      "say": "the cable frayed",
+      "match": [
+        "cable",
+        "wire",
+        "pulley"
+      ]
+    },
+    {
+      "say": "the pin is bent",
+      "match": [
+        "pin",
+        "selector",
+        "mag"
+      ]
+    },
+    {
+      "say": "the pedal broke",
+      "match": [
+        "pedal",
+        "crank"
+      ]
+    },
+    {
+      "say": "the screen is dead",
+      "match": [
+        "monitor",
+        "display",
+        "console"
+      ]
+    },
+    {
+      "say": "it squeaks / wobbles",
+      "match": [
+        "bushing",
+        "bearing",
+        "roller",
+        "stabilizer",
+        "foot"
+      ]
+    },
+    {
+      "say": "the handle broke",
+      "match": [
+        "handle",
+        "grip",
+        "knob"
+      ]
+    }
+  ]
+}
