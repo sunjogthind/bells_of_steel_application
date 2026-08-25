@@ -96,16 +96,16 @@ export default function PartsSearch({
         </div>
 
         {expanded.length > 0 && (
-          <p className="mt-3 rounded border border-steel/25 bg-steel/5 px-3 py-2 font-mono text-[11px] text-steel">
+          <p className="mt-3 rounded border border-steel/40 bg-steelSoft px-3 py-2 font-mono text-[11px] text-steel">
             matched symptom → searching part vocabulary: {expanded.join(', ')}
           </p>
         )}
       </div>
 
       {empty ? (
-        <div className="rounded-lg border border-amber-400/30 bg-amber-400/5 p-5">
-          <p className="text-sm font-medium text-amber-200">No part matches that.</p>
-          <p className="mt-2 text-sm leading-relaxed text-amber-200/70">
+        <div className="rounded-lg border border-amber-500/40 bg-amber-50 p-5">
+          <p className="text-sm font-medium text-amber-900">No part matches that.</p>
+          <p className="mt-2 text-sm leading-relaxed text-amber-900">
             This is the honest answer, not a nearest-guess. Bells of Steel publishes {parts.length} spare
             parts across {machines.length} machines; anything outside that list has to go to a human, because
             sending a customer the wrong replacement part costs more than saying &ldquo;let me check&rdquo;.
@@ -124,14 +124,14 @@ export default function PartsSearch({
             </thead>
             <tbody>
               {results.map(({ p }) => (
-                <tr key={p.id} className="border-t border-line bg-ink/40 transition-colors hover:bg-panel">
+                <tr key={p.id} className="border-t border-line bg-ink transition-colors hover:bg-panel">
                   <td className="px-4 py-2.5">
                     <a href={p.url} target="_blank" rel="noopener noreferrer"
                        className="underline decoration-line underline-offset-2 hover:decoration-steel">
                       {p.name}
                     </a>
                     {p.ref && <span className="ml-1.5 font-mono text-[10px] text-muted">diagram #{p.ref}</span>}
-                    {!p.available && <span className="ml-1.5 font-mono text-[10px] text-red-400">out of stock</span>}
+                    {!p.available && <span className="ml-1.5 font-mono text-[10px] text-red-600">out of stock</span>}
                   </td>
                   <td className="px-4 py-2.5 text-xs text-muted">{p.machine}</td>
                   <td className="px-4 py-2.5 font-mono text-[11px] text-muted">{p.sku ?? '—'}</td>
@@ -160,11 +160,11 @@ export default function PartsSearch({
           </div>
         </div>
 
-        <div className="rounded-lg border border-amber-400/25 bg-amber-400/[0.04] p-5">
-          <h2 className="text-sm font-semibold text-amber-200">
+        <div className="rounded-lg border border-amber-500/35 bg-amber-50 p-5">
+          <h2 className="text-sm font-semibold text-amber-900">
             {uncovered.length} machines over $500 have no spare parts published
           </h2>
-          <p className="mt-1.5 text-xs leading-relaxed text-amber-200/70">
+          <p className="mt-1.5 text-xs leading-relaxed text-amber-900">
             Found while building the index. When one of these fails in year two, there is nothing to sell the
             customer and nothing for support to point at.
           </p>
@@ -172,10 +172,10 @@ export default function PartsSearch({
             {uncovered.slice(0, 6).map((u) => (
               <li key={u.title} className="flex items-baseline justify-between gap-3 text-xs">
                 <a href={u.url} target="_blank" rel="noopener noreferrer"
-                   className="truncate text-amber-100/90 underline decoration-amber-400/20 underline-offset-2 hover:decoration-amber-400">
+                   className="truncate text-amber-900 underline decoration-amber-600/30 underline-offset-2 hover:decoration-amber-700">
                   {u.title}
                 </a>
-                <span className="shrink-0 font-mono tabular-nums text-amber-200/60">{money(u.priceCents)}</span>
+                <span className="shrink-0 font-mono tabular-nums text-amber-700">{money(u.priceCents)}</span>
               </li>
             ))}
           </ul>

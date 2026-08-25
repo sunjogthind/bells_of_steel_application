@@ -47,14 +47,15 @@ export default function Home() {
 
   return (
     <div className="gridbg">
-      <section className="mx-auto max-w-6xl px-5 pt-20 pb-14">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel">
-          Job application portfolio
-        </p>
-        <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-6xl">
-          I built four internal tools on the
-          <span className="text-steel"> real Bells of Steel catalog</span> instead of writing a cover letter.
+      <section className="mx-auto max-w-[1280px] px-6 pb-16 pt-20">
+        <p className="eyebrow text-steelDim">Job application portfolio</p>
+
+        <h1 className="mt-5 max-w-4xl text-[clamp(40px,6vw,72px)] font-extrabold">
+          I built four internal tools on the{' '}
+          <em className="not-italic text-steelDim">real Bells of Steel catalog</em>{' '}
+          instead of writing a cover letter.
         </h1>
+
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
           For the AI &amp; Internal Tools Developer role. Everything here reads from a snapshot of the
           live storefront feed — {s.products} products, {s.variants.toLocaleString()} variants — pulled on {SNAPSHOT_DATE}.
@@ -62,45 +63,47 @@ export default function Home() {
         </p>
 
         <div className="mt-9 flex flex-wrap gap-3">
-          <Link href="/builder" className="rounded bg-steel px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-[#ef5511]">
+          <Link href="/builder"
+                className="rounded bg-steel px-6 py-3 text-[15px] font-bold text-white shadow-glow transition-all hover:-translate-y-px hover:bg-steelDim hover:shadow-glowLg">
             Start with the Gym Builder
           </Link>
-          <Link href="/build-log" className="rounded border border-line px-5 py-2.5 text-sm font-medium text-bright transition-colors hover:border-muted">
+          <Link href="/build-log"
+                className="rounded border border-lineStrong px-6 py-3 text-[15px] font-bold text-bright transition-colors hover:border-steelDim hover:text-steelDim">
             How it was built
           </Link>
           <a href="https://github.com/sunjogthind/bells_of_steel_application" target="_blank" rel="noopener noreferrer"
-             className="rounded border border-line px-5 py-2.5 text-sm font-medium text-muted transition-colors hover:border-muted hover:text-bright">
+             className="rounded border border-line px-6 py-3 text-[15px] font-semibold text-dim transition-colors hover:border-steelDim hover:text-steelDim">
             Source ↗
           </a>
         </div>
 
-        <dl className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4">
+        <dl className="mt-14 grid grid-cols-2 gap-6 border-t border-line pt-8 sm:grid-cols-4">
           {stats.map((x) => (
-            <div key={x.v} className="bg-panel px-5 py-6">
-              <dt className="font-mono text-2xl font-semibold tabular-nums text-bright sm:text-3xl">{x.k}</dt>
-              <dd className="mt-1.5 text-xs leading-snug text-muted">{x.v}</dd>
+            <div key={x.v}>
+              <dt className="stat-num text-[36px] tabular-nums">{x.k}</dt>
+              <dd className="stat-lbl mt-1.5">{x.v}</dd>
             </div>
           ))}
         </dl>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 pb-20">
-        <div className="grid gap-4 md:grid-cols-2">
+      <section className="mx-auto max-w-[1280px] px-6 pb-20">
+        <div className="grid gap-5 md:grid-cols-2">
           {DEMOS.map((d) => (
             <Link
               key={d.href}
               href={d.href}
-              className="group relative flex flex-col rounded-lg border border-line bg-panel p-6 transition-colors hover:border-steel/60"
+              className="group relative flex flex-col rounded-lg border border-line bg-ink p-7 shadow-soft transition-all hover:-translate-y-0.5 hover:border-steel/60 hover:shadow-strong"
             >
               <div className="flex items-baseline justify-between gap-4">
-                <span className="font-mono text-xs text-steel">{d.n}</span>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-muted">{d.tag}</span>
+                <span className="text-xs font-extrabold text-steelDim">{d.n}</span>
+                <span className="stat-lbl text-[11px]">{d.tag}</span>
               </div>
-              <h2 className="mt-3 text-xl font-semibold tracking-tight group-hover:text-steel transition-colors">
+              <h2 className="mt-3 text-2xl font-extrabold transition-colors group-hover:text-steelDim">
                 {d.title}
               </h2>
-              <p className="mt-2.5 text-sm leading-relaxed text-muted">{d.blurb}</p>
-              <p className="mt-4 border-t border-line pt-3 font-mono text-xs leading-relaxed text-bright/70">
+              <p className="mt-3 text-[15px] leading-relaxed text-muted">{d.blurb}</p>
+              <p className="mt-5 border-t border-line pt-4 text-sm font-semibold leading-relaxed text-steelDim">
                 {d.highlight}
               </p>
             </Link>
@@ -108,16 +111,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 pb-24">
-        <div className="rounded-lg border border-line bg-panel p-7">
-          <h2 className="text-lg font-semibold tracking-tight">Why these four</h2>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
+      <section className="mx-auto max-w-[1280px] px-6 pb-24">
+        <div className="rounded-lg border border-line bg-panel p-8">
+          <h2 className="text-2xl font-extrabold">Why these four</h2>
+          <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted">
             The job description says you build internal applications, AI-powered tools, automations and
             dashboards for every department, and that you sit with the person who has the problem before
             you ship the fix. I could not sit with anyone at Bells of Steel, so I did the next best thing:
             I read the catalog feed closely enough to find the problems from the outside.
           </p>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
+          <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted">
             The Gym Builder is the one a customer would touch. The other three are the unglamorous internal
             kind — the merch-ops dashboard, the support index, the copilot that knows when to shut up.
             That ratio is deliberate; it is roughly the ratio in the job description.

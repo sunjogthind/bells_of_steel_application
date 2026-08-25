@@ -9,7 +9,7 @@ type Props = {
 };
 
 const STROKE: Record<Verdict, string> = {
-  fits: '#4ade80', tight: '#fbbf24', no: '#f87171', unknown: '#8b8b96',
+  fits: '#15803d', tight: '#b45309', no: '#dc2626', unknown: '#6b7280',
 };
 
 /** Top-down plan and side elevation, both drawn to the same inch scale. */
@@ -34,7 +34,7 @@ export default function RoomPlan(p: Props) {
 
   return (
     <div className="grid gap-4 lg:grid-cols-[1.4fr_1fr]">
-      <figure className="rounded-lg border border-line bg-ink/60 p-3">
+      <figure className="rounded-lg border border-line bg-ink p-3">
         <figcaption className="mb-2 font-mono text-[10px] uppercase tracking-wider text-muted">
           Plan view · {(p.roomW / 12).toFixed(1)}ft × {(p.roomD / 12).toFixed(1)}ft
         </figcaption>
@@ -42,15 +42,15 @@ export default function RoomPlan(p: Props) {
              aria-label={`Top-down plan of a ${p.roomW} by ${p.roomD} inch room with the rack footprint drawn to scale`}>
           <defs>
             <pattern id="hatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0" x2="0" y2="6" stroke="#26262b" strokeWidth="3" />
+              <line x1="0" y1="0" x2="0" y2="6" stroke="#d8dde0" strokeWidth="3" />
             </pattern>
           </defs>
           <rect x={ox} y={oy} width={rw} height={rd} fill="url(#hatch)" opacity="0.55" />
-          <rect x={ox} y={oy} width={rw} height={rd} fill="none" stroke="#3c3c45" strokeWidth="1.5" />
+          <rect x={ox} y={oy} width={rw} height={rd} fill="none" stroke="#b8bfc4" strokeWidth="1.5" />
 
           {hasPlan && (
             <>
-              <rect x={ax} y={ay} width={aw} height={ad} fill={colour} fillOpacity="0.16" stroke={colour} strokeWidth="1.75" />
+              <rect x={ax} y={ay} width={aw} height={ad} fill={colour} fillOpacity="0.10" stroke={colour} strokeWidth="1.75" />
               <text x={ax + aw / 2} y={ay + ad / 2} textAnchor="middle" dominantBaseline="middle"
                     className="font-mono" fontSize="9" fill={colour}>
                 {p.rackW}&Prime; &times; {p.rackD}&Prime;
@@ -62,42 +62,45 @@ export default function RoomPlan(p: Props) {
             <g>
               <line x1={ox + (rw - BARBELL_LENGTH_IN * scale) / 2} y1={oy + rd - 30}
                     x2={ox + (rw + BARBELL_LENGTH_IN * scale) / 2} y2={oy + rd - 30}
-                    stroke="#d64000" strokeWidth="3" strokeLinecap="round" />
-              <text x={planW / 2} y={oy + rd - 15} textAnchor="middle" className="font-mono" fontSize="9" fill="#d64000">
+                    stroke="#ff4b29" strokeWidth="3" strokeLinecap="round" />
+              <text x={planW / 2} y={oy + rd - 15} textAnchor="middle" className="font-mono" fontSize="9" fill="#d63a1f">
                 7ft bar · {BARBELL_LENGTH_IN}&Prime;
               </text>
             </g>
           )}
 
-          <text x={planW / 2} y={oy - 10} textAnchor="middle" className="font-mono" fontSize="9" fill="#8b8b96">
+          <text x={planW / 2} y={oy - 10} textAnchor="middle" className="font-mono" fontSize="9" fill="#4a4a4a">
             {p.roomW}&Prime; wide
           </text>
-          <text x={ox - 12} y={oy + rd / 2} textAnchor="middle" className="font-mono" fontSize="9" fill="#8b8b96"
+          <text x={ox - 12} y={oy + rd / 2} textAnchor="middle" className="font-mono" fontSize="9" fill="#4a4a4a"
                 transform={`rotate(-90 ${ox - 12} ${oy + rd / 2})`}>
             {p.roomD}&Prime; deep
           </text>
         </svg>
       </figure>
 
-      <figure className="rounded-lg border border-line bg-ink/60 p-3">
+      <figure className="rounded-lg border border-line bg-ink p-3">
         <figcaption className="mb-2 font-mono text-[10px] uppercase tracking-wider text-muted">
           Elevation · {Math.floor(p.ceiling / 12)}ft {p.ceiling % 12}in ceiling
         </figcaption>
         <svg viewBox={`0 0 ${elW} ${elH}`} className="w-full" role="img"
              aria-label={`Side elevation comparing the rack height to a ${p.ceiling} inch ceiling`}>
-          <line x1={ex - 10} y1={ey} x2={ex + ew + 10} y2={ey} stroke="#3c3c45" strokeWidth="2" />
-          <line x1={ex - 10} y1={elH - pad} x2={ex + ew + 10} y2={elH - pad} stroke="#3c3c45" strokeWidth="2" />
-          <text x={ex + ew + 14} y={ey + 4} className="font-mono" fontSize="9" fill="#8b8b96">ceiling</text>
+          <line x1={ex - 10} y1={ey} x2={ex + ew + 10} y2={ey} stroke="#b8bfc4" strokeWidth="2" />
+          <line x1={ex - 10} y1={elH - pad} x2={ex + ew + 10} y2={elH - pad} stroke="#b8bfc4" strokeWidth="2" />
+          <text x={ex + ew + 14} y={ey + 4} className="font-mono" fontSize="9" fill="#4a4a4a">ceiling</text>
 
           {p.rackH != null ? (
             <>
               <rect x={ex + (ew - rackEw) / 2} y={elH - pad - rackEh} width={rackEw} height={rackEh}
-                    fill={colour} fillOpacity="0.16" stroke={colour} strokeWidth="1.75" />
+                    fill={colour} fillOpacity="0.10" stroke={colour} strokeWidth="1.75" />
               <text x={ex + ew / 2} y={elH - pad - rackEh / 2} textAnchor="middle" dominantBaseline="middle"
                     className="font-mono" fontSize="9" fill={colour}>{p.rackH}&Prime;</text>
               <line x1={ex + ew / 2} y1={ey} x2={ex + ew / 2} y2={elH - pad - rackEh}
                     stroke={colour} strokeWidth="1" strokeDasharray="3 3" />
-              <text x={ex + ew / 2 + 6} y={Math.min(ey, elH - pad - rackEh) + Math.abs(elH - pad - rackEh - ey) / 2}
+              <text x={ex + ew / 2 + 6}
+                    y={Math.abs(elH - pad - rackEh - ey) < 14
+                      ? ey + 18
+                      : Math.min(ey, elH - pad - rackEh) + Math.abs(elH - pad - rackEh - ey) / 2}
                     className="font-mono" fontSize="9" fill={colour}>
                 {p.ceiling - p.rackH > 0
                   ? `${p.ceiling - p.rackH}\u2033 clear`
@@ -107,7 +110,7 @@ export default function RoomPlan(p: Props) {
               </text>
             </>
           ) : (
-            <text x={elW / 2} y={elH / 2} textAnchor="middle" className="font-mono" fontSize="10" fill="#8b8b96">
+            <text x={elW / 2} y={elH / 2} textAnchor="middle" className="font-mono" fontSize="10" fill="#4a4a4a">
               height not published
             </text>
           )}

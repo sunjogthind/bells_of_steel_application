@@ -4,9 +4,9 @@ import { useMemo, useState } from 'react';
 import { answer, type Index, type Answer } from '@/lib/copilot';
 
 const CONF: Record<Answer['confidence'], { label: string; cls: string }> = {
-  high:   { label: 'Grounded', cls: 'text-emerald-300 border-emerald-400/35 bg-emerald-500/10' },
-  medium: { label: 'Check first', cls: 'text-amber-300 border-amber-400/35 bg-amber-500/10' },
-  none:   { label: 'Escalate', cls: 'text-red-300 border-red-400/35 bg-red-500/10' },
+  high:   { label: 'Grounded', cls: 'text-emerald-700 border-emerald-600/35 bg-emerald-50' },
+  medium: { label: 'Check first', cls: 'text-amber-800 border-amber-500/40 bg-amber-50' },
+  none:   { label: 'Escalate', cls: 'text-red-700 border-red-500/40 bg-red-50' },
 };
 
 export default function Copilot({ ix, tickets }: { ix: Index; tickets: { q: string; why: string }[] }) {
@@ -30,7 +30,7 @@ export default function Copilot({ ix, tickets }: { ix: Index; tickets: { q: stri
             className="flex-1 resize-none rounded border border-line bg-ink px-3.5 py-2.5 text-sm outline-none transition-colors placeholder:text-muted focus:border-steel"
           />
           <button type="submit"
-                  className="h-fit rounded bg-steel px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-[#ef5511]">
+                  className="h-fit rounded bg-steel px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-steelDim">
             Draft reply
           </button>
         </form>
@@ -42,7 +42,7 @@ export default function Copilot({ ix, tickets }: { ix: Index; tickets: { q: stri
               <button key={t.q}
                       onClick={() => { setQ(t.q); setSubmitted(t.q); }}
                       className={`rounded border p-2.5 text-left transition-colors ${
-                        submitted === t.q ? 'border-steel bg-steel/5' : 'border-line hover:border-muted'
+                        submitted === t.q ? 'border-steel bg-steelSoft' : 'border-line hover:border-muted'
                       }`}>
                 <p className="text-xs leading-snug">{t.q}</p>
                 <p className="mt-1 font-mono text-[10px] text-muted">{t.why}</p>
@@ -55,7 +55,7 @@ export default function Copilot({ ix, tickets }: { ix: Index; tickets: { q: stri
       {result && (
         <div className="grid gap-4 lg:grid-cols-[1fr_300px]">
           <div className="space-y-4">
-            <div className={`rounded-lg border p-5 ${result.escalate ? 'border-red-400/30 bg-red-500/[0.04]' : 'border-line bg-panel'}`}>
+            <div className={`rounded-lg border p-5 ${result.escalate ? 'border-red-500/35 bg-red-50' : 'border-line bg-panel'}`}>
               <div className="flex flex-wrap items-center gap-2">
                 <span className={`rounded border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${CONF[result.confidence].cls}`}>
                   {CONF[result.confidence].label}
@@ -92,7 +92,7 @@ export default function Copilot({ ix, tickets }: { ix: Index; tickets: { q: stri
             )}
           </div>
 
-          <div className="rounded-lg border border-line bg-ink/60 p-4">
+          <div className="rounded-lg border border-line bg-ink p-4">
             <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Decision trace</p>
             <ol className="mt-3 space-y-2">
               {result.trace.map((t, i) => (
@@ -103,7 +103,7 @@ export default function Copilot({ ix, tickets }: { ix: Index; tickets: { q: stri
               ))}
             </ol>
             {result.escalate && (
-              <p className="mt-4 rounded border border-red-400/25 bg-red-500/5 p-2.5 font-mono text-[10px] leading-relaxed text-red-300/80">
+              <p className="mt-4 rounded border border-red-500/30 bg-red-50 p-2.5 font-mono text-[10px] leading-relaxed text-red-800">
                 → handed to a human. No answer sent.
               </p>
             )}

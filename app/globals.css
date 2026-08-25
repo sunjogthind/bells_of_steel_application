@@ -2,29 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: dark; }
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #f6f7f8;
+  --border: #d8dde0;
+  --text: #000000;
+  --text-dim: #4a4a4a;
+  --accent: #ff4b29;
+  --accent-dark: #d63a1f;
+  --accent-glow: rgba(255, 75, 41, 0.20);
+}
 
 body {
-  background: #0a0a0b;
-  color: #f4f4f5;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Faint grid, like graph paper on a shop drawing. */
+/* Bells of Steel set headings in Rubik 800 with tight negative tracking. */
+h1, h2, h3 { letter-spacing: -0.02em; }
+h1 { letter-spacing: -0.03em; line-height: 1.05; }
+
+/* Their uppercase label treatment, used for eyebrows and stat captions. */
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  font-size: 12px;
+}
+.stat-num {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--accent-dark);
+}
+.stat-lbl {
+  font-size: 13px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
 .gridbg {
   background-image:
-    linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
   background-size: 44px 44px;
 }
 
-.hairline { border: 1px solid #26262b; }
-
 ::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: #0a0a0b; }
-::-webkit-scrollbar-thumb { background: #2c2c33; border-radius: 6px; }
-::-webkit-scrollbar-thumb:hover { background: #3c3c45; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: #c6ccd1; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-strong, #b8bfc4); }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }

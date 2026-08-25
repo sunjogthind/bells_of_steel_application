@@ -111,7 +111,7 @@ export default function Page() {
                   <p className="font-mono text-[10px] uppercase tracking-wider text-steel">How it got caught</p>
                   <p className="mt-1.5 text-sm leading-relaxed text-muted">{b.fix}</p>
                 </div>
-                <p className="rounded border border-line bg-ink/40 p-3 text-sm italic leading-relaxed text-bright/75">
+                <p className="rounded border border-line bg-ink p-3 text-sm italic leading-relaxed text-dim">
                   {b.lesson}
                 </p>
               </div>
@@ -134,7 +134,7 @@ export default function Page() {
           Five build-time steps. Nothing is fetched at runtime, so the deployed site is fully static and
           the {s.products}-product feed never reaches the browser.
         </p>
-        <pre className="mt-4 overflow-x-auto rounded-lg border border-line bg-ink/60 p-4 font-mono text-[11px] leading-relaxed text-muted">
+        <pre className="mt-4 overflow-x-auto rounded-lg border border-line bg-ink p-4 font-mono text-[11px] leading-relaxed text-muted">
 {`fetch-catalog  →  products.json, paginated, 600ms apart   →  data/catalog-raw.json  (4.4 MB)
 normalize      →  spec extraction + data-issue flags      →  data/catalog.json      (1.0 MB)
 audit          →  12 catalog-health rules                 →  data/audit.json

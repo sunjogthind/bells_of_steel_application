@@ -19,7 +19,7 @@ export default function Page() {
         </p>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
           Every dimension is labelled with where it came from — the product page, our estimate, or
-          <span className="text-red-400"> not published at all</span>. When Bells of Steel doesn&rsquo;t
+          <span className="text-red-600"> not published at all</span>. When Bells of Steel doesn&rsquo;t
           publish a number, the tool says so instead of guessing. Snapshot: {SNAPSHOT_DATE}.
         </p>
       </div>

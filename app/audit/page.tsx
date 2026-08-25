@@ -6,9 +6,9 @@ export const metadata = { title: 'Catalog Audit — Rana Thind × Bells of Steel
 type Sev = 'critical' | 'high' | 'medium' | 'low';
 
 const SEV: Record<Sev, { label: string; cls: string; bar: string }> = {
-  critical: { label: 'Critical', cls: 'text-red-300 border-red-400/40 bg-red-500/15', bar: 'bg-red-400' },
-  high:     { label: 'High',     cls: 'text-orange-300 border-orange-400/40 bg-orange-500/15', bar: 'bg-orange-400' },
-  medium:   { label: 'Medium',   cls: 'text-amber-300 border-amber-400/40 bg-amber-500/10', bar: 'bg-amber-400' },
+  critical: { label: 'Critical', cls: 'text-red-700 border-red-500/40 bg-red-50', bar: 'bg-red-500' },
+  high:     { label: 'High',     cls: 'text-orange-700 border-orange-500/40 bg-orange-50', bar: 'bg-orange-500' },
+  medium:   { label: 'Medium',   cls: 'text-amber-800 border-amber-400/40 bg-amber-50', bar: 'bg-amber-500' },
   low:      { label: 'Low',      cls: 'text-muted border-line bg-panel', bar: 'bg-muted' },
 };
 
@@ -59,7 +59,7 @@ export default function Page() {
                 </summary>
 
                 <div className="space-y-4 border-t border-line px-5 py-5">
-                  <p className="text-sm leading-relaxed text-bright/85">{f.summary}</p>
+                  <p className="text-sm leading-relaxed text-dim">{f.summary}</p>
 
                   <div>
                     <p className="font-mono text-[10px] uppercase tracking-wider text-steel">Why it matters</p>
@@ -72,7 +72,7 @@ export default function Page() {
                   </div>
 
                   {f.verified && (
-                    <p className="rounded border border-emerald-400/25 bg-emerald-400/5 p-3 font-mono text-[11px] leading-relaxed text-emerald-300/80">
+                    <p className="rounded border border-emerald-600/30 bg-emerald-50 p-3 font-mono text-[11px] leading-relaxed text-emerald-800">
                       ✓ {f.verified}
                     </p>
                   )}
@@ -102,7 +102,7 @@ export default function Page() {
                                 )}
                               </td>
                               <td className="py-2 pr-4 font-mono text-[11px] text-muted">{e.detail}</td>
-                              <td className="py-2 text-right font-mono text-[11px] text-amber-300/80">{e.delta}</td>
+                              <td className="py-2 text-right font-mono text-[11px] text-amber-800">{e.delta}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -121,7 +121,7 @@ export default function Page() {
           <ul className="mt-3 space-y-2">
             {clean.map((c: any) => (
               <li key={c.label} className="flex gap-2.5 text-xs leading-relaxed">
-                <span className="mt-[3px] text-emerald-400">✓</span>
+                <span className="mt-[3px] text-emerald-700">✓</span>
                 <span><span className="text-bright">{c.label}.</span> <span className="text-muted">{c.detail}</span></span>
               </li>
             ))}

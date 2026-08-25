@@ -9,9 +9,9 @@ const money = (c: number | null) =>
   c == null ? '—' : `$${(c / 100).toLocaleString('en-CA', { maximumFractionDigits: 0 })}`;
 
 const VERDICT_UI: Record<Verdict, { label: string; cls: string; dot: string }> = {
-  fits:    { label: 'Fits',          cls: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/10', dot: 'bg-emerald-400' },
-  tight:   { label: 'Tight',         cls: 'text-amber-400 border-amber-400/30 bg-amber-400/10',       dot: 'bg-amber-400' },
-  no:      { label: "Won't fit",     cls: 'text-red-400 border-red-400/30 bg-red-400/10',             dot: 'bg-red-400' },
+  fits:    { label: 'Fits',          cls: 'text-emerald-700 border-emerald-600/30 bg-emerald-50', dot: 'bg-emerald-600' },
+  tight:   { label: 'Tight',         cls: 'text-amber-700 border-amber-500/40 bg-amber-50',       dot: 'bg-amber-500' },
+  no:      { label: "Won't fit",     cls: 'text-red-600 border-red-500/35 bg-red-50',             dot: 'bg-red-500' },
   unknown: { label: 'Can’t verify', cls: 'text-muted border-line bg-panel',                      dot: 'bg-muted' },
 };
 
@@ -23,9 +23,9 @@ const PRESETS = [
 ];
 
 const SOURCE_BADGE: Record<string, { t: string; cls: string }> = {
-  copy:      { t: 'from product page', cls: 'text-emerald-400/80' },
-  estimated: { t: 'our estimate',      cls: 'text-amber-400/80' },
-  unknown:   { t: 'not published',     cls: 'text-red-400/80' },
+  copy:      { t: 'from product page', cls: 'text-emerald-700/80' },
+  estimated: { t: 'our estimate',      cls: 'text-amber-700' },
+  unknown:   { t: 'not published',     cls: 'text-red-600/80' },
 };
 
 export default function Builder({
@@ -108,7 +108,7 @@ export default function Builder({
               onClick={() => { setCeiling(p.ceiling); setW(p.w); setD(p.d); }}
               className={`rounded border px-2.5 py-1 text-xs transition-colors ${
                 ceiling === p.ceiling && w === p.w && d === p.d
-                  ? 'border-steel bg-steel/15 text-steel'
+                  ? 'border-steel bg-steelSoft text-steel'
                   : 'border-line text-muted hover:border-muted hover:text-bright'
               }`}
             >
@@ -171,7 +171,7 @@ export default function Builder({
                 onClick={() => setSelectedId(active ? null : rack.id)}
                 aria-label={`${rack.title} — ${ui.label}`}
                 className={`w-full rounded-lg border p-3 text-left transition-colors ${
-                  active ? 'border-steel bg-steel/5' : 'border-line bg-panel hover:border-muted'
+                  active ? 'border-steel bg-steelSoft' : 'border-line bg-panel hover:border-muted'
                 }`}
               >
                 <div className="flex items-start justify-between gap-3">
@@ -257,7 +257,7 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
             const ui = VERDICT_UI[c.verdict];
             const sb = SOURCE_BADGE[c.source];
             return (
-              <li key={c.label} className="rounded border border-line bg-ink/40 p-3">
+              <li key={c.label} className="rounded border border-line bg-ink p-3">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${ui.dot}`} />
                   <span className="text-sm font-medium">{c.label}</span>
@@ -283,7 +283,7 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
           </p>
         </div>
         {att.length === 0 ? (
-          <p className="mt-3 rounded border border-amber-400/25 bg-amber-400/5 p-3 text-xs leading-relaxed text-amber-200/80">
+          <p className="mt-3 rounded border border-amber-500/35 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">
             Bells of Steel publishes no attachment compatibility tags for this rack, so this tool will not
             claim anything bolts onto it. For the Residential line specifically, that mapping does not exist
             in the catalog feed at all.
@@ -292,7 +292,7 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
           <div className="mt-3 grid gap-1.5 sm:grid-cols-2">
             {att.map((a) => (
               <label key={a.id}
-                     className="flex cursor-pointer items-center gap-2.5 rounded border border-line bg-ink/40 p-2.5 transition-colors hover:border-muted">
+                     className="flex cursor-pointer items-center gap-2.5 rounded border border-line bg-ink p-2.5 transition-colors hover:border-muted">
                 <input type="checkbox" checked={cart.includes(a.id)} onChange={() => toggle(a.id)} className="accent-steel" />
                 <span className="min-w-0 flex-1 truncate text-xs">{a.title}</span>
                 <span className="shrink-0 font-mono text-xs tabular-nums text-muted">{money(a.priceCents)}</span>
@@ -314,7 +314,7 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
               <div className="mt-1.5 grid gap-1.5 sm:grid-cols-2">
                 {g.items.slice(0, 4).map((i) => (
                   <label key={i.id}
-                         className="flex cursor-pointer items-center gap-2.5 rounded border border-line bg-ink/40 p-2.5 transition-colors hover:border-muted">
+                         className="flex cursor-pointer items-center gap-2.5 rounded border border-line bg-ink p-2.5 transition-colors hover:border-muted">
                     <input type="checkbox" checked={cart.includes(i.id)} onChange={() => toggle(i.id)} className="accent-steel" />
                     <span className="min-w-0 flex-1 truncate text-xs">{i.title}</span>
                     <span className="shrink-0 font-mono text-xs tabular-nums text-muted">{money(i.priceCents)}</span>
@@ -327,7 +327,7 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
       </div>
 
       <div className={`sticky bottom-4 rounded-lg border p-4 backdrop-blur ${
-        overBudget ? 'border-red-400/40 bg-red-400/10' : 'border-steel/40 bg-steel/10'
+        overBudget ? 'border-red-500/40 bg-red-50' : 'border-steel/40 bg-steelSoft'
       }`}>
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
@@ -336,7 +336,7 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
             </p>
             <p className="font-mono text-2xl font-semibold tabular-nums">{money(cartTotal)}</p>
           </div>
-          <p className={`font-mono text-xs ${overBudget ? 'text-red-400' : 'text-emerald-400'}`}>
+          <p className={`font-mono text-xs ${overBudget ? 'text-red-600' : 'text-emerald-700'}`}>
             {overBudget
               ? `${money(cartTotal - budget * 100)} over your $${budget.toLocaleString()} budget`
               : `${money(budget * 100 - cartTotal)} left of $${budget.toLocaleString()}`}
