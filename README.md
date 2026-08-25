@@ -3,7 +3,7 @@
 Four working internal tools built on the live Bells of Steel product catalog, for the
 **AI & Internal Tools Developer** application.
 
-**Live:** https://bos-portfolio.vercel.app
+**Live:** https://bells-of-steel-portfolio-rana-thind.vercel.app
 **Source:** https://github.com/sunjogthind/bells_of_steel_application
 
 > Independent demonstration by Rana Thind. Not affiliated with, endorsed by, or an official
