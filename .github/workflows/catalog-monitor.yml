@@ -1,0 +1,84 @@
+name: Catalog monitor
+
+# Re-pulls the Bells of Steel storefront feed, re-derives every dataset, and
+# commits the day's snapshot so the drift history is real rather than seeded.
+# Two requests per run, 600ms apart, with an identifying User-Agent.
+
+on:
+  schedule:
+    - cron: '0 13 * * *'   # 07:00 America/Edmonton
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: catalog-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Re-pull the catalog and diff it
+        id: run
+        run: |
+          npm run refresh-catalog | tee monitor.log
+          alerts=$(node -e "
+            const r = require('./data/monitor.json').runs[0];
+            process.stdout.write(String(r.bySeverity.alert + r.bySeverity.notable));
+          ")
+          echo "alerts=$alerts" >> "$GITHUB_OUTPUT"
+          echo "changes=$(node -e "process.stdout.write(String(require('./data/monitor.json').runs[0].changeCount))")" >> "$GITHUB_OUTPUT"
+
+      - name: Commit the snapshot
+        run: |
+          git config user.name  "catalog-monitor"
+          git config user.email "actions@github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "Catalog unchanged — nothing to commit."
+          else
+            git commit -m "Catalog snapshot $(date -I) (${{ steps.run.outputs.changes }} changes)"
+            git push
+          fi
+
+      # In a real deployment this posts to the team's Slack channel. Without a
+      # webhook configured it degrades to a job summary rather than failing.
+      - name: Report
+        if: always()
+        run: |
+          {
+            echo "### Catalog monitor — $(date -I)"
+            echo ""
+            echo "- Changes detected: **${{ steps.run.outputs.changes }}**"
+            echo "- Needing attention: **${{ steps.run.outputs.alerts }}**"
+            echo ""
+            echo '```'
+            tail -20 monitor.log || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Alert Slack
+        if: steps.run.outputs.alerts != '0' && env.SLACK_WEBHOOK != ''
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        run: |
+          node -e "
+            const r = require('./data/monitor.json').runs[0];
+            const lines = r.changes
+              .filter(c => c.severity === 'alert' || c.severity === 'notable')
+              .map(c => '• *' + c.title + '* — ' + c.detail)
+              .join('\n');
+            console.log(JSON.stringify({ text: 'Catalog monitor: ' + r.changeCount + ' change(s)\n' + lines }));
+          " > alert.json
+          curl -sS -X POST -H 'Content-Type: application/json' -d @alert.json "$SLACK_WEBHOOK"

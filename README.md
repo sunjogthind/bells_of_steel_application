@@ -16,8 +16,8 @@ Four working internal tools built on the live Bells of Steel product catalog, fo
 |---|---|---|
 | 01 | **Gym Builder** | Answers "will it fit in my basement" against 20 real rack models, drawn to scale, then shows only the attachments their own `hgb_` compatibility tags say will bolt on. |
 | 02 | **Catalog Audit** | Twelve data-health rules against the real feed. Found 16 rack models listed twice at two different prices, a corrupted vendor field, and 29 freight items shipping with no weight. |
-| 03 | **Parts Finder** | Flattens 68 spare parts buried inside 29 parent products into one plain-language searchable index. Also surfaces 15 machines over $500 with no spare parts published at all. |
-| 04 | **CS Copilot** | Drafts grounded replies with citations, and escalates to a human when the catalog cannot support an answer. No language model at runtime — deliberately. |
+| 03 | **Catalog Monitor** | A scheduled job that re-pulls the feed every morning, diffs it against the previous run, and reports only what moved. Runs unattended in GitHub Actions and commits each snapshot, so the drift history is real. Emits a BigQuery-shaped time series. |
+| 04 | **CS Copilot** | Drafts grounded replies with citations, and escalates to a human when the catalog cannot support an answer. Sits on a flattened index of all 68 spare parts. No language model at runtime — deliberately. |
 
 ## Notable findings
 
@@ -35,6 +35,8 @@ Everything below is against the real catalog and verified live:
   to their own builder for half the racks it fits.
 - **The Residential rack line publishes no dimensions anywhere** — the cheapest, most
   beginner-facing racks, bought by exactly the people working around a low basement ceiling.
+- **15 serviceable machines over $500 have no spare parts published**, the most expensive
+  being a $5,000 treadmill.
 
 ## Running it
 
@@ -48,9 +50,14 @@ npm run refresh-catalog # re-pull the feed and re-derive everything
 
 No API keys. No runtime services. The deployed site is fully static.
 
+The monitor also runs on a daily cron in GitHub Actions
+([`.github/workflows/catalog-monitor.yml`](./.github/workflows/catalog-monitor.yml)), re-pulling the
+feed, committing the day's snapshot, and posting alerts to Slack when a `SLACK_WEBHOOK` secret is set.
+Two polite requests per day with an identifying User-Agent.
+
 ## How it is put together
 
-`scripts/` is a five-step build-time pipeline that turns the raw storefront feed into small
+`scripts/` is a six-step build-time pipeline that turns the raw storefront feed into small
 derived datasets. `lib/` is pure logic shared by server and client. `app/` is one route per
 tool, with server components trimming data before it reaches the browser — the 4.4 MB raw
 feed never ships.

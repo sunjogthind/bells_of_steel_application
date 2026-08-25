@@ -31,11 +31,10 @@ function score(part: Part, q: string, expanded: string[]) {
   return s;
 }
 
-export default function PartsSearch({
-  parts, symptoms, uncovered, skuGrammar,
+export default function PartsIndex({
+  parts, symptoms, skuGrammar,
 }: {
   parts: Part[]; symptoms: Symptom[];
-  uncovered: { title: string; type: string; priceCents: number; url: string }[];
   skuGrammar: { total: number; prefixed: number; topMachineCodes: [string, number][] };
 }) {
   const [q, setQ] = useState('');
@@ -143,8 +142,7 @@ export default function PartsSearch({
         </div>
       )}
 
-      <div className="grid gap-4 lg:grid-cols-2">
-        <div className="rounded-lg border border-line bg-panel p-5">
+      <div className="rounded-lg border border-line bg-panel p-5">
           <h2 className="text-sm font-semibold">The SKU convention, written down</h2>
           <p className="mt-1.5 text-xs leading-relaxed text-muted">
             All {skuGrammar.prefixed} of {skuGrammar.total} part SKUs follow{' '}
@@ -158,28 +156,6 @@ export default function PartsSearch({
               </span>
             ))}
           </div>
-        </div>
-
-        <div className="rounded-lg border border-amber-500/35 bg-amber-50 p-5">
-          <h2 className="text-sm font-semibold text-amber-900">
-            {uncovered.length} machines over $500 have no spare parts published
-          </h2>
-          <p className="mt-1.5 text-xs leading-relaxed text-amber-900">
-            Found while building the index. When one of these fails in year two, there is nothing to sell the
-            customer and nothing for support to point at.
-          </p>
-          <ul className="mt-3 space-y-1">
-            {uncovered.slice(0, 6).map((u) => (
-              <li key={u.title} className="flex items-baseline justify-between gap-3 text-xs">
-                <a href={u.url} target="_blank" rel="noopener noreferrer"
-                   className="truncate text-amber-900 underline decoration-amber-600/30 underline-offset-2 hover:decoration-amber-700">
-                  {u.title}
-                </a>
-                <span className="shrink-0 font-mono tabular-nums text-amber-700">{money(u.priceCents)}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const NAV = [
   { href: '/builder', label: 'Gym Builder' },
   { href: '/audit', label: 'Catalog Audit' },
-  { href: '/parts', label: 'Parts Finder' },
+  { href: '/monitor', label: 'Monitor' },
   { href: '/copilot', label: 'CS Copilot' },
   { href: '/build-log', label: 'Build Log' },
 ];

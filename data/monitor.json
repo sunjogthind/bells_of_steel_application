@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-08-25T23:44:54.031Z",
+  "runs": [
+    {
+      "at": "2026-08-25T23:44:53.578Z",
+      "date": "2026-08-25",
+      "baseline": false,
+      "comparedTo": "2026-08-25T22:29:34.728Z",
+      "productCount": 476,
+      "changeCount": 0,
+      "bySeverity": {
+        "alert": 0,
+        "notable": 0,
+        "good": 0,
+        "info": 0
+      },
+      "changes": [],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "fake-sale": 8,
+        "oos-published": 56,
+        "taxonomy": 107,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
+    {
+      "at": "2026-08-25T22:29:34.728Z",
+      "date": "2026-08-25",
+      "baseline": true,
+      "comparedTo": null,
+      "productCount": 476,
+      "changeCount": 0,
+      "bySeverity": {
+        "alert": 0,
+        "notable": 0,
+        "good": 0,
+        "info": 0
+      },
+      "changes": [],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "fake-sale": 8,
+        "oos-published": 56,
+        "taxonomy": 107,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    }
+  ]
+}

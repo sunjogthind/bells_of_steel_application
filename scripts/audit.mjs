@@ -3,6 +3,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 
 const raw = JSON.parse(readFileSync('data/catalog-raw.json', 'utf8'));
+const partsData = JSON.parse(readFileSync('data/parts.json', 'utf8'));
 const P = raw.products;
 const url = (h) => `https://bellsofsteel.com/products/${h}`;
 const strip = (h) => (h || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
@@ -218,6 +219,24 @@ const add = (f) => findings.push(f);
         delta: 'invisible to builder', links: [url(r.p.handle)],
       })),
     ],
+  });
+}
+
+/* 8c -------- serviceable machines with nothing to repair them -------- */
+{
+  const un = partsData.uncovered ?? [];
+  const worst = un[0];
+  add({
+    id: 'parts-coverage', severity: 'high',
+    title: 'Expensive machines have no spare parts published',
+    count: un.length, unit: 'machines over $500',
+    summary: `Bells of Steel publishes ${partsData.partCount} spare parts covering ${partsData.productCount} products. ${un.length} serviceable machines priced over $500 are not among them${worst ? `, the most expensive being the ${worst.title} at $${(worst.priceCents / 100).toFixed(0)}` : ''}.`,
+    impact: 'A treadmill or a leg press that fails in year two has nothing to sell the customer and nothing for support to point at. That is a warranty conversation with no good ending, on the highest-ticket items in the range — and spare parts are a margin-rich revenue line being left on the table.',
+    fix: 'Work down this list by price. Every machine over $1,000 should have at least its wear parts - pads, cables, bushings - published before the next warranty season.',
+    evidence: un.slice(0, 10).map((u) => ({
+      label: u.title, detail: u.type ?? 'machine',
+      delta: `$${(u.priceCents / 100).toFixed(0)}`, links: [u.url],
+    })),
   });
 }
 

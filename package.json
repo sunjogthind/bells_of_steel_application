@@ -6,7 +6,7 @@
     "dev": "next dev -p 3111",
     "build": "next build",
     "start": "next start",
-    "refresh-catalog": "node scripts/fetch-catalog.mjs && node scripts/normalize.mjs"
+    "refresh-catalog": "node scripts/fetch-catalog.mjs && node scripts/normalize.mjs && node scripts/parts.mjs && node scripts/audit.mjs && node scripts/copilot.mjs && node scripts/monitor.mjs"
   },
   "dependencies": {
     "next": "14.2.15",

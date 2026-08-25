@@ -38,12 +38,14 @@ Findings in the audit are assertions about a real company's live store. Before a
 ## Layout
 
 ```
-scripts/          Build-time pipeline. Run in order; each writes to data/.
+scripts/          Build-time pipeline. Order matters; each writes to data/.
   fetch-catalog   Pulls products.json (paginated, 600ms apart, identifies itself)
   normalize       Raw feed -> shared shape, extracts specs, flags data issues
-  audit           Catalog-health findings -> data/audit.json
   parts           Flattens spare-part variants -> data/parts.json
+  audit           Catalog-health findings -> data/audit.json  (reads parts.json)
   copilot         Retrieval index + IDF table -> data/copilot.json
+  monitor         Fingerprints, diffs against the last run, appends history
+                  -> data/snapshots/<iso>.json, data/monitor.json, data/timeseries.csv
 
 lib/              Pure logic, no I/O. Runs identically on server and client.
   fit.ts          Fit engine + the hgb_ compatibility graph
@@ -53,7 +55,13 @@ app/              One route per demo. Server components read data/, pass trimmed
                   props to client components. The 4MB raw feed never ships.
 ```
 
-`npm run refresh-catalog` re-pulls and re-derives everything.
+`npm run refresh-catalog` runs the whole pipeline in order. The daily GitHub Actions
+workflow calls exactly this, so anything that breaks locally breaks the cron too.
+
+Snapshots in `data/snapshots/` are append-only history. Never edit or delete one to make
+a chart look better — the honesty of the drift history is the entire point of the monitor.
+A run with zero changes is a correct and expected result, and the UI says so rather than
+padding it.
 
 ## Bells of Steel domain notes
 

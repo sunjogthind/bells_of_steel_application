@@ -45,6 +45,13 @@ const BROKE = [
     fix: `It refused to. The Hydra Half Rack has 84" uprights and clears that ceiling, so the whole-family branch correctly declined and fell through to a generic message. I rewrote it to state the actual reason — 8 racks with 90" uprights need 92" — which is both true and more useful than the sentence I wanted.`,
     lesson: 'I wrote a guard against overclaiming and then got caught by it. That is the guard working.',
   },
+  {
+    n: '07',
+    title: 'Six routes returned HTTP 200 and the site was completely inaccessible',
+    body: `After renaming the Vercel project, every route on the new URL returned 200. I nearly stopped there. The body of those responses was Vercel's own login page — the site was behind an authentication wall and every visitor would have hit a sign-in screen.`,
+    fix: `Caught it by grepping the response body for the page title instead of trusting the status code. The cause: Vercel's deployment protection exempts only the project's originally-assigned production domain, and renaming does not move that exemption to the new aliases. Fixed by registering the new domain to the project explicitly.`,
+    lesson: 'A 200 means the server answered, not that it answered with your site. Assert on content, not on status.',
+  },
 ];
 
 const DECISIONS = [
@@ -67,8 +74,8 @@ export default function Page() {
   const stats = [
     { k: '2,454', v: 'lines of TypeScript' },
     { k: '20', v: 'source files' },
-    { k: '5', v: 'build-time pipeline steps' },
-    { k: '6', v: 'bugs worth writing down' },
+    { k: '6', v: 'build-time pipeline steps' },
+    { k: '7', v: 'bugs worth writing down' },
   ];
 
   return (
@@ -79,7 +86,7 @@ export default function Page() {
         <p className="mt-4 leading-relaxed text-muted">
           Four tools, one shared data layer, built with Claude Code in the terminal against a snapshot
           of the Bells of Steel storefront feed taken {SNAPSHOT_DATE}. The interesting part was not the
-          building. It was the six times I was wrong.
+          building. It was the seven times I was wrong.
         </p>
 
         <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4">
@@ -131,15 +138,17 @@ export default function Page() {
 
         <h2 className="mt-12 text-xl font-semibold tracking-tight">The pipeline</h2>
         <p className="mt-2 text-sm leading-relaxed text-muted">
-          Five build-time steps. Nothing is fetched at runtime, so the deployed site is fully static and
+          Six build-time steps. Nothing is fetched at runtime, so the deployed site is fully static and
           the {s.products}-product feed never reaches the browser.
         </p>
         <pre className="mt-4 overflow-x-auto rounded-lg border border-line bg-ink p-4 font-mono text-[11px] leading-relaxed text-muted">
 {`fetch-catalog  →  products.json, paginated, 600ms apart   →  data/catalog-raw.json  (4.4 MB)
 normalize      →  spec extraction + data-issue flags      →  data/catalog.json      (1.0 MB)
-audit          →  12 catalog-health rules                 →  data/audit.json
 parts          →  68 spare parts + coverage gaps          →  data/parts.json
-copilot        →  retrieval index + IDF table             →  data/copilot.json`}
+audit          →  13 catalog-health rules                 →  data/audit.json
+copilot        →  retrieval index + IDF table             →  data/copilot.json
+monitor        →  fingerprint, diff vs. last run          →  data/monitor.json
+                                                          →  data/timeseries.csv`}
         </pre>
 
         <div className="mt-10 rounded-lg border border-line bg-panel p-5">

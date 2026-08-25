@@ -19,18 +19,18 @@ const DEMOS = [
     highlight: 'Real findings against the real catalog.',
   },
   {
-    href: '/parts',
+    href: '/monitor',
     n: '03',
-    title: 'Parts Finder',
-    blurb: 'Twenty-nine spare-parts products hide behind variant names like "Bolt M10x40". This turns them into a searchable index a support rep can use without knowing the SKU scheme.',
-    tag: 'Internal · Support',
-    highlight: 'Ticket deflection for warranty and replacement requests.',
+    title: 'Catalog Monitor',
+    blurb: 'The audit says what is broken today. This is what stops it coming back — a scheduled job that re-pulls the feed every morning, diffs it against yesterday, and reports only what actually moved.',
+    tag: 'Internal · Automation',
+    highlight: 'Runs unattended in GitHub Actions. The history is real, not seeded.',
   },
   {
     href: '/copilot',
     n: '04',
     title: 'CS Copilot',
-    blurb: 'Answers customer questions from the catalog and shows exactly which products it pulled, what it is confident about, and when it should hand off to a human instead of guessing.',
+    blurb: 'Answers customer questions from the catalog, shows exactly which products it pulled, and hands off to a human rather than guessing. Sits on a flattened index of all 68 spare parts, searchable in plain language.',
     tag: 'Internal · AI with guardrails',
     highlight: 'Retrieval runs live. Nothing is invented.',
   },
@@ -122,8 +122,9 @@ export default function Home() {
           </p>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted">
             The Gym Builder is the one a customer would touch. The other three are the unglamorous internal
-            kind — the merch-ops dashboard, the support index, the copilot that knows when to shut up.
-            That ratio is deliberate; it is roughly the ratio in the job description.
+            kind — the merch-ops dashboard, the job that runs at 7am so nobody has to remember to look, and
+            the copilot that knows when to shut up. That ratio is deliberate; it is roughly the ratio in the
+            job description.
           </p>
         </div>
       </section>

@@ -1,12 +1,15 @@
 import copilot from '@/data/copilot.json';
+import parts from '@/data/parts.json';
 import { SNAPSHOT_DATE } from '@/lib/catalog';
 import Copilot from './Copilot';
+import PartsIndex from './PartsIndex';
 import type { Index } from '@/lib/copilot';
 
 export const metadata = { title: 'CS Copilot — Rana Thind × Bells of Steel' };
 
 export default function Page() {
   const d = copilot as any;
+  const pd = parts as any;
   const ix: Index = { docs: d.docs, idf: d.idf, parts: d.parts, dupPrices: d.dupPrices };
 
   return (
@@ -37,6 +40,26 @@ export default function Page() {
 
         <div className="mt-8">
           <Copilot ix={ix} tickets={d.tickets} />
+        </div>
+
+        <div className="mt-16 border-t border-line pt-12">
+          <p className="eyebrow text-steelDim">The lookup layer underneath</p>
+          <h2 className="mt-3 text-2xl font-extrabold sm:text-3xl">Parts index</h2>
+          <p className="mt-3 max-w-3xl leading-relaxed text-muted">
+            When the copilot answers a parts question it searches this. Bells of Steel sells{' '}
+            {pd.partCount} individual spare parts, but they are buried as variants inside {pd.productCount}{' '}
+            parent products with names like &ldquo;FID Bench Spare Parts&rdquo; — a customer writing in about
+            a torn bench pad cannot find one, and neither can a new support rep.
+          </p>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
+            Flattened into one index, searchable in plain language, and browsable directly for the times a rep
+            would rather look than ask. Matching is deterministic, so it can rank results but cannot invent a
+            part number that does not exist.
+          </p>
+
+          <div className="mt-6">
+            <PartsIndex parts={pd.parts} symptoms={pd.symptoms} skuGrammar={pd.skuGrammar} />
+          </div>
         </div>
       </div>
     </div>
