@@ -152,7 +152,7 @@ jobs:
   monitor:
     steps:
       - run: npm run refresh-catalog
-      - run: git commit -am "Catalogue snapshot $(date -I)"
+      - run: git commit -am "Catalog snapshot $(date -I)"
       - if: steps.monitor.outputs.alerts != '0'
         run: curl -X POST "$SLACK_WEBHOOK" -d @alert.json`}
         </pre>
