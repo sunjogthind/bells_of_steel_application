@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <div className="gridbg">
       <div className="mx-auto max-w-[1180px] px-6 py-12">
-        <p className="eyebrow text-steelDim">Demo 05 · Product concept · RAG</p>
+        <p className="eyebrow text-steelDim">Demo 05 · Product concept · Retrieval-augmented generation</p>
         <h1 className="mt-4 text-[clamp(32px,4.5vw,52px)] font-extrabold">Spotter</h1>
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
           A coach that reads your signup profile in plain language, writes a program using only the
@@ -80,6 +80,7 @@ export default function Page() {
             ['2 · Hybrid retrieval', 'BM25 over the corpus (k1 1.5, b 0.75, precomputed IDF) plus a concept-expansion pass that maps everyday words onto the corpus vocabulary. Expansion terms score at a 0.35 discount because they were inferred rather than said.'],
             ['3 · Structured rerank', 'Retrieved exercises are reweighted by whether you own the equipment and whether the difficulty suits your experience. This is where a general fitness bot cannot follow — it does not know your gym.'],
             ['4 · Constrained synthesis', 'The program is assembled deterministically from retrieved candidates against a split template. Patterns with no available exercise become an explicit gap, resolved to the cheapest real product that closes it.'],
+            ['5 · Generation, then verification', 'With a key configured, Claude Opus 5 receives the facts already derived and the documents already retrieved, and rewrites them as prose. The output is then checked back against that context: any price or set-and-rep scheme it names that was not in the input gets the whole generation discarded and the deterministic text kept.'],
           ].map(([h, b]) => (
             <div key={h} className="rounded-lg border border-line bg-panel p-5">
               <p className="font-bold">{h}</p>
@@ -90,18 +91,26 @@ export default function Page() {
 
         <div className="mt-6 grid gap-4 lg:grid-cols-2">
           <div className="rounded-lg border border-line bg-panel p-5">
-            <p className="stat-lbl">Where a model plugs in</p>
+            <p className="stat-lbl">The model, and what it is not allowed to do</p>
             <p className="mt-2 text-[15px] leading-relaxed text-muted">
-              Everything above runs with no model and no API key, which is why this page cannot hallucinate a
-              rep scheme or invent a product. Generation is the last step and the only one a model would touch:
-              hand Claude the same retrieved context and let it write warmer prose.
+              Toggle <span className="font-semibold text-bright">Compose with Claude</span> above and the
+              reply is written by Claude Opus 5 — genuinely generative, and genuinely retrieval-augmented.
+              Steps 1 through 4 still run first and unchanged. The model receives the facts already derived
+              and the documents already retrieved; it decides the wording and nothing else.
             </p>
             <p className="mt-2 text-[15px] leading-relaxed text-muted">
-              What the reply is <span className="font-semibold text-bright">allowed to say</span> is decided
-              before either path runs. That is the whole point — the model becomes a presentation layer, not a
-              source of truth.
+              Then its output is checked against that same context. If it names a price or a set scheme that
+              was not in the input, the generation is thrown away and you get the deterministic text with a
+              note saying why. The guard has its own test suite —{' '}
+              <code className="text-steelDim">npm run test:guard</code> — because a guard that wrongly
+              rejects good output fails silently and looks like the feature never worked.
+            </p>
+            <p className="mt-2 text-[15px] leading-relaxed text-muted">
+              With no key configured the page degrades to the deterministic composer and says so. Nothing
+              about the demo breaks; the prose just gets flatter.
             </p>
           </div>
+
           <div className="rounded-lg border border-line bg-panel p-5">
             <p className="stat-lbl">Two things it refuses to do</p>
             <ul className="mt-2 space-y-2 text-[15px] leading-relaxed text-muted">

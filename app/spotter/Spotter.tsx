@@ -13,7 +13,14 @@ const STARTERS = [
   { t: 'What should I buy next?', why: 'gap → real catalog product' },
 ];
 
-type Turn = { role: 'user' | 'spotter'; text: string[]; reply?: Reply };
+type Turn = {
+  role: 'user' | 'spotter';
+  text: string[];
+  reply?: Reply;
+  composedBy?: 'deterministic' | 'claude';
+  note?: string;
+  usage?: { input: number | null; output: number | null } | null;
+};
 
 export default function Spotter({ ix }: { ix: SpotterIndex }) {
   const [state, setState] = useState<State>(INITIAL_STATE);
@@ -26,17 +33,51 @@ export default function Spotter({ ix }: { ix: SpotterIndex }) {
   }]);
   const [input, setInput] = useState('');
   const [showTrace, setShowTrace] = useState(true);
+  const [useClaude, setUseClaude] = useState(false);
+  const [busy, setBusy] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, [turns]);
 
-  const send = (raw: string) => {
+  const send = async (raw: string) => {
     const text = raw.trim();
-    if (!text) return;
+    if (!text || busy) return;
+
+    // Retrieval, safety and synthesis happen first, always. The model never
+    // gets to decide any of it.
     const reply = respond(text, state, ix);
     setState({ profile: reply.profile, program: reply.program });
-    setTurns((t) => [...t, { role: 'user', text: [text] }, { role: 'spotter', text: reply.text, reply }]);
+    const idx = turns.length + 1;
+    setTurns((t) => [...t, { role: 'user', text: [text] }, {
+      role: 'spotter', text: reply.text, reply, composedBy: 'deterministic',
+    }]);
     setInput('');
+
+    if (!useClaude) return;
+
+    setBusy(true);
+    try {
+      const res = await fetch('/api/spotter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          question: text,
+          facts: reply.text,
+          context: reply.citations.map((c) => ({ title: c.title, note: c.note })),
+        }),
+      });
+      const data = await res.json();
+      setTurns((t) => t.map((turn, i) => i !== idx ? turn : (
+        data.available
+          ? { ...turn, text: data.text, composedBy: 'claude' as const, usage: data.usage }
+          : { ...turn, note: data.reason }
+      )));
+    } catch {
+      setTurns((t) => t.map((turn, i) => i !== idx ? turn
+        : { ...turn, note: 'Could not reach the composer — deterministic text kept.' }));
+    } finally {
+      setBusy(false);
+    }
   };
 
   const last = [...turns].reverse().find((t) => t.reply)?.reply;
@@ -67,11 +108,22 @@ export default function Spotter({ ix }: { ix: SpotterIndex }) {
                           {t.reply.intent.replace('_', ' ')}
                         </span>
                       )}
+                      {t.composedBy === 'claude' && (
+                        <span className="rounded border border-steel/40 bg-steelSoft px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-steelDim">
+                          written by claude
+                        </span>
+                      )}
                     </div>
                   )}
                   {t.text.map((p, j) => (
                     <p key={j} className={`text-[15px] leading-relaxed ${t.role === 'user' ? '' : 'mb-2 text-dim last:mb-0'}`}>{p}</p>
                   ))}
+
+                  {t.note && (
+                    <p className="mt-2 rounded border border-line bg-panel px-2.5 py-1.5 font-mono text-[11px] leading-relaxed text-muted">
+                      {t.note}
+                    </p>
+                  )}
 
                   {t.reply && t.reply.citations.length > 0 && (
                     <div className="mt-3 flex flex-wrap gap-1.5">
@@ -95,8 +147,22 @@ export default function Spotter({ ix }: { ix: SpotterIndex }) {
             <div ref={endRef} />
           </div>
 
+          <div className="flex flex-wrap items-center gap-2 border-t border-line px-3 pt-3">
+            <label className="flex cursor-pointer items-center gap-2 text-[13px]">
+              <input type="checkbox" checked={useClaude} onChange={(e) => setUseClaude(e.target.checked)}
+                     className="accent-steel" />
+              <span className="font-semibold">Compose with Claude</span>
+            </label>
+            <span className="text-[12px] text-muted">
+              {useClaude
+                ? 'Retrieval and safety still run first — the model only rewrites the result, and gets discarded if it invents a number.'
+                : 'Off: replies are composed deterministically, no API call.'}
+            </span>
+            {busy && <span className="ml-auto font-mono text-[11px] text-steelDim">composing…</span>}
+          </div>
+
           <form onSubmit={(e) => { e.preventDefault(); send(input); }}
-                className="flex gap-2 border-t border-line p-3">
+                className="flex gap-2 p-3">
             <input value={input} onChange={(e) => setInput(e.target.value)}
                    placeholder="Talk to Spotter…" aria-label="Message Spotter"
                    className="flex-1 rounded border border-line bg-panel px-3.5 py-2.5 text-[15px] outline-none transition-colors placeholder:text-muted focus:border-steel" />
@@ -134,7 +200,7 @@ export default function Spotter({ ix }: { ix: SpotterIndex }) {
                   ))}
                 </ol>
                 <p className="mt-3 border-t border-line pt-3 font-mono text-[11px] text-muted">
-                  composed by: <span className="text-bright">{last.composedBy}</span> · no model call was made
+                  every step above is deterministic · generation is the only stage a model touches
                 </p>
               </div>
             )}

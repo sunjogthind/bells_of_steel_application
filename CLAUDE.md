@@ -103,7 +103,13 @@ Learned from the feed; not documented anywhere public.
 ## Do not
 
 - Do not add a runtime dependency on any API key. The site must stay free to run and
-  impossible to break at demo time.
+  impossible to break at demo time. Spotter's Claude composer is the single exception and it
+  is opt-in, rate-limited, and degrades to deterministic text on every failure path -
+  missing key, rate limit, refusal, empty completion, or a failed output check.
+- Never let the model decide a fact. It receives facts already derived and documents already
+  retrieved, and rewrites them. `lib/spotter-guard.ts` verifies the result and discards it if
+  a price or set scheme appears that was not in the input. Keep that guard's tests passing
+  (`npm run test:guard`) - a guard that wrongly rejects good output fails silently.
 - Do not clone Bells of Steel branding. This is clearly an independent demo, and the
   footer disclaimer stays on every page.
 - Do not re-fetch the catalog on every build. The snapshot date is quoted throughout

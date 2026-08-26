@@ -49,8 +49,15 @@ npm run dev            # http://localhost:3111
 npm run refresh-catalog # re-pull the feed and re-derive everything
 ```
 
-No API keys. No runtime services. The deployed site is fully static — including Spotter,
-whose retrieval, slot extraction and program synthesis all run in the browser.
+Four of the five tools need no API key and no runtime services. Spotter's retrieval, slot
+extraction and program synthesis all run in the browser.
+
+Spotter's **generation** step is optional. Set `ANTHROPIC_API_KEY` and toggle "Compose with
+Claude" and replies are written by Claude Opus 5 from the already-retrieved context. The
+output is then verified against that context — any price or set-and-rep scheme the model
+names that was not in its input discards the whole generation and falls back to the
+deterministic text. That guard is tested: `npm run test:guard`. With no key the page
+degrades to the deterministic composer and says so.
 
 `corpus/` holds Spotter's exercise library and coaching notes. **These are written by us**,
 not Bells of Steel's — their programming is not public, and reconstructing it would be the

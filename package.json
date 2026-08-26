@@ -6,9 +6,11 @@
     "dev": "next dev -p 3111",
     "build": "next build",
     "start": "next start",
-    "refresh-catalog": "node scripts/fetch-catalog.mjs && node scripts/normalize.mjs && node scripts/parts.mjs && node scripts/audit.mjs && node scripts/copilot.mjs && node scripts/monitor.mjs"
+    "refresh-catalog": "node scripts/fetch-catalog.mjs && node scripts/normalize.mjs && node scripts/parts.mjs && node scripts/audit.mjs && node scripts/copilot.mjs && node scripts/monitor.mjs",
+    "test:guard": "node scripts/test-guard.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.120.0",
     "next": "14.2.15",
     "react": "18.3.1",
     "react-dom": "18.3.1"
