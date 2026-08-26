@@ -15,7 +15,7 @@ const rubik = Rubik({
 export const metadata: Metadata = {
   title: 'Rana Thind — Bells of Steel Application Portfolio',
   description:
-    'Four working internal tools built on the live Bells of Steel product catalogue, for the AI & Internal Tools Developer application.',
+    'Five working tools built on the live Bells of Steel product catalogue, for the AI & Internal Tools Developer application.',
 };
 
 const NAV = [

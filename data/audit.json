@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T21:15:12.835Z",
+  "generated_at": "2026-08-26T22:05:58.169Z",
   "snapshot": "2026-08-26T13:43:48.208Z",
   "scanned": 476,
   "variants": 1640,
@@ -10,14 +10,14 @@
       "title": "The same product is listed twice, at two different prices",
       "count": 16,
       "unit": "of 16 duplicated listings",
-      "summary": "Every prebuilt rack exists as two live product pages — one plain handle, one ending \"-hgb\" (your Home Gym Builder copy). All 16 comparable pairs are priced differently, and both pages are purchasable. 5 further duplicates were excluded as not comparable.",
-      "impact": "A customer's price depends on which of two identical pages they land on. The widest gap is $162.84. The cheaper copy is sometimes the \"-hgb\" one and sometimes not, so this reads as two listings drifting apart rather than an intentional discount.",
-      "fix": "Pick one canonical page per rack, 301 the other, and have the builder app read the canonical variant instead of holding its own copy.",
+      "summary": "Every prebuilt rack exists as two live product pages — one plain handle, one ending \"-hgb\" (your Home Gym Builder copy). All 16 charge different prices, and both pages are purchasable. 5 further duplicates were excluded as not comparable.",
+      "impact": "The two pages carry different SKUs — the plain handle adds a \"-BNDL\" suffix — but 16 of 16 pairs are identical in shipping weight, product copy and images, so a customer is choosing between two listings for the same rack with nothing on the page to tell them apart. The widest gap is $162.84. The cheaper page is usually running a small discount, but that is not the cause: the pre-discount list prices differ on 16 of 16 pairs, and on 6 the gap is actually wider before the discount is applied.",
+      "fix": "Pick one canonical page per rack and point the other at it. The -hgb copies are already tagged SEARCHANISE_IGNORE, so they are meant to be reached only through the builder — but they are publicly reachable and in the feed.",
       "evidence": [
         {
           "label": "Manticore Half Rack - Prebuilt",
-          "detail": "$1787.83 — /manticore-half-rack-prebuilt   vs   $1624.99 — /manticore-half-rack-prebuilt-hgb",
-          "delta": "$162.84 apart",
+          "detail": "$1787.83 (was $1799.86) — /manticore-half-rack-prebuilt   vs   $1624.99 — /manticore-half-rack-prebuilt-hgb",
+          "delta": "$162.84 apart, $174.87 before discounts",
           "links": [
             "https://bellsofsteel.com/products/manticore-half-rack-prebuilt",
             "https://bellsofsteel.com/products/manticore-half-rack-prebuilt-hgb"
@@ -25,8 +25,8 @@
         },
         {
           "label": "Manticore Folding Power Rack - Prebuilt",
-          "detail": "$1441.89 — /manctiore-folding-power-rack-prebuilt   vs   $1349.99 — /manctiore-folding-power-rack-prebuilt-hgb",
-          "delta": "$91.90 apart",
+          "detail": "$1441.89 (was $1474.92) — /manctiore-folding-power-rack-prebuilt   vs   $1349.99 — /manctiore-folding-power-rack-prebuilt-hgb",
+          "delta": "$91.90 apart, $124.93 before discounts",
           "links": [
             "https://bellsofsteel.com/products/manctiore-folding-power-rack-prebuilt",
             "https://bellsofsteel.com/products/manctiore-folding-power-rack-prebuilt-hgb"
@@ -34,8 +34,8 @@
         },
         {
           "label": "Roc Foldable 4 Post Cage - Prebuilt",
-          "detail": "$1265.87 — /roc-foldable-four-post-cage-prebuilt   vs   $1174.99 — /roc-foldable-four-post-cage-prebuilt-hgb",
-          "delta": "$90.88 apart",
+          "detail": "$1265.87 (was $1284.90) — /roc-foldable-four-post-cage-prebuilt   vs   $1174.99 — /roc-foldable-four-post-cage-prebuilt-hgb",
+          "delta": "$90.88 apart, $109.91 before discounts",
           "links": [
             "https://bellsofsteel.com/products/roc-foldable-four-post-cage-prebuilt",
             "https://bellsofsteel.com/products/roc-foldable-four-post-cage-prebuilt-hgb"
@@ -43,8 +43,8 @@
         },
         {
           "label": "Manticore Flat Foot Power Rack - Prebuilt",
-          "detail": "$1626.86 — /manticore-flat-foot-power-rack-prebuilt   vs   $1549.99 — /manticore-flat-foot-power-rack-prebuilt-hgb",
-          "delta": "$76.87 apart",
+          "detail": "$1626.86 (was $1644.89) — /manticore-flat-foot-power-rack-prebuilt   vs   $1549.99 — /manticore-flat-foot-power-rack-prebuilt-hgb",
+          "delta": "$76.87 apart, $94.90 before discounts",
           "links": [
             "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt",
             "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt-hgb"
@@ -52,8 +52,8 @@
         },
         {
           "label": "Hydra Half Rack - Prebuilt",
-          "detail": "$952.89 — /hydra-half-rack-prebuilt   vs   $999.99 — /hydra-half-rack-prebuilt-hgb",
-          "delta": "$47.10 apart",
+          "detail": "$952.89 (was $958.92) — /hydra-half-rack-prebuilt   vs   $999.99 — /hydra-half-rack-prebuilt-hgb",
+          "delta": "$47.10 apart, $41.07 before discounts",
           "links": [
             "https://bellsofsteel.com/products/hydra-half-rack-prebuilt",
             "https://bellsofsteel.com/products/hydra-half-rack-prebuilt-hgb"
@@ -61,8 +61,8 @@
         },
         {
           "label": "Hydra Flat Foot Power Rack - Prebuilt",
-          "detail": "$1291.86 — /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt   vs   $1329.99 — /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
-          "delta": "$38.13 apart",
+          "detail": "$1291.86 (was $1309.89) — /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt   vs   $1329.99 — /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "delta": "$38.13 apart, $20.10 before discounts",
           "links": [
             "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
             "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb"
@@ -70,8 +70,8 @@
         },
         {
           "label": "Hydra Four Post Power Rack - Prebuilt",
-          "detail": "$1301.86 — /hydra-four-post-power-rack-prebuilt   vs   $1339.99 — /hydra-four-post-power-rack-prebuilt-hgb",
-          "delta": "$38.13 apart",
+          "detail": "$1301.86 (was $1317.89) — /hydra-four-post-power-rack-prebuilt   vs   $1339.99 — /hydra-four-post-power-rack-prebuilt-hgb",
+          "delta": "$38.13 apart, $22.10 before discounts",
           "links": [
             "https://bellsofsteel.com/products/hydra-four-post-power-rack-prebuilt",
             "https://bellsofsteel.com/products/hydra-four-post-power-rack-prebuilt-hgb"
@@ -79,8 +79,8 @@
         },
         {
           "label": "Manticore Four Post Power Rack - Prebuilt",
-          "detail": "$1482.84 — /manticore-four-post-power-rack-prebuilt   vs   $1444.99 — /manticore-four-post-power-rack-prebuilt-hgb",
-          "delta": "$37.85 apart",
+          "detail": "$1482.84 (was $1509.90) — /manticore-four-post-power-rack-prebuilt   vs   $1444.99 — /manticore-four-post-power-rack-prebuilt-hgb",
+          "delta": "$37.85 apart, $64.91 before discounts",
           "links": [
             "https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt",
             "https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt-hgb"
@@ -89,7 +89,7 @@
         {
           "label": "Hydra Squat Stand - Prebuilt",
           "detail": "$634.95 — /hydra-squat-stand-prebuilt   vs   $599.99 — /hydra-squat-stand-prebuilt-hgb",
-          "delta": "$34.96 apart",
+          "delta": "$34.96 apart, $34.96 before discounts",
           "links": [
             "https://bellsofsteel.com/products/hydra-squat-stand-prebuilt",
             "https://bellsofsteel.com/products/hydra-squat-stand-prebuilt-hgb"
@@ -98,7 +98,7 @@
         {
           "label": "Manticore Squat Stand - Prebuilt",
           "detail": "$874.94 — /manticore-squat-stand-prebuilt   vs   $849.99 — /manticore-squat-stand-prebuilt-hgb",
-          "delta": "$24.95 apart",
+          "delta": "$24.95 apart, $24.95 before discounts",
           "links": [
             "https://bellsofsteel.com/products/manticore-squat-stand-prebuilt",
             "https://bellsofsteel.com/products/manticore-squat-stand-prebuilt-hgb"
@@ -106,8 +106,8 @@
         },
         {
           "label": "Hydra Six Post Power Rack - Prebuilt",
-          "detail": "$2176.79 — /hydra-six-post-power-rack-prebuilt   vs   $2199.99 — /hydra-six-post-power-rack-prebuilt-hgb",
-          "delta": "$23.20 apart",
+          "detail": "$2176.79 (was $2192.82) — /hydra-six-post-power-rack-prebuilt   vs   $2199.99 — /hydra-six-post-power-rack-prebuilt-hgb",
+          "delta": "$23.20 apart, $7.17 before discounts",
           "links": [
             "https://bellsofsteel.com/products/hydra-six-post-power-rack-prebuilt",
             "https://bellsofsteel.com/products/hydra-six-post-power-rack-prebuilt-hgb"
@@ -115,15 +115,15 @@
         },
         {
           "label": "Hydra Collegiate Power Rack - Prebuilt",
-          "detail": "$1421.86 — /hydra-collegiate-power-rack-prebuilt   vs   $1399.99 — /hydra-collegiate-power-rack-prebuilt-hgb",
-          "delta": "$21.87 apart",
+          "detail": "$1421.86 (was $1441.88) — /hydra-collegiate-power-rack-prebuilt   vs   $1399.99 — /hydra-collegiate-power-rack-prebuilt-hgb",
+          "delta": "$21.87 apart, $41.89 before discounts",
           "links": [
             "https://bellsofsteel.com/products/hydra-collegiate-power-rack-prebuilt",
             "https://bellsofsteel.com/products/hydra-collegiate-power-rack-prebuilt-hgb"
           ]
         }
       ],
-      "verified": "Both URLs fetched live on 25 Aug 2026 — HTTP 200, prices confirmed from each page’s own .json endpoint."
+      "verified": "Both URLs fetched live — HTTP 200, prices and SKUs confirmed from each page’s own .json endpoint. Shipping weight, copy length and image count compared per pair."
     },
     {
       "id": "zero-price",

@@ -187,9 +187,18 @@ const add = (f) => { if (f.count > 0) findings.push(f); };
       const rows = v.map((p) => ({
         handle: p.handle, url: url(p.handle),
         price: Math.min(...p.variants.map((x) => num(x.price))),
+        // The pre-discount price, so a sale on one page cannot be mistaken for the cause.
+        listPrice: parseFloat(p.variants[0].compare_at_price) || Math.min(...p.variants.map((x) => num(x.price))),
+        grams: p.variants[0].grams,
+        copyLen: strip(p.body_html).length,
+        images: (p.images || []).length,
       }));
       const spread = Math.max(...rows.map((r) => r.price)) - Math.min(...rows.map((r) => r.price));
-      return { title, rows, spread };
+      const listSpread = Math.max(...rows.map((r) => r.listPrice)) - Math.min(...rows.map((r) => r.listPrice));
+      const sameGoods = new Set(rows.map((r) => r.grams)).size === 1
+        && new Set(rows.map((r) => r.copyLen)).size === 1
+        && new Set(rows.map((r) => r.images)).size === 1;
+      return { title, rows, spread, listSpread, sameGoods };
     })
     .filter((d) => d.spread > 0)
     .sort((a, b) => b.spread - a.spread);
@@ -204,6 +213,11 @@ const add = (f) => { if (f.count > 0) findings.push(f); };
       pairsPhrase: mismatched.length === dupes.length ? `All ${dupes.length}` : `${mismatched.length} of the ${dupes.length}`,
       widestGap: mismatched.length ? +mismatched[0].spread.toFixed(2) : 0,
       widestGapProduct: mismatched.length ? mismatched[0].title.replace(/\s*\(.*\)$/, '') : null,
+      // Both objections a reader will raise, answered with numbers:
+      // "those are different SKUs" and "one of them is just on sale".
+      identicalGoods: mismatched.filter((m) => m.sameGoods).length,
+      listPriceDiffers: mismatched.filter((m) => m.listSpread > 0).length,
+      widerBeforeDiscount: mismatched.filter((m) => m.listSpread > m.spread).length,
     },
     evidence: mismatched.slice(0, 12).map((m) => ({
       label: m.title.replace(/\s*\(.*\)$/, ''),

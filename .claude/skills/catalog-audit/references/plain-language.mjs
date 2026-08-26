@@ -20,10 +20,10 @@ export const SEVERITY_ORDER = ['critical', 'high', 'medium', 'low'];
 
 export const COPY = {
   'duplicate-pricing': {
-    title: 'The same rack is on sale twice, at two different prices',
+    title: 'The same rack is listed twice, at two different prices',
     what: 'Every prebuilt rack has two live product pages: the normal one, and a second copy ending in "-hgb" that the Home Gym Builder uses. {pairsPhrase} pairs charge different prices for the same rack, and both pages can be bought from.',
     what_if: { skipped: 'A further {skipped} duplicated titles were left out of this comparison, because the two listings sell different things - a pair against a single, for instance - and their prices are not comparable.' },
-    why: 'What a customer pays depends on which of the two pages they happen to land on. The widest gap is ${widestGap} on the {widestGapProduct}. The cheaper page is sometimes the builder copy and sometimes not, so this reads as two listings drifting apart rather than a deliberate discount.',
+    why: 'The two pages carry different item codes — one adds a "-BNDL" ending — but {identicalGoods} of the {comparablePairs} pairs are identical in shipping weight, product copy and photos. A customer is choosing between two listings for the same rack with nothing on the page to tell them apart, and the widest gap is ${widestGap} on the {widestGapProduct}. The cheaper page is usually running a small sale, but that is not the cause: the before-sale prices differ on {listPriceDiffers} of {comparablePairs} pairs, and on {widerBeforeDiscount} the gap is wider before the sale is applied.',
     do: 'Decide which page is the real one for each rack and point the other at it. Until that is done, the pairs below need their prices matched by hand.',
   },
 

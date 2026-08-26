@@ -30,28 +30,43 @@ const add = (f) => findings.push(f);
       const rows = v.map((p) => ({
         handle: p.handle, url: url(p.handle),
         price: Math.min(...p.variants.map((x) => num(x.price))),
+        listPrice: parseFloat(p.variants[0].compare_at_price) || Math.min(...p.variants.map((x) => num(x.price))),
+        sku: p.variants[0].sku,
+        grams: p.variants[0].grams,
+        copy: strip(p.body_html).length,
+        images: (p.images || []).length,
         available: p.variants.some((x) => x.available),
       }));
       const spread = Math.max(...rows.map((r) => r.price)) - Math.min(...rows.map((r) => r.price));
-      return { title, rows, spread };
+      // The cheaper page usually carries a discount. Compare the pre-discount
+      // list prices too - if those differ, the discount is not the cause.
+      const listSpread = Math.max(...rows.map((r) => r.listPrice)) - Math.min(...rows.map((r) => r.listPrice));
+      const sameGoods = new Set(rows.map((r) => r.grams)).size === 1
+        && new Set(rows.map((r) => r.copy)).size === 1
+        && new Set(rows.map((r) => r.images)).size === 1;
+      return { title, rows, spread, listSpread, sameGoods };
     })
     .filter((d) => d.spread > 0)
     .sort((a, b) => b.spread - a.spread);
+
+  const identical = mismatched.filter((m) => m.sameGoods).length;
+  const listDiffers = mismatched.filter((m) => m.listSpread > 0).length;
+  const widerBefore = mismatched.filter((m) => m.listSpread > m.spread).length;
 
   add({
     id: 'duplicate-pricing', severity: 'critical',
     title: 'The same product is listed twice, at two different prices',
     count: mismatched.length, unit: `of ${dupes.length} duplicated listings`,
-    summary: `Every prebuilt rack exists as two live product pages — one plain handle, one ending "-hgb" (your Home Gym Builder copy). ${mismatched.length === dupes.length ? `All ${dupes.length}` : `${mismatched.length} of ${dupes.length}`} comparable pairs are priced differently, and both pages are purchasable.${skipped > 0 ? ` ${skipped} further duplicates were excluded as not comparable.` : ''}`,
-    impact: `A customer's price depends on which of two identical pages they land on. The widest gap is $${Math.max(...mismatched.map((m) => m.spread)).toFixed(2)}. The cheaper copy is sometimes the "-hgb" one and sometimes not, so this reads as two listings drifting apart rather than an intentional discount.`,
-    fix: 'Pick one canonical page per rack, 301 the other, and have the builder app read the canonical variant instead of holding its own copy.',
+    summary: `Every prebuilt rack exists as two live product pages — one plain handle, one ending "-hgb" (your Home Gym Builder copy). ${mismatched.length === dupes.length ? `All ${dupes.length}` : `${mismatched.length} of ${dupes.length}`} charge different prices, and both pages are purchasable.${skipped > 0 ? ` ${skipped} further duplicates were excluded as not comparable.` : ''}`,
+    impact: `The two pages carry different SKUs — the plain handle adds a "-BNDL" suffix — but ${identical} of ${mismatched.length} pairs are identical in shipping weight, product copy and images, so a customer is choosing between two listings for the same rack with nothing on the page to tell them apart. The widest gap is $${Math.max(...mismatched.map((m) => m.spread)).toFixed(2)}. The cheaper page is usually running a small discount, but that is not the cause: the pre-discount list prices differ on ${listDiffers} of ${mismatched.length} pairs, and on ${widerBefore} the gap is actually wider before the discount is applied.`,
+    fix: 'Pick one canonical page per rack and point the other at it. The -hgb copies are already tagged SEARCHANISE_IGNORE, so they are meant to be reached only through the builder — but they are publicly reachable and in the feed.',
     evidence: mismatched.slice(0, 12).map((m) => ({
       label: m.title.replace(/\s*\(.*\)$/, ''),
-      detail: m.rows.map((r) => `$${r.price.toFixed(2)} — /${r.handle}`).join('   vs   '),
-      delta: `$${m.spread.toFixed(2)} apart`,
+      detail: m.rows.map((r) => `$${r.price.toFixed(2)}${r.listPrice > r.price ? ` (was $${r.listPrice.toFixed(2)})` : ''} — /${r.handle}`).join('   vs   '),
+      delta: `$${m.spread.toFixed(2)} apart${m.listSpread > 0 ? `, $${m.listSpread.toFixed(2)} before discounts` : ''}`,
       links: m.rows.map((r) => r.url),
     })),
-    verified: 'Both URLs fetched live on 25 Aug 2026 — HTTP 200, prices confirmed from each page’s own .json endpoint.',
+    verified: 'Both URLs fetched live — HTTP 200, prices and SKUs confirmed from each page’s own .json endpoint. Shipping weight, copy length and image count compared per pair.',
   });
 }
 

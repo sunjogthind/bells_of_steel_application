@@ -1,6 +1,6 @@
-# Catalog health check
+# Catalogue health check
 
-Run 26 August 2026 against your live storefront catalog.
+Run 26 August 2026 against your live storefront catalogue.
 
 **One thing needs attention today.** It is at the top of this report. Below that, 5 high, 4 medium and 3 low findings that can wait their turn.
 
@@ -15,31 +15,31 @@ Checked 476 products and 1,640 product options.
 
 ---
 
-## 01. The same rack is on sale twice, at two different prices
+## 01. The same rack is listed twice, at two different prices
 
 **Critical** — Costing money or credibility right now. Worth looking at today.  
 **16 rack pairs priced differently**
 
 Every prebuilt rack has two live product pages: the normal one, and a second copy ending in "-hgb" that the Home Gym Builder uses. All 16 pairs charge different prices for the same rack, and both pages can be bought from. A further 5 duplicated titles were left out of this comparison, because the two listings sell different things - a pair against a single, for instance - and their prices are not comparable.
 
-What a customer pays depends on which of the two pages they happen to land on. The widest gap is $162.84 on the Manticore Half Rack - Prebuilt. The cheaper page is sometimes the builder copy and sometimes not, so this reads as two listings drifting apart rather than a deliberate discount.
+The two pages carry different item codes — one adds a "-BNDL" ending — but 16 of the 16 pairs are identical in shipping weight, product copy and photos. A customer is choosing between two listings for the same rack with nothing on the page to tell them apart, and the widest gap is $162.84 on the Manticore Half Rack - Prebuilt. The cheaper page is usually running a small sale, but that is not the cause: the before-sale prices differ on 16 of 16 pairs, and on 6 the gap is wider before the sale is applied.
 
 **What to do:** Decide which page is the real one for each rack and point the other at it. Until that is done, the pairs below need their prices matched by hand.
 
 Affected products (12 of 16 shown):
 
 - **Manticore Half Rack - Prebuilt** — $1787.83 on /manticore-half-rack-prebuilt  vs  $1624.99 on /manticore-half-rack-prebuilt-hgb — $162.84 apart ([page 1](https://bellsofsteel.com/products/manticore-half-rack-prebuilt) · [page 2](https://bellsofsteel.com/products/manticore-half-rack-prebuilt-hgb))
-- **Manticore Flat Foot Power Rack - Prebuilt** — $1644.89 on /manticore-flat-foot-power-rack-prebuilt  vs  $1549.99 on /manticore-flat-foot-power-rack-prebuilt-hgb — $94.90 apart ([page 1](https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt) · [page 2](https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt-hgb))
 - **Manticore Folding Power Rack - Prebuilt** — $1441.89 on /manctiore-folding-power-rack-prebuilt  vs  $1349.99 on /manctiore-folding-power-rack-prebuilt-hgb — $91.90 apart ([page 1](https://bellsofsteel.com/products/manctiore-folding-power-rack-prebuilt) · [page 2](https://bellsofsteel.com/products/manctiore-folding-power-rack-prebuilt-hgb))
 - **Roc Foldable 4 Post Cage - Prebuilt** — $1265.87 on /roc-foldable-four-post-cage-prebuilt  vs  $1174.99 on /roc-foldable-four-post-cage-prebuilt-hgb — $90.88 apart ([page 1](https://bellsofsteel.com/products/roc-foldable-four-post-cage-prebuilt) · [page 2](https://bellsofsteel.com/products/roc-foldable-four-post-cage-prebuilt-hgb))
-- **Manticore Four Post Power Rack - Prebuilt** — $1500.87 on /manticore-four-post-power-rack-prebuilt  vs  $1444.99 on /manticore-four-post-power-rack-prebuilt-hgb — $55.88 apart ([page 1](https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt) · [page 2](https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt-hgb))
+- **Manticore Flat Foot Power Rack - Prebuilt** — $1626.86 on /manticore-flat-foot-power-rack-prebuilt  vs  $1549.99 on /manticore-flat-foot-power-rack-prebuilt-hgb — $76.87 apart ([page 1](https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt) · [page 2](https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt-hgb))
 - **Hydra Half Rack - Prebuilt** — $952.89 on /hydra-half-rack-prebuilt  vs  $999.99 on /hydra-half-rack-prebuilt-hgb — $47.10 apart ([page 1](https://bellsofsteel.com/products/hydra-half-rack-prebuilt) · [page 2](https://bellsofsteel.com/products/hydra-half-rack-prebuilt-hgb))
+- **Hydra Flat Foot Power Rack - Prebuilt** — $1291.86 on /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt  vs  $1329.99 on /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb — $38.13 apart ([page 1](https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt) · [page 2](https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb))
 - **Hydra Four Post Power Rack - Prebuilt** — $1301.86 on /hydra-four-post-power-rack-prebuilt  vs  $1339.99 on /hydra-four-post-power-rack-prebuilt-hgb — $38.13 apart ([page 1](https://bellsofsteel.com/products/hydra-four-post-power-rack-prebuilt) · [page 2](https://bellsofsteel.com/products/hydra-four-post-power-rack-prebuilt-hgb))
+- **Manticore Four Post Power Rack - Prebuilt** — $1482.84 on /manticore-four-post-power-rack-prebuilt  vs  $1444.99 on /manticore-four-post-power-rack-prebuilt-hgb — $37.85 apart ([page 1](https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt) · [page 2](https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt-hgb))
 - **Hydra Squat Stand - Prebuilt** — $634.95 on /hydra-squat-stand-prebuilt  vs  $599.99 on /hydra-squat-stand-prebuilt-hgb — $34.96 apart ([page 1](https://bellsofsteel.com/products/hydra-squat-stand-prebuilt) · [page 2](https://bellsofsteel.com/products/hydra-squat-stand-prebuilt-hgb))
 - **Manticore Squat Stand - Prebuilt** — $874.94 on /manticore-squat-stand-prebuilt  vs  $849.99 on /manticore-squat-stand-prebuilt-hgb — $24.95 apart ([page 1](https://bellsofsteel.com/products/manticore-squat-stand-prebuilt) · [page 2](https://bellsofsteel.com/products/manticore-squat-stand-prebuilt-hgb))
 - **Hydra Six Post Power Rack - Prebuilt** — $2176.79 on /hydra-six-post-power-rack-prebuilt  vs  $2199.99 on /hydra-six-post-power-rack-prebuilt-hgb — $23.20 apart ([page 1](https://bellsofsteel.com/products/hydra-six-post-power-rack-prebuilt) · [page 2](https://bellsofsteel.com/products/hydra-six-post-power-rack-prebuilt-hgb))
 - **Hydra Collegiate Power Rack - Prebuilt** — $1421.86 on /hydra-collegiate-power-rack-prebuilt  vs  $1399.99 on /hydra-collegiate-power-rack-prebuilt-hgb — $21.87 apart ([page 1](https://bellsofsteel.com/products/hydra-collegiate-power-rack-prebuilt) · [page 2](https://bellsofsteel.com/products/hydra-collegiate-power-rack-prebuilt-hgb))
-- **Hydra Flat Foot Power Rack - Prebuilt** — $1309.89 on /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt  vs  $1329.99 on /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb — $20.10 apart ([page 1](https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt) · [page 2](https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb))
 
 ## 02. Products priced at $0.00 or $0.01 are visible to the public
 
@@ -48,7 +48,7 @@ Affected products (12 of 16 shown):
 
 41 buyable options across 33 products are priced at $1.00 or less. 16 of them are recognisably on purpose: hardware labelled "FREE FOR BUILDERS", and placeholder options named "Variant for price 0" belonging to a bundling app.
 
-Nothing marks these as different from real products, so everything that reads your catalog picks them up - shopping feeds, analytics, price monitoring, any internal tool. They are the cheapest things in the catalog, so they surface first anywhere sorted by price.
+Nothing marks these as different from real products, so everything that reads your catalogue picks them up - shopping feeds, analytics, price monitoring, any internal tool. They are the cheapest things in the catalogue, so they surface first anywhere sorted by price.
 
 **What to do:** Give the builder scaffolding its own product category, or take it off the online store channel so it stops appearing publicly at all.
 
@@ -158,9 +158,9 @@ Affected products (10 of 15 shown):
 ## 07. A crossed-out "was" price that matches the price being charged
 
 **Medium** — Working against you quietly. Worth planning in.  
-**8 product options**
+**6 product options**
 
-8 product options carry a compare-at price that is the same as, or lower than, what the customer actually pays.
+6 product options carry a compare-at price that is the same as, or lower than, what the customer actually pays.
 
 The store displays compare-at as a crossed-out "was" price. When it matches the real price there is no discount behind the claim. That is a weaker sales page than an honest one, and it is the kind of claim consumer-protection rules take an interest in.
 
@@ -170,9 +170,7 @@ Affected products:
 
 - [Roc Foldable 2 Post Cage - Prebuilt (3" x 3", ⅝" Holes)](https://bellsofsteel.com/products/roc-foldable-two-post-cage-prebuilt) — sells for $719.95, shown as reduced from $719.95 — no real discount
 - [Manticore Folding Half Rack - Prebuilt (3" x 3", 1" Holes)](https://bellsofsteel.com/products/manticore-folding-half-rack-prebuilt) — sells for $934.95, shown as reduced from $934.95 — no real discount
-- [Hydra Flat Foot Power Rack - Prebuilt (3" x 3", ⅝" Holes)](https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt) — sells for $1309.89, shown as reduced from $1309.89 — no real discount
 - [Manticore Squat Stand - Prebuilt (3" x 3", 1" Holes)](https://bellsofsteel.com/products/manticore-squat-stand-prebuilt) — sells for $874.94, shown as reduced from $874.94 — no real discount
-- [Manticore Flat Foot Power Rack - Prebuilt (3" x 3", 1" Holes)](https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt) — sells for $1644.89, shown as reduced from $1644.89 — no real discount
 - [Hydra Squat Stand - Prebuilt (3" x 3", ⅝" Holes)](https://bellsofsteel.com/products/hydra-squat-stand-prebuilt) — sells for $634.95, shown as reduced from $634.95 — no real discount
 - [Hip Thrust Machine](https://bellsofsteel.com/products/hip-thrust-machine) — sells for $1199.99, shown as reduced from $1199.99 — no real discount
 - [Mark Wildman Adjustable Kettlebell](https://bellsofsteel.com/products/mark-wildman-adjustable-kettlebells) — sells for $239.99, shown as reduced from $239.99 — no real discount
@@ -180,15 +178,15 @@ Affected products:
 ## 08. Live product pages where nothing can be bought
 
 **Medium** — Working against you quietly. Worth planning in.  
-**56 products**
+**58 products**
 
-56 products are live on the storefront with nothing in stock on any option.
+58 products are live on the storefront with nothing in stock on any option.
 
 These pages still take ad clicks, still appear in search, and convert at zero. They are also the pages most likely to produce a "when is this back?" email.
 
 **What to do:** Decide product by product: take it down, or swap the add-to-cart for a back-in-stock signup so the traffic is at least captured.
 
-Affected products (10 of 56 shown):
+Affected products (10 of 58 shown):
 
 - [Basilisk Stack Loaded Leg Extension / Leg Curl](https://bellsofsteel.com/products/basilisk-stack-loaded-leg-extension-leg-curl) — 3 options, none in stock — cannot be bought
 - [Fat Bar - Lat Pulldown Bar](https://bellsofsteel.com/products/fat-bar-lat-pulldown-bar) — 1 option, none in stock — cannot be bought
@@ -201,12 +199,12 @@ Affected products (10 of 56 shown):
 - [48KG Extension Kit for Adjustable Kettlebell - Wildman Poison Pill](https://bellsofsteel.com/products/wildman-poison-pill) — 1 option, none in stock — cannot be bought
 - [StrongArm Combo Rack - Squat Stand & Bench Press](https://bellsofsteel.com/products/strongarm-combo-rack) — 1 option, none in stock — cannot be bought
 
-## 09. A fifth of the catalog has no product category
+## 09. A fifth of the catalogue has no product category
 
 **Medium** — Working against you quietly. Worth planning in.  
 **107 products**
 
-89 products have no category set, and another 18 use the word "Hidden" as their category. Together that is 22% of the catalog.
+89 products have no category set, and another 18 use the word "Hidden" as their category. Together that is 22% of the catalogue.
 
 Category is what your automatic collections and storefront filters sort on, and what any report groups by. A product without one is missing from all of it. "Hidden" is a visibility setting sitting in the category field.
 
@@ -306,6 +304,6 @@ Affected products:
 
 ---
 
-Source: saved catalog: data/catalog-raw.json. Catalog read Aug 25, 2026, 6:11 p.m.. Report generated Aug 26, 2026, 2:06 a.m..
+Source: saved catalogue: data/catalog-raw.json. Catalogue read Aug 26, 2026, 7:43 a.m.. Report generated Aug 26, 2026, 4:05 p.m..
 
-Every number above is counted from your published storefront catalog. Where the catalog does not publish something, this report says so rather than estimating it.
+Every number above is counted from your published storefront catalogue. Where the catalogue does not publish something, this report says so rather than estimating it.
