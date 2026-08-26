@@ -6,7 +6,7 @@ import type { RackPayload, Slim } from '@/lib/builder-data';
 import RoomPlan from './RoomPlan';
 
 const money = (c: number | null) =>
-  c == null ? '—' : `$${(c / 100).toLocaleString('en-CA', { maximumFractionDigits: 0 })}`;
+  c == null ? ', ' : `$${(c / 100).toLocaleString('en-CA', { maximumFractionDigits: 0 })}`;
 
 const VERDICT_UI: Record<Verdict, { label: string; cls: string; dot: string }> = {
   fits:    { label: 'Fits',          cls: 'text-emerald-700 border-emerald-600/30 bg-emerald-50', dot: 'bg-emerald-600' },
@@ -82,7 +82,7 @@ export default function Builder({
 
     const unverified = evaluated.filter((e) => e.verdict === 'unknown');
     if (unverified.length) {
-      out.push(`${unverified.length} rack${unverified.length > 1 ? 's' : ''} can't be checked at all — no dimensions are published for them. The whole Residential line is in this bucket.`);
+      out.push(`${unverified.length} rack${unverified.length > 1 ? 's' : ''} can't be checked at all, no dimensions are published for them. The whole Residential line is in this bucket.`);
     }
 
     if (usesBarbell && w < 92) out.push(`At ${(w / 12).toFixed(1)}ft wide, a 7ft barbell will be a squeeze regardless of which rack you pick.`);
@@ -169,7 +169,7 @@ export default function Builder({
               <button
                 key={rack.id}
                 onClick={() => setSelectedId(active ? null : rack.id)}
-                aria-label={`${rack.title} — ${ui.label}`}
+                aria-label={`${rack.title}, ${ui.label}`}
                 className={`w-full rounded-lg border p-3 text-left transition-colors ${
                   active ? 'border-steel bg-steelSoft' : 'border-line bg-panel hover:border-muted'
                 }`}

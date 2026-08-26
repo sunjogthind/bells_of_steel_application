@@ -13,7 +13,7 @@ export const getCatalog = () => catalog;
 export const allProducts = (): Product[] => catalog.products;
 
 export const money = (cents: number | null) =>
-  cents == null ? '—' : `$${(cents / 100).toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  cents == null ? ', ' : `$${(cents / 100).toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
 export const typeOf = (p: Product) => p.type && p.type !== 'Hidden' ? p.type : p.derivedType;
 

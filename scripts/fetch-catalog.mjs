@@ -24,4 +24,4 @@ writeFileSync('data/catalog-raw.json', JSON.stringify({
   count: all.length,
   products: all,
 }, null, 2));
-console.error(`\nwrote data/catalog-raw.json — ${all.length} products`);
+console.error(`\nwrote data/catalog-raw.json, ${all.length} products`);

@@ -133,7 +133,7 @@ export default function PartsIndex({
                     {!p.available && <span className="ml-1.5 font-mono text-[10px] text-red-600">out of stock</span>}
                   </td>
                   <td className="px-4 py-2.5 text-xs text-muted">{p.machine}</td>
-                  <td className="px-4 py-2.5 font-mono text-[11px] text-muted">{p.sku ?? '—'}</td>
+                  <td className="px-4 py-2.5 font-mono text-[11px] text-muted">{p.sku ?? ', '}</td>
                   <td className="px-4 py-2.5 text-right font-mono tabular-nums">{money(p.priceCents)}</td>
                 </tr>
               ))}
@@ -147,7 +147,7 @@ export default function PartsIndex({
           <p className="mt-1.5 text-xs leading-relaxed text-muted">
             All {skuGrammar.prefixed} of {skuGrammar.total} of your part SKUs follow{' '}
             <code className="text-steel">SP-&lt;MACHINE&gt;-&lt;PART&gt;</code>. The convention is perfectly
-            consistent — it is just written down nowhere a new support rep would find it.
+            consistent. It is just written down nowhere a new support rep would find it.
           </p>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {skuGrammar.topMachineCodes.map(([code, n]) => (

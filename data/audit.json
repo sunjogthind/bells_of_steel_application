@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T22:05:58.169Z",
+  "generated_at": "2026-08-26T22:31:38.434Z",
   "snapshot": "2026-08-26T13:43:48.208Z",
   "scanned": 476,
   "variants": 1640,
@@ -10,13 +10,13 @@
       "title": "The same product is listed twice, at two different prices",
       "count": 16,
       "unit": "of 16 duplicated listings",
-      "summary": "Every prebuilt rack exists as two live product pages — one plain handle, one ending \"-hgb\" (your Home Gym Builder copy). All 16 charge different prices, and both pages are purchasable. 5 further duplicates were excluded as not comparable.",
-      "impact": "The two pages carry different SKUs — the plain handle adds a \"-BNDL\" suffix — but 16 of 16 pairs are identical in shipping weight, product copy and images, so a customer is choosing between two listings for the same rack with nothing on the page to tell them apart. The widest gap is $162.84. The cheaper page is usually running a small discount, but that is not the cause: the pre-discount list prices differ on 16 of 16 pairs, and on 6 the gap is actually wider before the discount is applied.",
-      "fix": "Pick one canonical page per rack and point the other at it. The -hgb copies are already tagged SEARCHANISE_IGNORE, so they are meant to be reached only through the builder — but they are publicly reachable and in the feed.",
+      "summary": "Every prebuilt rack exists as two live product pages: one plain handle, one ending \"-hgb\" (your Home Gym Builder copy). All 16 charge different prices, and both pages are purchasable. 5 further duplicates were excluded as not comparable.",
+      "impact": "The two pages carry different SKUs (the plain handle adds a \"-BNDL\" suffix), but 16 of 16 pairs are identical in shipping weight, product copy and images, so a customer is choosing between two listings for the same rack with nothing on the page to tell them apart. The widest gap is $162.84. The cheaper page is usually running a small discount, but that is not the cause: the pre-discount list prices differ on 16 of 16 pairs, and on 6 the gap is actually wider before the discount is applied.",
+      "fix": "Pick one canonical page per rack and point the other at it. The -hgb copies are already tagged SEARCHANISE_IGNORE, so they are meant to be reached only through the builder, but they are publicly reachable and in the feed.",
       "evidence": [
         {
           "label": "Manticore Half Rack - Prebuilt",
-          "detail": "$1787.83 (was $1799.86) — /manticore-half-rack-prebuilt   vs   $1624.99 — /manticore-half-rack-prebuilt-hgb",
+          "detail": "$1787.83 (was $1799.86), /manticore-half-rack-prebuilt   vs   $1624.99, /manticore-half-rack-prebuilt-hgb",
           "delta": "$162.84 apart, $174.87 before discounts",
           "links": [
             "https://bellsofsteel.com/products/manticore-half-rack-prebuilt",
@@ -25,7 +25,7 @@
         },
         {
           "label": "Manticore Folding Power Rack - Prebuilt",
-          "detail": "$1441.89 (was $1474.92) — /manctiore-folding-power-rack-prebuilt   vs   $1349.99 — /manctiore-folding-power-rack-prebuilt-hgb",
+          "detail": "$1441.89 (was $1474.92), /manctiore-folding-power-rack-prebuilt   vs   $1349.99, /manctiore-folding-power-rack-prebuilt-hgb",
           "delta": "$91.90 apart, $124.93 before discounts",
           "links": [
             "https://bellsofsteel.com/products/manctiore-folding-power-rack-prebuilt",
@@ -34,7 +34,7 @@
         },
         {
           "label": "Roc Foldable 4 Post Cage - Prebuilt",
-          "detail": "$1265.87 (was $1284.90) — /roc-foldable-four-post-cage-prebuilt   vs   $1174.99 — /roc-foldable-four-post-cage-prebuilt-hgb",
+          "detail": "$1265.87 (was $1284.90), /roc-foldable-four-post-cage-prebuilt   vs   $1174.99, /roc-foldable-four-post-cage-prebuilt-hgb",
           "delta": "$90.88 apart, $109.91 before discounts",
           "links": [
             "https://bellsofsteel.com/products/roc-foldable-four-post-cage-prebuilt",
@@ -43,7 +43,7 @@
         },
         {
           "label": "Manticore Flat Foot Power Rack - Prebuilt",
-          "detail": "$1626.86 (was $1644.89) — /manticore-flat-foot-power-rack-prebuilt   vs   $1549.99 — /manticore-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "$1626.86 (was $1644.89), /manticore-flat-foot-power-rack-prebuilt   vs   $1549.99, /manticore-flat-foot-power-rack-prebuilt-hgb",
           "delta": "$76.87 apart, $94.90 before discounts",
           "links": [
             "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt",
@@ -52,7 +52,7 @@
         },
         {
           "label": "Hydra Half Rack - Prebuilt",
-          "detail": "$952.89 (was $958.92) — /hydra-half-rack-prebuilt   vs   $999.99 — /hydra-half-rack-prebuilt-hgb",
+          "detail": "$952.89 (was $958.92), /hydra-half-rack-prebuilt   vs   $999.99, /hydra-half-rack-prebuilt-hgb",
           "delta": "$47.10 apart, $41.07 before discounts",
           "links": [
             "https://bellsofsteel.com/products/hydra-half-rack-prebuilt",
@@ -61,7 +61,7 @@
         },
         {
           "label": "Hydra Flat Foot Power Rack - Prebuilt",
-          "detail": "$1291.86 (was $1309.89) — /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt   vs   $1329.99 — /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "$1291.86 (was $1309.89), /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt   vs   $1329.99, /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
           "delta": "$38.13 apart, $20.10 before discounts",
           "links": [
             "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
@@ -70,7 +70,7 @@
         },
         {
           "label": "Hydra Four Post Power Rack - Prebuilt",
-          "detail": "$1301.86 (was $1317.89) — /hydra-four-post-power-rack-prebuilt   vs   $1339.99 — /hydra-four-post-power-rack-prebuilt-hgb",
+          "detail": "$1301.86 (was $1317.89), /hydra-four-post-power-rack-prebuilt   vs   $1339.99, /hydra-four-post-power-rack-prebuilt-hgb",
           "delta": "$38.13 apart, $22.10 before discounts",
           "links": [
             "https://bellsofsteel.com/products/hydra-four-post-power-rack-prebuilt",
@@ -79,7 +79,7 @@
         },
         {
           "label": "Manticore Four Post Power Rack - Prebuilt",
-          "detail": "$1482.84 (was $1509.90) — /manticore-four-post-power-rack-prebuilt   vs   $1444.99 — /manticore-four-post-power-rack-prebuilt-hgb",
+          "detail": "$1482.84 (was $1509.90), /manticore-four-post-power-rack-prebuilt   vs   $1444.99, /manticore-four-post-power-rack-prebuilt-hgb",
           "delta": "$37.85 apart, $64.91 before discounts",
           "links": [
             "https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt",
@@ -88,7 +88,7 @@
         },
         {
           "label": "Hydra Squat Stand - Prebuilt",
-          "detail": "$634.95 — /hydra-squat-stand-prebuilt   vs   $599.99 — /hydra-squat-stand-prebuilt-hgb",
+          "detail": "$634.95, /hydra-squat-stand-prebuilt   vs   $599.99, /hydra-squat-stand-prebuilt-hgb",
           "delta": "$34.96 apart, $34.96 before discounts",
           "links": [
             "https://bellsofsteel.com/products/hydra-squat-stand-prebuilt",
@@ -97,7 +97,7 @@
         },
         {
           "label": "Manticore Squat Stand - Prebuilt",
-          "detail": "$874.94 — /manticore-squat-stand-prebuilt   vs   $849.99 — /manticore-squat-stand-prebuilt-hgb",
+          "detail": "$874.94, /manticore-squat-stand-prebuilt   vs   $849.99, /manticore-squat-stand-prebuilt-hgb",
           "delta": "$24.95 apart, $24.95 before discounts",
           "links": [
             "https://bellsofsteel.com/products/manticore-squat-stand-prebuilt",
@@ -106,7 +106,7 @@
         },
         {
           "label": "Hydra Six Post Power Rack - Prebuilt",
-          "detail": "$2176.79 (was $2192.82) — /hydra-six-post-power-rack-prebuilt   vs   $2199.99 — /hydra-six-post-power-rack-prebuilt-hgb",
+          "detail": "$2176.79 (was $2192.82), /hydra-six-post-power-rack-prebuilt   vs   $2199.99, /hydra-six-post-power-rack-prebuilt-hgb",
           "delta": "$23.20 apart, $7.17 before discounts",
           "links": [
             "https://bellsofsteel.com/products/hydra-six-post-power-rack-prebuilt",
@@ -115,7 +115,7 @@
         },
         {
           "label": "Hydra Collegiate Power Rack - Prebuilt",
-          "detail": "$1421.86 (was $1441.88) — /hydra-collegiate-power-rack-prebuilt   vs   $1399.99 — /hydra-collegiate-power-rack-prebuilt-hgb",
+          "detail": "$1421.86 (was $1441.88), /hydra-collegiate-power-rack-prebuilt   vs   $1399.99, /hydra-collegiate-power-rack-prebuilt-hgb",
           "delta": "$21.87 apart, $41.89 before discounts",
           "links": [
             "https://bellsofsteel.com/products/hydra-collegiate-power-rack-prebuilt",
@@ -123,7 +123,7 @@
           ]
         }
       ],
-      "verified": "Both URLs fetched live — HTTP 200, prices and SKUs confirmed from each page’s own .json endpoint. Shipping weight, copy length and image count compared per pair."
+      "verified": "Both URLs fetched live, HTTP 200, prices and SKUs confirmed from each page’s own .json endpoint. Shipping weight, copy length and image count compared per pair."
     },
     {
       "id": "zero-price",
@@ -131,13 +131,13 @@
       "title": "Products priced at $0.00 or $0.01 are exposed in the public feed",
       "count": 33,
       "unit": "products",
-      "summary": "41 purchasable variants across 33 products carry a price of $1.00 or less. 16 of them are recognisably deliberate — \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
-      "impact": "Nothing in the feed distinguishes these from real products, so anything reading products.json inherits them — shopping feeds, analytics, price monitoring, any internal tool. Spotter recommended one as the cheapest fix for an equipment gap until I filtered them out.",
+      "summary": "41 purchasable variants across 33 products carry a price of $1.00 or less. 16 of them are recognisably deliberate, \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
+      "impact": "Nothing in the feed distinguishes these from real products, so anything reading products.json inherits them: shopping feeds, analytics, price monitoring, any internal tool. Spotter recommended one as the cheapest fix for an equipment gap until I filtered them out.",
       "fix": "Move builder scaffolding to a dedicated product type or unpublish it from the online-store channel so it stops appearing in the feed at all.",
       "evidence": [
         {
           "label": "Hydra Storage Builder",
-          "detail": "$0.00 — variant \"Default Title\"",
+          "detail": "$0.00, variant \"Default Title\"",
           "delta": "worth checking",
           "links": [
             "https://bellsofsteel.com/products/hydra-storage-builder"
@@ -145,7 +145,7 @@
         },
         {
           "label": "Manticore Folding Power Rack Builder (3\" x 3\", 1\" Holes)",
-          "detail": "$0.00 — variant \"Default Title\"",
+          "detail": "$0.00, variant \"Default Title\"",
           "delta": "worth checking",
           "links": [
             "https://bellsofsteel.com/products/manctiore-folding-power-rack-builder"
@@ -153,7 +153,7 @@
         },
         {
           "label": "Kraken Cable Tower Rack Attachment",
-          "detail": "$0.00 — variant \"Variant for price 0\"",
+          "detail": "$0.00, variant \"Variant for price 0\"",
           "delta": "likely intentional",
           "links": [
             "https://bellsofsteel.com/products/kraken-cable-tower-rack-attachment-1"
@@ -161,7 +161,7 @@
         },
         {
           "label": "Hydra Bumper Plate Tree Builder",
-          "detail": "$0.00 — variant \"Default Title\"",
+          "detail": "$0.00, variant \"Default Title\"",
           "delta": "worth checking",
           "links": [
             "https://bellsofsteel.com/products/hydra-bumper-plate-tree-builder"
@@ -169,7 +169,7 @@
         },
         {
           "label": "Hydra Storage Builder",
-          "detail": "$0.00 — variant \"Variant for price 0\"",
+          "detail": "$0.00, variant \"Variant for price 0\"",
           "delta": "likely intentional",
           "links": [
             "https://bellsofsteel.com/products/hydra-storage-builder-1"
@@ -177,7 +177,7 @@
         },
         {
           "label": "Manticore Pair of M24 130mm Long Bolts (FREE FOR BUILDERS)",
-          "detail": "$0.00 — variant \"Default Title\"",
+          "detail": "$0.00, variant \"Default Title\"",
           "delta": "likely intentional",
           "links": [
             "https://bellsofsteel.com/products/manticore-pr-m24-130-free"
@@ -185,7 +185,7 @@
         },
         {
           "label": "Manticore BOS Logo Tag (FREE FOR BUILDERS)",
-          "detail": "$0.00 — variant \"Default Title\"",
+          "detail": "$0.00, variant \"Default Title\"",
           "delta": "likely intentional",
           "links": [
             "https://bellsofsteel.com/products/manticore-logo-tag-free"
@@ -193,7 +193,7 @@
         },
         {
           "label": "Hydra BOS Logo Tag - FREE FOR BUILDERS",
-          "detail": "$0.00 — variant \"Default Title\"",
+          "detail": "$0.00, variant \"Default Title\"",
           "delta": "likely intentional",
           "links": [
             "https://bellsofsteel.com/products/hydra-logo-tag-free"
@@ -201,7 +201,7 @@
         },
         {
           "label": "Commercial Interchangeable Weight Rack",
-          "detail": "$0.01 — variant \"Default Title\"",
+          "detail": "$0.01, variant \"Default Title\"",
           "delta": "worth checking",
           "links": [
             "https://bellsofsteel.com/products/commercial-interchangeable-weight-rack"
@@ -209,7 +209,7 @@
         },
         {
           "label": "Commercial Interchangeable Weight Rack",
-          "detail": "$0.00 — variant \"Variant for price 0\"",
+          "detail": "$0.00, variant \"Variant for price 0\"",
           "delta": "likely intentional",
           "links": [
             "https://bellsofsteel.com/products/commercial-interchangeable-weight-rack"
@@ -229,7 +229,7 @@
       "evidence": [
         {
           "label": "Kolossyem Rack",
-          "detail": "$5314.99 — Default Title",
+          "detail": "$5314.99, Default Title",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/kolossyem-rack"
@@ -237,7 +237,7 @@
         },
         {
           "label": "Hydra Trident Station",
-          "detail": "$4582.34 — Variant for price 4582.34",
+          "detail": "$4582.34, Variant for price 4582.34",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/hydra-trident-station-1"
@@ -245,7 +245,7 @@
         },
         {
           "label": "Hydra Trident Station",
-          "detail": "$4222.36 — Variant for price 4222.36",
+          "detail": "$4222.36, Variant for price 4222.36",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/hydra-trident-station-1"
@@ -253,7 +253,7 @@
         },
         {
           "label": "All-in-One Trainer - OLD Version on Clearance",
-          "detail": "$1999.99 — Default Title",
+          "detail": "$1999.99, Default Title",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/all-in-one-trainer-old"
@@ -261,7 +261,7 @@
         },
         {
           "label": "Pandemonium Squat – 3-in-1 Pendulum Squat / Calf Press / Viking Press Machine",
-          "detail": "$1599.99 — Default Title",
+          "detail": "$1599.99, Default Title",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/pandemonium-squat"
@@ -269,7 +269,7 @@
         },
         {
           "label": "Hydra Storage Builder",
-          "detail": "$1549.91 — Variant for price 1549.91",
+          "detail": "$1549.91, Variant for price 1549.91",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/hydra-storage-builder-1"
@@ -277,7 +277,7 @@
         },
         {
           "label": "Hydra Storage Builder",
-          "detail": "$1499.94 — Variant for price 1499.94",
+          "detail": "$1499.94, Variant for price 1499.94",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/hydra-storage-builder-1"
@@ -285,7 +285,7 @@
         },
         {
           "label": "All-in-One Trainer",
-          "detail": "$1349.99 — Plate Loaded v2 (with Footplate)",
+          "detail": "$1349.99, Plate Loaded v2 (with Footplate)",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/all-in-one-trainer"
@@ -293,7 +293,7 @@
         },
         {
           "label": "Hydra Storage Builder",
-          "detail": "$1319.93 — Variant for price 1319.93",
+          "detail": "$1319.93, Variant for price 1319.93",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/hydra-storage-builder-1"
@@ -301,7 +301,7 @@
         },
         {
           "label": "Hydra Storage Builder",
-          "detail": "$1309.94 — Variant for price 1309.94",
+          "detail": "$1309.94, Variant for price 1309.94",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/hydra-storage-builder-1"
@@ -317,7 +317,7 @@
       "unit": "products",
       "summary": "9 products have a vendor of \"related_to_<numeric id>\" instead of a brand name. The rest of the catalogue correctly reads \"Bells of Steel\".",
       "impact": "Vendor is a customer-facing field and a required attribute in Google Shopping and most marketplace feeds. These products are advertising a database key as their brand.",
-      "fix": "Find the app writing this — the value shape suggests a related-products integration reusing the field — and reset the affected products to the correct vendor. Worth checking what else that integration touches.",
+      "fix": "Find the app writing this (the value shape suggests a related-products integration reusing the field) and reset the affected products to the correct vendor. Worth checking what else that integration touches.",
       "evidence": [
         {
           "label": "Kraken Cable Tower Rack Attachment",
@@ -400,7 +400,7 @@
       "count": 5,
       "unit": "products",
       "summary": "148 products carry the hgb_ tags that drive Home Gym Builder compatibility. 1 says in its own title that it fits both rack families while carrying tags for only one; 4 more name both families and carry no tags at all.",
-      "impact": "These attachments are invisible to your builder for the family they were left out of. A customer configuring that rack is never offered a part that physically fits it — and the title they can read says otherwise.",
+      "impact": "These attachments are invisible to your builder for the family they were left out of. A customer configuring that rack is never offered a part that physically fits it, and the title they can read says otherwise.",
       "fix": "Reconcile the hgb_ tags against product titles as a scheduled check. The comparison is cheap and it is exactly the sort of drift nobody notices by hand.",
       "evidence": [
         {
@@ -452,7 +452,7 @@
       "count": 15,
       "unit": "machines over $500",
       "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 15 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $5000.",
-      "impact": "A treadmill that fails in year two has nothing to sell the customer and nothing for support to point at — a warranty conversation with no good ending, on your highest-ticket items. Spare parts are also a margin-rich line being left on the table.",
+      "impact": "A treadmill that fails in year two has nothing to sell the customer and nothing for support to point at, a warranty conversation with no good ending, on your highest-ticket items. Spare parts are also a margin-rich line being left on the table.",
       "fix": "Work down this list by price. Every machine over $1,000 should have at least its wear parts - pads, cables, bushings - published before the next warranty season.",
       "evidence": [
         {
@@ -544,7 +544,7 @@
       "count": 6,
       "unit": "variants",
       "summary": "6 variants set a compare-at price identical to what the customer actually pays.",
-      "impact": "Shopify renders compare-at as a struck-through \"was\" price. A struck-through number that matches the real one is a discount claim with no discount behind it — which is both a conversion problem and the kind of thing consumer-protection rules care about.",
+      "impact": "Shopify renders compare-at as a struck-through \"was\" price. A struck-through number that matches the real one is a discount claim with no discount behind it, which is both a conversion problem and the kind of thing consumer-protection rules care about.",
       "fix": "Clear compare_at_price wherever it is less than or equal to price, and add it to the same publish-time validation as the weight check.",
       "evidence": [
         {
@@ -697,7 +697,7 @@
       "unit": "products",
       "summary": "89 products have an empty product_type and a further 18 use the literal string \"Hidden\" as their type.",
       "impact": "product_type is what your automated collections, storefront filters and any BigQuery or Looker grouping key off. Every product without one is invisible to that machinery, and \"Hidden\" is a visibility flag wearing a taxonomy field’s clothes.",
-      "fix": "Most are inferable from the title alone — the classifier in this demo types 60 of them with a dozen rules. Backfill, then make type required at publish.",
+      "fix": "Most are inferable from the title alone; the classifier in this demo types 60 of them with a dozen rules. Backfill, then make type required at publish.",
       "evidence": [
         {
           "label": "Oblivyon Tower - 3x3\" Cable Tower - Back Upright",
@@ -768,11 +768,11 @@
     {
       "id": "specs-hidden",
       "severity": "medium",
-      "title": "Spec tables are switched off on 90 products — including entry-level racks",
+      "title": "Spec tables are switched off on 90 products, including entry-level racks",
       "count": 90,
       "unit": "products",
-      "summary": "90 products carry the hide:specs tag. Separately, all 3 Residential racks publish no upright height — the one number that decides whether a rack fits a room.",
-      "impact": "The Residential racks are your cheapest and most beginner-facing — exactly the buyer working around a low basement ceiling, and the one least able to guess. The Gym Builder cannot verify fit for any of them. Neither can the customer.",
+      "summary": "90 products carry the hide:specs tag. Separately, all 3 Residential racks publish no upright height, the one number that decides whether a rack fits a room.",
+      "impact": "The Residential racks are your cheapest and most beginner-facing, exactly the buyer working around a low basement ceiling, and the one least able to guess. The Gym Builder cannot verify fit for any of them. Neither can the customer.",
       "fix": "Publish height, width and depth on every rack. It is the highest-volume pre-sales question in this category.",
       "evidence": [
         {

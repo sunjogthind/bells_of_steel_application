@@ -60,7 +60,7 @@ hype, no emoji. Two or three short paragraphs at most.`;
 export async function POST(req: Request) {
   if (!process.env.ANTHROPIC_API_KEY) {
     return NextResponse.json(
-      { available: false, reason: 'No ANTHROPIC_API_KEY configured — the deterministic composer is handling replies.' },
+      { available: false, reason: 'No ANTHROPIC_API_KEY configured, the deterministic composer is handling replies.' },
       { status: 503 }
     );
   }
@@ -131,7 +131,7 @@ export async function POST(req: Request) {
       return NextResponse.json({
         available: false,
         rejected: true,
-        reason: `Generation discarded — it introduced ${problems.join(', ')} not present in the retrieved context.`,
+        reason: `Generation discarded. It introduced ${problems.join(', ')} not present in the retrieved context.`,
       }, { status: 200 });
     }
 
@@ -150,7 +150,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ available: false, reason: 'API key rejected.' }, { status: 200 });
     }
     if (error instanceof Anthropic.RateLimitError) {
-      return NextResponse.json({ available: false, reason: 'Upstream rate limit — deterministic text used.' }, { status: 200 });
+      return NextResponse.json({ available: false, reason: 'Upstream rate limit, deterministic text used.' }, { status: 200 });
     }
     if (error instanceof Anthropic.BadRequestError) {
       return NextResponse.json({ available: false, reason: `Bad request: ${error.message}` }, { status: 200 });

@@ -5,7 +5,7 @@ import { IconRack } from '@/components/Icons';
 import { SNAPSHOT_DATE } from '@/lib/catalog';
 import Builder from './Builder';
 
-export const metadata = { title: 'Gym Builder — Rana Thind × Bells of Steel' };
+export const metadata = { title: 'Gym Builder · Rana Thind × Bells of Steel' };
 
 export default function Page() {
   const { racks, kit, lookup } = builderPayload();
@@ -33,7 +33,7 @@ export default function Page() {
           only the attachments your own compatibility tags say will bolt on.
         </p>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
-          Every dimension is labelled with where it came from — the product page, my estimate, or
+          Every dimension is labelled with where it came from, the product page, my estimate, or
           <span className="text-red-600"> not published at all</span>. Where a spec isn&rsquo;t published,
           the tool says so instead of guessing. Snapshot: {SNAPSHOT_DATE}.
         </p>
@@ -43,7 +43,7 @@ export default function Page() {
         <TechBox
           rows={[
                   { k: 'Rendering', v: <>Next.js server component reads the catalogue, trims it, and passes only what the client needs. The 4.4&nbsp;MB feed never reaches the browser.</> },
-          { k: 'Fit engine', v: <><C>lib/fit.ts</C> — pure functions, no I/O. Every dimension carries a provenance tag: sourced, estimated, or not published.</> },
+          { k: 'Fit engine', v: <><C>lib/fit.ts</C>, pure functions, no I/O. Every dimension carries a provenance tag: sourced, estimated, or not published.</> },
           { k: 'Drawing', v: <>Hand-written inline SVG. Plan and elevation share one inch-to-pixel scale, so the two views agree.</> },
           { k: 'Compatibility', v: <>Traverses the <C>hgb_</C> tag graph across five attachment classes rather than inferring fit.</> },
           ]}

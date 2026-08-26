@@ -4,7 +4,7 @@ import TechBox, { C } from '@/components/TechBox';
 import { IconMonitor } from '@/components/Icons';
 import audit from '@/data/audit.json';
 
-export const metadata = { title: 'Catalogue Monitor — Rana Thind × Bells of Steel' };
+export const metadata = { title: 'Catalogue Monitor · Rana Thind × Bells of Steel' };
 
 const SEV: Record<string, { cls: string; dot: string; label: string }> = {
   alert:   { cls: 'border-red-500/35 bg-red-50', dot: 'bg-red-500', label: 'Alert' },
@@ -37,7 +37,7 @@ export default function Page() {
         </p>
         <p className="mt-3 max-w-3xl leading-relaxed text-muted">
           A scheduled job re-pulls your storefront feed every morning, fingerprints all{' '}
-          {latest.productCount} products, and reports only what changed — new products, price movements,
+          {latest.productCount} products, and reports only what changed, new products, price movements,
           stock flips, data issues that appeared or got fixed.
         </p>
         <p className="mt-3 max-w-3xl leading-relaxed text-muted">
@@ -49,7 +49,7 @@ export default function Page() {
           points={[
             { lead: 'It catches drift the morning it happens.', body: <>An audit is stale a week later. This one re-reads the feed every day and only speaks up when something moved.</> },
             { lead: 'It has already earned its keep.', body: <>Its first real run found 21 changes in a single day, including two compare-at price problems your team had fixed and one product that quietly went out of stock.</> },
-            { lead: 'It costs nobody any attention.', body: <>Runs unattended, commits its own history, and stays silent on the days nothing changed — which is most days, and is the point.</> },
+            { lead: 'It costs nobody any attention.', body: <>Runs unattended, commits its own history, and stays silent on the days nothing changed, which is most days, and is the point.</> },
           ]}
           caveat="It reports what changed, not whether the change was intended. A price drop and a pricing mistake look identical from outside."
         />
@@ -83,7 +83,7 @@ export default function Page() {
                   <p className="font-bold">{fmt(r.at)}</p>
                   <p className="mt-0.5 text-[13px] text-muted">
                     {r.baseline
-                      ? 'Baseline run — nothing to compare against yet.'
+                      ? 'Baseline run. Nothing to compare against yet.'
                       : `Compared against ${fmt(r.comparedTo)}`}
                   </p>
                 </div>
@@ -98,7 +98,7 @@ export default function Page() {
                 <p className="mt-4 border-t border-line pt-4 text-sm leading-relaxed text-muted">
                   {r.baseline
                     ? 'First run. The fingerprint was recorded so later runs have something to diff against.'
-                    : 'Nothing moved. This is the output on most days, and it is the point — a monitor that reports something every morning gets filtered into a folder nobody opens. Quiet is the correct answer when nothing changed.'}
+                    : 'Nothing moved. This is the output on most days, and it is the point, a monitor that reports something every morning gets filtered into a folder nobody opens. Quiet is the correct answer when nothing changed.'}
                 </p>
               ) : (
                 <ul className="mt-4 space-y-2 border-t border-line pt-4">
@@ -129,7 +129,7 @@ export default function Page() {
         <h2 className="mt-14 text-2xl font-extrabold">What it watches for</h2>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
           {[
-            ['Alert', 'A product gains a data issue it did not have before, or an audit rule count goes up. This is the case worth waking someone for — it means something regressed today.', 'alert'],
+            ['Alert', 'A product gains a data issue it did not have before, or an audit rule count goes up. This is the case worth waking someone for. It means something regressed today.', 'alert'],
             ['Notable', 'A price moved by more than $50. Large enough that your support and marketing teams should know before a customer tells them.', 'notable'],
             ['Fixed', 'A data issue was resolved, or a rule count went down. Worth recording so the work shows.', 'good'],
             ['Info', 'Products added or removed, stock flips, small price changes. Logged, never alerted on.', 'info'],
@@ -170,7 +170,7 @@ jobs:
         {/* ---------- bigquery ---------- */}
         <h2 className="mt-14 text-2xl font-extrabold">Where this lands in BigQuery</h2>
         <p className="mt-3 max-w-3xl leading-relaxed text-muted">
-          Every run also appends to a flat time series — one row per rule per day. That is the shape you
+          Every run also appends to a flat time series, one row per rule per day. That is the shape you
           want in BigQuery: narrow, append-only, and chartable in Looker without any further modelling.
         </p>
         <div className="mt-4 grid gap-4 lg:grid-cols-2">
@@ -233,10 +233,10 @@ ORDER BY run_date DESC, finding_count DESC;`}
         </div>
         <TechBox
           rows={[
-                  { k: 'Schedule', v: <>GitHub Actions cron at 07:00 Calgary. Unattended — no machine of mine needs to be on.</> },
+                  { k: 'Schedule', v: <>GitHub Actions cron at 07:00 Calgary. Unattended, no machine of mine needs to be on.</> },
           { k: 'Diffing', v: <>Each run fingerprints all 476 products, compares against the previous run, and classifies what moved by severity.</> },
           { k: 'State', v: <>Append-only snapshots in <C>data/snapshots/</C>, committed back by the job itself.</> },
-          { k: 'Warehouse', v: <><C>data/timeseries.csv</C> — one row per rule per day, the shape BigQuery wants.</> },
+          { k: 'Warehouse', v: <><C>data/timeseries.csv</C>, one row per rule per day, the shape BigQuery wants.</> },
           ]}
           note="The job commits under its own name, so the run history is auditable rather than asserted."
         />

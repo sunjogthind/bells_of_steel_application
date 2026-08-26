@@ -28,7 +28,7 @@ export default function Spotter({ ix }: { ix: SpotterIndex }) {
     role: 'spotter',
     text: [
       "I'm Spotter. Tell me how long you've been training, what you're after, how many days a week you can train, and what equipment you've got.",
-      'One sentence is fine — I read plain language.',
+      'One sentence is fine, I read plain language.',
     ],
   }]);
   const [input, setInput] = useState('');
@@ -74,7 +74,7 @@ export default function Spotter({ ix }: { ix: SpotterIndex }) {
       )));
     } catch {
       setTurns((t) => t.map((turn, i) => i !== idx ? turn
-        : { ...turn, note: 'Could not reach the composer — deterministic text kept.' }));
+        : { ...turn, note: 'Could not reach the composer, deterministic text kept.' }));
     } finally {
       setBusy(false);
     }
@@ -155,7 +155,7 @@ export default function Spotter({ ix }: { ix: SpotterIndex }) {
             </label>
             <span className="text-[12px] text-muted">
               {useClaude
-                ? 'Retrieval and safety still run first — the model only rewrites the result, and gets discarded if it invents a number.'
+                ? 'Retrieval and safety still run first, the model only rewrites the result, and gets discarded if it invents a number.'
                 : 'Off: replies are composed deterministically, no API call.'}
             </span>
             {busy && <span className="ml-auto font-mono text-[11px] text-steelDim">composing…</span>}
@@ -181,7 +181,7 @@ export default function Spotter({ ix }: { ix: SpotterIndex }) {
           ))}
         </div>
 
-        {/* retrieval trace — the part worth showing */}
+        {/* retrieval trace, the part worth showing */}
         {last && (
           <div className="mt-5 rounded-lg border border-line bg-panel">
             <button onClick={() => setShowTrace((v) => !v)}
@@ -296,7 +296,7 @@ function ProgramCard({ program }: { program: Program }) {
                   )}
                 </td>
                 <td className="whitespace-nowrap py-2 text-right font-mono tabular-nums text-muted">
-                  {sl.sets ? `${sl.sets} × ${sl.reps}` : '—'}
+                  {sl.sets ? `${sl.sets} × ${sl.reps}` : ', '}
                   {sl.sets ? <div className="text-[11px] text-lineStrong">{sl.rpe}</div> : null}
                 </td>
               </tr>
@@ -309,7 +309,7 @@ function ProgramCard({ program }: { program: Program }) {
             <p className="text-[12px] font-bold text-amber-900">Closing the gap</p>
             <a href={program.gaps[0].product.url} target="_blank" rel="noopener noreferrer"
                className="mt-1 block text-[13px] text-amber-900 underline decoration-amber-600/30 underline-offset-2 hover:decoration-amber-700">
-              {program.gaps[0].product.title} — ${(program.gaps[0].product.priceCents / 100).toFixed(2)}
+              {program.gaps[0].product.title}, ${(program.gaps[0].product.priceCents / 100).toFixed(2)}
             </a>
             <p className="mt-1 text-[11px] text-amber-700">From the live catalogue, cheapest option that covers it.</p>
           </div>

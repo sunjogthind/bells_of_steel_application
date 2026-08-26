@@ -125,5 +125,5 @@ writeFileSync('data/timeseries.csv', rows.join('\n') + '\n');
 
 console.log(prev ? `monitor: compared against ${prev.fetched_at}` : 'monitor: first run, baseline established');
 console.log(`  ${changes.length} change(s) · alert=${run.bySeverity.alert} notable=${run.bySeverity.notable} good=${run.bySeverity.good} info=${run.bySeverity.info}`);
-changes.slice(0, 12).forEach((c) => console.log(`   [${c.severity}] ${c.kind}: ${c.title.slice(0, 54)} — ${c.detail.slice(0, 70)}`));
+changes.slice(0, 12).forEach((c) => console.log(`   [${c.severity}] ${c.kind}: ${c.title.slice(0, 54)}, ${c.detail.slice(0, 70)}`));
 console.log(`  ${runs.length} run(s) in history → data/monitor.json, data/timeseries.csv`);

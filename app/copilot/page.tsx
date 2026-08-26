@@ -8,7 +8,7 @@ import Copilot from './Copilot';
 import PartsIndex from './PartsIndex';
 import type { Index } from '@/lib/copilot';
 
-export const metadata = { title: 'CS Copilot — Rana Thind × Bells of Steel' };
+export const metadata = { title: 'CS Copilot · Rana Thind × Bells of Steel' };
 
 export default function Page() {
   const d = copilot as any;
@@ -46,7 +46,7 @@ export default function Page() {
             from, and anything your catalogue cannot support goes to a human.
           </p>
           <p className="mt-2.5 text-sm leading-relaxed text-muted">
-            A model would write warmer prose. It would not change which facts the answer may contain — that
+            A model would write warmer prose. It would not change which facts the answer may contain. That
             is settled by the retrieval and escalation layer underneath. Spotter runs the same engine with
             Claude wired in.
           </p>
@@ -65,7 +65,7 @@ export default function Page() {
             one, and neither can a rep in their first week.
           </p>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
-            Flattened into one searchable index. Matching is deterministic — it ranks results, it cannot
+            Flattened into one searchable index. Matching is deterministic. It ranks results, it cannot
             invent a part number.
           </p>
 
@@ -76,7 +76,7 @@ export default function Page() {
         <TechBox
           rows={[
                   { k: 'Index', v: <>Built ahead of time over 476 products and 68 spare parts, with IDF weights precomputed so the browser only has to score.</> },
-          { k: 'Routing', v: <>Six intents matched in a deliberate order — a dimensions question containing the word &ldquo;fit&rdquo; is not a compatibility question.</> },
+          { k: 'Routing', v: <>Six intents matched in a deliberate order, a dimensions question containing the word &ldquo;fit&rdquo; is not a compatibility question.</> },
           { k: 'Grounding', v: <>Every claim carries the product it came from. Below the relevance threshold it escalates instead of answering.</> },
           { k: 'Model', v: <>None. Retrieval and the escalation policy decide whether an answer is safe; a model would only change how it reads.</> },
           ]}

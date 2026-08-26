@@ -15,7 +15,7 @@ const DEMOS = ([
     href: '/audit',
     n: '02',
     title: 'Catalogue Audit',
-    blurb: 'A dashboard that reads your live storefront feed and lists what is broken in it. Not hypothetical problems — nine of your products are shipping a corrupted vendor field to customers right now.',
+    blurb: 'A dashboard that reads your live storefront feed and lists what is broken in it. Not hypothetical problems, nine of your products are shipping a corrupted vendor field to customers right now.',
     tag: 'Internal · Merch ops',
     highlight: 'Real findings against your real catalogue.',
   },
@@ -23,7 +23,7 @@ const DEMOS = ([
     href: '/monitor',
     n: '03',
     title: 'Catalogue Monitor',
-    blurb: 'The audit says what is broken today. This is what stops it coming back — a scheduled job that re-pulls your feed every morning, diffs it against yesterday, and reports only what actually moved.',
+    blurb: 'The audit says what is broken today. This is what stops it coming back, a scheduled job that re-pulls your feed every morning, diffs it against yesterday, and reports only what actually moved.',
     tag: 'Internal · Automation',
     highlight: 'Runs unattended in GitHub Actions. The history is real, not seeded.',
   },
@@ -67,7 +67,7 @@ export default function Home() {
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
           For the AI &amp; Internal Tools Developer role. Everything here reads from a snapshot of your
-          live storefront feed — {s.products} products, {s.variants.toLocaleString()} variants — pulled on {SNAPSHOT_DATE}.
+          live storefront feed, {s.products} products, {s.variants.toLocaleString()} variants, pulled on {SNAPSHOT_DATE}.
           No mock data, no lorem ipsum, no invented SKUs.
         </p>
 
@@ -134,7 +134,7 @@ export default function Home() {
             feed closely enough to find the problems from the outside.
           </p>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted">
-            Two of these your customers would touch. The other three are the unglamorous internal kind — a
+            Two of these your customers would touch. The other three are the unglamorous internal kind, a
             merch-ops dashboard, a job that runs at 7am so nobody has to remember to look, and a copilot
             that knows when to shut up. That ratio is roughly the one in your job description.
           </p>

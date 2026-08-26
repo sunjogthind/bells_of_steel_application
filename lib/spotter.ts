@@ -178,7 +178,7 @@ export function synthesize(profile: Profile, ix: SpotterIndex): Program {
         if (!gaps.some((g) => g.pattern === pattern)) {
           gaps.push({ pattern, needs, product: cheapestProductFor(ix, needs) });
         }
-        return { pattern, exerciseId: null, name: `No ${pattern.replace('_', ' ')} available`, sets: 0, reps: '—', rpe: '—',
+        return { pattern, exerciseId: null, name: `No ${pattern.replace('_', ' ')} available`, sets: 0, reps: ', ', rpe: ', ',
           gap: { pattern, needs } };
       }
       used.add(pick.id);
@@ -208,7 +208,7 @@ export function synthesize(profile: Profile, ix: SpotterIndex): Program {
       ? 'Add a small amount of weight each session while the reps stay clean. Miss the target reps twice in a row and drop about ten percent, then build back up.'
       : exp === 'intermediate'
       ? 'Hold the load for a week, add reps within the range, then add weight and reset to the bottom of the range. Deload every fifth or sixth week.'
-      : 'Run this in three-to-four week blocks with a planned deload. Adjust by RPE rather than by a fixed percentage — the readiness data in the app is there for exactly this.';
+      : 'Run this in three-to-four week blocks with a planned deload. Adjust by RPE rather than by a fixed percentage, the readiness data in the app is there for exactly this.';
 
   return { split: splitKey, rationale, sessions, gaps, progression };
 }
@@ -250,11 +250,11 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
     return {
       ...base, escalate: true, program: state.program,
       text: intent !== 'injury' ? [
-        `Still holding off on the program — you mentioned ${profile.constraints.join(' and ')} pain and that has not been cleared.`,
+        `Still holding off on the program. You mentioned ${profile.constraints.join(' and ')} pain and that has not been cleared.`,
         `I can keep answering questions about training, equipment or the app in the meantime. I am just not going to write you a loading plan around an undiagnosed joint.`,
       ] : [
         `You mentioned ${profile.constraints.length && profile.constraints[0] !== 'unspecified' ? `your ${profile.constraints.join(' and ')}` : 'pain or an injury'}, so I am going to stop here rather than work around it.`,
-        `Which substitutions are safe depends on what is actually wrong, and that needs someone who can examine you. I can generate a program once you have been cleared, and I can build it around movements you have been told to avoid — but I am not going to guess at that from a chat message.`,
+        `Which substitutions are safe depends on what is actually wrong, and that needs someone who can examine you. I can generate a program once you have been cleared, and I can build it around movements you have been told to avoid, but I am not going to guess at that from a chat message.`,
         `Your Form Check channel is a reasonable place for technique questions. Pain is a different question and belongs with a physio or a doctor.`,
       ],
       citations: kb.map((r) => cite(r.doc, 'safety guidance')),
@@ -270,10 +270,10 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
       ...base, program: state.program, citations: [],
       text: [
         extracted.length
-          ? `Got it — ${extracted.map((e) => e.replace('=', ' ')).join(', ')}.`
+          ? `Got it, ${extracted.map((e) => e.replace('=', ' ')).join(', ')}.`
           : `Happy to build you something.`,
         `Before I write anything I need ${missing.length === 1 ? '' : missing.length + ' more things'}: ${missing.join(', ')}.`,
-        `Plain language is fine — "been lifting about a year, want to get stronger, 4 days, I've got a rack, barbell and bumpers" is everything I need in one line.`,
+        `Plain language is fine, "been lifting about a year, want to get stronger, 4 days, I've got a rack, barbell and bumpers" is everything I need in one line.`,
       ],
       trace,
     };
@@ -296,7 +296,7 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
     }
     return {
       ...base, program: state.program, citations: hits.map((r) => cite(r.doc, r.why[0] ?? 'retrieved')),
-      text: [hits[0].doc.meta.body, hits[1] ? `Related: ${hits[1].doc.title.toLowerCase()} — ${hits[1].doc.meta.body.split('. ')[0]}.` : ''].filter(Boolean),
+      text: [hits[0].doc.meta.body, hits[1] ? `Related: ${hits[1].doc.title.toLowerCase()}, ${hits[1].doc.meta.body.split('. ')[0]}.` : ''].filter(Boolean),
       trace,
     };
   }
@@ -316,7 +316,7 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
         hits.length
           ? `From your live catalogue: ${hits.slice(0, 3).map((r) => `${r.doc.title} ($${(r.doc.meta.priceCents / 100).toFixed(2)})`).join(', ')}.`
           : `Nothing in your catalogue matched that closely enough to recommend.`,
-        `Prices are from the snapshot this demo was built against — check the live store before buying.`,
+        `Prices are from the snapshot this demo was built against. Check the live store before buying.`,
       ].filter(Boolean),
       trace,
     };
@@ -338,7 +338,7 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
     trace.push(`swap target: ${target.title} (${target.meta.pattern})`);
     if (!alt) {
       return { ...base, program: state.program, citations: [cite(target, 'current')], trace,
-        text: [`There is nothing else in the ${target.meta.pattern.replace('_', ' ')} pattern you have the equipment for. Keeping ${target.title} for now — tell me what you have and I will look again.`] };
+        text: [`There is nothing else in the ${target.meta.pattern.replace('_', ' ')} pattern you have the equipment for. Keeping ${target.title} for now. Tell me what you have and I will look again.`] };
     }
     const program = {
       ...state.program,
@@ -354,7 +354,7 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
       ...base, program,
       citations: [cite(target, 'replaced'), cite(alt, 'same pattern, equipment available')],
       text: [
-        `Swapped ${target.title} for ${alt.title} — same ${target.meta.pattern.replace('_', ' ')} pattern, and you have what it needs.`,
+        `Swapped ${target.title} for ${alt.title}, same ${target.meta.pattern.replace('_', ' ')} pattern, and you have what it needs.`,
         alt.meta.cues?.[0] ? `Cue: ${alt.meta.cues[0].toLowerCase()}.` : '',
       ].filter(Boolean),
       trace,

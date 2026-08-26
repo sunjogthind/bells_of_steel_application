@@ -13,7 +13,7 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  title: 'Rana Thind — Bells of Steel Application Portfolio',
+  title: 'Rana Thind · Bells of Steel Application Portfolio',
   description:
     'Five working tools built on the live Bells of Steel product catalogue, for the AI & Internal Tools Developer application.',
 };
@@ -64,7 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <p className="mt-3 max-w-3xl">
               Product data is a read-only snapshot of the public Bells of Steel storefront catalogue
               (<code className="font-mono text-[12px] text-bright">bellsofsteel.com/products.json</code>), taken
-              25 August 2026. Prices and availability were accurate at snapshot time only — check the live
+              25 August 2026. Prices and availability were accurate at snapshot time only. Check the live
               store before relying on any number here. All product names, images and copy belong to Bells of
               Steel Inc. Typeface and colour palette are matched to the Bells of Steel storefront as a design exercise.
             </p>

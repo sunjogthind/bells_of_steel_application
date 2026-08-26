@@ -115,7 +115,7 @@ function markdown() {
     const rank = String(i + 1).padStart(2, '0');
     L.push(`## ${rank}. ${f.copy.title}`);
     L.push('');
-    L.push(`**${SEVERITY[f.severity].label}** — ${SEVERITY[f.severity].meaning}  `);
+    L.push(`**${SEVERITY[f.severity].label}**, ${SEVERITY[f.severity].meaning}  `);
     L.push(`**${n(f.count)} ${f.unit}**`);
     L.push('');
     L.push(f.copy.what);
@@ -132,9 +132,9 @@ function markdown() {
       f.evidence.forEach((e) => {
         const links = (e.links ?? []).filter(Boolean);
         const head = links.length === 1 ? `[${e.label}](${links[0]})` : `**${e.label}**`;
-        const bits = [e.detail, e.delta].filter(Boolean).join(' — ');
+        const bits = [e.detail, e.delta].filter(Boolean).join(', ');
         const extra = links.length > 1 ? ` (${links.map((u, k) => `[page ${k + 1}](${u})`).join(' · ')})` : '';
-        L.push(`- ${head}${bits ? ` — ${bits}` : ''}${extra}`);
+        L.push(`- ${head}${bits ? `, ${bits}` : ''}${extra}`);
       });
     }
     L.push('');
@@ -291,7 +291,7 @@ function severityTiles() {
 function evidenceTable(f) {
   const shown = f.evidence.length;
   const caption = shown < f.count
-    ? `Affected products — ${shown} of ${n(f.count)} shown`
+    ? `Affected products, ${shown} of ${n(f.count)} shown`
     : `Affected products`;
   const rows = f.evidence.map((e) => {
     const links = (e.links ?? []).filter(Boolean);

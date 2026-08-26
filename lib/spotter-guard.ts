@@ -20,7 +20,7 @@ const normalise = (s: string) =>
   s.toLowerCase()
     .replace(/[,\s]/g, '')
     .replace(/[×✕✖]/g, 'x')
-    .replace(/[–—−]/g, '-');
+    .replace(/[–, −]/g, '-');
 
 export function inventedFacts(reply: string, grounding: string): string[] {
   const problems: string[] = [];
@@ -31,7 +31,7 @@ export function inventedFacts(reply: string, grounding: string): string[] {
     if (!ground.includes(normalise(m))) problems.push(`price ${m}`);
   });
 
-  const schemes = reply.match(/\b\d+\s*[x×]\s*\d+(?:\s*[–—-]\s*\d+)?\b/gi) ?? [];
+  const schemes = reply.match(/\b\d+\s*[x×]\s*\d+(?:\s*[–, -]\s*\d+)?\b/gi) ?? [];
   schemes.forEach((sc) => {
     if (!ground.includes(normalise(sc))) problems.push(`set scheme ${sc}`);
   });

@@ -121,13 +121,13 @@ export function answer(q: string, ix: Index): Answer {
 
   if (intent === 'policy') {
     return ESCALATE('policy',
-      'Routing to a human — this is outside the catalogue.',
+      'Routing to a human. This is outside the catalogue.',
       'Shipping, warranty, returns and assembly are policy questions. The product catalogue is the only source this tool is allowed to read, and it contains no policy data, so answering would mean inventing terms. That is the one thing a customer-facing assistant must never do.',
       [...trace, 'no policy source connected → escalate']);
   }
 
   if (!hits.length) {
-    return ESCALATE(intent, 'No product matched — routing to a human.',
+    return ESCALATE(intent, 'No product matched, routing to a human.',
       'Nothing in the catalogue scored above the relevance threshold for this question, so there is nothing to ground an answer in.',
       trace);
   }
@@ -141,7 +141,7 @@ export function answer(q: string, ix: Index): Answer {
 
     if (!rack) {
       return ESCALATE('compatibility', 'Could not identify which rack this is about.',
-        'A compatibility answer needs both sides — which rack, and which attachment. I could not resolve a specific rack model from the question, and guessing which one the customer owns is exactly how a wrong part gets shipped.',
+        'A compatibility answer needs both sides, which rack, and which attachment. I could not resolve a specific rack model from the question, and guessing which one the customer owns is exactly how a wrong part gets shipped.',
         [...trace, 'rack entity unresolved → escalate'],
         hits.slice(0, 3).map((h) => cite(h.doc, 'candidate')));
     }
@@ -161,7 +161,7 @@ export function answer(q: string, ix: Index): Answer {
       return ESCALATE('compatibility', 'Compatibility is not published for this attachment.',
         `"${attachment.doc.title}" carries no rack compatibility tags in the catalogue at all, so there is no published answer to give. This needs someone who can check the physical spec.`,
         [...trace, 'no hgb_ tags on attachment → escalate'],
-        [cite(rack.doc, 'rack'), cite(attachment.doc, 'attachment — no compatibility data')]);
+        [cite(rack.doc, 'rack'), cite(attachment.doc, 'attachment, no compatibility data')]);
     }
 
     const wanted = attTags.filter((t) => t.startsWith(`hgb_${key.fam}_${key.frame}_`));
@@ -170,13 +170,13 @@ export function answer(q: string, ix: Index): Answer {
     if (wanted.length) {
       return {
         intent: 'compatibility', confidence: 'high',
-        headline: 'Yes — this attachment is tagged as compatible.',
+        headline: 'Yes. This attachment is tagged as compatible.',
         body: [
           `"${attachment.doc.title}" is listed as compatible with the ${rack.doc.title}.`,
           `Both are in the ${key.fam.replace(/^./, (c) => c.toUpperCase())} ${HOLE[key.fam]} hole pattern, and the catalogue carries the matching compatibility tag (${wanted[0]}) for this exact frame.`,
           attachment.doc.priceCents ? `The attachment is ${money(attachment.doc.priceCents)}${attachment.doc.available ? ' and currently in stock' : ', but currently out of stock'}.` : '',
         ].filter(Boolean),
-        citations: [cite(rack.doc, 'rack'), cite(attachment.doc, `compatible — tag ${wanted[0]}`)],
+        citations: [cite(rack.doc, 'rack'), cite(attachment.doc, `compatible, tag ${wanted[0]}`)],
         escalate: false,
         trace: [...trace, `matched tag ${wanted[0]} → compatible`],
       };
@@ -184,15 +184,15 @@ export function answer(q: string, ix: Index): Answer {
 
     return {
       intent: 'compatibility', confidence: 'high',
-      headline: 'No — these are not compatible.',
+      headline: 'No. These are not compatible.',
       body: [
         `"${attachment.doc.title}" is not tagged for the ${rack.doc.title}.`,
         otherFamily
-          ? `It is built for the other rack family. Hydra uprights use ${HOLE.hydra} holes and Manticore uses ${HOLE.manticore}, so the hardware physically will not line up — this is not a case where it fits with some persuasion.`
+          ? `It is built for the other rack family. Hydra uprights use ${HOLE.hydra} holes and Manticore uses ${HOLE.manticore}, so the hardware physically will not line up. This is not a case where it fits with some persuasion.`
           : `The catalogue lists compatibility for other frames in this family, but not for this one.`,
         `Bells of Steel's own product copy carries the same warning: only attachments made for that exact upright and hole size will fit.`,
       ],
-      citations: [cite(rack.doc, `rack — ${HOLE[key.fam]} holes`), cite(attachment.doc, `tagged for: ${attTags.slice(0, 3).join(', ')}`)],
+      citations: [cite(rack.doc, `rack, ${HOLE[key.fam]} holes`), cite(attachment.doc, `tagged for: ${attTags.slice(0, 3).join(', ')}`)],
       escalate: false,
       trace: [...trace, `no tag for hgb_${key.fam}_${key.frame}_* → not compatible`],
     };
@@ -218,10 +218,10 @@ export function answer(q: string, ix: Index): Answer {
           headline: `None of the ${racks.length} rack models clear a ${ceil![1]}ft ceiling.`,
           body: [
             `At ${ceilingIn}" there is no prebuilt rack in the range that will stand up. The shortest uprights Bells of Steel sells are ${shortest[0]?.specs.uprightHeightIn}", and you need roughly 2" above that for the feet and pull-up bar hardware.`,
-            `Worth confirming the measurement with the customer before saying no — people often quote the height to a joist or a duct rather than to the finished ceiling, and a few inches decides this.`,
-            unknown.length ? `${unknown.length} rack models publish no height at all and could not be checked either way — the Residential line is the main gap, and it is the one most likely to suit a low room.` : '',
+            `Worth confirming the measurement with the customer before saying no, people often quote the height to a joist or a duct rather than to the finished ceiling, and a few inches decides this.`,
+            unknown.length ? `${unknown.length} rack models publish no height at all and could not be checked either way, the Residential line is the main gap, and it is the one most likely to suit a low room.` : '',
           ].filter(Boolean),
-          citations: shortest.slice(0, 3).map((d) => cite(d, `${d.specs.uprightHeightIn}" uprights — still too tall`)),
+          citations: shortest.slice(0, 3).map((d) => cite(d, `${d.specs.uprightHeightIn}" uprights, still too tall`)),
           escalate: false, trace,
         };
       }
@@ -232,7 +232,7 @@ export function answer(q: string, ix: Index): Answer {
         body: [
           `With ${ceilingIn}" to work with, these fit: ${fitting.slice(0, 6).map((d) => `${d.title.replace(/\s*\(.*\)$/, '')} (${d.specs.uprightHeightIn}" uprights)`).join('; ')}.`,
           `Allow about 2" above the uprights for the feet and pull-up bar hardware.`,
-          unknown.length ? `Note for the rep: ${unknown.length} rack models publish no height at all, so they cannot be checked here — the Residential line is the main gap.` : '',
+          unknown.length ? `Note for the rep: ${unknown.length} rack models publish no height at all, so they cannot be checked here, the Residential line is the main gap.` : '',
         ].filter(Boolean),
         citations: fitting.slice(0, 4).map((d) => cite(d, `${d.specs.uprightHeightIn}" uprights`)),
         escalate: false, trace,
@@ -267,9 +267,9 @@ export function answer(q: string, ix: Index): Answer {
       trace.push(`WARNING: ${dup.length} live listings for this title at different prices`);
       return {
         intent: 'price', confidence: 'medium',
-        headline: `Check before quoting — this product has two live prices.`,
+        headline: `Check before quoting. This product has two live prices.`,
         body: [
-          `"${top.title}" exists as ${dup.length} separate product pages, currently priced ${money(lo)} and ${money(hi)} — a difference of ${money(hi - lo)}.`,
+          `"${top.title}" exists as ${dup.length} separate product pages, currently priced ${money(lo)} and ${money(hi)}, a difference of ${money(hi - lo)}.`,
           `Confirm which page the customer is looking at before quoting, and flag it to whoever owns the catalogue. This affects every prebuilt rack, not just this one.`,
         ],
         citations: dup.map((d) => ({ title: `/${d.handle}`, url: d.url, note: money(d.priceCents) })),
@@ -283,7 +283,7 @@ export function answer(q: string, ix: Index): Answer {
         top.priceMaxCents && top.priceMaxCents !== top.priceCents
           ? `Price varies by variant, from ${money(top.priceCents)} to ${money(top.priceMaxCents)}.`
           : `Listed at ${money(top.priceCents)}.`,
-        `Snapshot price — confirm against the live page before committing to it with a customer.`,
+        `Snapshot price. Confirm against the live page before committing to it with a customer.`,
       ],
       citations: [cite(top, money(top.priceCents))],
       escalate: false, trace,
@@ -326,13 +326,13 @@ export function answer(q: string, ix: Index): Answer {
     }
     return {
       intent: 'parts', confidence: 'high',
-      headline: `Yes — ${scored[0].p.name} is ${money(scored[0].p.priceCents)}.`,
+      headline: `Yes, ${scored[0].p.name} is ${money(scored[0].p.priceCents)}.`,
       body: [
-        `The closest match is ${scored[0].p.name} (SKU ${scored[0].p.sku}) for the ${scored[0].p.machine}, at ${money(scored[0].p.priceCents)}${scored[0].p.available ? '' : ' — currently out of stock'}.`,
+        `The closest match is ${scored[0].p.name} (SKU ${scored[0].p.sku}) for the ${scored[0].p.machine}, at ${money(scored[0].p.priceCents)}${scored[0].p.available ? '' : ', currently out of stock'}.`,
         scored.length > 1 ? `Other parts for the same machine: ${scored.slice(1).map((r) => `${r.p.name} (${money(r.p.priceCents)})`).join(', ')}.` : '',
-        `Confirm the machine model with the customer before shipping — part names repeat across machines.`,
+        `Confirm the machine model with the customer before shipping, part names repeat across machines.`,
       ].filter(Boolean),
-      citations: scored.map((r) => ({ title: `${r.p.name} — ${r.p.sku}`, url: r.p.url, note: money(r.p.priceCents) })),
+      citations: scored.map((r) => ({ title: `${r.p.name}, ${r.p.sku}`, url: r.p.url, note: money(r.p.priceCents) })),
       escalate: false, trace,
     };
   }

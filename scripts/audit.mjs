@@ -57,16 +57,16 @@ const add = (f) => findings.push(f);
     id: 'duplicate-pricing', severity: 'critical',
     title: 'The same product is listed twice, at two different prices',
     count: mismatched.length, unit: `of ${dupes.length} duplicated listings`,
-    summary: `Every prebuilt rack exists as two live product pages — one plain handle, one ending "-hgb" (your Home Gym Builder copy). ${mismatched.length === dupes.length ? `All ${dupes.length}` : `${mismatched.length} of ${dupes.length}`} charge different prices, and both pages are purchasable.${skipped > 0 ? ` ${skipped} further duplicates were excluded as not comparable.` : ''}`,
-    impact: `The two pages carry different SKUs — the plain handle adds a "-BNDL" suffix — but ${identical} of ${mismatched.length} pairs are identical in shipping weight, product copy and images, so a customer is choosing between two listings for the same rack with nothing on the page to tell them apart. The widest gap is $${Math.max(...mismatched.map((m) => m.spread)).toFixed(2)}. The cheaper page is usually running a small discount, but that is not the cause: the pre-discount list prices differ on ${listDiffers} of ${mismatched.length} pairs, and on ${widerBefore} the gap is actually wider before the discount is applied.`,
-    fix: 'Pick one canonical page per rack and point the other at it. The -hgb copies are already tagged SEARCHANISE_IGNORE, so they are meant to be reached only through the builder — but they are publicly reachable and in the feed.',
+    summary: `Every prebuilt rack exists as two live product pages: one plain handle, one ending "-hgb" (your Home Gym Builder copy). ${mismatched.length === dupes.length ? `All ${dupes.length}` : `${mismatched.length} of ${dupes.length}`} charge different prices, and both pages are purchasable.${skipped > 0 ? ` ${skipped} further duplicates were excluded as not comparable.` : ''}`,
+    impact: `The two pages carry different SKUs (the plain handle adds a "-BNDL" suffix), but ${identical} of ${mismatched.length} pairs are identical in shipping weight, product copy and images, so a customer is choosing between two listings for the same rack with nothing on the page to tell them apart. The widest gap is $${Math.max(...mismatched.map((m) => m.spread)).toFixed(2)}. The cheaper page is usually running a small discount, but that is not the cause: the pre-discount list prices differ on ${listDiffers} of ${mismatched.length} pairs, and on ${widerBefore} the gap is actually wider before the discount is applied.`,
+    fix: 'Pick one canonical page per rack and point the other at it. The -hgb copies are already tagged SEARCHANISE_IGNORE, so they are meant to be reached only through the builder, but they are publicly reachable and in the feed.',
     evidence: mismatched.slice(0, 12).map((m) => ({
       label: m.title.replace(/\s*\(.*\)$/, ''),
-      detail: m.rows.map((r) => `$${r.price.toFixed(2)}${r.listPrice > r.price ? ` (was $${r.listPrice.toFixed(2)})` : ''} — /${r.handle}`).join('   vs   '),
+      detail: m.rows.map((r) => `$${r.price.toFixed(2)}${r.listPrice > r.price ? ` (was $${r.listPrice.toFixed(2)})` : ''}, /${r.handle}`).join('   vs   '),
       delta: `$${m.spread.toFixed(2)} apart${m.listSpread > 0 ? `, $${m.listSpread.toFixed(2)} before discounts` : ''}`,
       links: m.rows.map((r) => r.url),
     })),
-    verified: 'Both URLs fetched live — HTTP 200, prices and SKUs confirmed from each page’s own .json endpoint. Shipping weight, copy length and image count compared per pair.',
+    verified: 'Both URLs fetched live, HTTP 200, prices and SKUs confirmed from each page’s own .json endpoint. Shipping weight, copy length and image count compared per pair.',
   });
 }
 
@@ -82,11 +82,11 @@ const add = (f) => findings.push(f);
     id: 'zero-price', severity: 'high',
     title: 'Products priced at $0.00 or $0.01 are exposed in the public feed',
     count: products.length, unit: 'products',
-    summary: `${rows.length} purchasable variants across ${products.length} products carry a price of $1.00 or less. ${intentional.length} of them are recognisably deliberate — "FREE FOR BUILDERS" hardware and placeholder variants named "Variant for price 0" that belong to a bundling app.`,
-    impact: 'Nothing in the feed distinguishes these from real products, so anything reading products.json inherits them — shopping feeds, analytics, price monitoring, any internal tool. Spotter recommended one as the cheapest fix for an equipment gap until I filtered them out.',
+    summary: `${rows.length} purchasable variants across ${products.length} products carry a price of $1.00 or less. ${intentional.length} of them are recognisably deliberate, "FREE FOR BUILDERS" hardware and placeholder variants named "Variant for price 0" that belong to a bundling app.`,
+    impact: 'Nothing in the feed distinguishes these from real products, so anything reading products.json inherits them: shopping feeds, analytics, price monitoring, any internal tool. Spotter recommended one as the cheapest fix for an equipment gap until I filtered them out.',
     fix: 'Move builder scaffolding to a dedicated product type or unpublish it from the online-store channel so it stops appearing in the feed at all.',
     evidence: rows.slice(0, 10).map((r) => ({
-      label: r.p.title, detail: `$${num(r.v.price).toFixed(2)} — variant "${r.v.title}"`,
+      label: r.p.title, detail: `$${num(r.v.price).toFixed(2)}, variant "${r.v.title}"`,
       delta: /FREE FOR BUILDERS/i.test(r.p.title) || /^Variant for price/i.test(r.v.title) ? 'likely intentional' : 'worth checking',
       links: [url(r.p.handle)],
     })),
@@ -108,7 +108,7 @@ const add = (f) => findings.push(f);
     impact: 'You move squat racks and plate sets on LTL freight, and weight is the input to the rate. A zero there means the carrier calculation is running on a default, and the gap between the quoted rate and the real one is absorbed on every one of these orders.',
     fix: 'Backfill weights from your packing data, then add a Shopify validation that refuses to publish a shipped product with a zero weight.',
     evidence: rows.sort((a, b) => num(b.v.price) - num(a.v.price)).slice(0, 10).map((r) => ({
-      label: r.p.title, detail: `$${num(r.v.price).toFixed(2)} — ${r.v.title}`,
+      label: r.p.title, detail: `$${num(r.v.price).toFixed(2)}, ${r.v.title}`,
       delta: '0 g', links: [url(r.p.handle)],
     })),
   });
@@ -123,7 +123,7 @@ const add = (f) => findings.push(f);
     count: bad.length, unit: 'products',
     summary: `${bad.length} products have a vendor of "related_to_<numeric id>" instead of a brand name. The rest of the catalogue correctly reads "Bells of Steel".`,
     impact: 'Vendor is a customer-facing field and a required attribute in Google Shopping and most marketplace feeds. These products are advertising a database key as their brand.',
-    fix: 'Find the app writing this — the value shape suggests a related-products integration reusing the field — and reset the affected products to the correct vendor. Worth checking what else that integration touches.',
+    fix: 'Find the app writing this (the value shape suggests a related-products integration reusing the field) and reset the affected products to the correct vendor. Worth checking what else that integration touches.',
     evidence: bad.slice(0, 10).map((p) => ({
       label: p.title, detail: `vendor = "${p.vendor}"`, delta: 'corrupt', links: [url(p.handle)],
     })),
@@ -142,7 +142,7 @@ const add = (f) => findings.push(f);
     title: 'Compare-at price equals the selling price',
     count: rows.length, unit: 'variants',
     summary: `${rows.length} variants set a compare-at price identical to what the customer actually pays.`,
-    impact: 'Shopify renders compare-at as a struck-through "was" price. A struck-through number that matches the real one is a discount claim with no discount behind it — which is both a conversion problem and the kind of thing consumer-protection rules care about.',
+    impact: 'Shopify renders compare-at as a struck-through "was" price. A struck-through number that matches the real one is a discount claim with no discount behind it, which is both a conversion problem and the kind of thing consumer-protection rules care about.',
     fix: 'Clear compare_at_price wherever it is less than or equal to price, and add it to the same publish-time validation as the weight check.',
     evidence: rows.slice(0, 10).map((r) => ({
       label: r.p.title, detail: `price $${num(r.v.price).toFixed(2)} · compare-at $${r.c.toFixed(2)}`,
@@ -178,7 +178,7 @@ const add = (f) => findings.push(f);
     count: missing.length + placeholder.length, unit: 'products',
     summary: `${missing.length} products have an empty product_type and a further ${placeholder.length} use the literal string "Hidden" as their type.`,
     impact: 'product_type is what your automated collections, storefront filters and any BigQuery or Looker grouping key off. Every product without one is invisible to that machinery, and "Hidden" is a visibility flag wearing a taxonomy field’s clothes.',
-    fix: 'Most are inferable from the title alone — the classifier in this demo types 60 of them with a dozen rules. Backfill, then make type required at publish.',
+    fix: 'Most are inferable from the title alone; the classifier in this demo types 60 of them with a dozen rules. Backfill, then make type required at publish.',
     evidence: missing.slice(0, 8).map((p) => ({
       label: p.title, detail: 'product_type is empty', delta: 'untyped', links: [url(p.handle)],
     })),
@@ -199,10 +199,10 @@ const add = (f) => findings.push(f);
   const noDims = residential.filter((p) => !/(\d{2,3})\s*["”]\s*upright/i.test(strip(p.body_html)));
   add({
     id: 'specs-hidden', severity: 'medium',
-    title: 'Spec tables are switched off on 90 products — including entry-level racks',
+    title: 'Spec tables are switched off on 90 products, including entry-level racks',
     count: hidden.length, unit: 'products',
-    summary: `${hidden.length} products carry the hide:specs tag. Separately, ${noDims.length === residential.length ? `all ${residential.length}` : `${noDims.length} of ${residential.length}`} Residential racks publish no upright height — the one number that decides whether a rack fits a room.`,
-    impact: 'The Residential racks are your cheapest and most beginner-facing — exactly the buyer working around a low basement ceiling, and the one least able to guess. The Gym Builder cannot verify fit for any of them. Neither can the customer.',
+    summary: `${hidden.length} products carry the hide:specs tag. Separately, ${noDims.length === residential.length ? `all ${residential.length}` : `${noDims.length} of ${residential.length}`} Residential racks publish no upright height, the one number that decides whether a rack fits a room.`,
+    impact: 'The Residential racks are your cheapest and most beginner-facing, exactly the buyer working around a low basement ceiling, and the one least able to guess. The Gym Builder cannot verify fit for any of them. Neither can the customer.',
     fix: 'Publish height, width and depth on every rack. It is the highest-volume pre-sales question in this category.',
     evidence: noDims.map((p) => ({
       label: p.title, detail: 'no upright height published',
@@ -229,7 +229,7 @@ const add = (f) => findings.push(f);
     title: 'The compatibility tags contradict the product titles',
     count: oneSided.length + untagged.length, unit: 'products',
     summary: `${tagged.length} products carry the hgb_ tags that drive Home Gym Builder compatibility. ${oneSided.length} says in its own title that it fits both rack families while carrying tags for only one; ${untagged.length} more name both families and carry no tags at all.`,
-    impact: 'These attachments are invisible to your builder for the family they were left out of. A customer configuring that rack is never offered a part that physically fits it — and the title they can read says otherwise.',
+    impact: 'These attachments are invisible to your builder for the family they were left out of. A customer configuring that rack is never offered a part that physically fits it, and the title they can read says otherwise.',
     fix: 'Reconcile the hgb_ tags against product titles as a scheduled check. The comparison is cheap and it is exactly the sort of drift nobody notices by hand.',
     evidence: [
       ...oneSided.map((r) => ({
@@ -254,7 +254,7 @@ const add = (f) => findings.push(f);
     title: 'Expensive machines have no spare parts published',
     count: un.length, unit: 'machines over $500',
     summary: `Bells of Steel publishes ${partsData.partCount} spare parts covering ${partsData.productCount} products. ${un.length} serviceable machines priced over $500 are not among them${worst ? `, the most expensive being the ${worst.title} at $${(worst.priceCents / 100).toFixed(0)}` : ''}.`,
-    impact: 'A treadmill that fails in year two has nothing to sell the customer and nothing for support to point at — a warranty conversation with no good ending, on your highest-ticket items. Spare parts are also a margin-rich line being left on the table.',
+    impact: 'A treadmill that fails in year two has nothing to sell the customer and nothing for support to point at, a warranty conversation with no good ending, on your highest-ticket items. Spare parts are also a margin-rich line being left on the table.',
     fix: 'Work down this list by price. Every machine over $1,000 should have at least its wear parts - pads, cables, bushings - published before the next warranty season.',
     evidence: un.slice(0, 10).map((u) => ({
       label: u.title, detail: u.type ?? 'machine',
