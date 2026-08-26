@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               (<code className="font-mono text-[12px] text-bright">bellsofsteel.com/products.json</code>), taken
               25 August 2026. Prices and availability were accurate at snapshot time only — check the live
               store before relying on any number here. All product names, images and copy belong to Bells of
-              Steel Inc. Typeface and colour palette are matched to their storefront as a design exercise.
+              Steel Inc. Typeface and colour palette are matched to the Bells of Steel storefront as a design exercise.
             </p>
             <p className="mt-4 font-semibold">
               <a href="mailto:ranasunj@ualberta.ca" className="text-dim hover:text-steelDim">ranasunj@ualberta.ca</a>

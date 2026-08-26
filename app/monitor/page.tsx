@@ -28,11 +28,11 @@ export default function Page() {
           The Catalog Audit says what is broken today. This is the part that stops it coming back.
         </p>
         <p className="mt-3 max-w-3xl leading-relaxed text-muted">
-          A scheduled job re-pulls the storefront feed every morning, fingerprints all{' '}
+          A scheduled job re-pulls your storefront feed every morning, fingerprints all{' '}
           {latest.productCount} products, diffs them against the previous run, and reports only what
           changed — new products, price movements, stock flips, and data issues that appeared or got fixed.
           It runs unattended in GitHub Actions and commits each snapshot back to the repository, so the
-          history is real rather than reconstructed.
+          history below is real rather than reconstructed.
         </p>
 
         <div className="mt-8 grid grid-cols-2 gap-6 border-t border-line pt-8 sm:grid-cols-4">
@@ -111,7 +111,7 @@ export default function Page() {
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
           {[
             ['Alert', 'A product gains a data issue it did not have before, or an audit rule count goes up. This is the case worth waking someone for — it means something regressed today.', 'alert'],
-            ['Notable', 'A price moved by more than $50. Large enough that support and marketing should know before a customer tells them.', 'notable'],
+            ['Notable', 'A price moved by more than $50. Large enough that your support and marketing teams should know before a customer tells them.', 'notable'],
             ['Fixed', 'A data issue was resolved, or a rule count went down. Worth recording so the work shows.', 'good'],
             ['Info', 'Products added or removed, stock flips, small price changes. Logged, never alerted on.', 'info'],
           ].map(([label, desc, sev]) => (
@@ -129,9 +129,9 @@ export default function Page() {
         <h2 className="mt-14 text-2xl font-extrabold">How it runs</h2>
         <p className="mt-3 max-w-3xl leading-relaxed text-muted">
           A GitHub Actions workflow on a daily cron. It re-runs the whole pipeline, writes a new snapshot,
-          and commits it. Two polite requests to the storefront per day, 600ms apart, with a User-Agent that
-          says who it is. In a real deployment the last step posts alerts to a Slack channel instead of
-          only writing a file.
+          and commits it. Two polite requests to your storefront per day, 600ms apart, with a User-Agent that
+          says who it is. Running inside your stack, the last step posts to a Slack channel instead of only
+          writing a file.
         </p>
         <pre className="mt-4 overflow-x-auto rounded-lg border border-line bg-panel p-4 font-mono text-[12px] leading-relaxed text-dim">
 {`# .github/workflows/catalog-monitor.yml
@@ -153,8 +153,7 @@ jobs:
         <h2 className="mt-14 text-2xl font-extrabold">Where this lands in BigQuery</h2>
         <p className="mt-3 max-w-3xl leading-relaxed text-muted">
           Every run also appends to a flat time series — one row per rule per day. That is the shape you
-          want in a warehouse: narrow, append-only, and trivially chartable in Looker without any further
-          modelling.
+          want in BigQuery: narrow, append-only, and chartable in Looker without any further modelling.
         </p>
         <div className="mt-4 grid gap-4 lg:grid-cols-2">
           <div>

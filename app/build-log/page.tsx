@@ -21,7 +21,7 @@ const BROKE = [
     n: '03',
     title: 'The copilot gave a confidently wrong compatibility answer',
     body: `I read the hgb_ tag scheme as having two attachment classes, strength and storage, because those were the two that showed up in the counts I looked at. The compatibility check was built on that assumption.`,
-    fix: `A test question about a lat pulldown returned "not compatible" for a rack it plainly fits. There are five classes, not two — strength, storage, lat, smith, kraken. Widening the parser fixed the answer and also surfaced a real bug in their catalog: the Utility Seat is titled "for Hydra/Manticore" but carries seven Hydra tags and zero Manticore ones, so their own builder would never offer it to a Manticore customer.`,
+    fix: `A test question about a lat pulldown returned "not compatible" for a rack it plainly fits. There are five classes, not two — strength, storage, lat, smith, kraken. Widening the parser fixed the answer and also surfaced a real bug in your catalog: the Utility Seat is titled "for Hydra/Manticore" but carries seven Hydra tags and zero Manticore ones, so your own builder would never offer it to a Manticore customer.`,
     lesson: 'Deriving a schema from the top of a sorted list gives you the common cases and hides the rest.',
   },
   {
@@ -64,8 +64,8 @@ const DECISIONS = [
     a: `Because a fit tool that silently guesses a ceiling clearance is worse than no fit tool. Every dimension carries where it came from, and the Residential racks — which publish no dimensions at all — return "cannot verify" instead of a number. The gap is the finding.`,
   },
   {
-    q: 'Why build on their real catalog rather than mock data?',
-    a: `Mock data would have let me build all four tools in half the time and demonstrate nothing. Every interesting thing here — the hgb_ compatibility graph, the duplicate listings, the corrupted vendor field, the treadmill with no spare parts — came out of reading data that actually exists.`,
+    q: 'Why build on your real catalog rather than mock data?',
+    a: `Mock data would have let me build all five tools in half the time and demonstrate nothing. Every interesting thing here — the hgb_ compatibility graph, the duplicate listings, the corrupted vendor field, the treadmill with no spare parts — came out of reading data that actually exists, in your store, today.`,
   },
 ];
 
@@ -84,9 +84,9 @@ export default function Page() {
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel">Build log</p>
         <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">How this was built</h1>
         <p className="mt-4 leading-relaxed text-muted">
-          Four tools, one shared data layer, built with Claude Code in the terminal against a snapshot
-          of the Bells of Steel storefront feed taken {SNAPSHOT_DATE}. The interesting part was not the
-          building. It was the seven times I was wrong.
+          Five tools, one shared data layer, built with Claude Code in the terminal against a snapshot of
+          your storefront feed taken {SNAPSHOT_DATE}. The interesting part was not the building. It was the
+          seven times I was wrong.
         </p>
 
         <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4">
@@ -100,8 +100,8 @@ export default function Page() {
 
         <h2 className="mt-12 text-xl font-semibold tracking-tight">What broke</h2>
         <p className="mt-2 text-sm leading-relaxed text-muted">
-          Written up honestly, including the two that would have made it into the interview as confident
-          wrong statements if I had not checked.
+          Written up honestly, including the two that would have reached you as confident wrong statements
+          if I had not checked them first.
         </p>
 
         <div className="mt-6 space-y-3">

@@ -82,7 +82,7 @@ export default function Builder({
 
     const unverified = evaluated.filter((e) => e.verdict === 'unknown');
     if (unverified.length) {
-      out.push(`${unverified.length} rack${unverified.length > 1 ? 's' : ''} can't be checked at all — Bells of Steel publishes no dimensions for them. All of the Residential line is in this bucket.`);
+      out.push(`${unverified.length} rack${unverified.length > 1 ? 's' : ''} can't be checked at all — no dimensions are published for them. The whole Residential line is in this bucket.`);
     }
 
     if (usesBarbell && w < 92) out.push(`At ${(w / 12).toFixed(1)}ft wide, a 7ft barbell will be a squeeze regardless of which rack you pick.`);
@@ -279,14 +279,14 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
             Bolt-on attachments <span className="font-mono text-xs font-normal text-muted">({att.length})</span>
           </h3>
           <p className="font-mono text-[10px] text-muted">
-            from their <code className="text-steel">hgb_</code> compatibility tags
+            from your <code className="text-steel">hgb_</code> compatibility tags
           </p>
         </div>
         {att.length === 0 ? (
           <p className="mt-3 rounded border border-amber-500/35 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">
-            Bells of Steel publishes no attachment compatibility tags for this rack, so this tool will not
-            claim anything bolts onto it. For the Residential line specifically, that mapping does not exist
-            in the catalog feed at all.
+            No attachment compatibility tags are published for this rack, so this tool will not claim
+            anything bolts onto it. For the Residential line specifically, that mapping does not exist in
+            the catalog feed at all.
           </p>
         ) : (
           <div className="mt-3 grid gap-1.5 sm:grid-cols-2">
@@ -305,7 +305,7 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
       <div className="rounded-lg border border-line bg-panel p-5">
         <h3 className="text-sm font-semibold">Complete the gym</h3>
         <p className="mt-1 text-xs text-muted">
-          Grouped using the same categories Bells of Steel curates in their own tags.
+          Grouped using the same categories you already curate in your own tags.
         </p>
         <div className="mt-4 space-y-4">
           {kit.map((g) => (

@@ -22,13 +22,13 @@ export default function Page() {
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel">Demo 02 · Internal · Merch ops</p>
         <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Catalog Audit</h1>
         <p className="mt-4 max-w-3xl leading-relaxed text-muted">
-          A dashboard that reads the storefront feed and reports what is wrong with it. Every finding below
-          is against the real Bells of Steel catalog as of {SNAPSHOT_DATE} — {scanned} products,{' '}
+          A dashboard that reads your storefront feed and reports what is wrong with it. Every finding below
+          is against your live catalog as of {SNAPSHOT_DATE} — {scanned} products,{' '}
           {variants.toLocaleString()} variants. Nothing here is hypothetical.
         </p>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
-          This is the least glamorous of the four demos and the one I would want to ship first. It is the
-          kind of thing that runs nightly and posts to a Slack channel.
+          This is the least glamorous thing I built and the one I would want to ship first. It is the kind
+          of thing that runs nightly and posts to a channel, so nobody has to remember to go looking.
         </p>
 
         <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4">
@@ -129,8 +129,9 @@ export default function Page() {
         </div>
 
         <p className="mt-6 text-xs leading-relaxed text-muted">
-          Findings are computed by <code className="text-bright">scripts/audit.mjs</code> at build time from the
-          raw storefront feed. Counts and prices reflect the {SNAPSHOT_DATE} snapshot and may have changed since.
+          Findings are computed by <code className="text-bright">scripts/audit.mjs</code> at build time from your
+          raw storefront feed. Counts and prices reflect the {SNAPSHOT_DATE} snapshot and may have changed since —
+          if any of these are already fixed, the Catalog Monitor would have caught it.
         </p>
       </div>
     </div>

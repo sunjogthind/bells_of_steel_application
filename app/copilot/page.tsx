@@ -19,15 +19,15 @@ export default function Page() {
         <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">CS Copilot</h1>
         <p className="mt-4 max-w-3xl leading-relaxed text-muted">
           Drafts a reply to a customer question, shows exactly which products it pulled to get there, and
-          refuses when the catalog cannot support an answer. Running against all {d.docs.length} products
-          and {d.parts.length} spare parts, snapshot {SNAPSHOT_DATE}.
+          refuses when your catalog cannot support an answer. Running against all {d.docs.length} of your
+          products and {d.parts.length} spare parts, snapshot {SNAPSHOT_DATE}.
         </p>
 
         <div className="mt-6 max-w-3xl rounded-lg border border-line bg-panel p-5">
           <p className="font-mono text-[10px] uppercase tracking-wider text-steel">A deliberate choice</p>
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            There is no language model behind this. Every fact in every answer is a lookup against the
-            catalog, carrying the URL it came from, and anything the catalog cannot support is routed to a
+            There is no language model behind this. Every fact in every answer is a lookup against your
+            catalog, carrying the URL it came from, and anything your catalog cannot support is routed to a
             human instead of approximated. That makes the demo free to run and impossible to hallucinate at.
           </p>
           <p className="mt-2.5 text-sm leading-relaxed text-muted">
@@ -46,10 +46,10 @@ export default function Page() {
           <p className="eyebrow text-steelDim">The lookup layer underneath</p>
           <h2 className="mt-3 text-2xl font-extrabold sm:text-3xl">Parts index</h2>
           <p className="mt-3 max-w-3xl leading-relaxed text-muted">
-            When the copilot answers a parts question it searches this. Bells of Steel sells{' '}
-            {pd.partCount} individual spare parts, but they are buried as variants inside {pd.productCount}{' '}
-            parent products with names like &ldquo;FID Bench Spare Parts&rdquo; — a customer writing in about
-            a torn bench pad cannot find one, and neither can a new support rep.
+            When the copilot answers a parts question it searches this. You sell {pd.partCount} individual
+            spare parts, but they are buried as variants inside {pd.productCount} parent products with names
+            like &ldquo;FID Bench Spare Parts&rdquo; — a customer writing in about a torn bench pad cannot
+            find one, and neither can a support rep in their first week.
           </p>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
             Flattened into one index, searchable in plain language, and browsable directly for the times a rep

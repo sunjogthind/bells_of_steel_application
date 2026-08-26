@@ -110,7 +110,7 @@ export function checkFit(rack: Geometry, room: Room): { checks: Check[]; verdict
     checks.push({
       label: 'Ceiling clearance', verdict: 'unknown', source: 'unknown',
       need: 'not published', have: `${room.ceilingIn}"`,
-      detail: 'Bells of Steel does not publish an upright height for this rack, so this tool will not tell you whether it clears your ceiling. Ask their team before ordering.',
+      detail: 'No upright height is published for this rack, so this tool will not tell you whether it clears your ceiling. Worth asking before ordering.',
     });
   } else {
     const min = rack.height.value + CEILING_HARDWARE_IN;

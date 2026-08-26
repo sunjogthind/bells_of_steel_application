@@ -105,9 +105,9 @@ export default function PartsIndex({
         <div className="rounded-lg border border-amber-500/40 bg-amber-50 p-5">
           <p className="text-sm font-medium text-amber-900">No part matches that.</p>
           <p className="mt-2 text-sm leading-relaxed text-amber-900">
-            This is the honest answer, not a nearest-guess. Bells of Steel publishes {parts.length} spare
-            parts across {machines.length} machines; anything outside that list has to go to a human, because
-            sending a customer the wrong replacement part costs more than saying &ldquo;let me check&rdquo;.
+            This is the honest answer, not a nearest-guess. You publish {parts.length} spare parts across{' '}
+            {machines.length} machines; anything outside that list has to go to a human, because sending a
+            customer the wrong replacement part costs more than saying &ldquo;let me check&rdquo;.
           </p>
         </div>
       ) : (
@@ -145,9 +145,9 @@ export default function PartsIndex({
       <div className="rounded-lg border border-line bg-panel p-5">
           <h2 className="text-sm font-semibold">The SKU convention, written down</h2>
           <p className="mt-1.5 text-xs leading-relaxed text-muted">
-            All {skuGrammar.prefixed} of {skuGrammar.total} part SKUs follow{' '}
-            <code className="text-steel">SP-&lt;MACHINE&gt;-&lt;PART&gt;</code>. It is consistent, and it is
-            nowhere a new support rep would find it.
+            All {skuGrammar.prefixed} of {skuGrammar.total} of your part SKUs follow{' '}
+            <code className="text-steel">SP-&lt;MACHINE&gt;-&lt;PART&gt;</code>. The convention is perfectly
+            consistent — it is just written down nowhere a new support rep would find it.
           </p>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {skuGrammar.topMachineCodes.map(([code, n]) => (

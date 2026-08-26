@@ -255,7 +255,7 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
       ] : [
         `You mentioned ${profile.constraints.length && profile.constraints[0] !== 'unspecified' ? `your ${profile.constraints.join(' and ')}` : 'pain or an injury'}, so I am going to stop here rather than work around it.`,
         `Which substitutions are safe depends on what is actually wrong, and that needs someone who can examine you. I can generate a program once you have been cleared, and I can build it around movements you have been told to avoid — but I am not going to guess at that from a chat message.`,
-        `Bells of Steel's Form Check channel is a reasonable place for technique questions. Pain is a different question and belongs with a physio or a doctor.`,
+        `Your Form Check channel is a reasonable place for technique questions. Pain is a different question and belongs with a physio or a doctor.`,
       ],
       citations: kb.map((r) => cite(r.doc, 'safety guidance')),
       trace,
@@ -289,7 +289,7 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
         ...base, program: state.program, escalate: true, citations: [],
         text: [
           `I do not have anything solid enough to answer that from.`,
-          `Spotter only answers from its coaching notes and the Bells of Steel catalog. When neither covers a question I would rather say so than produce something that sounds authoritative and is not.`,
+          `Spotter only answers from its coaching notes and your catalog. When neither covers a question it says so, rather than producing something that sounds authoritative and is not.`,
         ],
         trace,
       };
@@ -314,8 +314,8 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
       text: [
         gapLine,
         hits.length
-          ? `From the live catalog: ${hits.slice(0, 3).map((r) => `${r.doc.title} ($${(r.doc.meta.priceCents / 100).toFixed(2)})`).join(', ')}.`
-          : `Nothing in the catalog matched that closely enough to recommend.`,
+          ? `From your live catalog: ${hits.slice(0, 3).map((r) => `${r.doc.title} ($${(r.doc.meta.priceCents / 100).toFixed(2)})`).join(', ')}.`
+          : `Nothing in your catalog matched that closely enough to recommend.`,
         `Prices are from the snapshot this demo was built against — check the live store before buying.`,
       ].filter(Boolean),
       trace,
@@ -370,7 +370,7 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
   const gapText = program.gaps.length
     ? `One gap: nothing in your kit covers ${program.gaps.map((g) => g.pattern.replace('_', ' ')).join(' or ')}. ${
         program.gaps[0].product
-          ? `The cheapest fix in their catalog is ${program.gaps[0].product.title} at $${(program.gaps[0].product.priceCents / 100).toFixed(2)}.`
+          ? `The cheapest fix in your catalog is ${program.gaps[0].product.title} at $${(program.gaps[0].product.priceCents / 100).toFixed(2)}.`
           : ''}`
     : `Your kit covers every pattern in the split, so nothing is missing.`;
 
