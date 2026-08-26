@@ -1,4 +1,5 @@
 import copilot from '@/data/copilot.json';
+import Impact from '@/components/Impact';
 import TechBox, { C } from '@/components/TechBox';
 import { IconCopilot } from '@/components/Icons';
 import parts from '@/data/parts.json';
@@ -32,6 +33,14 @@ export default function Page() {
 
         <div className="mt-6 max-w-3xl rounded-lg border border-line bg-panel p-5">
           <p className="font-mono text-[10px] uppercase tracking-wider text-steel">A deliberate choice</p>
+        <Impact
+          points={[
+            { lead: 'It deflects the tickets that have a factual answer.', body: <>Compatibility, dimensions, price, stock and spare parts are most of the inbox, and all of them are lookups against data you already publish.</> },
+            { lead: 'It escalates instead of guessing.', body: <>A confident wrong answer about which attachment fits costs a return and a customer. Slow is cheaper than wrong, and it is built to prefer slow.</> },
+            { lead: 'A new rep is useful on day one.', body: <>The 68 spare parts are buried inside 29 parent products under names like &ldquo;FID Bench Spare Parts&rdquo;. Flattened and searchable, nobody needs to learn the SKU scheme.</> },
+          ]}
+          caveat="It answers only from the catalogue. Shipping, warranty and returns are policy questions and it routes them to a human rather than inventing terms."
+        />
           <p className="mt-2 text-sm leading-relaxed text-muted">
             No language model here. Every fact is a lookup against your catalogue, carrying the URL it came
             from, and anything your catalogue cannot support goes to a human.

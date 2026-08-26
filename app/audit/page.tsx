@@ -1,4 +1,5 @@
 import audit from '@/data/audit.json';
+import Impact from '@/components/Impact';
 import TechBox, { C } from '@/components/TechBox';
 import { IconAudit } from '@/components/Icons';
 import { SNAPSHOT_DATE } from '@/lib/catalog';
@@ -46,6 +47,14 @@ export default function Page() {
                 <span className="font-mono text-[10px] uppercase tracking-wider text-muted">{SEV[s].label}</span>
               </div>
               <p className="mt-1.5 font-mono text-2xl font-semibold tabular-nums">{bySev(s)}</p>
+        <Impact
+          points={[
+            { lead: 'It asks the same questions of all 476 products.', body: <>Roughly 6,000 checks in a few seconds. Nobody looks at product 300 as carefully as product 3, and this does not get tired.</> },
+            { lead: 'Ranked by what it costs, not by how hard it is to fix.', body: <>Freight items with no weight leak money on every order; two products missing photos is housekeeping. The list is meant to be acted on top-down.</> },
+            { lead: 'Every finding links to the evidence.', body: <>Each one is checkable in a click, so a finding you disagree with can be dismissed in seconds rather than argued about.</> },
+          ]}
+          caveat="It reads your public storefront feed only — no ERP, no inventory, no orders — and it cannot know intent. A finding is a question worth asking, not a verdict."
+        />
             </div>
           ))}
         </div>

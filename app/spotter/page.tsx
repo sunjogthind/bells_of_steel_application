@@ -1,4 +1,5 @@
 import spotter from '@/data/spotter.json';
+import Impact from '@/components/Impact';
 import TechBox, { C } from '@/components/TechBox';
 import { IconSpotter } from '@/components/Icons';
 import Spotter from './Spotter';
@@ -64,6 +65,14 @@ export default function Page() {
             written for this demo. Your programming is not public, so I did not guess at it. Pointed at your
             real library, that is a data change, not a code change.
           </p>
+        <Impact
+          points={[
+            { lead: 'It turns a signup into a reason to come back.', body: <>A new member currently gets a program from a fixed quiz. This gives them one built around the equipment they actually own, which is the difference between a plan they follow and one they abandon.</> },
+            { lead: 'The equipment gap is the recommendation.', body: <>When a movement pattern has nothing to train it with, that is both a coaching answer and a product answer — grounded in a real item at a real price rather than an ad.</> },
+            { lead: 'It drafts, your coaches approve.', body: <>Used internally it is a first draft for a human to correct, which is where the hours actually are.</> },
+          ]}
+          caveat="It refuses to write a program around pain or an injury, and hands that to a human. Which substitutions are safe depends on a diagnosis."
+        />
         </div>
 
         <div className="mt-10">

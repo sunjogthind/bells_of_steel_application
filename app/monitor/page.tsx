@@ -1,4 +1,5 @@
 import monitor from '@/data/monitor.json';
+import Impact from '@/components/Impact';
 import TechBox, { C } from '@/components/TechBox';
 import { IconMonitor } from '@/components/Icons';
 import audit from '@/data/audit.json';
@@ -43,6 +44,15 @@ export default function Page() {
           It runs unattended in GitHub Actions and commits each snapshot, so the history below is real
           rather than reconstructed.
         </p>
+
+        <Impact
+          points={[
+            { lead: 'It catches drift the morning it happens.', body: <>An audit is stale a week later. This one re-reads the feed every day and only speaks up when something moved.</> },
+            { lead: 'It has already earned its keep.', body: <>Its first real run found 21 changes in a single day, including two compare-at price problems your team had fixed and one product that quietly went out of stock.</> },
+            { lead: 'It costs nobody any attention.', body: <>Runs unattended, commits its own history, and stays silent on the days nothing changed — which is most days, and is the point.</> },
+          ]}
+          caveat="It reports what changed, not whether the change was intended. A price drop and a pricing mistake look identical from outside."
+        />
 
         <div className="mt-8 grid grid-cols-2 gap-6 border-t border-line pt-8 sm:grid-cols-4">
           <div>
