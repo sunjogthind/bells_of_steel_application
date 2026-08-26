@@ -79,6 +79,25 @@ feed never ships.
 See [CLAUDE.md](./CLAUDE.md) for the conventions and the Bells of Steel domain notes, and
 the **Build Log** page on the site for the six things that broke along the way.
 
+## The audit as a skill
+
+`.claude/skills/catalog-audit/` packages the same thirteen checks so someone who cannot
+read JavaScript can run them and get a plain-language report. Built in Cowork.
+
+```bash
+node .claude/skills/catalog-audit/scripts/run-audit.mjs            # live feed
+node .claude/skills/catalog-audit/scripts/run-audit.mjs --snapshot data/catalog-raw.json
+node .claude/skills/catalog-audit/scripts/self-test.mjs            # 11 checks
+```
+
+The engine measures and `references/plain-language.mjs` writes — every reader-facing
+sentence lives there with placeholders filled from each rule's own metrics, so nothing
+composes prose at runtime and a non-engineer can edit the wording. Sample output is in
+[`catalog-audit/`](./catalog-audit/).
+
+Portability meant a second copy of the rules, which can drift from `scripts/audit.mjs`.
+`self-test.mjs` runs both against the same snapshot and compares them finding by finding.
+
 ## MCP server
 
 `mcp/` is a Model Context Protocol server that exposes the catalog to Claude Code, so anyone

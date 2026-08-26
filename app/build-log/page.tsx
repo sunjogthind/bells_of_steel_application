@@ -52,6 +52,13 @@ const BROKE = [
     fix: `Caught it by grepping the response body for the page title instead of trusting the status code. The cause: Vercel's deployment protection exempts only the project's originally-assigned production domain, and renaming does not move that exemption to the new aliases. Fixed by registering the new domain to the project explicitly.`,
     lesson: 'A 200 means the server answered, not that it answered with your site. Assert on content, not on status.',
   },
+  {
+    n: '08',
+    title: 'The same comparison bug, for the third time',
+    body: `Packaging the audit as a skill meant it had to be readable by someone who has never opened a terminal, so I wrote a test that greps the rendered report for words that mean it has failed — BM25, regex, normalization, product_type, compare_at_price, hgb_, 301.`,
+    fix: `The test failed on 301. It was matching $1301.86, the price of the Hydra Four Post rack, inside a redirect code. Word boundaries fixed it in a minute. What stopped me was recognising it: this is the same error as the $225 duplicate-pricing false positive and the guard that rejected "4 x 4-6" — a comparison that looked like-for-like and wasn't.`,
+    lesson: 'Three times on one project. I am now suspicious of every comparison I write before I run it, which is roughly the correct amount of suspicious.',
+  },
 ];
 
 const DECISIONS = [
@@ -75,7 +82,7 @@ export default function Page() {
     { k: '2,454', v: 'lines of TypeScript' },
     { k: '20', v: 'source files' },
     { k: '6', v: 'build-time pipeline steps' },
-    { k: '7', v: 'bugs worth writing down' },
+    { k: '8', v: 'bugs worth writing down' },
   ];
 
   return (
@@ -101,7 +108,7 @@ export default function Page() {
         <h2 className="mt-12 text-xl font-semibold tracking-tight">What broke</h2>
         <p className="mt-2 text-sm leading-relaxed text-muted">
           Written up honestly, including the two that would have reached you as confident wrong statements
-          if I had not checked them first.
+          if I had not checked them first — and one class of mistake I made three separate times.
         </p>
 
         <div className="mt-6 space-y-3">
@@ -152,6 +159,22 @@ monitor        →  fingerprint, diff vs. last run          →  data/monitor.js
         </pre>
 
         <div className="mt-10 rounded-lg border border-line bg-panel p-5">
+          <h2 className="text-sm font-semibold">The audit, as a skill</h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted">
+            The Catalog Audit page is built for someone evaluating me. The person who would actually fix the
+            data needs something else, so I packaged the same thirteen checks as a skill — built in Cowork —
+            that runs without a repo checkout and writes a plain-language report.
+          </p>
+          <p className="mt-2 text-sm leading-relaxed text-muted">
+            The engine measures; a separate file writes. Every sentence the reader sees lives in one copy
+            file with placeholders filled from each rule&rsquo;s own numbers, so nothing composes prose at
+            runtime and a non-engineer can change the wording. Making it portable cost a second copy of the
+            rules, which can drift — <code className="text-steelDim">self-test.mjs</code> runs both engines
+            against the same snapshot and compares them finding by finding.
+          </p>
+        </div>
+
+        <div className="mt-4 rounded-lg border border-line bg-panel p-5">
           <h2 className="text-sm font-semibold">An MCP server, too</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted">
             The repo ships an MCP server putting the catalog behind four tools in Claude Code:{' '}

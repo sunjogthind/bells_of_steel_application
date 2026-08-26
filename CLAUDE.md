@@ -56,6 +56,13 @@ scripts/          Build-time pipeline. Order matters; each writes to data/.
 corpus/           Spotter's exercise library and coaching notes. OURS, not theirs.
                   Never present this content as Bells of Steel's methodology.
 
+.claude/skills/catalog-audit/
+                  The audit packaged for a non-technical reader. Carries its own copy of
+                  the 13 rules so it runs without the repo. That copy CAN drift from
+                  scripts/audit.mjs - run scripts/self-test.mjs after touching either.
+                  Reader-facing sentences live only in references/plain-language.mjs;
+                  do not compose prose at runtime anywhere in this skill.
+
 lib/              Pure logic, no I/O. Runs identically on server and client.
   fit.ts          Fit engine + the hgb_ compatibility graph
   copilot.ts      Intent classification, retrieval, escalation policy
