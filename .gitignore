@@ -8,3 +8,6 @@ next-env.d.ts
 
 mcp/node_modules/
 .vercel
+
+# Local-only context file, if it is ever copied into the repo
+CONTEXT.md
