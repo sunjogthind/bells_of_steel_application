@@ -1,6 +1,184 @@
 {
-  "generated_at": "2026-08-26T00:11:17.078Z",
+  "generated_at": "2026-08-26T13:43:48.516Z",
   "runs": [
+    {
+      "at": "2026-08-26T13:43:48.208Z",
+      "date": "2026-08-26",
+      "baseline": false,
+      "comparedTo": "2026-08-26T00:11:16.704Z",
+      "productCount": 476,
+      "changeCount": 21,
+      "bySeverity": {
+        "alert": 3,
+        "notable": 3,
+        "good": 1,
+        "info": 14
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+          "detail": "$1309.89 → $1291.86 ($18.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt",
+          "detail": "$2450.79 → $2432.76 ($18.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt",
+          "detail": "$1644.89 → $1626.86 ($18.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt",
+          "detail": "$1500.87 → $1482.84 ($18.03 cheaper)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Kraken Weight Stack Shroud (Single Side)",
+          "handle": "kraken-stack-shroud",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Kraken Weight Stack Shroud (Single Side)",
+          "handle": "kraken-stack-shroud",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Cable Crossover Machine",
+          "handle": "cable-crossover-machine",
+          "detail": "$151.96 → $189.99 (+$38.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Commercial Interchangeable Weight Rack - Components Only",
+          "handle": "commercial-dumbbell-kettlebell-rackk",
+          "detail": "$80.96 → $59.96 ($21.00 cheaper)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Olympic Curl Bar Cable Attachment",
+          "handle": "fat-bar-olympic-curl-bar-cable-attachment",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Fat Bar - Olympic Curl Bar Cable Attachment",
+          "handle": "fat-bar-olympic-curl-bar-cable-attachment",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Fixed Barbell Rack",
+          "handle": "fixed-barbell-rack",
+          "detail": "$339.99 → $271.96 ($68.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Foam Roller Storage",
+          "handle": "foam-roller-storage",
+          "detail": "$139.99 → $83.96 ($56.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Folding Rack 2.3\" x 2.3\" (5/8\" Holes)",
+          "handle": "folding-rack",
+          "detail": "$489.99 → $416.96 ($73.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Wrist Roller and Rack Attachment",
+          "handle": "wrist-roller",
+          "detail": "$44.99 → $38.96 ($6.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Massage Balls",
+          "handle": "massage-balls",
+          "detail": "$6.96 → $8.99 (+$2.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Mighty Grip Medicine Balls",
+          "handle": "mighty-grip-medicine-balls",
+          "detail": "$27.96 → $34.99 (+$7.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Flip-Down Safeties",
+          "handle": "flip-down-safeties",
+          "detail": "$153.96 → $149.96 ($4.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Split Squat Leg Roller Rack Attachment",
+          "handle": "split-squat-leg-roller-attachment",
+          "detail": "$79.99 → $67.96 ($12.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Standard Band Pegs",
+          "handle": "standard-band-pegs",
+          "detail": "$29.99 → $20.96 ($9.03 cheaper)"
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "fake-sale",
+          "handle": null,
+          "detail": "Audit rule \"fake-sale\" moved 8 → 6."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 56 → 58."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 6,
+        "oos-published": 58,
+        "taxonomy": 107,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-08-26T00:11:16.704Z",
       "date": "2026-08-26",

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-26T07:17:39.038Z",
-  "snapshot": "2026-08-26T00:11:16.704Z",
+  "generated_at": "2026-08-26T13:43:48.424Z",
+  "snapshot": "2026-08-26T13:43:48.208Z",
   "scanned": 476,
   "variants": 1640,
   "findings": [
@@ -24,15 +24,6 @@
           ]
         },
         {
-          "label": "Manticore Flat Foot Power Rack - Prebuilt",
-          "detail": "$1644.89 — /manticore-flat-foot-power-rack-prebuilt   vs   $1549.99 — /manticore-flat-foot-power-rack-prebuilt-hgb",
-          "delta": "$94.90 apart",
-          "links": [
-            "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt",
-            "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt-hgb"
-          ]
-        },
-        {
           "label": "Manticore Folding Power Rack - Prebuilt",
           "detail": "$1441.89 — /manctiore-folding-power-rack-prebuilt   vs   $1349.99 — /manctiore-folding-power-rack-prebuilt-hgb",
           "delta": "$91.90 apart",
@@ -51,12 +42,12 @@
           ]
         },
         {
-          "label": "Manticore Four Post Power Rack - Prebuilt",
-          "detail": "$1500.87 — /manticore-four-post-power-rack-prebuilt   vs   $1444.99 — /manticore-four-post-power-rack-prebuilt-hgb",
-          "delta": "$55.88 apart",
+          "label": "Manticore Flat Foot Power Rack - Prebuilt",
+          "detail": "$1626.86 — /manticore-flat-foot-power-rack-prebuilt   vs   $1549.99 — /manticore-flat-foot-power-rack-prebuilt-hgb",
+          "delta": "$76.87 apart",
           "links": [
-            "https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt",
-            "https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt-hgb"
+            "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt",
+            "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt-hgb"
           ]
         },
         {
@@ -69,12 +60,30 @@
           ]
         },
         {
+          "label": "Hydra Flat Foot Power Rack - Prebuilt",
+          "detail": "$1291.86 — /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt   vs   $1329.99 — /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "delta": "$38.13 apart",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb"
+          ]
+        },
+        {
           "label": "Hydra Four Post Power Rack - Prebuilt",
           "detail": "$1301.86 — /hydra-four-post-power-rack-prebuilt   vs   $1339.99 — /hydra-four-post-power-rack-prebuilt-hgb",
           "delta": "$38.13 apart",
           "links": [
             "https://bellsofsteel.com/products/hydra-four-post-power-rack-prebuilt",
             "https://bellsofsteel.com/products/hydra-four-post-power-rack-prebuilt-hgb"
+          ]
+        },
+        {
+          "label": "Manticore Four Post Power Rack - Prebuilt",
+          "detail": "$1482.84 — /manticore-four-post-power-rack-prebuilt   vs   $1444.99 — /manticore-four-post-power-rack-prebuilt-hgb",
+          "delta": "$37.85 apart",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt",
+            "https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt-hgb"
           ]
         },
         {
@@ -111,15 +120,6 @@
           "links": [
             "https://bellsofsteel.com/products/hydra-collegiate-power-rack-prebuilt",
             "https://bellsofsteel.com/products/hydra-collegiate-power-rack-prebuilt-hgb"
-          ]
-        },
-        {
-          "label": "Hydra Flat Foot Power Rack - Prebuilt",
-          "detail": "$1309.89 — /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt   vs   $1329.99 — /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
-          "delta": "$20.10 apart",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
-            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb"
           ]
         }
       ],
@@ -541,9 +541,9 @@
       "id": "fake-sale",
       "severity": "medium",
       "title": "Compare-at price equals the selling price",
-      "count": 8,
+      "count": 6,
       "unit": "variants",
-      "summary": "8 variants set a compare-at price identical to what the customer actually pays.",
+      "summary": "6 variants set a compare-at price identical to what the customer actually pays.",
       "impact": "Shopify renders compare-at as a struck-through \"was\" price. A struck-through number that matches the real one is a discount claim with no discount behind it — which is both a conversion problem and the kind of thing consumer-protection rules care about.",
       "fix": "Clear compare_at_price wherever it is less than or equal to price, and add it to the same publish-time validation as the weight check.",
       "evidence": [
@@ -564,27 +564,11 @@
           ]
         },
         {
-          "label": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
-          "detail": "price $1309.89 · compare-at $1309.89",
-          "delta": "no actual discount",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt"
-          ]
-        },
-        {
           "label": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
           "detail": "price $874.94 · compare-at $874.94",
           "delta": "no actual discount",
           "links": [
             "https://bellsofsteel.com/products/manticore-squat-stand-prebuilt"
-          ]
-        },
-        {
-          "label": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "detail": "price $1644.89 · compare-at $1644.89",
-          "delta": "no actual discount",
-          "links": [
-            "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt"
           ]
         },
         {
@@ -617,9 +601,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 56,
+      "count": 58,
       "unit": "products",
-      "summary": "56 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "58 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
