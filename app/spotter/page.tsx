@@ -47,18 +47,15 @@ export default function Page() {
 
         {/* provenance — the thing that has to be said plainly */}
         <div className="mt-4 rounded-lg border border-amber-500/35 bg-amber-50 p-5">
-          <p className="text-[13px] font-bold uppercase tracking-wider text-amber-900">What is real here and what is mine</p>
+          <p className="text-[13px] font-bold uppercase tracking-wider text-amber-900">What is real, and what is mine</p>
           <p className="mt-2 max-w-4xl text-[15px] leading-relaxed text-amber-900">
-            The <span className="font-bold">equipment catalog is real</span> — {s.products} live products from
-            your storefront, the same snapshot the rest of this site runs on, so every recommendation points
-            at something that exists at a price you actually charge.
+            The <span className="font-bold">equipment is real</span> — {s.products} live products from your
+            storefront, at prices you actually charge.
           </p>
           <p className="mt-2 max-w-4xl text-[15px] leading-relaxed text-amber-900">
             The <span className="font-bold">{s.exercises} exercises and {s.knowledge} coaching notes are mine</span>,
-            written for this demo. Your real programming lives inside your training app and is not public.
-            Reconstructing it from a few screenshots and passing it off as yours is exactly the thing the rest
-            of this portfolio argues against, so I did not. Pointed at your actual library, this is a data
-            change rather than a code change.
+            written for this demo. Your programming is not public, so I did not guess at it. Pointed at your
+            real library, that is a data change, not a code change.
           </p>
         </div>
 
@@ -76,11 +73,11 @@ export default function Page() {
 
         <div className="mt-5 grid gap-4 md:grid-cols-2">
           {[
-            ['1 · Slot extraction', 'Free text becomes a structured profile: experience, goal, days, equipment, constraints. Anything not confidently extracted stays null and gets asked about. A wrong slot produces a confidently wrong program, so this layer refuses to guess.'],
-            ['2 · Hybrid retrieval', 'BM25 over the corpus (k1 1.5, b 0.75, precomputed IDF) plus a concept-expansion pass that maps everyday words onto the corpus vocabulary. Expansion terms score at a 0.35 discount because they were inferred rather than said.'],
-            ['3 · Structured rerank', 'Retrieved exercises are reweighted by whether the member owns the equipment and whether the difficulty suits their experience. This is where a general fitness bot cannot follow — it does not know their gym. Recommendation quality is capped by how accurate your product_type field is, which is one of the things the Catalog Audit measures.'],
-            ['4 · Constrained synthesis', 'The program is assembled deterministically from retrieved candidates against a split template. Patterns with no available exercise become an explicit gap, resolved to the cheapest product in your catalog that closes it.'],
-            ['5 · Generation, then verification', 'With a key configured, Claude Opus 5 receives the facts already derived and the documents already retrieved, and rewrites them as prose. The output is then checked back against that context: any price or set-and-rep scheme it names that was not in the input gets the whole generation discarded and the deterministic text kept.'],
+            ['1 · Slot extraction', 'Free text becomes a structured profile: experience, goal, days, equipment, constraints. Anything not confidently extracted stays null and gets asked about — a wrong slot produces a confidently wrong program.'],
+            ['2 · Hybrid retrieval', 'BM25 over the corpus (k1 1.5, b 0.75, precomputed IDF) plus a concept-expansion pass mapping everyday words onto corpus vocabulary. Expansion terms score at a 0.35 discount — they were inferred, not said.'],
+            ['3 · Structured rerank', 'Candidates are reweighted by what the member owns and what suits their experience. This is where a general fitness bot cannot follow — it does not know their gym. Accuracy here is capped by your product_type field, which the Catalog Audit measures.'],
+            ['4 · Constrained synthesis', 'The program is assembled deterministically against a split template. A pattern with no available exercise becomes an explicit gap, resolved to the cheapest product in your catalog that closes it.'],
+            ['5 · Generation, then verification', 'Claude Opus 5 rewrites the retrieved facts as prose, then the output is checked back against them. Any price or rep scheme that was not in the input discards the whole generation.'],
           ].map(([h, b]) => (
             <div key={h} className="rounded-lg border border-line bg-panel p-5">
               <p className="font-bold">{h}</p>
@@ -91,23 +88,17 @@ export default function Page() {
 
         <div className="mt-6 grid gap-4 lg:grid-cols-2">
           <div className="rounded-lg border border-line bg-panel p-5">
-            <p className="stat-lbl">The model, and what it is not allowed to do</p>
+            <p className="stat-lbl">What the model is not allowed to do</p>
             <p className="mt-2 text-[15px] leading-relaxed text-muted">
-              Toggle <span className="font-semibold text-bright">Compose with Claude</span> above and the
-              reply is written by Claude Opus 5 — genuinely generative, and genuinely retrieval-augmented.
-              Steps 1 through 4 still run first and unchanged. The model receives the facts already derived
-              and the documents already retrieved; it decides the wording and nothing else.
+              With <span className="font-semibold text-bright">Compose with Claude</span> on, the reply is
+              written by Claude Opus 5. Steps 1 to 4 still run first, unchanged — the model gets the facts
+              and the documents, and decides the wording. Nothing else.
             </p>
             <p className="mt-2 text-[15px] leading-relaxed text-muted">
-              Then its output is checked against that same context. If it names a price or a set scheme that
-              was not in the input, the generation is thrown away and you get the deterministic text with a
-              note saying why. The guard has its own test suite —{' '}
-              <code className="text-steelDim">npm run test:guard</code> — because a guard that wrongly
-              rejects good output fails silently and looks like the feature never worked.
-            </p>
-            <p className="mt-2 text-[15px] leading-relaxed text-muted">
-              With no key configured the page degrades to the deterministic composer and says so. Nothing
-              about the demo breaks; the prose just gets flatter.
+              Its output is then checked against that same context, with its own test suite (
+              <code className="text-steelDim">npm run test:guard</code>). Invent a price, and the whole
+              generation is discarded. With no key the page falls back to the deterministic composer and
+              says so.
             </p>
           </div>
 

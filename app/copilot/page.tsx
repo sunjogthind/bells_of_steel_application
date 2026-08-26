@@ -26,15 +26,13 @@ export default function Page() {
         <div className="mt-6 max-w-3xl rounded-lg border border-line bg-panel p-5">
           <p className="font-mono text-[10px] uppercase tracking-wider text-steel">A deliberate choice</p>
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            There is no language model behind this. Every fact in every answer is a lookup against your
-            catalog, carrying the URL it came from, and anything your catalog cannot support is routed to a
-            human instead of approximated. That makes the demo free to run and impossible to hallucinate at.
+            No language model here. Every fact is a lookup against your catalog, carrying the URL it came
+            from, and anything your catalog cannot support goes to a human.
           </p>
           <p className="mt-2.5 text-sm leading-relaxed text-muted">
-            Putting Claude on top of this is a short API route, and it would write nicer prose. It would not
-            change which facts the answer is allowed to contain — that is decided by the retrieval and
-            escalation layer underneath, which is the part worth showing. It is the same pattern I used in
-            FinanceOS: let the model write, never let it be the source of truth.
+            A model would write warmer prose. It would not change which facts the answer may contain — that
+            is settled by the retrieval and escalation layer underneath. Spotter runs the same engine with
+            Claude wired in.
           </p>
         </div>
 
@@ -46,15 +44,13 @@ export default function Page() {
           <p className="eyebrow text-steelDim">The lookup layer underneath</p>
           <h2 className="mt-3 text-2xl font-extrabold sm:text-3xl">Parts index</h2>
           <p className="mt-3 max-w-3xl leading-relaxed text-muted">
-            When the copilot answers a parts question it searches this. You sell {pd.partCount} individual
-            spare parts, but they are buried as variants inside {pd.productCount} parent products with names
-            like &ldquo;FID Bench Spare Parts&rdquo; — a customer writing in about a torn bench pad cannot
-            find one, and neither can a support rep in their first week.
+            You sell {pd.partCount} spare parts, buried as variants inside {pd.productCount} parent products
+            with names like &ldquo;FID Bench Spare Parts&rdquo;. A customer with a torn bench pad cannot find
+            one, and neither can a rep in their first week.
           </p>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
-            Flattened into one index, searchable in plain language, and browsable directly for the times a rep
-            would rather look than ask. Matching is deterministic, so it can rank results but cannot invent a
-            part number that does not exist.
+            Flattened into one searchable index. Matching is deterministic — it ranks results, it cannot
+            invent a part number.
           </p>
 
           <div className="mt-6">

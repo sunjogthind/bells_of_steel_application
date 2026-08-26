@@ -123,16 +123,14 @@ export default function Home() {
         <div className="rounded-lg border border-line bg-panel p-8">
           <h2 className="text-2xl font-extrabold">Why these five</h2>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted">
-            The job description says this role builds internal applications, AI-powered tools, automations
-            and dashboards for every department, and that you sit with the person who has the problem before
-            you ship the fix. I could not sit with anyone at Bells of Steel before applying, so I did the
-            next best thing: I read your catalog feed closely enough to find the problems from the outside.
+            The job description says this role sits with the person who has the problem before shipping the
+            fix. I could not do that before applying, so I did the next best thing and read your catalog
+            feed closely enough to find the problems from the outside.
           </p>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted">
-            The Gym Builder and Spotter are the two your customers would touch. The other three are the
-            unglamorous internal kind — the merch-ops dashboard, the job that runs at 7am so nobody has to
-            remember to look, and the copilot that knows when to shut up. That ratio is deliberate; it is
-            roughly the ratio in your job description.
+            Two of these your customers would touch. The other three are the unglamorous internal kind — a
+            merch-ops dashboard, a job that runs at 7am so nobody has to remember to look, and a copilot
+            that knows when to shut up. That ratio is roughly the one in your job description.
           </p>
         </div>
       </section>

@@ -98,6 +98,15 @@ Learned from the feed; not documented anywhere public.
 - Comments explain *why*, never *what*. A comment restating the code gets deleted.
 - Copy is written in full sentences and plain language. No exclamation marks, no
   "leverage", no em-dash-joined marketing clauses.
+- **Voice: Rana writing to Bells of Steel.** Address them as "you" and "your". Never
+  describe the company in the third person - "their catalog" reads like a case study
+  written for somebody else. Two exceptions: the footer disclaimer names the company
+  formally because it is a legal statement, and inside the Gym Builder and Spotter tools
+  "you" already means the gym customer, so the company is named rather than addressed.
+  Singular "their" for a rep or a member is correct English and stays.
+- **Say it once, short.** No paragraph should explain a decision the reader did not
+  challenge. If a block runs past roughly 250 characters it is usually justifying itself -
+  cut to the claim. Do not restate the same guarantee in three consecutive panels.
 - Prefer deterministic logic over a model call. A model is for prose, not for facts.
 
 ## Do not
