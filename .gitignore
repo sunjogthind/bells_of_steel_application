@@ -14,3 +14,6 @@ CONTEXT.md
 
 # Local-only working brief
 COWORK_TASK.md
+
+# Transient output from the catalog-audit skill
+catalog-audit-findings.json

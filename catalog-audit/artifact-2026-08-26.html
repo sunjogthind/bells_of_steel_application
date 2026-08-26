@@ -1,0 +1,544 @@
+<title>Bells of Steel Catalog Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+:root{
+  --ground:#F5F6F8; --surface:#FFFFFF; --sunk:#EEF0F4;
+  --ink:#171A20; --body:#333A45; --muted:#68717F; --line:#DCE0E7;
+  --accent:#39507F; --accent-soft:#E7EBF3;
+  --critical:#A8261C; --high:#B0601A; --medium:#6E6220; --low:#5A6470;
+  --stripe-critical:#A8261C; --stripe-high:#B0601A; --stripe-medium:#6E6220; --stripe-low:#98A0AC;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#111318; --surface:#191C22; --sunk:#20242B;
+    --ink:#EDEFF3; --body:#C3C9D3; --muted:#8B94A2; --line:#2B303A;
+    --accent:#93AEE0; --accent-soft:#232B3A;
+    --critical:#E9776B; --high:#E0A265; --medium:#C4B76A; --low:#9AA3B0;
+    --stripe-critical:#C4402F; --stripe-high:#C07C2C; --stripe-medium:#8A7C2C; --stripe-low:#586170;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#111318; --surface:#191C22; --sunk:#20242B;
+  --ink:#EDEFF3; --body:#C3C9D3; --muted:#8B94A2; --line:#2B303A;
+  --accent:#93AEE0; --accent-soft:#232B3A;
+  --critical:#E9776B; --high:#E0A265; --medium:#C4B76A; --low:#9AA3B0;
+  --stripe-critical:#C4402F; --stripe-high:#C07C2C; --stripe-medium:#8A7C2C; --stripe-low:#586170;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--body);
+  font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
+  font-size:17px; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:940px; margin:0 auto; padding:56px 24px 96px; display:flex; flex-direction:column; gap:40px}
+h1,h2,h3,.chip,.tile-n,.eyebrow{font-family:Archivo,"Helvetica Neue",Arial,sans-serif}
+code,.mono,.tile-n,.rank,.chip{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+
+/* ---- masthead ---- */
+.masthead{display:flex; flex-direction:column; gap:14px; border-bottom:2px solid var(--ink); padding-bottom:26px}
+.eyebrow{
+  font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--muted); font-weight:600;
+}
+h1{
+  font-size:clamp(30px,5vw,44px); line-height:1.08; margin:0; color:var(--ink);
+  font-weight:700; letter-spacing:-.015em; text-wrap:balance;
+}
+.dateline{font-size:14px; color:var(--muted); font-family:"IBM Plex Mono",monospace}
+
+/* ---- verdict ---- */
+.verdict{
+  background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--accent);
+  padding:24px 26px; display:flex; flex-direction:column; gap:10px;
+}
+.verdict .line{font-family:Archivo,sans-serif; font-weight:700; font-size:clamp(20px,3vw,26px); color:var(--ink); line-height:1.25; text-wrap:balance}
+.verdict .detail{margin:0; max-width:64ch}
+.verdict.clean{border-left-color:var(--stripe-low)}
+
+/* ---- severity tiles ---- */
+.tiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line)}
+.tile{background:var(--surface); padding:16px 18px; display:flex; flex-direction:column; gap:6px}
+.tile-head{display:flex; align-items:baseline; gap:10px}
+.tile-n{font-size:30px; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; line-height:1}
+.tile-label{font-family:Archivo,sans-serif; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase}
+.tile-mean{font-size:13.5px; line-height:1.45; color:var(--muted); margin:0}
+.tile[data-sev="critical"] .tile-label{color:var(--critical)}
+.tile[data-sev="high"] .tile-label{color:var(--high)}
+.tile[data-sev="medium"] .tile-label{color:var(--medium)}
+.tile[data-sev="low"] .tile-label{color:var(--low)}
+
+/* ---- findings ---- */
+.findings{display:flex; flex-direction:column; gap:28px}
+.finding{background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--stripe-low); padding:26px 28px; display:flex; flex-direction:column; gap:14px}
+.finding[data-sev="critical"]{border-left-color:var(--stripe-critical)}
+.finding[data-sev="high"]{border-left-color:var(--stripe-high)}
+.finding[data-sev="medium"]{border-left-color:var(--stripe-medium)}
+.f-top{display:flex; flex-wrap:wrap; align-items:center; gap:10px}
+.rank{font-size:12px; color:var(--muted); font-variant-numeric:tabular-nums}
+.chip{font-size:10.5px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; padding:3px 8px; border:1px solid currentColor}
+.chip[data-sev="critical"]{color:var(--critical)}
+.chip[data-sev="high"]{color:var(--high)}
+.chip[data-sev="medium"]{color:var(--medium)}
+.chip[data-sev="low"]{color:var(--low)}
+.count{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--ink); font-variant-numeric:tabular-nums}
+.means{font-size:13px; color:var(--muted); font-family:Archivo,sans-serif}
+h2{font-size:clamp(20px,3vw,25px); line-height:1.22; margin:0; color:var(--ink); font-weight:700; letter-spacing:-.01em; text-wrap:balance}
+.finding p{margin:0; max-width:66ch}
+.todo{background:var(--sunk); padding:14px 16px; border-left:2px solid var(--accent)}
+.todo strong{font-family:Archivo,sans-serif; font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:4px}
+
+/* ---- evidence ---- */
+.ev-head{font-family:Archivo,sans-serif; font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:var(--muted); font-weight:600; margin:6px 0 0}
+.ev-scroll{overflow-x:auto}
+table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:520px}
+th,td{text-align:left; padding:9px 14px 9px 0; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-family:Archivo,sans-serif; font-size:10.5px; letter-spacing:.11em; text-transform:uppercase; color:var(--muted); font-weight:600; border-bottom-color:var(--ink)}
+td.detail,td.delta{font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--muted); font-variant-numeric:tabular-nums}
+td.delta{white-space:nowrap; color:var(--ink); text-align:right; padding-right:0}
+td.product{width:30%; min-width:190px; padding-right:22px}
+th:last-child{text-align:right}
+tr:last-child td{border-bottom:none}
+a{color:var(--accent); text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.also{font-size:12.5px; color:var(--muted); white-space:nowrap; display:inline-block}
+
+/* ---- clean ---- */
+.clean-list{display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line)}
+.clean-item{background:var(--surface); padding:14px 18px; display:flex; flex-wrap:wrap; gap:4px 14px; align-items:baseline}
+.clean-item strong{font-family:Archivo,sans-serif; font-size:15px; color:var(--ink); font-weight:600}
+.clean-item span{font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--muted)}
+h3{font-family:Archivo,sans-serif; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 14px; font-weight:700}
+
+/* ---- footer ---- */
+footer{border-top:1px solid var(--line); padding-top:22px; font-size:13.5px; color:var(--muted); display:flex; flex-direction:column; gap:10px}
+footer p{margin:0; max-width:68ch}
+footer .src{font-family:"IBM Plex Mono",monospace; font-size:12px; word-break:break-word}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+@media print{body{background:#fff} .finding,.verdict,.tile{break-inside:avoid}}
+</style>
+<div class="wrap">
+    <header class="masthead">
+      <p class="eyebrow">Bells of Steel · Catalog health check</p>
+      <h1>What your catalog is getting wrong today</h1>
+      <p class="dateline">August 26, 2026 · 476 products · 1,640 options</p>
+    </header>
+
+    <section class="verdict">
+      <p class="line">One thing needs attention today.</p>
+      <p class="detail">It is at the top of this report. Below that, 5 high, 4 medium and 3 low findings that can wait their turn.</p>
+    </section>
+
+    <section class="tiles">
+      <div class="tile" data-sev="critical">
+        <div class="tile-head"><span class="tile-n">1</span><span class="tile-label">Critical</span></div>
+        <p class="tile-mean">Costing money or credibility right now. Worth looking at today.</p>
+      </div>
+      <div class="tile" data-sev="high">
+        <div class="tile-head"><span class="tile-n">5</span><span class="tile-label">High</span></div>
+        <p class="tile-mean">Taking something off every affected order or sale. Worth this week.</p>
+      </div>
+      <div class="tile" data-sev="medium">
+        <div class="tile-head"><span class="tile-n">4</span><span class="tile-label">Medium</span></div>
+        <p class="tile-mean">Working against you quietly. Worth planning in.</p>
+      </div>
+      <div class="tile" data-sev="low">
+        <div class="tile-head"><span class="tile-n">3</span><span class="tile-label">Low</span></div>
+        <p class="tile-mean">Housekeeping. Nothing breaks if it waits.</p>
+      </div>
+    </section>
+
+    <section class="findings">
+      <article class="finding" data-sev="critical">
+        <div class="f-top">
+          <span class="rank">01</span>
+          <span class="chip" data-sev="critical">Critical</span>
+          <span class="count">16 rack pairs priced differently</span>
+          <span class="means">Costing money or credibility right now. Worth looking at today.</span>
+        </div>
+        <h2>The same rack is on sale twice, at two different prices</h2>
+        <p>Every prebuilt rack has two live product pages: the normal one, and a second copy ending in &quot;-hgb&quot; that the Home Gym Builder uses. All 16 pairs charge different prices for the same rack, and both pages can be bought from. A further 5 duplicated titles were left out of this comparison, because the two listings sell different things - a pair against a single, for instance - and their prices are not comparable.</p>
+        <p>What a customer pays depends on which of the two pages they happen to land on. The widest gap is $162.84 on the Manticore Half Rack - Prebuilt. The cheaper page is sometimes the builder copy and sometimes not, so this reads as two listings drifting apart rather than a deliberate discount.</p>
+        <div class="todo"><strong>What to do</strong>Decide which page is the real one for each rack and point the other at it. Until that is done, the pairs below need their prices matched by hand.</div>
+        
+        <p class="ev-head">Affected products — 12 of 16 shown</p>
+        <div class="ev-scroll">
+          <table>
+            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <tbody>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/manticore-half-rack-prebuilt" target="_blank" rel="noopener">Manticore Half Rack - Prebuilt</a> <span class="also">· <a href="https://bellsofsteel.com/products/manticore-half-rack-prebuilt-hgb" target="_blank" rel="noopener">second page</a></span></td><td class="detail">$1787.83 on /manticore-half-rack-prebuilt  vs  $1624.99 on /manticore-half-rack-prebuilt-hgb</td><td class="delta">$162.84 apart</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt" target="_blank" rel="noopener">Manticore Flat Foot Power Rack - Prebuilt</a> <span class="also">· <a href="https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt-hgb" target="_blank" rel="noopener">second page</a></span></td><td class="detail">$1644.89 on /manticore-flat-foot-power-rack-prebuilt  vs  $1549.99 on /manticore-flat-foot-power-rack-prebuilt-hgb</td><td class="delta">$94.90 apart</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/manctiore-folding-power-rack-prebuilt" target="_blank" rel="noopener">Manticore Folding Power Rack - Prebuilt</a> <span class="also">· <a href="https://bellsofsteel.com/products/manctiore-folding-power-rack-prebuilt-hgb" target="_blank" rel="noopener">second page</a></span></td><td class="detail">$1441.89 on /manctiore-folding-power-rack-prebuilt  vs  $1349.99 on /manctiore-folding-power-rack-prebuilt-hgb</td><td class="delta">$91.90 apart</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/roc-foldable-four-post-cage-prebuilt" target="_blank" rel="noopener">Roc Foldable 4 Post Cage - Prebuilt</a> <span class="also">· <a href="https://bellsofsteel.com/products/roc-foldable-four-post-cage-prebuilt-hgb" target="_blank" rel="noopener">second page</a></span></td><td class="detail">$1265.87 on /roc-foldable-four-post-cage-prebuilt  vs  $1174.99 on /roc-foldable-four-post-cage-prebuilt-hgb</td><td class="delta">$90.88 apart</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt" target="_blank" rel="noopener">Manticore Four Post Power Rack - Prebuilt</a> <span class="also">· <a href="https://bellsofsteel.com/products/manticore-four-post-power-rack-prebuilt-hgb" target="_blank" rel="noopener">second page</a></span></td><td class="detail">$1500.87 on /manticore-four-post-power-rack-prebuilt  vs  $1444.99 on /manticore-four-post-power-rack-prebuilt-hgb</td><td class="delta">$55.88 apart</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-half-rack-prebuilt" target="_blank" rel="noopener">Hydra Half Rack - Prebuilt</a> <span class="also">· <a href="https://bellsofsteel.com/products/hydra-half-rack-prebuilt-hgb" target="_blank" rel="noopener">second page</a></span></td><td class="detail">$952.89 on /hydra-half-rack-prebuilt  vs  $999.99 on /hydra-half-rack-prebuilt-hgb</td><td class="delta">$47.10 apart</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-four-post-power-rack-prebuilt" target="_blank" rel="noopener">Hydra Four Post Power Rack - Prebuilt</a> <span class="also">· <a href="https://bellsofsteel.com/products/hydra-four-post-power-rack-prebuilt-hgb" target="_blank" rel="noopener">second page</a></span></td><td class="detail">$1301.86 on /hydra-four-post-power-rack-prebuilt  vs  $1339.99 on /hydra-four-post-power-rack-prebuilt-hgb</td><td class="delta">$38.13 apart</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-squat-stand-prebuilt" target="_blank" rel="noopener">Hydra Squat Stand - Prebuilt</a> <span class="also">· <a href="https://bellsofsteel.com/products/hydra-squat-stand-prebuilt-hgb" target="_blank" rel="noopener">second page</a></span></td><td class="detail">$634.95 on /hydra-squat-stand-prebuilt  vs  $599.99 on /hydra-squat-stand-prebuilt-hgb</td><td class="delta">$34.96 apart</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/manticore-squat-stand-prebuilt" target="_blank" rel="noopener">Manticore Squat Stand - Prebuilt</a> <span class="also">· <a href="https://bellsofsteel.com/products/manticore-squat-stand-prebuilt-hgb" target="_blank" rel="noopener">second page</a></span></td><td class="detail">$874.94 on /manticore-squat-stand-prebuilt  vs  $849.99 on /manticore-squat-stand-prebuilt-hgb</td><td class="delta">$24.95 apart</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-six-post-power-rack-prebuilt" target="_blank" rel="noopener">Hydra Six Post Power Rack - Prebuilt</a> <span class="also">· <a href="https://bellsofsteel.com/products/hydra-six-post-power-rack-prebuilt-hgb" target="_blank" rel="noopener">second page</a></span></td><td class="detail">$2176.79 on /hydra-six-post-power-rack-prebuilt  vs  $2199.99 on /hydra-six-post-power-rack-prebuilt-hgb</td><td class="delta">$23.20 apart</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-collegiate-power-rack-prebuilt" target="_blank" rel="noopener">Hydra Collegiate Power Rack - Prebuilt</a> <span class="also">· <a href="https://bellsofsteel.com/products/hydra-collegiate-power-rack-prebuilt-hgb" target="_blank" rel="noopener">second page</a></span></td><td class="detail">$1421.86 on /hydra-collegiate-power-rack-prebuilt  vs  $1399.99 on /hydra-collegiate-power-rack-prebuilt-hgb</td><td class="delta">$21.87 apart</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt" target="_blank" rel="noopener">Hydra Flat Foot Power Rack - Prebuilt</a> <span class="also">· <a href="https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb" target="_blank" rel="noopener">second page</a></span></td><td class="detail">$1309.89 on /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt  vs  $1329.99 on /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb</td><td class="delta">$20.10 apart</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="finding" data-sev="high">
+        <div class="f-top">
+          <span class="rank">02</span>
+          <span class="chip" data-sev="high">High</span>
+          <span class="count">33 products</span>
+          <span class="means">Taking something off every affected order or sale. Worth this week.</span>
+        </div>
+        <h2>Products priced at $0.00 or $0.01 are visible to the public</h2>
+        <p>41 buyable options across 33 products are priced at $1.00 or less. 16 of them are recognisably on purpose: hardware labelled &quot;FREE FOR BUILDERS&quot;, and placeholder options named &quot;Variant for price 0&quot; belonging to a bundling app.</p>
+        <p>Nothing marks these as different from real products, so everything that reads your catalog picks them up - shopping feeds, analytics, price monitoring, any internal tool. They are the cheapest things in the catalog, so they surface first anywhere sorted by price.</p>
+        <div class="todo"><strong>What to do</strong>Give the builder scaffolding its own product category, or take it off the online store channel so it stops appearing publicly at all.</div>
+        
+        <p class="ev-head">Affected products — 10 of 33 shown</p>
+        <div class="ev-scroll">
+          <table>
+            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <tbody>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-storage-builder" target="_blank" rel="noopener">Hydra Storage Builder</a></td><td class="detail">$0.00, the product's only option</td><td class="delta">worth checking</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/manctiore-folding-power-rack-builder" target="_blank" rel="noopener">Manticore Folding Power Rack Builder (3&quot; x 3&quot;, 1&quot; Holes)</a></td><td class="detail">$0.00, the product's only option</td><td class="delta">worth checking</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/kraken-cable-tower-rack-attachment-1" target="_blank" rel="noopener">Kraken Cable Tower Rack Attachment</a></td><td class="detail">$0.00 on the &quot;Variant for price 0&quot; option</td><td class="delta">looks deliberate</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-bumper-plate-tree-builder" target="_blank" rel="noopener">Hydra Bumper Plate Tree Builder</a></td><td class="detail">$0.00, the product's only option</td><td class="delta">worth checking</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-storage-builder-1" target="_blank" rel="noopener">Hydra Storage Builder</a></td><td class="detail">$0.00 on the &quot;Variant for price 0&quot; option</td><td class="delta">looks deliberate</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/manticore-pr-m24-130-free" target="_blank" rel="noopener">Manticore Pair of M24 130mm Long Bolts (FREE FOR BUILDERS)</a></td><td class="detail">$0.00, the product's only option</td><td class="delta">looks deliberate</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/manticore-logo-tag-free" target="_blank" rel="noopener">Manticore BOS Logo Tag (FREE FOR BUILDERS)</a></td><td class="detail">$0.00, the product's only option</td><td class="delta">looks deliberate</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-logo-tag-free" target="_blank" rel="noopener">Hydra BOS Logo Tag - FREE FOR BUILDERS</a></td><td class="detail">$0.00, the product's only option</td><td class="delta">looks deliberate</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/commercial-interchangeable-weight-rack" target="_blank" rel="noopener">Commercial Interchangeable Weight Rack</a></td><td class="detail">$0.01, the product's only option</td><td class="delta">worth checking</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/commercial-interchangeable-weight-rack" target="_blank" rel="noopener">Commercial Interchangeable Weight Rack</a></td><td class="detail">$0.00 on the &quot;Variant for price 0&quot; option</td><td class="delta">looks deliberate</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="finding" data-sev="high">
+        <div class="f-top">
+          <span class="rank">03</span>
+          <span class="chip" data-sev="high">High</span>
+          <span class="count">29 products</span>
+          <span class="means">Taking something off every affected order or sale. Worth this week.</span>
+        </div>
+        <h2>Heavy products are recorded as weighing nothing</h2>
+        <p>279 options over $50, across 29 products, are marked as needing shipping but have their weight recorded as zero.</p>
+        <p>Weight is what a freight rate is calculated from. A zero there means the carrier quote is running on a default rather than the real number, and the difference between the quote and the actual cost comes out of the order.</p>
+        <div class="todo"><strong>What to do</strong>Fill the weights in from your packing data. The list below is ordered by price, so start at the top. Then ask for a rule that refuses to publish a shipped product with no weight.</div>
+        
+        <p class="ev-head">Affected products — 10 of 29 shown</p>
+        <div class="ev-scroll">
+          <table>
+            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <tbody>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/kolossyem-rack" target="_blank" rel="noopener">Kolossyem Rack</a></td><td class="detail">$5314.99</td><td class="delta">weight is 0</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-trident-station-1" target="_blank" rel="noopener">Hydra Trident Station</a></td><td class="detail">$4582.34 - Variant for price 4582.34</td><td class="delta">weight is 0</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-trident-station-1" target="_blank" rel="noopener">Hydra Trident Station</a></td><td class="detail">$4222.36 - Variant for price 4222.36</td><td class="delta">weight is 0</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/all-in-one-trainer-old" target="_blank" rel="noopener">All-in-One Trainer - OLD Version on Clearance</a></td><td class="detail">$1999.99</td><td class="delta">weight is 0</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/pandemonium-squat" target="_blank" rel="noopener">Pandemonium Squat – 3-in-1 Pendulum Squat / Calf Press / Viking Press Machine</a></td><td class="detail">$1599.99</td><td class="delta">weight is 0</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-storage-builder-1" target="_blank" rel="noopener">Hydra Storage Builder</a></td><td class="detail">$1549.91 - Variant for price 1549.91</td><td class="delta">weight is 0</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-storage-builder-1" target="_blank" rel="noopener">Hydra Storage Builder</a></td><td class="detail">$1499.94 - Variant for price 1499.94</td><td class="delta">weight is 0</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/all-in-one-trainer" target="_blank" rel="noopener">All-in-One Trainer</a></td><td class="detail">$1349.99 - Plate Loaded v2 (with Footplate)</td><td class="delta">weight is 0</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-storage-builder-1" target="_blank" rel="noopener">Hydra Storage Builder</a></td><td class="detail">$1319.93 - Variant for price 1319.93</td><td class="delta">weight is 0</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-storage-builder-1" target="_blank" rel="noopener">Hydra Storage Builder</a></td><td class="detail">$1309.94 - Variant for price 1309.94</td><td class="delta">weight is 0</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="finding" data-sev="high">
+        <div class="f-top">
+          <span class="rank">04</span>
+          <span class="chip" data-sev="high">High</span>
+          <span class="count">9 products</span>
+          <span class="means">Taking something off every affected order or sale. Worth this week.</span>
+        </div>
+        <h2>Some products show a database code where the brand should be</h2>
+        <p>9 products have their brand set to a code in the form &quot;related_to_&quot; followed by a number, instead of Bells of Steel. The other 460 are correct.</p>
+        <p>Brand is shown to customers, and it is a required field in Google Shopping and most marketplace feeds. These products are advertising an internal reference number as their brand name.</p>
+        <div class="todo"><strong>What to do</strong>Reset the brand on the products below. The shape of the value suggests a related-products app is writing into that field, so it is worth finding out which one, and what else it touches.</div>
+        
+        <p class="ev-head">Affected products</p>
+        <div class="ev-scroll">
+          <table>
+            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <tbody>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/kraken-cable-tower-rack-attachment-1" target="_blank" rel="noopener">Kraken Cable Tower Rack Attachment</a></td><td class="detail">brand reads &quot;related_to_7678798430260&quot;</td><td class="delta">wrong</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-storage-builder-1" target="_blank" rel="noopener">Hydra Storage Builder</a></td><td class="detail">brand reads &quot;related_to_7562480451636&quot;</td><td class="delta">wrong</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/commercial-interchangeable-weight-rack" target="_blank" rel="noopener">Commercial Interchangeable Weight Rack</a></td><td class="detail">brand reads &quot;related_to_7412175011892&quot;</td><td class="delta">wrong</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/barbell-and-plate-custom-set-1" target="_blank" rel="noopener">Barbell And Plate Custom Set</a></td><td class="detail">brand reads &quot;related_to_7425783726132&quot;</td><td class="delta">wrong</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-trident-station-1" target="_blank" rel="noopener">Hydra Trident Station</a></td><td class="detail">brand reads &quot;related_to_7424212697140&quot;</td><td class="delta">wrong</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/dumbbell-bench-combo-1" target="_blank" rel="noopener">Dumbbell Bench Combo</a></td><td class="detail">brand reads &quot;related_to_7424043286580&quot;</td><td class="delta">wrong</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/3-packs-of-bars-1" target="_blank" rel="noopener">3 Packs Of Bars</a></td><td class="detail">brand reads &quot;related_to_7422453186612&quot;</td><td class="delta">wrong</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/partner-bar-bumper-set-1" target="_blank" rel="noopener">Partner Bar Bumper Set</a></td><td class="detail">brand reads &quot;related_to_7422084743220&quot;</td><td class="delta">wrong</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/apartment-gym-combo-2" target="_blank" rel="noopener">Apartment Gym Combo</a></td><td class="detail">brand reads &quot;related_to_7422040277044&quot;</td><td class="delta">wrong</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="finding" data-sev="high">
+        <div class="f-top">
+          <span class="rank">05</span>
+          <span class="chip" data-sev="high">High</span>
+          <span class="count">5 products</span>
+          <span class="means">Taking something off every affected order or sale. Worth this week.</span>
+        </div>
+        <h2>Attachments are missing from racks their own titles say they fit</h2>
+        <p>1 products say in their title that they fit both Hydra and Manticore racks but are only listed as fitting one. Another 4 name both families and are not listed against either.</p>
+        <p>The Home Gym Builder only offers a customer the parts listed as fitting their rack. These attachments are invisible for the family they were left out of, while the title the customer can read says the opposite.</p>
+        <div class="todo"><strong>What to do</strong>Check the products below against their own titles and add the missing compatibility. This comparison is cheap to repeat, and it is exactly the sort of drift nobody catches by hand.</div>
+        
+        <p class="ev-head">Affected products</p>
+        <div class="ev-scroll">
+          <table>
+            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <tbody>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/utility-seat-for-hydra-manticore" target="_blank" rel="noopener">Utility Seat for Hydra/Manticore</a></td><td class="detail">listed as fitting Hydra only</td><td class="delta">title says both</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/safety-straps" target="_blank" rel="noopener">Safety Straps for Hydra &amp; Manticore Racks</a></td><td class="detail">not listed as fitting either rack family</td><td class="delta">missing from the builder</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-manticore-lat-pulldown-plate-loaded-to-selectorized-upgrade-kit" target="_blank" rel="noopener">Hydra / Manticore Lat Pulldown Plate Loaded to Selectorized Upgrade Kit</a></td><td class="detail">not listed as fitting either rack family</td><td class="delta">missing from the builder</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/end-cap-for-hydra-manticore-uprights-single" target="_blank" rel="noopener">End Cap for Hydra / Manticore Uprights (Single)</a></td><td class="detail">not listed as fitting either rack family</td><td class="delta">missing from the builder</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/seal-row-pad-for-60mm-hydra-manticore" target="_blank" rel="noopener">Seal Row Pad for 60mm/ Hydra/ Manticore</a></td><td class="detail">not listed as fitting either rack family</td><td class="delta">missing from the builder</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="finding" data-sev="high">
+        <div class="f-top">
+          <span class="rank">06</span>
+          <span class="chip" data-sev="high">High</span>
+          <span class="count">15 machines over $500</span>
+          <span class="means">Taking something off every affected order or sale. Worth this week.</span>
+        </div>
+        <h2>Expensive machines have no spare parts published</h2>
+        <p>You publish 68 spare parts covering 29 products. 15 serviceable machines priced over $500 have none at all, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $5000.</p>
+        <p>A machine that fails in year two has nothing to sell the customer and nothing for support to point at. That is a warranty conversation with no good ending, on your highest-priced items. Spare parts are also good margin being left on the table.</p>
+        <div class="todo"><strong>What to do</strong>Work down the list by price. Every machine over $1,000 should have its wear parts - pads, cables, bushings - listed before the next warranty season.</div>
+        
+        <p class="ev-head">Affected products — 10 of 15 shown</p>
+        <div class="ev-scroll">
+          <table>
+            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <tbody>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/blitz-manual-treadmill" target="_blank" rel="noopener">Blitz Magnetic Resistance Manual Treadmill</a></td><td class="detail">Cardio Machine</td><td class="delta">$5000</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/blitz-mountain-climber-treadmill" target="_blank" rel="noopener">Blitz Mountain Climber Treadmill</a></td><td class="detail">Cardio Machine</td><td class="delta">$2560</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/sisyphean-stepper" target="_blank" rel="noopener">Sisyphean Stepper - Manual Stair Climber</a></td><td class="detail">Cardio Machine</td><td class="delta">$2400</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/residential-manual-treadmill" target="_blank" rel="noopener">Wooden Residential Manual Treadmill</a></td><td class="detail">Cardio Machine</td><td class="delta">$2200</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/the-dreadmill" target="_blank" rel="noopener">The Dreadmill</a></td><td class="detail">Cardio Machine</td><td class="delta">$2000</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/leg-press-hack-squat-set" target="_blank" rel="noopener">Leg Press Hack Squat Machine</a></td><td class="detail">Strength Machine</td><td class="delta">$1900</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/blitz-stepper" target="_blank" rel="noopener">Blitz Stepper</a></td><td class="detail">Cardio Machine</td><td class="delta">$1500</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/reverse-hammer" target="_blank" rel="noopener">Reverse Hammer 2 In 1 GHD And Reverse Back Extension</a></td><td class="detail">Strength Machine</td><td class="delta">$1350</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/belt-squat-machine" target="_blank" rel="noopener">Belt Squat Machine</a></td><td class="detail">Strength Machine</td><td class="delta">$1150</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/manticore-four-post-converter-bench" target="_blank" rel="noopener">Manticore Four Post Converter Bench</a></td><td class="detail">Bench</td><td class="delta">$1100</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="finding" data-sev="medium">
+        <div class="f-top">
+          <span class="rank">07</span>
+          <span class="chip" data-sev="medium">Medium</span>
+          <span class="count">8 product options</span>
+          <span class="means">Working against you quietly. Worth planning in.</span>
+        </div>
+        <h2>A crossed-out &quot;was&quot; price that matches the price being charged</h2>
+        <p>8 product options carry a compare-at price that is the same as, or lower than, what the customer actually pays.</p>
+        <p>The store displays compare-at as a crossed-out &quot;was&quot; price. When it matches the real price there is no discount behind the claim. That is a weaker sales page than an honest one, and it is the kind of claim consumer-protection rules take an interest in.</p>
+        <div class="todo"><strong>What to do</strong>Clear the compare-at price on the options below wherever it is not genuinely higher than the selling price.</div>
+        
+        <p class="ev-head">Affected products</p>
+        <div class="ev-scroll">
+          <table>
+            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <tbody>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/roc-foldable-two-post-cage-prebuilt" target="_blank" rel="noopener">Roc Foldable 2 Post Cage - Prebuilt (3&quot; x 3&quot;, ⅝&quot; Holes)</a></td><td class="detail">sells for $719.95, shown as reduced from $719.95</td><td class="delta">no real discount</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/manticore-folding-half-rack-prebuilt" target="_blank" rel="noopener">Manticore Folding Half Rack - Prebuilt (3&quot; x 3&quot;, 1&quot; Holes)</a></td><td class="detail">sells for $934.95, shown as reduced from $934.95</td><td class="delta">no real discount</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt" target="_blank" rel="noopener">Hydra Flat Foot Power Rack - Prebuilt (3&quot; x 3&quot;, ⅝&quot; Holes)</a></td><td class="detail">sells for $1309.89, shown as reduced from $1309.89</td><td class="delta">no real discount</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/manticore-squat-stand-prebuilt" target="_blank" rel="noopener">Manticore Squat Stand - Prebuilt (3&quot; x 3&quot;, 1&quot; Holes)</a></td><td class="detail">sells for $874.94, shown as reduced from $874.94</td><td class="delta">no real discount</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/manticore-flat-foot-power-rack-prebuilt" target="_blank" rel="noopener">Manticore Flat Foot Power Rack - Prebuilt (3&quot; x 3&quot;, 1&quot; Holes)</a></td><td class="detail">sells for $1644.89, shown as reduced from $1644.89</td><td class="delta">no real discount</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-squat-stand-prebuilt" target="_blank" rel="noopener">Hydra Squat Stand - Prebuilt (3&quot; x 3&quot;, ⅝&quot; Holes)</a></td><td class="detail">sells for $634.95, shown as reduced from $634.95</td><td class="delta">no real discount</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hip-thrust-machine" target="_blank" rel="noopener">Hip Thrust Machine</a></td><td class="detail">sells for $1199.99, shown as reduced from $1199.99</td><td class="delta">no real discount</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/mark-wildman-adjustable-kettlebells" target="_blank" rel="noopener">Mark Wildman Adjustable Kettlebell</a></td><td class="detail">sells for $239.99, shown as reduced from $239.99</td><td class="delta">no real discount</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="finding" data-sev="medium">
+        <div class="f-top">
+          <span class="rank">08</span>
+          <span class="chip" data-sev="medium">Medium</span>
+          <span class="count">56 products</span>
+          <span class="means">Working against you quietly. Worth planning in.</span>
+        </div>
+        <h2>Live product pages where nothing can be bought</h2>
+        <p>56 products are live on the storefront with nothing in stock on any option.</p>
+        <p>These pages still take ad clicks, still appear in search, and convert at zero. They are also the pages most likely to produce a &quot;when is this back?&quot; email.</p>
+        <div class="todo"><strong>What to do</strong>Decide product by product: take it down, or swap the add-to-cart for a back-in-stock signup so the traffic is at least captured.</div>
+        
+        <p class="ev-head">Affected products — 10 of 56 shown</p>
+        <div class="ev-scroll">
+          <table>
+            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <tbody>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/basilisk-stack-loaded-leg-extension-leg-curl" target="_blank" rel="noopener">Basilisk Stack Loaded Leg Extension / Leg Curl</a></td><td class="detail">3 options, none in stock</td><td class="delta">cannot be bought</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/fat-bar-lat-pulldown-bar" target="_blank" rel="noopener">Fat Bar - Lat Pulldown Bar</a></td><td class="detail">1 option, none in stock</td><td class="delta">cannot be bought</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/manticore-two-post-converter-bench" target="_blank" rel="noopener">Manticore Two Post Converter Bench</a></td><td class="detail">1 option, none in stock</td><td class="delta">cannot be bought</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/specialty-bar-bundle" target="_blank" rel="noopener">Specialty Bar Bundle</a></td><td class="detail">1 option, none in stock</td><td class="delta">cannot be bought</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/rack-junctions-3-x-3" target="_blank" rel="noopener">Rack Junctions - 3&quot; x 3&quot;</a></td><td class="detail">2 options, none in stock</td><td class="delta">cannot be bought</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/die-cut-sticker-upgrade-sticker-pack" target="_blank" rel="noopener">Die-Cut Sticker Upgrade / Sticker Pack</a></td><td class="detail">1 option, none in stock</td><td class="delta">cannot be bought</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/flat-iron-tricep-press-cable-attachment" target="_blank" rel="noopener">Flat-Iron Tricep Press Cable Attachment</a></td><td class="detail">2 options, none in stock</td><td class="delta">cannot be bought</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/footplate-for-cable-tower" target="_blank" rel="noopener">Footplate for Cable Tower/All In One Trainer</a></td><td class="detail">1 option, none in stock</td><td class="delta">cannot be bought</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/wildman-poison-pill" target="_blank" rel="noopener">48KG Extension Kit for Adjustable Kettlebell - Wildman Poison Pill</a></td><td class="detail">1 option, none in stock</td><td class="delta">cannot be bought</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/strongarm-combo-rack" target="_blank" rel="noopener">StrongArm Combo Rack - Squat Stand &amp; Bench Press</a></td><td class="detail">1 option, none in stock</td><td class="delta">cannot be bought</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="finding" data-sev="medium">
+        <div class="f-top">
+          <span class="rank">09</span>
+          <span class="chip" data-sev="medium">Medium</span>
+          <span class="count">107 products</span>
+          <span class="means">Working against you quietly. Worth planning in.</span>
+        </div>
+        <h2>A fifth of the catalog has no product category</h2>
+        <p>89 products have no category set, and another 18 use the word &quot;Hidden&quot; as their category. Together that is 22% of the catalog.</p>
+        <p>Category is what your automatic collections and storefront filters sort on, and what any report groups by. A product without one is missing from all of it. &quot;Hidden&quot; is a visibility setting sitting in the category field.</p>
+        <div class="todo"><strong>What to do</strong>Most can be worked out from the product title alone. Work through the list and set a real category, then ask for category to be made a required field.</div>
+        
+        <p class="ev-head">Affected products — 8 of 107 shown</p>
+        <div class="ev-scroll">
+          <table>
+            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <tbody>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/oblivyon-tower-3x3-cable-tower-back-upright" target="_blank" rel="noopener">Oblivyon Tower - 3x3&quot; Cable Tower - Back Upright</a></td><td class="detail">category is blank</td><td class="delta">uncategorised</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/blitz-indoor-cycling-bike-spare-parts" target="_blank" rel="noopener">Blitz Indoor Cycling Bike Spare Parts</a></td><td class="detail">category is blank</td><td class="delta">uncategorised</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/fid-bench-spare-parts" target="_blank" rel="noopener">FID Bench Spare Parts</a></td><td class="detail">category is blank</td><td class="delta">uncategorised</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hero-pad-spare-parts" target="_blank" rel="noopener">Hero Pad Spare Parts</a></td><td class="detail">category is blank</td><td class="delta">uncategorised</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/pandemonium-squat-machine-spare-parts" target="_blank" rel="noopener">Pandemonium Squat Machine Spare Parts</a></td><td class="detail">category is blank</td><td class="delta">uncategorised</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/ripcords-premium-resistance-bands" target="_blank" rel="noopener">Ripcords Premium Resistance Bands</a></td><td class="detail">category is blank</td><td class="delta">uncategorised</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/human-trainer-bodyweight-suspension-system" target="_blank" rel="noopener">Human Trainer Bodyweight Suspension System</a></td><td class="detail">category is blank</td><td class="delta">uncategorised</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/leg-cords" target="_blank" rel="noopener">Leg Cords</a></td><td class="detail">category is blank</td><td class="delta">uncategorised</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="finding" data-sev="medium">
+        <div class="f-top">
+          <span class="rank">10</span>
+          <span class="chip" data-sev="medium">Medium</span>
+          <span class="count">90 products</span>
+          <span class="means">Working against you quietly. Worth planning in.</span>
+        </div>
+        <h2>Spec tables are switched off, including on the entry-level racks</h2>
+        <p>90 products have their spec table turned off. Separately, 3 of the 3 Residential racks publish no upright height anywhere on the page.</p>
+        <p>Upright height is the number that decides whether a rack fits a room. The Residential line is your cheapest and most beginner-facing, bought by exactly the person working around a low basement ceiling and least able to guess. Neither they nor the Gym Builder can check that it fits.</p>
+        <div class="todo"><strong>What to do</strong>Publish height, width and depth on every rack. It is the most common question asked before a rack sale.</div>
+        
+        <p class="ev-head">Affected products — 3 of 90 shown</p>
+        <div class="ev-scroll">
+          <table>
+            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <tbody>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/folding-rack" target="_blank" rel="noopener">Folding Rack 2.3&quot; x 2.3&quot; (5/8&quot; Holes)</a></td><td class="detail">no upright height published</td><td class="delta">height unknown</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/residential-power-rack" target="_blank" rel="noopener">Residential Power Rack (2.3&quot; x 2.3&quot;, ⅝&quot; HOLES)</a></td><td class="detail">no upright height published</td><td class="delta">height unknown</td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/light-commercial-rack" target="_blank" rel="noopener">Light Commercial Power Rack (2.3&quot; x 2.3&quot;, ⅝&quot; HOLES)</a></td><td class="detail">no upright height published</td><td class="delta">height unknown</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="finding" data-sev="low">
+        <div class="f-top">
+          <span class="rank">11</span>
+          <span class="chip" data-sev="low">Low</span>
+          <span class="count">11 products</span>
+          <span class="means">Housekeeping. Nothing breaks if it waits.</span>
+        </div>
+        <h2>Product options with no SKU</h2>
+        <p>11 products have at least one option with no SKU.</p>
+        <p>SKU is what links the store to the warehouse and to any report built on top. A blank one breaks that link quietly - nothing shows an error, the product simply goes missing from the count.</p>
+        <div class="todo"><strong>What to do</strong>Assign SKUs to the products below.</div>
+        
+        <p class="ev-head">Affected products — 6 of 11 shown</p>
+        <div class="ev-scroll">
+          <table>
+            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <tbody>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/ultimate-backyard-gym-bundle" target="_blank" rel="noopener">Ultimate Backyard Training Bundle</a></td><td class="detail">an option has no SKU</td><td class="delta"></td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/kraken-cable-tower-rack-attachment-1" target="_blank" rel="noopener">Kraken Cable Tower Rack Attachment</a></td><td class="detail">an option has no SKU</td><td class="delta"></td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-storage-builder-1" target="_blank" rel="noopener">Hydra Storage Builder</a></td><td class="detail">an option has no SKU</td><td class="delta"></td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/commercial-interchangeable-weight-rack" target="_blank" rel="noopener">Commercial Interchangeable Weight Rack</a></td><td class="detail">an option has no SKU</td><td class="delta"></td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/barbell-and-plate-custom-set-1" target="_blank" rel="noopener">Barbell And Plate Custom Set</a></td><td class="detail">an option has no SKU</td><td class="delta"></td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hydra-trident-station-1" target="_blank" rel="noopener">Hydra Trident Station</a></td><td class="detail">an option has no SKU</td><td class="delta"></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="finding" data-sev="low">
+        <div class="f-top">
+          <span class="rank">12</span>
+          <span class="chip" data-sev="low">Low</span>
+          <span class="count">36 products</span>
+          <span class="means">Housekeeping. Nothing breaks if it waits.</span>
+        </div>
+        <h2>Thin or empty product descriptions</h2>
+        <p>36 products have under 120 characters of description.</p>
+        <p>Thin pages rank poorly in search, and there is nothing for a support rep to quote when a customer asks what the thing actually does.</p>
+        <div class="todo"><strong>What to do</strong>Start with the ones that are in stock and getting traffic.</div>
+        
+        <p class="ev-head">Affected products — 6 of 36 shown</p>
+        <div class="ev-scroll">
+          <table>
+            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <tbody>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/fid-bench-spare-parts" target="_blank" rel="noopener">FID Bench Spare Parts</a></td><td class="detail">117 characters of description</td><td class="delta"></td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/hero-pad-spare-parts" target="_blank" rel="noopener">Hero Pad Spare Parts</a></td><td class="detail">26 characters of description</td><td class="delta"></td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/competition-flat-bench-pad-spare-parts" target="_blank" rel="noopener">Competition Flat Bench Pad Spare Parts</a></td><td class="detail">39 characters of description</td><td class="delta"></td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/buzzsaw-bench-spare-parts" target="_blank" rel="noopener">Buzzsaw Bench Spare Parts</a></td><td class="detail">71 characters of description</td><td class="delta"></td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/functional-trainer-spare-parts" target="_blank" rel="noopener">Functional Trainer Spare Parts</a></td><td class="detail">101 characters of description</td><td class="delta"></td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/utility-adjustable-bench-spare-parts" target="_blank" rel="noopener">Utility Adjustable Bench Spare Parts</a></td><td class="detail">91 characters of description</td><td class="delta"></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="finding" data-sev="low">
+        <div class="f-top">
+          <span class="rank">13</span>
+          <span class="chip" data-sev="low">Low</span>
+          <span class="count">2 products</span>
+          <span class="means">Housekeeping. Nothing breaks if it waits.</span>
+        </div>
+        <h2>Products with no photo</h2>
+        <p>2 products have no image at all.</p>
+        <p>A product page with no photo effectively does not sell, and an image is a required field in most shopping feeds.</p>
+        <div class="todo"><strong>What to do</strong>Add photography, or take the product down until there is some.</div>
+        
+        <p class="ev-head">Affected products</p>
+        <div class="ev-scroll">
+          <table>
+            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <tbody>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/3-layer-band-peg-deadlift-platform" target="_blank" rel="noopener">3 Layer Band Peg - Deadlift Platform</a></td><td class="detail">no images</td><td class="delta"></td></tr>
+            <tr><td class="product"><a href="https://bellsofsteel.com/products/1-layer-band-peg-deadlift-platform" target="_blank" rel="noopener">1 Layer Band Peg - Deadlift Platform</a></td><td class="detail">no images</td><td class="delta"></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <h3>Checks that came back clean</h3>
+      <div class="clean-list">
+        <div class="clean-item"><strong>No SKU is being used by two different products</strong><span>1379 SKUs checked, 0 reused.</span></div>
+        <div class="clean-item"><strong>Discontinued products really are unbuyable</strong><span>17 marked discontinued, 0 still purchasable.</span></div>
+        <div class="clean-item"><strong>The brand name is right everywhere else</strong><span>460 of 476 products correctly show Bells of Steel.</span></div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="src">Source: saved catalog: data/catalog-raw.json · catalog read Aug 26, 2026, 12:11 a.m. · report generated Aug 26, 2026, 7:56 a.m.</p>
+      <p>Every number here is counted from your published storefront catalog. Where the catalog does not publish something, this report says it is not published rather than estimating it.</p>
+      <p>Independent catalog audit by Rana Thind. Not affiliated with, endorsed by, or an official property of Bells of Steel Inc.</p>
+    </footer>
+  </div>

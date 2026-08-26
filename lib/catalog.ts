@@ -3,7 +3,12 @@ import type { Catalog, Product } from './types';
 
 const catalog = raw as unknown as Catalog;
 
-export const SNAPSHOT_DATE = '25 August 2026';
+/* Derived from the snapshot itself, not written down. The monitor commits a fresh
+   catalog every morning; a hardcoded date would silently start lying the first time
+   it did, on five pages at once. */
+export const SNAPSHOT_DATE = new Date(catalog.fetched_at).toLocaleDateString('en-GB', {
+  day: 'numeric', month: 'long', year: 'numeric', timeZone: 'America/Edmonton',
+});
 export const getCatalog = () => catalog;
 export const allProducts = (): Product[] => catalog.products;
 
