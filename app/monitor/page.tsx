@@ -29,10 +29,12 @@ export default function Page() {
         </p>
         <p className="mt-3 max-w-3xl leading-relaxed text-muted">
           A scheduled job re-pulls your storefront feed every morning, fingerprints all{' '}
-          {latest.productCount} products, diffs them against the previous run, and reports only what
-          changed — new products, price movements, stock flips, and data issues that appeared or got fixed.
-          It runs unattended in GitHub Actions and commits each snapshot back to the repository, so the
-          history below is real rather than reconstructed.
+          {latest.productCount} products, and reports only what changed — new products, price movements,
+          stock flips, data issues that appeared or got fixed.
+        </p>
+        <p className="mt-3 max-w-3xl leading-relaxed text-muted">
+          It runs unattended in GitHub Actions and commits each snapshot, so the history below is real
+          rather than reconstructed.
         </p>
 
         <div className="mt-8 grid grid-cols-2 gap-6 border-t border-line pt-8 sm:grid-cols-4">
@@ -128,10 +130,9 @@ export default function Page() {
         {/* ---------- the schedule ---------- */}
         <h2 className="mt-14 text-2xl font-extrabold">How it runs</h2>
         <p className="mt-3 max-w-3xl leading-relaxed text-muted">
-          A GitHub Actions workflow on a daily cron. It re-runs the whole pipeline, writes a new snapshot,
-          and commits it. Two polite requests to your storefront per day, 600ms apart, with a User-Agent that
-          says who it is. Running inside your stack, the last step posts to a Slack channel instead of only
-          writing a file.
+          A daily cron that re-runs the pipeline, writes a snapshot and commits it. Two polite requests to
+          your storefront per day, 600ms apart, with a User-Agent that says who it is. Inside your stack the
+          last step posts to Slack rather than writing a file.
         </p>
         <pre className="mt-4 overflow-x-auto rounded-lg border border-line bg-panel p-4 font-mono text-[12px] leading-relaxed text-dim">
 {`# .github/workflows/catalog-monitor.yml

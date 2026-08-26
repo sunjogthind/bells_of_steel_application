@@ -56,16 +56,16 @@ const BROKE = [
 
 const DECISIONS = [
   {
-    q: 'Why is there no language model at runtime?',
-    a: `Three of the four tools are deterministic and the fourth could have been a chat box. A model would have made the prose warmer and the facts less trustworthy. Grounding, retrieval and the escalation policy are the parts that decide whether the output is safe; the model only decides how it reads. Building the hard half first also means the demo costs nothing to run, cannot be broken by a rate limit, and cannot hallucinate in front of the person evaluating it.`,
+    q: 'Why is most of this deterministic?',
+    a: `Retrieval, grounding and escalation decide whether an answer is safe. A model only decides how it reads. Building the hard half first means four of the five tools cost nothing to run and cannot hallucinate. Spotter has Claude wired in on top, with its output checked back against the retrieved context.`,
   },
   {
     q: 'Why does the UI keep saying "estimated" and "not published"?',
-    a: `Because a fit tool that silently guesses a ceiling clearance is worse than no fit tool. Every dimension carries where it came from, and the Residential racks — which publish no dimensions at all — return "cannot verify" instead of a number. The gap is the finding.`,
+    a: `A fit tool that silently guesses a ceiling clearance is worse than no fit tool. Every dimension carries where it came from, and the three Residential racks return "cannot verify" instead of a number. The gap is the finding.`,
   },
   {
     q: 'Why build on your real catalog rather than mock data?',
-    a: `Mock data would have let me build all five tools in half the time and demonstrate nothing. Every interesting thing here — the hgb_ compatibility graph, the duplicate listings, the corrupted vendor field, the treadmill with no spare parts — came out of reading data that actually exists, in your store, today.`,
+    a: `Mock data would have been half the work and demonstrated nothing. The hgb_ graph, the duplicate listings, the corrupted vendor field, the treadmill with no spare parts — all of it came out of reading data that actually exists.`,
   },
 ];
 
@@ -154,15 +154,15 @@ monitor        →  fingerprint, diff vs. last run          →  data/monitor.js
         <div className="mt-10 rounded-lg border border-line bg-panel p-5">
           <h2 className="text-sm font-semibold">An MCP server, too</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            The repo ships a Model Context Protocol server that puts the same catalog behind four
-            tools in Claude Code — <code className="text-steel">search_products</code>,{' '}
+            The repo ships an MCP server putting the catalog behind four tools in Claude Code:{' '}
+            <code className="text-steel">search_products</code>,{' '}
             <code className="text-steel">check_compatibility</code>,{' '}
-            <code className="text-steel">find_spare_part</code> and{' '}
-            <code className="text-steel">catalog_health</code> — so someone at Bells of Steel could
-            ask &ldquo;does the batwing storage fit a Manticore four post&rdquo; from a terminal
-            without knowing the hgb_ tag grammar. It answers that one correctly, including the
-            reason: Hydra is ⅝&Prime; holes, Manticore is 1&Prime;, and the hardware does not
-            interchange. Same escalation rule as the copilot — no tags means &ldquo;not
+            <code className="text-steel">find_spare_part</code>,{' '}
+            <code className="text-steel">catalog_health</code>.
+          </p>
+          <p className="mt-2 text-sm leading-relaxed text-muted">
+            Ask it whether the batwing storage fits a Manticore four post and it says no, with the
+            reason: Hydra is ⅝&Prime; holes, Manticore is 1&Prime;. No tags means &ldquo;not
             published&rdquo;, not a guess.
           </p>
         </div>
@@ -175,11 +175,10 @@ monitor        →  fingerprint, diff vs. last run          →  data/monitor.js
             </a>
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            The repo has one, and it is specific to this project rather than a generic template. It carries
-            the rule the whole codebase is organised around (never invent a fact about someone else&rsquo;s
-            business), the verification steps every audit finding has to pass, and the Bells of Steel domain
-            notes — the hgb_ tag grammar, the hole-size constraint, the duplicate-handle pattern — that took
-            the longest to work out and would take the longest to rediscover.
+            Specific to this project, not a generic template. It carries the rule the codebase is organised
+            around — never invent a fact about someone else&rsquo;s business — the verification steps every
+            audit finding has to pass, and the domain notes that took longest to work out: the hgb_ tag
+            grammar, the hole-size constraint, the duplicate-handle pattern.
           </p>
         </div>
       </div>

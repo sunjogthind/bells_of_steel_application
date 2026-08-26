@@ -12,10 +12,9 @@ export default function Page() {
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel">Demo 01 · Customer-facing</p>
         <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Gym Builder</h1>
         <p className="mt-4 max-w-3xl leading-relaxed text-muted">
-          &ldquo;Will it fit in my basement?&rdquo; is the question that decides whether someone buys a rack
-          or closes the tab. This answers it against the {racks.length} prebuilt rack models in your live
-          catalog, then shows only the attachments your own compatibility tags say will bolt onto the one
-          the customer picked.
+          &ldquo;Will it fit in my basement?&rdquo; decides whether someone buys a rack or closes the tab.
+          This answers it against the {racks.length} prebuilt rack models in your live catalog, then shows
+          only the attachments your own compatibility tags say will bolt on.
         </p>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
           Every dimension is labelled with where it came from — the product page, my estimate, or

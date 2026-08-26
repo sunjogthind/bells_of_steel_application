@@ -42,8 +42,8 @@ const add = (f) => findings.push(f);
     id: 'duplicate-pricing', severity: 'critical',
     title: 'The same product is listed twice, at two different prices',
     count: mismatched.length, unit: `of ${dupes.length} duplicated listings`,
-    summary: `${skipped > 0 ? `(${skipped} further duplicated titles were excluded because their listings have different variant structures and are not comparable on price.) ` : ''}Every prebuilt rack exists as two separate live product pages — one plain handle and one ending in "-hgb" (your Home Gym Builder copy). ${mismatched.length} of the ${dupes.length} duplicated pairs are priced differently, and both pages return HTTP 200 and are purchasable.`,
-    impact: `A customer's price depends on which of two identical pages they land on. The widest gap is $${Math.max(...mismatched.map((m) => m.spread)).toFixed(2)}. The cheaper copy is sometimes the "-hgb" one and sometimes not, so this does not look like an intentional bundle discount — it looks like two listings drifting apart over time.`,
+    summary: `Every prebuilt rack exists as two live product pages — one plain handle, one ending "-hgb" (your Home Gym Builder copy). ${mismatched.length === dupes.length ? `All ${dupes.length}` : `${mismatched.length} of ${dupes.length}`} comparable pairs are priced differently, and both pages are purchasable.${skipped > 0 ? ` ${skipped} further duplicates were excluded as not comparable.` : ''}`,
+    impact: `A customer's price depends on which of two identical pages they land on. The widest gap is $${Math.max(...mismatched.map((m) => m.spread)).toFixed(2)}. The cheaper copy is sometimes the "-hgb" one and sometimes not, so this reads as two listings drifting apart rather than an intentional discount.`,
     fix: 'Pick one canonical page per rack, 301 the other, and have the builder app read the canonical variant instead of holding its own copy.',
     evidence: mismatched.slice(0, 12).map((m) => ({
       label: m.title.replace(/\s*\(.*\)$/, ''),
@@ -68,7 +68,7 @@ const add = (f) => findings.push(f);
     title: 'Products priced at $0.00 or $0.01 are exposed in the public feed',
     count: products.length, unit: 'products',
     summary: `${rows.length} purchasable variants across ${products.length} products carry a price of $1.00 or less. ${intentional.length} of them are recognisably deliberate — "FREE FOR BUILDERS" hardware and placeholder variants named "Variant for price 0" that belong to a bundling app.`,
-    impact: 'Deliberate or not, nothing in the feed distinguishes these from real products. Anything reading products.json inherits them: Google Shopping and marketplace feeds, analytics, price monitoring, and any internal tool built on the catalog. The handful that are not obviously scaffolding are worth confirming are genuinely not orderable on their own.',
+    impact: 'Nothing in the feed distinguishes these from real products, so anything reading products.json inherits them — shopping feeds, analytics, price monitoring, any internal tool. Spotter recommended one as the cheapest fix for an equipment gap until I filtered them out.',
     fix: 'Move builder scaffolding to a dedicated product type or unpublish it from the online-store channel so it stops appearing in the feed at all.',
     evidence: rows.slice(0, 10).map((r) => ({
       label: r.p.title, detail: `$${num(r.v.price).toFixed(2)} — variant "${r.v.title}"`,
@@ -173,16 +173,24 @@ const add = (f) => findings.push(f);
 /* 8 -------- suppressed specs -------- */
 {
   const hidden = P.filter((p) => (p.tags || []).includes('hide:specs'));
-  const racks = P.filter((p) => /power rack|rack \(|folding rack/i.test(p.title) && !/\d{2,3}\s*["”]/.test(strip(p.body_html)));
+  // Match the Residential line by its own hgb_ tag. An earlier version matched on
+  // the title and picked up "…Power Rack Builder" scaffolding instead, which made
+  // the claim contradict its own evidence.
+  // Racks only - the Cable Tower carries the same tag but is not a rack. And test for
+  // upright height specifically, which is the dimension that decides whether a rack
+  // fits a room, so this matches what the Gym Builder checks.
+  const residential = P.filter((p) =>
+    (p.tags || []).includes('hgb_residential_prebuilt') && /rack/i.test(p.title));
+  const noDims = residential.filter((p) => !/(\d{2,3})\s*["”]\s*upright/i.test(strip(p.body_html)));
   add({
     id: 'specs-hidden', severity: 'medium',
     title: 'Spec tables are switched off on 90 products — including entry-level racks',
     count: hidden.length, unit: 'products',
-    summary: `${hidden.length} products carry the hide:specs tag. Separately, the Residential rack line publishes no dimensions anywhere in its copy: ${racks.slice(0, 3).map((p) => p.title).join(', ')}.`,
-    impact: 'The Residential racks are the cheapest and most beginner-facing in your range — exactly the buyer most likely to be working around a low basement ceiling, and the one with the least tolerance for guessing. The Gym Builder demo cannot verify fit for any of them, and neither can your customer.',
-    fix: 'Publish height, width and depth on every rack. It is the single highest-volume pre-sales question in this category.',
-    evidence: racks.slice(0, 6).map((p) => ({
-      label: p.title, detail: 'no dimensions found anywhere in the product copy',
+    summary: `${hidden.length} products carry the hide:specs tag. Separately, ${noDims.length === residential.length ? `all ${residential.length}` : `${noDims.length} of ${residential.length}`} Residential racks publish no upright height — the one number that decides whether a rack fits a room.`,
+    impact: 'The Residential racks are your cheapest and most beginner-facing — exactly the buyer working around a low basement ceiling, and the one least able to guess. The Gym Builder cannot verify fit for any of them. Neither can the customer.',
+    fix: 'Publish height, width and depth on every rack. It is the highest-volume pre-sales question in this category.',
+    evidence: noDims.map((p) => ({
+      label: p.title, detail: 'no upright height published',
       delta: 'unverifiable', links: [url(p.handle)],
     })),
   });
@@ -205,8 +213,8 @@ const add = (f) => findings.push(f);
     id: 'compat-graph', severity: 'high',
     title: 'The compatibility tags contradict the product titles',
     count: oneSided.length + untagged.length, unit: 'products',
-    summary: `The hgb_ tag scheme is what drives the Home Gym Builder's compatibility logic — ${tagged.length} products carry it. But ${oneSided.length} product says in its own title that it fits both rack families while carrying tags for only one, and ${untagged.length} more name both families and carry no compatibility tags at all.`,
-    impact: 'These attachments are invisible to your builder for the family they were left out of. A customer configuring that rack is never shown a part that physically fits it — the tags are the only thing the builder consults, and the title it contradicts is the thing the customer reads.',
+    summary: `${tagged.length} products carry the hgb_ tags that drive Home Gym Builder compatibility. ${oneSided.length} says in its own title that it fits both rack families while carrying tags for only one; ${untagged.length} more name both families and carry no tags at all.`,
+    impact: 'These attachments are invisible to your builder for the family they were left out of. A customer configuring that rack is never offered a part that physically fits it — and the title they can read says otherwise.',
     fix: 'Reconcile the hgb_ tags against product titles as a scheduled check. The comparison is cheap and it is exactly the sort of drift nobody notices by hand.',
     evidence: [
       ...oneSided.map((r) => ({
@@ -231,7 +239,7 @@ const add = (f) => findings.push(f);
     title: 'Expensive machines have no spare parts published',
     count: un.length, unit: 'machines over $500',
     summary: `Bells of Steel publishes ${partsData.partCount} spare parts covering ${partsData.productCount} products. ${un.length} serviceable machines priced over $500 are not among them${worst ? `, the most expensive being the ${worst.title} at $${(worst.priceCents / 100).toFixed(0)}` : ''}.`,
-    impact: 'A treadmill or a leg press that fails in year two has nothing to sell the customer and nothing for your support team to point at. That is a warranty conversation with no good ending, on the highest-ticket items in your range — and spare parts are a margin-rich revenue line being left on the table.',
+    impact: 'A treadmill that fails in year two has nothing to sell the customer and nothing for support to point at — a warranty conversation with no good ending, on your highest-ticket items. Spare parts are also a margin-rich line being left on the table.',
     fix: 'Work down this list by price. Every machine over $1,000 should have at least its wear parts - pads, cables, bushings - published before the next warranty season.',
     evidence: un.slice(0, 10).map((u) => ({
       label: u.title, detail: u.type ?? 'machine',

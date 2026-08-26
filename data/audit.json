@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T01:11:59.106Z",
+  "generated_at": "2026-08-26T07:17:39.038Z",
   "snapshot": "2026-08-26T00:11:16.704Z",
   "scanned": 476,
   "variants": 1640,
@@ -10,8 +10,8 @@
       "title": "The same product is listed twice, at two different prices",
       "count": 16,
       "unit": "of 16 duplicated listings",
-      "summary": "(5 further duplicated titles were excluded because their listings have different variant structures and are not comparable on price.) Every prebuilt rack exists as two separate live product pages — one plain handle and one ending in \"-hgb\" (your Home Gym Builder copy). 16 of the 16 duplicated pairs are priced differently, and both pages return HTTP 200 and are purchasable.",
-      "impact": "A customer's price depends on which of two identical pages they land on. The widest gap is $162.84. The cheaper copy is sometimes the \"-hgb\" one and sometimes not, so this does not look like an intentional bundle discount — it looks like two listings drifting apart over time.",
+      "summary": "Every prebuilt rack exists as two live product pages — one plain handle, one ending \"-hgb\" (your Home Gym Builder copy). All 16 comparable pairs are priced differently, and both pages are purchasable. 5 further duplicates were excluded as not comparable.",
+      "impact": "A customer's price depends on which of two identical pages they land on. The widest gap is $162.84. The cheaper copy is sometimes the \"-hgb\" one and sometimes not, so this reads as two listings drifting apart rather than an intentional discount.",
       "fix": "Pick one canonical page per rack, 301 the other, and have the builder app read the canonical variant instead of holding its own copy.",
       "evidence": [
         {
@@ -132,7 +132,7 @@
       "count": 33,
       "unit": "products",
       "summary": "41 purchasable variants across 33 products carry a price of $1.00 or less. 16 of them are recognisably deliberate — \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
-      "impact": "Deliberate or not, nothing in the feed distinguishes these from real products. Anything reading products.json inherits them: Google Shopping and marketplace feeds, analytics, price monitoring, and any internal tool built on the catalog. The handful that are not obviously scaffolding are worth confirming are genuinely not orderable on their own.",
+      "impact": "Nothing in the feed distinguishes these from real products, so anything reading products.json inherits them — shopping feeds, analytics, price monitoring, any internal tool. Spotter recommended one as the cheapest fix for an equipment gap until I filtered them out.",
       "fix": "Move builder scaffolding to a dedicated product type or unpublish it from the online-store channel so it stops appearing in the feed at all.",
       "evidence": [
         {
@@ -399,8 +399,8 @@
       "title": "The compatibility tags contradict the product titles",
       "count": 5,
       "unit": "products",
-      "summary": "The hgb_ tag scheme is what drives the Home Gym Builder's compatibility logic — 148 products carry it. But 1 product says in its own title that it fits both rack families while carrying tags for only one, and 4 more name both families and carry no compatibility tags at all.",
-      "impact": "These attachments are invisible to your builder for the family they were left out of. A customer configuring that rack is never shown a part that physically fits it — the tags are the only thing the builder consults, and the title it contradicts is the thing the customer reads.",
+      "summary": "148 products carry the hgb_ tags that drive Home Gym Builder compatibility. 1 says in its own title that it fits both rack families while carrying tags for only one; 4 more name both families and carry no tags at all.",
+      "impact": "These attachments are invisible to your builder for the family they were left out of. A customer configuring that rack is never offered a part that physically fits it — and the title they can read says otherwise.",
       "fix": "Reconcile the hgb_ tags against product titles as a scheduled check. The comparison is cheap and it is exactly the sort of drift nobody notices by hand.",
       "evidence": [
         {
@@ -452,7 +452,7 @@
       "count": 15,
       "unit": "machines over $500",
       "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 15 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $5000.",
-      "impact": "A treadmill or a leg press that fails in year two has nothing to sell the customer and nothing for your support team to point at. That is a warranty conversation with no good ending, on the highest-ticket items in your range — and spare parts are a margin-rich revenue line being left on the table.",
+      "impact": "A treadmill that fails in year two has nothing to sell the customer and nothing for support to point at — a warranty conversation with no good ending, on your highest-ticket items. Spare parts are also a margin-rich line being left on the table.",
       "fix": "Work down this list by price. Every machine over $1,000 should have at least its wear parts - pads, cables, bushings - published before the next warranty season.",
       "evidence": [
         {
@@ -787,56 +787,32 @@
       "title": "Spec tables are switched off on 90 products — including entry-level racks",
       "count": 90,
       "unit": "products",
-      "summary": "90 products carry the hide:specs tag. Separately, the Residential rack line publishes no dimensions anywhere in its copy: Manticore Folding Power Rack Builder (3\" x 3\", 1\" Holes), Manticore Flat Foot Power Rack Builder (3\" x 3\", 1\" Holes), Manticore Four Post Power Rack Builder (3\" x 3\", 1\" Holes).",
-      "impact": "The Residential racks are the cheapest and most beginner-facing in your range — exactly the buyer most likely to be working around a low basement ceiling, and the one with the least tolerance for guessing. The Gym Builder demo cannot verify fit for any of them, and neither can your customer.",
-      "fix": "Publish height, width and depth on every rack. It is the single highest-volume pre-sales question in this category.",
+      "summary": "90 products carry the hide:specs tag. Separately, all 3 Residential racks publish no upright height — the one number that decides whether a rack fits a room.",
+      "impact": "The Residential racks are your cheapest and most beginner-facing — exactly the buyer working around a low basement ceiling, and the one least able to guess. The Gym Builder cannot verify fit for any of them. Neither can the customer.",
+      "fix": "Publish height, width and depth on every rack. It is the highest-volume pre-sales question in this category.",
       "evidence": [
         {
-          "label": "Manticore Folding Power Rack Builder (3\" x 3\", 1\" Holes)",
-          "detail": "no dimensions found anywhere in the product copy",
+          "label": "Folding Rack 2.3\" x 2.3\" (5/8\" Holes)",
+          "detail": "no upright height published",
           "delta": "unverifiable",
           "links": [
-            "https://bellsofsteel.com/products/manctiore-folding-power-rack-builder"
+            "https://bellsofsteel.com/products/folding-rack"
           ]
         },
         {
-          "label": "Manticore Flat Foot Power Rack Builder (3\" x 3\", 1\" Holes)",
-          "detail": "no dimensions found anywhere in the product copy",
+          "label": "Residential Power Rack (2.3\" x 2.3\", ⅝\" HOLES)",
+          "detail": "no upright height published",
           "delta": "unverifiable",
           "links": [
-            "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-builder"
+            "https://bellsofsteel.com/products/residential-power-rack"
           ]
         },
         {
-          "label": "Manticore Four Post Power Rack Builder (3\" x 3\", 1\" Holes)",
-          "detail": "no dimensions found anywhere in the product copy",
+          "label": "Light Commercial Power Rack (2.3\" x 2.3\", ⅝\" HOLES)",
+          "detail": "no upright height published",
           "delta": "unverifiable",
           "links": [
-            "https://bellsofsteel.com/products/manticore-four-post-power-rack-builder"
-          ]
-        },
-        {
-          "label": "Manticore Six Post Power Rack Builder (3\" x 3\", 1\" Holes)",
-          "detail": "no dimensions found anywhere in the product copy",
-          "delta": "unverifiable",
-          "links": [
-            "https://bellsofsteel.com/products/manticore-six-post-power-rack-builder"
-          ]
-        },
-        {
-          "label": "Hydra Four Post Power Rack Builder (3\" x 3\", ⅝\" Holes)",
-          "detail": "no dimensions found anywhere in the product copy",
-          "delta": "unverifiable",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-four-post-power-rack-builder"
-          ]
-        },
-        {
-          "label": "Hydra Six Post Power Rack Builder (3\" x 3\", ⅝\" Holes)",
-          "detail": "no dimensions found anywhere in the product copy",
-          "delta": "unverifiable",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-six-post-power-rack-builder"
+            "https://bellsofsteel.com/products/light-commercial-rack"
           ]
         }
       ]
