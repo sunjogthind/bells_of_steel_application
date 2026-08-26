@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Portfolio of four internal tools built on the live Bells of Steel product catalog,
+Portfolio of four internal tools built on the live Bells of Steel product catalogue,
 for the AI & Internal Tools Developer application. Next.js 14 App Router, TypeScript,
 Tailwind. Deployed on Vercel as a fully static site.
 
@@ -9,7 +9,7 @@ Tailwind. Deployed on Vercel as a fully static site.
 **Never invent a fact about someone else's business.**
 
 Every number rendered on this site traces to the Bells of Steel storefront feed. If the
-catalog does not publish something, the correct output is "not published" — never an
+catalogue does not publish something, the correct output is "not published" — never an
 estimate presented as a spec, and never a plausible-sounding guess.
 
 This is enforced structurally, not by good intentions:
@@ -51,7 +51,7 @@ scripts/          Build-time pipeline. Order matters; each writes to data/.
   copilot         Retrieval index + IDF table -> data/copilot.json
   monitor         Fingerprints, diffs against the last run, appends history
                   -> data/snapshots/<iso>.json, data/monitor.json, data/timeseries.csv
-  spotter         RAG index over corpus/ + the real catalog -> data/spotter.json
+  spotter         RAG index over corpus/ + the real catalogue -> data/spotter.json
 
 corpus/           Spotter's exercise library and coaching notes. OURS, not theirs.
                   Never present this content as Bells of Steel's methodology.
@@ -106,7 +106,7 @@ Learned from the feed; not documented anywhere public.
 - Copy is written in full sentences and plain language. No exclamation marks, no
   "leverage", no em-dash-joined marketing clauses.
 - **Voice: Rana writing to Bells of Steel.** Address them as "you" and "your". Never
-  describe the company in the third person - "their catalog" reads like a case study
+  describe the company in the third person - "their catalogue" reads like a case study
   written for somebody else. Two exceptions: the footer disclaimer names the company
   formally because it is a legal statement, and inside the Gym Builder and Spotter tools
   "you" already means the gym customer, so the company is named rather than addressed.
@@ -128,5 +128,5 @@ Learned from the feed; not documented anywhere public.
   (`npm run test:guard`) - a guard that wrongly rejects good output fails silently.
 - Do not clone Bells of Steel branding. This is clearly an independent demo, and the
   footer disclaimer stays on every page.
-- Do not re-fetch the catalog on every build. The snapshot date is quoted throughout
+- Do not re-fetch the catalogue on every build. The snapshot date is quoted throughout
   the copy; changing the data silently makes that copy wrong.

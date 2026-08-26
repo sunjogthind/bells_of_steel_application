@@ -2,7 +2,7 @@
  * Equipment vocabulary.
  *
  * These classes are OURS - a normalised way to describe what a person owns.
- * `match` maps each class onto the real Bells of Steel catalog so that when a
+ * `match` maps each class onto the real Bells of Steel catalogue so that when a
  * program is limited by missing equipment, the recommendation points at an
  * actual product with an actual price rather than a generic suggestion.
  */

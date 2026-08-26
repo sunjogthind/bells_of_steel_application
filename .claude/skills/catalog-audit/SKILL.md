@@ -1,12 +1,12 @@
 ---
 name: catalog-audit
-description: Runs a data-quality audit against the live Bells of Steel product catalog and writes a plain-language report a merch coordinator can act on - duplicate listings priced differently, missing shipping weights, corrupted brand fields, out-of-stock pages still live, missing spare parts, and eight more checks. Use this whenever someone asks about catalog health, product data quality, listing errors, duplicate products, pricing mismatches, missing weights or SKUs or images, whether anything is wrong with the store, or asks for a catalog check, catalog audit, product feed review, or "what's broken in the catalog" - including when they do not use the word "audit". Also use it when someone asks what needs attention in the catalog today or this week.
+description: Runs a data-quality audit against the live Bells of Steel product catalogue and writes a plain-language report a merch coordinator can act on - duplicate listings priced differently, missing shipping weights, corrupted brand fields, out-of-stock pages still live, missing spare parts, and eight more checks. Use this whenever someone asks about catalogue health, product data quality, listing errors, duplicate products, pricing mismatches, missing weights or SKUs or images, whether anything is wrong with the store, or asks for a catalogue check, catalogue audit, product feed review, or "what's broken in the catalogue" - including when they do not use the word "audit". Also use it when someone asks what needs attention in the catalogue today or this week.
 ---
 
-# Catalog Audit
+# Catalogue Audit
 
 Thirteen data-quality checks against the live Bells of Steel storefront feed, turned into
-a report the person who fixes catalog data can read without asking anyone what it means.
+a report the person who fixes catalogue data can read without asking anyone what it means.
 
 The reader is a merch coordinator. They know the products cold and have never opened a
 terminal. Everything below exists to keep that true.
@@ -16,7 +16,7 @@ terminal. Everything below exists to keep that true.
 Two scripts. The first measures, the second writes.
 
 ```
-scripts/run-audit.mjs      reads the catalog, runs the 13 rules, writes a findings file
+scripts/run-audit.mjs      reads the catalogue, runs the 13 rules, writes a findings file
 scripts/render-report.mjs  turns that findings file into Markdown and HTML
 references/plain-language.mjs   the sentences the reader sees - edit here, nowhere else
 scripts/self-test.mjs      proves the clean case works and the rules have not drifted
@@ -44,14 +44,14 @@ The fetch is polite: 250 products a page, 600ms apart, and it identifies itself.
 about fifteen seconds.
 
 **When a fresh pull is not wanted** - the network will not reach the store, or the question
-is about a catalog as it stood on a particular day - point it at a saved feed instead:
+is about a catalogue as it stood on a particular day - point it at a saved feed instead:
 
 ```bash
 node scripts/run-audit.mjs --snapshot data/catalog-raw.json --out catalog-audit/findings.json
 ```
 
-The report says which day the catalog was read, either way. If the live read fails, say so
-and offer the saved copy. Do not report on a catalog that could not be read.
+The report says which day the catalogue was read, either way. If the live read fails, say so
+and offer the saved copy. Do not report on a catalogue that could not be read.
 
 **Publishing the report.** `--fragment <file.html>` writes an Artifact-ready version of the
 same page (head tags plus body, no document skeleton). Publish that with the Artifact tool
@@ -75,15 +75,15 @@ list of problems. Do not pad it out to look like more.
 The report is written by Rana Thind, addressed to Bells of Steel. Anything you write around
 it follows the same rules.
 
-- **"Your catalog", never "their catalog".** The reader works there.
+- **"Your catalogue", never "their catalogue".** The reader works there.
 - **Short.** Past roughly 250 characters a paragraph is usually justifying itself. Cut to
   the claim.
 - **Plain English, full sentences.** No exclamation marks, no hype, no emoji.
 - **No engineering vocabulary.** If the output contains "BM25", "regex", "normalization",
   `product_type`, `compare_at_price`, `hgb_` or "301 redirect", it has failed. Say
   "category", "compare-at price", "which racks it fits", "point one page at the other".
-- **Never invent a fact about their business.** Every number traces to the catalog. If the
-  catalog does not publish something, the answer is "not published" - never an estimate
+- **Never invent a fact about their business.** Every number traces to the catalogue. If the
+  catalogue does not publish something, the answer is "not published" - never an estimate
   dressed up as a spec. This is the rule the whole thing rests on.
 
 ## The checks
@@ -131,7 +131,7 @@ Then run the self-test:
 node scripts/self-test.mjs
 ```
 
-It checks that a clean catalog produces a clean report rather than an empty one, that every
+It checks that a clean catalogue produces a clean report rather than an empty one, that every
 rule that fires has plain-language copy written for it, that no engineering vocabulary or
 unfilled placeholder reached the output - and, when run from inside the portfolio repo,
 that this engine still agrees finding for finding with `scripts/audit.mjs`.

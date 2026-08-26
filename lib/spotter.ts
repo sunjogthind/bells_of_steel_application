@@ -289,7 +289,7 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
         ...base, program: state.program, escalate: true, citations: [],
         text: [
           `I do not have anything solid enough to answer that from.`,
-          `Spotter only answers from its coaching notes and your catalog. When neither covers a question it says so, rather than producing something that sounds authoritative and is not.`,
+          `Spotter only answers from its coaching notes and your catalogue. When neither covers a question it says so, rather than producing something that sounds authoritative and is not.`,
         ],
         trace,
       };
@@ -304,7 +304,7 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
   /* -- product / equipment gap -- */
   if (intent === 'product') {
     const hits = retrieve(text, ix, { kinds: ['product'], limit: 4 });
-    trace.push(`retrieved ${hits.length} catalog products`);
+    trace.push(`retrieved ${hits.length} catalogue products`);
     const gapLine = state.program?.gaps.length
       ? `Based on your current program, the gap worth closing first is ${state.program.gaps[0].pattern.replace('_', ' ')}.`
       : '';
@@ -314,8 +314,8 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
       text: [
         gapLine,
         hits.length
-          ? `From your live catalog: ${hits.slice(0, 3).map((r) => `${r.doc.title} ($${(r.doc.meta.priceCents / 100).toFixed(2)})`).join(', ')}.`
-          : `Nothing in your catalog matched that closely enough to recommend.`,
+          ? `From your live catalogue: ${hits.slice(0, 3).map((r) => `${r.doc.title} ($${(r.doc.meta.priceCents / 100).toFixed(2)})`).join(', ')}.`
+          : `Nothing in your catalogue matched that closely enough to recommend.`,
         `Prices are from the snapshot this demo was built against — check the live store before buying.`,
       ].filter(Boolean),
       trace,
@@ -370,7 +370,7 @@ export function respond(text: string, state: State, ix: SpotterIndex): Reply {
   const gapText = program.gaps.length
     ? `One gap: nothing in your kit covers ${program.gaps.map((g) => g.pattern.replace('_', ' ')).join(' or ')}. ${
         program.gaps[0].product
-          ? `The cheapest fix in your catalog is ${program.gaps[0].product.title} at $${(program.gaps[0].product.priceCents / 100).toFixed(2)}.`
+          ? `The cheapest fix in your catalogue is ${program.gaps[0].product.title} at $${(program.gaps[0].product.priceCents / 100).toFixed(2)}.`
           : ''}`
     : `Your kit covers every pattern in the split, so nothing is missing.`;
 

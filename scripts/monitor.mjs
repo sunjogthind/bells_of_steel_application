@@ -1,6 +1,6 @@
-// Catalog monitor.
+// Catalogue monitor.
 //
-// Fingerprints the current catalog, diffs it against the previous run, and
+// Fingerprints the current catalogue, diffs it against the previous run, and
 // records what actually changed. Designed to run unattended on a schedule -
 // the value is not the snapshot, it is noticing the day something drifts.
 //

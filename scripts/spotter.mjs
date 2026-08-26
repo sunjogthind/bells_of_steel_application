@@ -1,7 +1,7 @@
 // Builds Spotter's retrieval index.
 //
 // Three document types share one index: exercises and coaching notes (ours,
-// clearly labelled) and the real Bells of Steel product catalog. BM25 stats are
+// clearly labelled) and the real Bells of Steel product catalogue. BM25 stats are
 // precomputed here so the browser only does the scoring.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { EXERCISES } from '../corpus/exercises.mjs';
@@ -30,7 +30,7 @@ KNOWLEDGE.forEach((k) => docs.push({
 
 // Real products, so an equipment gap resolves to something you can actually buy.
 //
-// The $0.00/$0.01 builder scaffolding the Catalog Audit flagged is excluded here.
+// The $0.00/$0.01 builder scaffolding the Catalogue Audit flagged is excluded here.
 // Left in, Spotter cheerfully recommends "Dumbbell Bench Combo - $0.01" as the
 // cheapest way to close a gap, which is exactly the downstream pollution that
 // audit finding predicted. Filtering it is the fix that finding argues for.

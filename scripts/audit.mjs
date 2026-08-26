@@ -106,7 +106,7 @@ const add = (f) => findings.push(f);
     id: 'vendor-corrupt', severity: 'high',
     title: 'A broken sync is writing product IDs into the vendor field',
     count: bad.length, unit: 'products',
-    summary: `${bad.length} products have a vendor of "related_to_<numeric id>" instead of a brand name. The rest of the catalog correctly reads "Bells of Steel".`,
+    summary: `${bad.length} products have a vendor of "related_to_<numeric id>" instead of a brand name. The rest of the catalogue correctly reads "Bells of Steel".`,
     impact: 'Vendor is a customer-facing field and a required attribute in Google Shopping and most marketplace feeds. These products are advertising a database key as their brand.',
     fix: 'Find the app writing this — the value shape suggests a related-products integration reusing the field — and reset the affected products to the correct vendor. Worth checking what else that integration touches.',
     evidence: bad.slice(0, 10).map((p) => ({
@@ -159,7 +159,7 @@ const add = (f) => findings.push(f);
   const placeholder = P.filter((p) => p.product_type === 'Hidden');
   add({
     id: 'taxonomy', severity: 'medium',
-    title: 'A fifth of the catalog has no product type',
+    title: 'A fifth of the catalogue has no product type',
     count: missing.length + placeholder.length, unit: 'products',
     summary: `${missing.length} products have an empty product_type and a further ${placeholder.length} use the literal string "Hidden" as their type.`,
     impact: 'product_type is what your automated collections, storefront filters and any BigQuery or Looker grouping key off. Every product without one is invisible to that machinery, and "Hidden" is a visibility flag wearing a taxonomy field’s clothes.',

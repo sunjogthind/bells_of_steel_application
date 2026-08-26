@@ -3,7 +3,7 @@
 //
 // Deterministic on purpose. Every sentence is either measured by the engine or written
 // by hand in references/plain-language.mjs - nothing here composes prose, so no number
-// in the output can be one the catalog did not produce.
+// in the output can be one the catalogue did not produce.
 //
 // Usage:
 //   node render-report.mjs <findings.json> --md <out.md> --html <out.html> [--fragment <out.html>]
@@ -90,9 +90,9 @@ const V = verdict();
 
 function markdown() {
   const L = [];
-  L.push(`# Catalog health check`);
+  L.push(`# Catalogue health check`);
   L.push('');
-  L.push(`Run ${when(A.generated_at)} against your live storefront catalog.`);
+  L.push(`Run ${when(A.generated_at)} against your live storefront catalogue.`);
   L.push('');
   L.push(`**${V.line}** ${V.detail}`);
   L.push('');
@@ -151,9 +151,9 @@ function markdown() {
 
   L.push('---');
   L.push('');
-  L.push(`Source: ${A.source}. Catalog read ${whenExact(A.snapshot)}. Report generated ${whenExact(A.generated_at)}.`);
+  L.push(`Source: ${A.source}. Catalogue read ${whenExact(A.snapshot)}. Report generated ${whenExact(A.generated_at)}.`);
   L.push('');
-  L.push(`Every number above is counted from your published storefront catalog. Where the catalog does not publish something, this report says so rather than estimating it.`);
+  L.push(`Every number above is counted from your published storefront catalogue. Where the catalogue does not publish something, this report says so rather than estimating it.`);
   L.push('');
   return L.join('\n');
 }
@@ -305,7 +305,7 @@ function evidenceTable(f) {
         <p class="ev-head">${esc(caption)}</p>
         <div class="ev-scroll">
           <table>
-            <thead><tr><th>Product</th><th>What the catalog says</th><th></th></tr></thead>
+            <thead><tr><th>Product</th><th>What the catalogue says</th><th></th></tr></thead>
             <tbody>
             ${rows}
             </tbody>
@@ -333,8 +333,8 @@ function findingBlock(f, i) {
 function bodyHtml() {
   return `<div class="wrap">
     <header class="masthead">
-      <p class="eyebrow">Bells of Steel · Catalog health check</p>
-      <h1>${total === 0 ? 'Your catalog is clean' : 'What your catalog is getting wrong today'}</h1>
+      <p class="eyebrow">Bells of Steel · Catalogue health check</p>
+      <h1>${total === 0 ? 'Your catalogue is clean' : 'What your catalogue is getting wrong today'}</h1>
       <p class="dateline">${esc(when(A.generated_at))} · ${n(A.scanned)} products · ${n(A.variants)} options</p>
     </header>
 
@@ -357,9 +357,9 @@ function bodyHtml() {
     </section>` : ''}
 
     <footer>
-      <p class="src">Source: ${esc(A.source)} · catalog read ${esc(whenExact(A.snapshot))} · report generated ${esc(whenExact(A.generated_at))}</p>
-      <p>Every number here is counted from your published storefront catalog. Where the catalog does not publish something, this report says it is not published rather than estimating it.</p>
-      <p>Independent catalog audit by Rana Thind. Not affiliated with, endorsed by, or an official property of Bells of Steel Inc.</p>
+      <p class="src">Source: ${esc(A.source)} · catalogue read ${esc(whenExact(A.snapshot))} · report generated ${esc(whenExact(A.generated_at))}</p>
+      <p>Every number here is counted from your published storefront catalogue. Where the catalogue does not publish something, this report says it is not published rather than estimating it.</p>
+      <p>Independent catalogue audit by Rana Thind. Not affiliated with, endorsed by, or an official property of Bells of Steel Inc.</p>
     </footer>
   </div>`;
 }
@@ -368,7 +368,7 @@ const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">`;
 
-const TITLE = 'Bells of Steel Catalog Health';
+const TITLE = 'Bells of Steel Catalogue Health';
 
 function fullHtml() {
   return `<!doctype html>

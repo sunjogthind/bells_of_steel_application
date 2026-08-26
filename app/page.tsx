@@ -9,20 +9,20 @@ const DEMOS = ([
     title: 'Gym Builder',
     blurb: 'Give it your ceiling height, floor space and budget. It returns racks that actually fit, drawn to scale, with every attachment your own compatibility tags say will bolt on.',
     tag: 'Customer-facing · Revenue',
-    highlight: 'Runs on the hgb_ compatibility graph already in your catalog.',
+    highlight: 'Runs on the hgb_ compatibility graph already in your catalogue.',
   },
   {
     href: '/audit',
     n: '02',
-    title: 'Catalog Audit',
+    title: 'Catalogue Audit',
     blurb: 'A dashboard that reads your live storefront feed and lists what is broken in it. Not hypothetical problems — nine of your products are shipping a corrupted vendor field to customers right now.',
     tag: 'Internal · Merch ops',
-    highlight: 'Real findings against your real catalog.',
+    highlight: 'Real findings against your real catalogue.',
   },
   {
     href: '/monitor',
     n: '03',
-    title: 'Catalog Monitor',
+    title: 'Catalogue Monitor',
     blurb: 'The audit says what is broken today. This is what stops it coming back — a scheduled job that re-pulls your feed every morning, diffs it against yesterday, and reports only what actually moved.',
     tag: 'Internal · Automation',
     highlight: 'Runs unattended in GitHub Actions. The history is real, not seeded.',
@@ -39,7 +39,7 @@ const DEMOS = ([
     href: '/copilot',
     n: '04',
     title: 'CS Copilot',
-    blurb: 'Answers customer questions from your catalog, shows exactly which products it pulled, and hands off to a human rather than guessing. Sits on a flattened index of all 68 of your spare parts, searchable in plain language.',
+    blurb: 'Answers customer questions from your catalogue, shows exactly which products it pulled, and hands off to a human rather than guessing. Sits on a flattened index of all 68 of your spare parts, searchable in plain language.',
     tag: 'Internal · AI with guardrails',
     highlight: 'Retrieval runs live. Nothing is invented.',
   },
@@ -61,7 +61,7 @@ export default function Home() {
 
         <h1 className="mt-5 max-w-4xl text-[clamp(40px,6vw,72px)] font-extrabold">
           I built five internal tools on your{' '}
-          <em className="not-italic text-steelDim">real catalog</em>{' '}
+          <em className="not-italic text-steelDim">real catalogue</em>{' '}
           instead of writing a cover letter.
         </h1>
 
@@ -130,7 +130,7 @@ export default function Home() {
           <h2 className="text-2xl font-extrabold">Why these five</h2>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted">
             The job description says this role sits with the person who has the problem before shipping the
-            fix. I could not do that before applying, so I did the next best thing and read your catalog
+            fix. I could not do that before applying, so I did the next best thing and read your catalogue
             feed closely enough to find the problems from the outside.
           </p>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted">

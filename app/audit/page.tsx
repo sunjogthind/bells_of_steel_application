@@ -1,8 +1,9 @@
 import audit from '@/data/audit.json';
+import TechBox, { C } from '@/components/TechBox';
 import { IconAudit } from '@/components/Icons';
 import { SNAPSHOT_DATE } from '@/lib/catalog';
 
-export const metadata = { title: 'Catalog Audit — Rana Thind × Bells of Steel' };
+export const metadata = { title: 'Catalogue Audit — Rana Thind × Bells of Steel' };
 
 type Sev = 'critical' | 'high' | 'medium' | 'low';
 
@@ -26,10 +27,10 @@ export default function Page() {
           </span>
           <p className="eyebrow text-steelDim">Demo 02 · Internal · Merch ops</p>
         </div>
-        <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Catalog Audit</h1>
+        <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Catalogue Audit</h1>
         <p className="mt-4 max-w-3xl leading-relaxed text-muted">
           A dashboard that reads your storefront feed and reports what is wrong with it. Every finding below
-          is against your live catalog as of {SNAPSHOT_DATE} — {scanned} products,{' '}
+          is against your live catalogue as of {SNAPSHOT_DATE} — {scanned} products,{' '}
           {variants.toLocaleString()} variants. Nothing here is hypothetical.
         </p>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
@@ -137,8 +138,17 @@ export default function Page() {
         <p className="mt-6 text-xs leading-relaxed text-muted">
           Findings are computed by <code className="text-bright">scripts/audit.mjs</code> at build time from your
           raw storefront feed. Counts and prices reflect the {SNAPSHOT_DATE} snapshot and may have changed since —
-          if any of these are already fixed, the Catalog Monitor would have caught it.
+          if any of these are already fixed, the Catalogue Monitor would have caught it.
         </p>
+        <TechBox
+          rows={[
+                  { k: 'Rules', v: <><C>scripts/audit.mjs</C> — 13 checks run at build time against the raw storefront feed, not a cleaned copy.</> },
+          { k: 'Output', v: <><C>data/audit.json</C>, rendered server-side. Nothing is computed while you read this page.</> },
+          { k: 'Verification', v: <>Findings that assert something live are checked by fetching the URL, and comparisons are restricted to like-for-like listings.</> },
+          { k: 'Also shipped as', v: <>A skill in <C>.claude/skills/catalog-audit</C>, so someone who cannot read JavaScript can run the same checks.</> },
+          ]}
+          note="Built with Claude Code. The skill version was built in Cowork."
+        />
       </div>
     </div>
   );

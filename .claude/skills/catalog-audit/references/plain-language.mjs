@@ -2,7 +2,7 @@
 //
 // This file is deliberately separate from the rules that produce the numbers. The engine
 // decides what is true; this decides how it is said. Every {placeholder} below is filled
-// from the finding's own measurements, so no sentence here can state a number the catalog
+// from the finding's own measurements, so no sentence here can state a number the catalogue
 // did not produce. If a sentence reads wrong, edit it here - nothing else needs touching.
 //
 // Voice: Rana writing to Bells of Steel. Address them as "you" and "your". Plain English,
@@ -30,7 +30,7 @@ export const COPY = {
   'zero-price': {
     title: 'Products priced at $0.00 or $0.01 are visible to the public',
     what: '{variants} buyable options across {products} products are priced at $1.00 or less. {looksDeliberate} of them are recognisably on purpose: hardware labelled "FREE FOR BUILDERS", and placeholder options named "Variant for price 0" belonging to a bundling app.',
-    why: 'Nothing marks these as different from real products, so everything that reads your catalog picks them up - shopping feeds, analytics, price monitoring, any internal tool. They are the cheapest things in the catalog, so they surface first anywhere sorted by price.',
+    why: 'Nothing marks these as different from real products, so everything that reads your catalogue picks them up - shopping feeds, analytics, price monitoring, any internal tool. They are the cheapest things in the catalogue, so they surface first anywhere sorted by price.',
     do: 'Give the builder scaffolding its own product category, or take it off the online store channel so it stops appearing publicly at all.',
   },
 
@@ -63,8 +63,8 @@ export const COPY = {
   },
 
   'taxonomy': {
-    title: 'A fifth of the catalog has no product category',
-    what: '{empty} products have no category set, and another {placeholder} use the word "Hidden" as their category. Together that is {share}% of the catalog.',
+    title: 'A fifth of the catalogue has no product category',
+    what: '{empty} products have no category set, and another {placeholder} use the word "Hidden" as their category. Together that is {share}% of the catalogue.',
     why: 'Category is what your automatic collections and storefront filters sort on, and what any report groups by. A product without one is missing from all of it. "Hidden" is a visibility setting sitting in the category field.',
     do: 'Most can be worked out from the product title alone. Work through the list and set a real category, then ask for category to be made a required field.',
   },

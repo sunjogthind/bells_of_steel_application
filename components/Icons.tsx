@@ -29,7 +29,7 @@ export const IconRack = ({ className }: P) => (
   </svg>
 );
 
-/** Catalog Audit — rows of catalog data, one of them flagged. */
+/** Catalogue Audit — rows of catalogue data, one of them flagged. */
 export const IconAudit = ({ className }: P) => (
   <svg {...base} className={className}>
     <path d="M4 6.5h11M4 12h8M4 17.5h10" />
@@ -38,7 +38,7 @@ export const IconAudit = ({ className }: P) => (
   </svg>
 );
 
-/** Catalog Monitor — a scheduled cycle, with the moment it catches something. */
+/** Catalogue Monitor — a scheduled cycle, with the moment it catches something. */
 export const IconMonitor = ({ className }: P) => (
   <svg {...base} className={className}>
     <path d="M20 12a8 8 0 1 1-2.6-5.9" />

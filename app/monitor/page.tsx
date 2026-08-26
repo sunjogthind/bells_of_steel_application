@@ -1,8 +1,9 @@
 import monitor from '@/data/monitor.json';
+import TechBox, { C } from '@/components/TechBox';
 import { IconMonitor } from '@/components/Icons';
 import audit from '@/data/audit.json';
 
-export const metadata = { title: 'Catalog Monitor — Rana Thind × Bells of Steel' };
+export const metadata = { title: 'Catalogue Monitor — Rana Thind × Bells of Steel' };
 
 const SEV: Record<string, { cls: string; dot: string; label: string }> = {
   alert:   { cls: 'border-red-500/35 bg-red-50', dot: 'bg-red-500', label: 'Alert' },
@@ -29,9 +30,9 @@ export default function Page() {
           </span>
           <p className="eyebrow text-steelDim">Demo 03 · Internal · Automation</p>
         </div>
-        <h1 className="mt-4 text-[clamp(32px,4.5vw,48px)] font-extrabold">Catalog Monitor</h1>
+        <h1 className="mt-4 text-[clamp(32px,4.5vw,48px)] font-extrabold">Catalogue Monitor</h1>
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
-          The Catalog Audit says what is broken today. This is the part that stops it coming back.
+          The Catalogue Audit says what is broken today. This is the part that stops it coming back.
         </p>
         <p className="mt-3 max-w-3xl leading-relaxed text-muted">
           A scheduled job re-pulls your storefront feed every morning, fingerprints all{' '}
@@ -151,7 +152,7 @@ jobs:
   monitor:
     steps:
       - run: npm run refresh-catalog
-      - run: git commit -am "Catalog snapshot $(date -I)"
+      - run: git commit -am "Catalogue snapshot $(date -I)"
       - if: steps.monitor.outputs.alerts != '0'
         run: curl -X POST "$SLACK_WEBHOOK" -d @alert.json`}
         </pre>
@@ -220,6 +221,15 @@ ORDER BY run_date DESC, finding_count DESC;`}
             Showing the first rows. The file grows by {(audit as any).findings.length} rows per day.
           </p>
         </div>
+        <TechBox
+          rows={[
+                  { k: 'Schedule', v: <>GitHub Actions cron at 07:00 Calgary. Unattended — no machine of mine needs to be on.</> },
+          { k: 'Diffing', v: <>Each run fingerprints all 476 products, compares against the previous run, and classifies what moved by severity.</> },
+          { k: 'State', v: <>Append-only snapshots in <C>data/snapshots/</C>, committed back by the job itself.</> },
+          { k: 'Warehouse', v: <><C>data/timeseries.csv</C> — one row per rule per day, the shape BigQuery wants.</> },
+          ]}
+          note="The job commits under its own name, so the run history is auditable rather than asserted."
+        />
       </div>
     </div>
   );

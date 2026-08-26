@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Portable catalog audit engine.
+// Portable catalogue audit engine.
 //
 // Self-contained on purpose: the merch coordinator who runs this does not have the
 // portfolio repo checked out, so everything the rules depend on - the live fetch, the
@@ -24,22 +24,22 @@ const QUIET = argv.includes('--quiet');
 const log = (...a) => { if (!QUIET) console.error(...a); };
 
 const BASE = 'https://bellsofsteel.com/products.json';
-const UA = 'bos-catalog-audit-skill/1.0 (catalog health check; contact ranasunj@ualberta.ca)';
+const UA = 'bos-catalog-audit-skill/1.0 (catalogue health check; contact ranasunj@ualberta.ca)';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /* ---------------------------------------------------------------- source */
 
 /** Explains a failed read in terms the person running this can act on, rather than
- *  leaving them with a status code. Nothing is guessed at to fill the gap - a catalog
+ *  leaving them with a status code. Nothing is guessed at to fill the gap - a catalogue
  *  that could not be read produces no report at all. */
 function unreadable(reason) {
   return new Error(
-    `Could not read the Bells of Steel catalog.\n\n  ${reason}\n\n`
+    `Could not read the Bells of Steel catalogue.\n\n  ${reason}\n\n`
     + `  This usually means one of three things: the storefront is briefly down, the\n`
     + `  network you are on cannot reach it, or the store is refusing automated reads\n`
     + `  from this connection. None of them are anything you did.\n\n`
-    + `  You can still run against a saved copy of the catalog:\n`
-    + `    node run-audit.mjs --snapshot <the saved catalog file>\n`
+    + `  You can still run against a saved copy of the catalogue:\n`
+    + `    node run-audit.mjs --snapshot <the saved catalogue file>\n`
     + `  The report will say which day that copy is from.`);
 }
 
@@ -74,7 +74,7 @@ const snapshotPath = arg('--snapshot');
 let raw;
 try {
 if (snapshotPath) {
-  log(`Reading saved catalog: ${snapshotPath}`);
+  log(`Reading saved catalogue: ${snapshotPath}`);
   raw = JSON.parse(readFileSync(snapshotPath, 'utf8'));
   if (!Array.isArray(raw.products)) throw new Error(`${snapshotPath} does not look like a raw storefront feed (no products array).`);
 } else {
@@ -316,7 +316,7 @@ const add = (f) => { if (f.count > 0) findings.push(f); };
   const placeholder = P.filter((p) => p.product_type === 'Hidden');
   add({
     id: 'taxonomy', severity: 'medium',
-    title: 'A fifth of the catalog has no product category',
+    title: 'A fifth of the catalogue has no product category',
     count: missing.length + placeholder.length, unit: 'products',
     metrics: { empty: missing.length, placeholder: placeholder.length, scanned: P.length,
       share: Math.round(((missing.length + placeholder.length) / P.length) * 100) },
@@ -463,7 +463,7 @@ findings.sort((a, b) => order[a.severity] - order[b.severity]);
 const out = {
   generated_at: new Date().toISOString(),
   snapshot: raw.fetched_at ?? null,
-  source: snapshotPath ? `saved catalog: ${snapshotPath}` : BASE,
+  source: snapshotPath ? `saved catalogue: ${snapshotPath}` : BASE,
   scanned: P.length,
   variants: P.reduce((s, p) => s + p.variants.length, 0),
   counts: {

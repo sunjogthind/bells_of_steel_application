@@ -2,8 +2,8 @@
  * The CS copilot's answer engine.
  *
  * There is no language model behind this. Every fact in every answer is
- * looked up in the catalog and carries the URL it came from, and any
- * question the catalog cannot answer is routed to a human rather than
+ * looked up in the catalogue and carries the URL it came from, and any
+ * question the catalogue cannot answer is routed to a human rather than
  * approximated. Adding a model on top would improve the prose; it would
  * not improve - and could easily damage - the part that matters.
  * ------------------------------------------------------------------ */
@@ -121,14 +121,14 @@ export function answer(q: string, ix: Index): Answer {
 
   if (intent === 'policy') {
     return ESCALATE('policy',
-      'Routing to a human — this is outside the catalog.',
-      'Shipping, warranty, returns and assembly are policy questions. The product catalog is the only source this tool is allowed to read, and it contains no policy data, so answering would mean inventing terms. That is the one thing a customer-facing assistant must never do.',
+      'Routing to a human — this is outside the catalogue.',
+      'Shipping, warranty, returns and assembly are policy questions. The product catalogue is the only source this tool is allowed to read, and it contains no policy data, so answering would mean inventing terms. That is the one thing a customer-facing assistant must never do.',
       [...trace, 'no policy source connected → escalate']);
   }
 
   if (!hits.length) {
     return ESCALATE(intent, 'No product matched — routing to a human.',
-      'Nothing in the catalog scored above the relevance threshold for this question, so there is nothing to ground an answer in.',
+      'Nothing in the catalogue scored above the relevance threshold for this question, so there is nothing to ground an answer in.',
       trace);
   }
 
@@ -159,7 +159,7 @@ export function answer(q: string, ix: Index): Answer {
 
     if (!attTags.length) {
       return ESCALATE('compatibility', 'Compatibility is not published for this attachment.',
-        `"${attachment.doc.title}" carries no rack compatibility tags in the catalog at all, so there is no published answer to give. This needs someone who can check the physical spec.`,
+        `"${attachment.doc.title}" carries no rack compatibility tags in the catalogue at all, so there is no published answer to give. This needs someone who can check the physical spec.`,
         [...trace, 'no hgb_ tags on attachment → escalate'],
         [cite(rack.doc, 'rack'), cite(attachment.doc, 'attachment — no compatibility data')]);
     }
@@ -173,7 +173,7 @@ export function answer(q: string, ix: Index): Answer {
         headline: 'Yes — this attachment is tagged as compatible.',
         body: [
           `"${attachment.doc.title}" is listed as compatible with the ${rack.doc.title}.`,
-          `Both are in the ${key.fam.replace(/^./, (c) => c.toUpperCase())} ${HOLE[key.fam]} hole pattern, and the catalog carries the matching compatibility tag (${wanted[0]}) for this exact frame.`,
+          `Both are in the ${key.fam.replace(/^./, (c) => c.toUpperCase())} ${HOLE[key.fam]} hole pattern, and the catalogue carries the matching compatibility tag (${wanted[0]}) for this exact frame.`,
           attachment.doc.priceCents ? `The attachment is ${money(attachment.doc.priceCents)}${attachment.doc.available ? ' and currently in stock' : ', but currently out of stock'}.` : '',
         ].filter(Boolean),
         citations: [cite(rack.doc, 'rack'), cite(attachment.doc, `compatible — tag ${wanted[0]}`)],
@@ -189,7 +189,7 @@ export function answer(q: string, ix: Index): Answer {
         `"${attachment.doc.title}" is not tagged for the ${rack.doc.title}.`,
         otherFamily
           ? `It is built for the other rack family. Hydra uprights use ${HOLE.hydra} holes and Manticore uses ${HOLE.manticore}, so the hardware physically will not line up — this is not a case where it fits with some persuasion.`
-          : `The catalog lists compatibility for other frames in this family, but not for this one.`,
+          : `The catalogue lists compatibility for other frames in this family, but not for this one.`,
         `Bells of Steel's own product copy carries the same warning: only attachments made for that exact upright and hole size will fit.`,
       ],
       citations: [cite(rack.doc, `rack — ${HOLE[key.fam]} holes`), cite(attachment.doc, `tagged for: ${attTags.slice(0, 3).join(', ')}`)],
@@ -270,7 +270,7 @@ export function answer(q: string, ix: Index): Answer {
         headline: `Check before quoting — this product has two live prices.`,
         body: [
           `"${top.title}" exists as ${dup.length} separate product pages, currently priced ${money(lo)} and ${money(hi)} — a difference of ${money(hi - lo)}.`,
-          `Confirm which page the customer is looking at before quoting, and flag it to whoever owns the catalog. This affects every prebuilt rack, not just this one.`,
+          `Confirm which page the customer is looking at before quoting, and flag it to whoever owns the catalogue. This affects every prebuilt rack, not just this one.`,
         ],
         citations: dup.map((d) => ({ title: `/${d.handle}`, url: d.url, note: money(d.priceCents) })),
         escalate: false, trace,
@@ -297,8 +297,8 @@ export function answer(q: string, ix: Index): Answer {
       headline: top.available ? `${top.title.replace(/\s*\(.*\)$/, '')} was in stock at snapshot.` : `${top.title.replace(/\s*\(.*\)$/, '')} was out of stock at snapshot.`,
       body: [
         top.available
-          ? `At least one variant showed as available when this catalog was captured.`
-          : `Every variant showed as unavailable when this catalog was captured.`,
+          ? `At least one variant showed as available when this catalogue was captured.`
+          : `Every variant showed as unavailable when this catalogue was captured.`,
         `Stock is the one field that goes stale fastest. Treat this as a hint and check live inventory before you tell a customer anything.`,
       ],
       citations: [cite(top, top.available ? 'available at snapshot' : 'unavailable at snapshot')],
@@ -339,7 +339,7 @@ export function answer(q: string, ix: Index): Answer {
 
   /* -------- unknown -------- */
   return ESCALATE('unknown', 'Not confident enough to answer this one.',
-    `I found products that look related, but the question does not map to something the catalog can answer factually. Rather than produce a plausible-sounding reply, this goes to a human with the context attached.`,
+    `I found products that look related, but the question does not map to something the catalogue can answer factually. Rather than produce a plausible-sounding reply, this goes to a human with the context attached.`,
     [...trace, 'intent unresolved → escalate'],
     hits.slice(0, 3).map((h) => cite(h.doc, 'possibly relevant')));
 }

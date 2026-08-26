@@ -95,7 +95,7 @@ const flagCounts = {};
 products.forEach((p) => p.flags.forEach((f) => (flagCounts[f] = (flagCounts[f] || 0) + 1)));
 console.log(`normalized ${products.length} products -> data/catalog.json`);
 console.log(`variants: ${products.reduce((s, p) => s + p.variants.length, 0)}`);
-console.log(`\n--- catalog health flags ---`);
+console.log(`\n--- catalogue health flags ---`);
 Object.entries(flagCounts).sort((a, b) => b[1] - a[1]).forEach(([k, v]) => console.log(`  ${String(v).padStart(4)}  ${k}`));
 console.log(`\n--- spec extraction hit rates ---`);
 ['tubing', 'holeSize', 'uprightHeightIn', 'crossmemberIn'].forEach((k) => {

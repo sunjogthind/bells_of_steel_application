@@ -1,4 +1,5 @@
 import spotter from '@/data/spotter.json';
+import TechBox, { C } from '@/components/TechBox';
 import { IconSpotter } from '@/components/Icons';
 import Spotter from './Spotter';
 import type { SpotterIndex } from '@/lib/spotter-types';
@@ -38,7 +39,7 @@ export default function Page() {
             <p className="mt-2 text-[15px] leading-relaxed text-muted">
               You sell the rack <span className="font-semibold text-bright">and</span> the programming. A
               generic fitness bot cannot write around a member&rsquo;s exact kit, and cannot tell them which
-              single purchase unlocks the pattern they are missing. This can, from your live catalog.
+              single purchase unlocks the pattern they are missing. This can, from your live catalogue.
             </p>
           </div>
           <div className="rounded-lg border border-line bg-panel p-5">
@@ -81,8 +82,8 @@ export default function Page() {
           {[
             ['1 · Slot extraction', 'Free text becomes a structured profile: experience, goal, days, equipment, constraints. Anything not confidently extracted stays null and gets asked about — a wrong slot produces a confidently wrong program.'],
             ['2 · Hybrid retrieval', 'BM25 over the corpus (k1 1.5, b 0.75, precomputed IDF) plus a concept-expansion pass mapping everyday words onto corpus vocabulary. Expansion terms score at a 0.35 discount — they were inferred, not said.'],
-            ['3 · Structured rerank', 'Candidates are reweighted by what the member owns and what suits their experience. This is where a general fitness bot cannot follow — it does not know their gym. Accuracy here is capped by your product_type field, which the Catalog Audit measures.'],
-            ['4 · Constrained synthesis', 'The program is assembled deterministically against a split template. A pattern with no available exercise becomes an explicit gap, resolved to the cheapest product in your catalog that closes it.'],
+            ['3 · Structured rerank', 'Candidates are reweighted by what the member owns and what suits their experience. This is where a general fitness bot cannot follow — it does not know their gym. Accuracy here is capped by your product_type field, which the Catalogue Audit measures.'],
+            ['4 · Constrained synthesis', 'The program is assembled deterministically against a split template. A pattern with no available exercise becomes an explicit gap, resolved to the cheapest product in your catalogue that closes it.'],
             ['5 · Generation, then verification', 'Claude Opus 5 rewrites the retrieved facts as prose, then the output is checked back against them. Any price or rep scheme that was not in the input discards the whole generation.'],
           ].map(([h, b]) => (
             <div key={h} className="rounded-lg border border-line bg-panel p-5">
@@ -124,6 +125,15 @@ export default function Page() {
             </ul>
           </div>
         </div>
+        <TechBox
+          rows={[
+                  { k: 'Retrieval', v: <>BM25 (k1&nbsp;1.5, b&nbsp;0.75) over 406 documents, plus concept expansion scored at a discount because those terms were inferred.</> },
+          { k: 'Language layer', v: <>Slot extraction into a structured profile. Anything not confidently extracted stays null and gets asked about.</> },
+          { k: 'Synthesis', v: <>Deterministic, constrained to owned equipment. A pattern with no usable exercise becomes a gap resolved to a real product.</> },
+          { k: 'Generation', v: <>Optional Claude Opus 5 via <C>/api/spotter</C>, rate-limited, with its output checked back against the retrieved context.</> },
+          ]}
+          note="Without an API key the page falls back to the deterministic composer and says so. Nothing breaks."
+        />
       </div>
     </div>
   );

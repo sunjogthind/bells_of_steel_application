@@ -1,4 +1,4 @@
-// Pulls the public Bells of Steel Shopify catalog into a local snapshot.
+// Pulls the public Bells of Steel Shopify catalogue into a local snapshot.
 // Polite: 250/page, 600ms between pages, identifies itself.
 import { writeFileSync } from 'node:fs';
 

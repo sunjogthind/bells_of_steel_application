@@ -1,6 +1,6 @@
 # Bells of Steel — Internal Tools Portfolio
 
-Five working tools built on the live Bells of Steel product catalog, for the
+Five working tools built on the live Bells of Steel product catalogue, for the
 **AI & Internal Tools Developer** application.
 
 **Live:** https://bells-of-steel-portfolio-rana-thind.vercel.app
@@ -8,28 +8,28 @@ Five working tools built on the live Bells of Steel product catalog, for the
 
 > Independent demonstration by Rana Thind. Not affiliated with, endorsed by, or an official
 > property of Bells of Steel Inc. Product data is a read-only snapshot of the public
-> storefront catalog taken 25 August 2026.
+> storefront catalogue taken 25 August 2026.
 
 ## The five tools
 
 | | Tool | What it does |
 |---|---|---|
 | 01 | **Gym Builder** | Answers "will it fit in my basement" against 20 real rack models, drawn to scale, then shows only the attachments their own `hgb_` compatibility tags say will bolt on. |
-| 02 | **Catalog Audit** | Twelve data-health rules against the real feed. Found 16 rack models listed twice at two different prices, a corrupted vendor field, and 29 freight items shipping with no weight. |
-| 03 | **Catalog Monitor** | A scheduled job that re-pulls the feed every morning, diffs it against the previous run, and reports only what moved. Runs unattended in GitHub Actions and commits each snapshot, so the drift history is real. Emits a BigQuery-shaped time series. |
+| 02 | **Catalogue Audit** | Twelve data-health rules against the real feed. Found 16 rack models listed twice at two different prices, a corrupted vendor field, and 29 freight items shipping with no weight. |
+| 03 | **Catalogue Monitor** | A scheduled job that re-pulls the feed every morning, diffs it against the previous run, and reports only what moved. Runs unattended in GitHub Actions and commits each snapshot, so the drift history is real. Emits a BigQuery-shaped time series. |
 | 05 | **Spotter** | A retrieval-grounded training coach. Reads a signup profile written in plain language, extracts structured slots, and synthesises a program constrained to the equipment you actually own — resolving any gap to a real product. Refuses to train around an injury. |
-| 04 | **CS Copilot** | Drafts grounded replies with citations, and escalates to a human when the catalog cannot support an answer. Sits on a flattened index of all 68 spare parts. No language model at runtime — deliberately. |
+| 04 | **CS Copilot** | Drafts grounded replies with citations, and escalates to a human when the catalogue cannot support an answer. Sits on a flattened index of all 68 spare parts. No language model at runtime — deliberately. |
 
 ## Notable findings
 
-Everything below is against the real catalog and verified live:
+Everything below is against the real catalogue and verified live:
 
 - **Every prebuilt rack is listed twice, at two different prices.** All 16 comparable
   duplicate pairs disagree. Widest gap: $162.84 on the Manticore Half Rack. Both pages
   return HTTP 200 and are purchasable.
 - **9 products have `vendor` set to `related_to_<product_id>`** — a broken app sync writing
   a database key into a customer-facing, feed-required field.
-- **29 physical products over $50 carry a shipping weight of 0 g**, on a catalog that moves
+- **29 physical products over $50 carry a shipping weight of 0 g**, on a catalogue that moves
   on LTL freight.
 - **The compatibility tags contradict the product titles.** The Utility Seat is titled "for
   Hydra/Manticore" but carries seven Hydra tags and zero Manticore ones, making it invisible
@@ -62,7 +62,7 @@ degrades to the deterministic composer and says so.
 `corpus/` holds Spotter's exercise library and coaching notes. **These are written by us**,
 not Bells of Steel's — their programming is not public, and reconstructing it would be the
 exact failure this project argues against. The equipment half of the corpus is their real
-catalog. Swapping in their library is a data change, not a code change.
+catalogue. Swapping in their library is a data change, not a code change.
 
 The monitor also runs on a daily cron in GitHub Actions
 ([`.github/workflows/catalog-monitor.yml`](./.github/workflows/catalog-monitor.yml)), re-pulling the
@@ -100,7 +100,7 @@ Portability meant a second copy of the rules, which can drift from `scripts/audi
 
 ## MCP server
 
-`mcp/` is a Model Context Protocol server that exposes the catalog to Claude Code, so anyone
+`mcp/` is a Model Context Protocol server that exposes the catalogue to Claude Code, so anyone
 at the company could query products, compatibility and spare parts from the terminal without
 knowing the SKU scheme or the `hgb_` tag grammar.
 

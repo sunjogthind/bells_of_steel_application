@@ -54,7 +54,7 @@ export default function Builder({
     return c;
   }, [evaluated]);
 
-  /** Explain what the current room is actually doing to the catalog. */
+  /** Explain what the current room is actually doing to the catalogue. */
   const insights = useMemo(() => {
     const out: string[] = [];
     const blocked = evaluated.filter((e) => e.verdict === 'no');
@@ -286,7 +286,7 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
           <p className="mt-3 rounded border border-amber-500/35 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">
             No attachment compatibility tags are published for this rack, so this tool will not claim
             anything bolts onto it. For the Residential line specifically, that mapping does not exist in
-            the catalog feed at all.
+            the catalogue feed at all.
           </p>
         ) : (
           <div className="mt-3 grid gap-1.5 sm:grid-cols-2">

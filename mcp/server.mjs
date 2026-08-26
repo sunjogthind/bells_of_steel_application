@@ -2,7 +2,7 @@
 /**
  * bells-of-steel-mcp
  *
- * Exposes the Bells of Steel catalog to Claude Code as tools, so anyone at the
+ * Exposes the Bells of Steel catalogue to Claude Code as tools, so anyone at the
  * company can ask about products, compatibility and spare parts from the terminal
  * without knowing the SKU scheme or the hgb_ tag grammar.
  *
@@ -54,7 +54,7 @@ const RACK_FRAME = (title) =>
 const server = new McpServer({ name: 'bells-of-steel', version: '1.0.0' });
 
 server.registerTool('search_products', {
-  title: 'Search the catalog',
+  title: 'Search the catalogue',
   description: 'Find Bells of Steel products by name or description. Returns price, stock and URL.',
   inputSchema: { query: z.string().describe('What to look for, e.g. "manticore half rack" or "bumper plates"') },
 }, async ({ query }) => {
@@ -67,7 +67,7 @@ server.registerTool('search_products', {
 
 server.registerTool('check_compatibility', {
   title: 'Check attachment compatibility',
-  description: 'Check whether a rack attachment fits a given rack, using the hgb_ compatibility tags in the catalog. Says so explicitly when compatibility is not published rather than guessing.',
+  description: 'Check whether a rack attachment fits a given rack, using the hgb_ compatibility tags in the catalogue. Says so explicitly when compatibility is not published rather than guessing.',
   inputSchema: {
     rack: z.string().describe('Rack model, e.g. "Manticore Four Post"'),
     attachment: z.string().describe('Attachment, e.g. "lat pulldown"'),
@@ -113,8 +113,8 @@ server.registerTool('find_spare_part', {
 });
 
 server.registerTool('catalog_health', {
-  title: 'Catalog health findings',
-  description: 'Data-quality findings against the storefront catalog, ordered by severity.',
+  title: 'Catalogue health findings',
+  description: 'Data-quality findings against the storefront catalogue, ordered by severity.',
   inputSchema: { severity: z.enum(['all', 'critical', 'high', 'medium', 'low']).optional().describe('Filter by severity') },
 }, async ({ severity = 'all' }) => {
   const rows = severity === 'all' ? findings : findings.filter((f) => f.severity === severity);

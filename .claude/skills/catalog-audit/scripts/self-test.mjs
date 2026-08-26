@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // Proves three things before anyone trusts a report:
-//   1. a catalog with nothing wrong produces a clean report, not an empty one;
+//   1. a catalogue with nothing wrong produces a clean report, not an empty one;
 //   2. every rule that fires has plain-language copy written for it;
 //   3. where the portfolio repo is present, this portable engine agrees with its
-//      scripts/audit.mjs on the same catalog - the copies have not drifted.
+//      scripts/audit.mjs on the same catalogue - the copies have not drifted.
 //
 // Usage: node self-test.mjs [--repo <path to bos-portfolio>]
 import { readFileSync, writeFileSync, existsSync, mkdtempSync } from 'node:fs';
@@ -42,8 +42,8 @@ const check = (name, ok, note = '') => {
   const out = join(tmp, 'clean-findings.json');
   run('run-audit.mjs', ['--snapshot', snap, '--out', out, '--quiet']);
   const A = JSON.parse(readFileSync(out, 'utf8'));
-  check('a clean catalog produces zero findings', A.findings.length === 0, `${A.findings.length} found`);
-  check('a clean catalog still reports its passed checks', (A.clean ?? []).length > 0);
+  check('a clean catalogue produces zero findings', A.findings.length === 0, `${A.findings.length} found`);
+  check('a clean catalogue still reports its passed checks', (A.clean ?? []).length > 0);
 
   const md = run('render-report.mjs', [out]);
   check('the clean report says so in words', /Nothing needs attention/.test(md));
@@ -75,7 +75,7 @@ if (existsSync(repoSnapshot)) {
   const overlong = md.split('\n').filter((l) => l.length > 700 && !l.startsWith('- ') && !l.startsWith('|'));
   check('no paragraph runs away with itself', overlong.length === 0, `${overlong.length} over 700 chars`);
 } else {
-  console.log(`SKIP  catalog checks - no saved catalog at ${repoSnapshot}`);
+  console.log(`SKIP  catalogue checks - no saved catalogue at ${repoSnapshot}`);
 }
 
 /* ------------------------------- 3. parity with the portfolio repo's audit */

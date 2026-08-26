@@ -28,15 +28,15 @@ docs.forEach((d) => Array.from(new Set([...tok(d.title), ...tok(d.type ?? ''), .
 const idf = {};
 Object.entries(df).forEach(([t, n]) => (idf[t] = Math.log(1 + docs.length / n)));
 
-/* Realistic tickets. Every expected answer below is derived from the catalog data,
+/* Realistic tickets. Every expected answer below is derived from the catalogue data,
    not written from imagination - the page recomputes each one live. */
 const tickets = [
   { q: 'Will the Hydra lat pulldown fit my Manticore four post rack?', why: 'compatibility across rack families - the trap question' },
   { q: 'I have a 7ft basement ceiling. Which power racks will actually fit?', why: 'dimensional, answerable from published specs' },
   { q: 'How tall is the Residential Power Rack?', why: 'dimensional, and the data does not exist' },
   { q: 'The back pad on my FID bench is torn, can I buy a replacement?', why: 'parts lookup' },
-  { q: 'How much is the Manticore Half Rack?', why: 'price - and the catalog disagrees with itself' },
-  { q: 'Do you ship to Australia and what is the warranty period?', why: 'policy - deliberately outside the catalog' },
+  { q: 'How much is the Manticore Half Rack?', why: 'price - and the catalogue disagrees with itself' },
+  { q: 'Do you ship to Australia and what is the warranty period?', why: 'policy - deliberately outside the catalogue' },
 ];
 
 // Titles that resolve to more than one live listing at different prices, so a

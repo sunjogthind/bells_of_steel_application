@@ -1,4 +1,5 @@
 import copilot from '@/data/copilot.json';
+import TechBox, { C } from '@/components/TechBox';
 import { IconCopilot } from '@/components/Icons';
 import parts from '@/data/parts.json';
 import { SNAPSHOT_DATE } from '@/lib/catalog';
@@ -25,15 +26,15 @@ export default function Page() {
         <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">CS Copilot</h1>
         <p className="mt-4 max-w-3xl leading-relaxed text-muted">
           Drafts a reply to a customer question, shows exactly which products it pulled to get there, and
-          refuses when your catalog cannot support an answer. Running against all {d.docs.length} of your
+          refuses when your catalogue cannot support an answer. Running against all {d.docs.length} of your
           products and {d.parts.length} spare parts, snapshot {SNAPSHOT_DATE}.
         </p>
 
         <div className="mt-6 max-w-3xl rounded-lg border border-line bg-panel p-5">
           <p className="font-mono text-[10px] uppercase tracking-wider text-steel">A deliberate choice</p>
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            No language model here. Every fact is a lookup against your catalog, carrying the URL it came
-            from, and anything your catalog cannot support goes to a human.
+            No language model here. Every fact is a lookup against your catalogue, carrying the URL it came
+            from, and anything your catalogue cannot support goes to a human.
           </p>
           <p className="mt-2.5 text-sm leading-relaxed text-muted">
             A model would write warmer prose. It would not change which facts the answer may contain — that
@@ -63,6 +64,15 @@ export default function Page() {
             <PartsIndex parts={pd.parts} symptoms={pd.symptoms} skuGrammar={pd.skuGrammar} />
           </div>
         </div>
+        <TechBox
+          rows={[
+                  { k: 'Index', v: <>Built ahead of time over 476 products and 68 spare parts, with IDF weights precomputed so the browser only has to score.</> },
+          { k: 'Routing', v: <>Six intents matched in a deliberate order — a dimensions question containing the word &ldquo;fit&rdquo; is not a compatibility question.</> },
+          { k: 'Grounding', v: <>Every claim carries the product it came from. Below the relevance threshold it escalates instead of answering.</> },
+          { k: 'Model', v: <>None. Retrieval and the escalation policy decide whether an answer is safe; a model would only change how it reads.</> },
+          ]}
+          note="Deterministic end to end, so it costs nothing to run and cannot hallucinate mid-demo."
+        />
       </div>
     </div>
   );

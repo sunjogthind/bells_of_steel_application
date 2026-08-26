@@ -10,7 +10,7 @@ const STARTERS = [
   { t: 'Why does the rep range change between exercises?', why: 'retrieval from coaching notes' },
   { t: 'My left shoulder has been hurting on presses', why: 'safety → escalates, never works around it' },
   { t: 'I only have kettlebells and a pull-up bar, 3 days', why: 'equipment-constrained generation' },
-  { t: 'What should I buy next?', why: 'gap → real catalog product' },
+  { t: 'What should I buy next?', why: 'gap → real catalogue product' },
 ];
 
 type Turn = {
@@ -311,7 +311,7 @@ function ProgramCard({ program }: { program: Program }) {
                className="mt-1 block text-[13px] text-amber-900 underline decoration-amber-600/30 underline-offset-2 hover:decoration-amber-700">
               {program.gaps[0].product.title} — ${(program.gaps[0].product.priceCents / 100).toFixed(2)}
             </a>
-            <p className="mt-1 text-[11px] text-amber-700">From the live catalog, cheapest option that covers it.</p>
+            <p className="mt-1 text-[11px] text-amber-700">From the live catalogue, cheapest option that covers it.</p>
           </div>
         )}
       </div>

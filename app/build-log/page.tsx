@@ -5,9 +5,9 @@ export const metadata = { title: 'Build Log — Rana Thind × Bells of Steel' };
 const BROKE = [
   {
     n: '01',
-    title: 'I only fetched half the catalog and did not notice',
-    body: `Shopify's products.json takes a limit of 250. Page one came back with 240, so my loop treated "fewer than the limit" as "last page" and stopped. The catalog looked like 240 products and every downstream number was quietly wrong.`,
-    fix: `Caught it by spot-checking page 2 by hand rather than trusting the loop. Shopify returns fewer than the limit whenever items are filtered out server-side, so the only reliable stop condition is an empty page. Real size: 476 products, 1,640 variants — I had been reasoning about half a catalog.`,
+    title: 'I only fetched half the catalogue and did not notice',
+    body: `Shopify's products.json takes a limit of 250. Page one came back with 240, so my loop treated "fewer than the limit" as "last page" and stopped. The catalogue looked like 240 products and every downstream number was quietly wrong.`,
+    fix: `Caught it by spot-checking page 2 by hand rather than trusting the loop. Shopify returns fewer than the limit whenever items are filtered out server-side, so the only reliable stop condition is an empty page. Real size: 476 products, 1,640 variants — I had been reasoning about half a catalogue.`,
     lesson: 'A termination condition that reads as obviously correct is exactly the kind that never gets tested.',
   },
   {
@@ -21,7 +21,7 @@ const BROKE = [
     n: '03',
     title: 'The copilot gave a confidently wrong compatibility answer',
     body: `I read the hgb_ tag scheme as having two attachment classes, strength and storage, because those were the two that showed up in the counts I looked at. The compatibility check was built on that assumption.`,
-    fix: `A test question about a lat pulldown returned "not compatible" for a rack it plainly fits. There are five classes, not two — strength, storage, lat, smith, kraken. Widening the parser fixed the answer and also surfaced a real bug in your catalog: the Utility Seat is titled "for Hydra/Manticore" but carries seven Hydra tags and zero Manticore ones, so your own builder would never offer it to a Manticore customer.`,
+    fix: `A test question about a lat pulldown returned "not compatible" for a rack it plainly fits. There are five classes, not two — strength, storage, lat, smith, kraken. Widening the parser fixed the answer and also surfaced a real bug in your catalogue: the Utility Seat is titled "for Hydra/Manticore" but carries seven Hydra tags and zero Manticore ones, so your own builder would never offer it to a Manticore customer.`,
     lesson: 'Deriving a schema from the top of a sorted list gives you the common cases and hides the rest.',
   },
   {
@@ -71,7 +71,7 @@ const DECISIONS = [
     a: `A fit tool that silently guesses a ceiling clearance is worse than no fit tool. Every dimension carries where it came from, and the three Residential racks return "cannot verify" instead of a number. The gap is the finding.`,
   },
   {
-    q: 'Why build on your real catalog rather than mock data?',
+    q: 'Why build on your real catalogue rather than mock data?',
     a: `Mock data would have been half the work and demonstrated nothing. The hgb_ graph, the duplicate listings, the corrupted vendor field, the treadmill with no spare parts — all of it came out of reading data that actually exists.`,
   },
 ];
@@ -161,7 +161,7 @@ monitor        →  fingerprint, diff vs. last run          →  data/monitor.js
         <div className="mt-10 rounded-lg border border-line bg-panel p-5">
           <h2 className="text-sm font-semibold">The audit, as a skill</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            The Catalog Audit page is built for someone evaluating me. The person who would actually fix the
+            The Catalogue Audit page is built for someone evaluating me. The person who would actually fix the
             data needs something else, so I packaged the same thirteen checks as a skill — built in Cowork —
             that runs without a repo checkout and writes a plain-language report.
           </p>
@@ -177,7 +177,7 @@ monitor        →  fingerprint, diff vs. last run          →  data/monitor.js
         <div className="mt-4 rounded-lg border border-line bg-panel p-5">
           <h2 className="text-sm font-semibold">An MCP server, too</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            The repo ships an MCP server putting the catalog behind four tools in Claude Code:{' '}
+            The repo ships an MCP server putting the catalogue behind four tools in Claude Code:{' '}
             <code className="text-steel">search_products</code>,{' '}
             <code className="text-steel">check_compatibility</code>,{' '}
             <code className="text-steel">find_spare_part</code>,{' '}
