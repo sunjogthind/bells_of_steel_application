@@ -11,3 +11,6 @@ mcp/node_modules/
 
 # Local-only context file, if it is ever copied into the repo
 CONTEXT.md
+
+# Local-only working brief
+COWORK_TASK.md
