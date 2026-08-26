@@ -59,6 +59,13 @@ const BROKE = [
     fix: `The test failed on 301. It was matching $1301.86, the price of the Hydra Four Post rack, inside a redirect code. Word boundaries fixed it in a minute. What stopped me was recognising it: this is the same error as the $225 duplicate-pricing false positive and the guard that rejected "4 x 4-6" — a comparison that looked like-for-like and wasn't.`,
     lesson: 'Three times on one project. I am now suspicious of every comparison I write before I run it, which is roughly the correct amount of suspicious.',
   },
+  {
+    n: '09',
+    title: 'The fourth one, and the first a person caught',
+    body: `The critical finding said the same rack sits on two live pages at two different prices. Someone reading it noticed that one of the two Hydra Six Post listings showed a 1% discount badge and the other did not, and asked whether that was simply the explanation.`,
+    fix: `Checking properly turned up something worse than the discount: all 16 pairs have different SKUs, the plain handle carrying a "-BNDL" suffix. I had asserted these were the same product without ever comparing SKUs, and the write-up went further and called the gap "two listings drifting apart rather than a deliberate discount" — a claim about intent I had no evidence for. Both objections turned out answerable. Shipping weight, product copy and image filenames are identical on 16 of 16 pairs, so the suffix is bookkeeping rather than a different rack. And the discount is not the cause: pre-discount prices differ on all 16, and on 6 the gap is wider before the sale. The finding now states both, with the numbers.`,
+    lesson: 'The first three were caught by tests I had written. This one was caught by a person looking at one product page and asking a reasonable question. Tests only check the comparisons you already thought to make.',
+  },
 ];
 
 const DECISIONS = [
@@ -82,7 +89,7 @@ export default function Page() {
     { k: '2,454', v: 'lines of TypeScript' },
     { k: '20', v: 'source files' },
     { k: '6', v: 'build-time pipeline steps' },
-    { k: '8', v: 'bugs worth writing down' },
+    { k: '9', v: 'bugs worth writing down' },
   ];
 
   return (
@@ -93,7 +100,7 @@ export default function Page() {
         <p className="mt-4 leading-relaxed text-muted">
           Five tools and one shared data layer, built with Claude Code in the terminal against a snapshot
           of your storefront feed taken {SNAPSHOT_DATE}, plus a skill built in Cowork. The interesting part
-          was not the building. It was the eight times I was wrong.
+          was not the building. It was the nine times I was wrong.
         </p>
 
         <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4">
@@ -108,7 +115,7 @@ export default function Page() {
         <h2 className="mt-12 text-xl font-semibold tracking-tight">What broke</h2>
         <p className="mt-2 text-sm leading-relaxed text-muted">
           Written up honestly, including the two that would have reached you as confident wrong statements
-          if I had not checked them first — and one class of mistake I made three separate times.
+          if I had not checked them first — and one class of mistake I made four separate times.
         </p>
 
         <div className="mt-6 space-y-3">
