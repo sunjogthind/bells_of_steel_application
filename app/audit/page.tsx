@@ -1,4 +1,5 @@
 import audit from '@/data/audit.json';
+import { IconAudit } from '@/components/Icons';
 import { SNAPSHOT_DATE } from '@/lib/catalog';
 
 export const metadata = { title: 'Catalog Audit — Rana Thind × Bells of Steel' };
@@ -19,7 +20,12 @@ export default function Page() {
   return (
     <div className="gridbg">
       <div className="mx-auto max-w-5xl px-5 py-12">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel">Demo 02 · Internal · Merch ops</p>
+        <div className="flex items-center gap-3">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-steel/25 bg-steelSoft text-steelDim">
+            <IconAudit className="h-6 w-6" />
+          </span>
+          <p className="eyebrow text-steelDim">Demo 02 · Internal · Merch ops</p>
+        </div>
         <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Catalog Audit</h1>
         <p className="mt-4 max-w-3xl leading-relaxed text-muted">
           A dashboard that reads your storefront feed and reports what is wrong with it. Every finding below

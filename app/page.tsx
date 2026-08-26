@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { catalogStats, SNAPSHOT_DATE } from '@/lib/catalog';
+import { DEMO_ICONS } from '@/components/Icons';
 
 const DEMOS = ([
   {
@@ -103,11 +104,16 @@ export default function Home() {
               href={d.href}
               className="group relative flex flex-col rounded-lg border border-line bg-ink p-7 shadow-soft transition-all hover:-translate-y-0.5 hover:border-steel/60 hover:shadow-strong"
             >
-              <div className="flex items-baseline justify-between gap-4">
-                <span className="text-xs font-extrabold text-steelDim">{d.n}</span>
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-3">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-steel/25 bg-steelSoft text-steelDim transition-colors group-hover:border-steel/50 group-hover:bg-steel group-hover:text-white">
+                    {(() => { const Icon = DEMO_ICONS[d.href]; return Icon ? <Icon className="h-[22px] w-[22px]" /> : null; })()}
+                  </span>
+                  <span className="text-xs font-extrabold text-steelDim">{d.n}</span>
+                </div>
                 <span className="stat-lbl text-[11px]">{d.tag}</span>
               </div>
-              <h2 className="mt-3 text-2xl font-extrabold transition-colors group-hover:text-steelDim">
+              <h2 className="mt-4 text-2xl font-extrabold transition-colors group-hover:text-steelDim">
                 {d.title}
               </h2>
               <p className="mt-3 text-[15px] leading-relaxed text-muted">{d.blurb}</p>

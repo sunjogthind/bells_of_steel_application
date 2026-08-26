@@ -1,4 +1,5 @@
 import { builderPayload } from '@/lib/builder-data';
+import { IconRack } from '@/components/Icons';
 import { SNAPSHOT_DATE } from '@/lib/catalog';
 import Builder from './Builder';
 
@@ -9,7 +10,12 @@ export default function Page() {
   return (
     <div className="gridbg">
       <div className="mx-auto max-w-6xl px-5 pt-12">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel">Demo 01 · Customer-facing</p>
+        <div className="flex items-center gap-3">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-steel/25 bg-steelSoft text-steelDim">
+            <IconRack className="h-6 w-6" />
+          </span>
+          <p className="eyebrow text-steelDim">Demo 01 · Customer-facing</p>
+        </div>
         <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Gym Builder</h1>
         <p className="mt-4 max-w-3xl leading-relaxed text-muted">
           &ldquo;Will it fit in my basement?&rdquo; decides whether someone buys a rack or closes the tab.

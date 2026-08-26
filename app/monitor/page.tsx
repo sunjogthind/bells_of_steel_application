@@ -1,4 +1,5 @@
 import monitor from '@/data/monitor.json';
+import { IconMonitor } from '@/components/Icons';
 import audit from '@/data/audit.json';
 
 export const metadata = { title: 'Catalog Monitor — Rana Thind × Bells of Steel' };
@@ -22,7 +23,12 @@ export default function Page() {
   return (
     <div className="gridbg">
       <div className="mx-auto max-w-5xl px-6 py-12">
-        <p className="eyebrow text-steelDim">Demo 03 · Internal · Automation</p>
+        <div className="flex items-center gap-3">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-steel/25 bg-steelSoft text-steelDim">
+            <IconMonitor className="h-6 w-6" />
+          </span>
+          <p className="eyebrow text-steelDim">Demo 03 · Internal · Automation</p>
+        </div>
         <h1 className="mt-4 text-[clamp(32px,4.5vw,48px)] font-extrabold">Catalog Monitor</h1>
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
           The Catalog Audit says what is broken today. This is the part that stops it coming back.

@@ -1,4 +1,5 @@
 import copilot from '@/data/copilot.json';
+import { IconCopilot } from '@/components/Icons';
 import parts from '@/data/parts.json';
 import { SNAPSHOT_DATE } from '@/lib/catalog';
 import Copilot from './Copilot';
@@ -15,7 +16,12 @@ export default function Page() {
   return (
     <div className="gridbg">
       <div className="mx-auto max-w-5xl px-5 py-12">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel">Demo 04 · Internal · AI with guardrails</p>
+        <div className="flex items-center gap-3">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-steel/25 bg-steelSoft text-steelDim">
+            <IconCopilot className="h-6 w-6" />
+          </span>
+          <p className="eyebrow text-steelDim">Demo 04 · Internal · AI with guardrails</p>
+        </div>
         <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">CS Copilot</h1>
         <p className="mt-4 max-w-3xl leading-relaxed text-muted">
           Drafts a reply to a customer question, shows exactly which products it pulled to get there, and

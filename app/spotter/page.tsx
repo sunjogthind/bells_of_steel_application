@@ -1,4 +1,5 @@
 import spotter from '@/data/spotter.json';
+import { IconSpotter } from '@/components/Icons';
 import Spotter from './Spotter';
 import type { SpotterIndex } from '@/lib/spotter-types';
 
@@ -11,7 +12,12 @@ export default function Page() {
   return (
     <div className="gridbg">
       <div className="mx-auto max-w-[1180px] px-6 py-12">
-        <p className="eyebrow text-steelDim">Demo 05 · Product concept · Retrieval-augmented generation</p>
+        <div className="flex items-center gap-3">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-steel/25 bg-steelSoft text-steelDim">
+            <IconSpotter className="h-6 w-6" />
+          </span>
+          <p className="eyebrow text-steelDim">Demo 05 · Product concept · Retrieval-augmented generation</p>
+        </div>
         <h1 className="mt-4 text-[clamp(32px,4.5vw,52px)] font-extrabold">Spotter</h1>
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
           A coach that reads a new member&rsquo;s signup profile in plain language, writes a program around
