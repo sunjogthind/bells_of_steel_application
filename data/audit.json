@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T13:43:48.424Z",
+  "generated_at": "2026-08-26T21:15:12.835Z",
   "snapshot": "2026-08-26T13:43:48.208Z",
   "scanned": 476,
   "variants": 1640,
@@ -315,7 +315,7 @@
       "title": "A broken sync is writing product IDs into the vendor field",
       "count": 9,
       "unit": "products",
-      "summary": "9 products have a vendor of \"related_to_<numeric id>\" instead of a brand name. The rest of the catalog correctly reads \"Bells of Steel\".",
+      "summary": "9 products have a vendor of \"related_to_<numeric id>\" instead of a brand name. The rest of the catalogue correctly reads \"Bells of Steel\".",
       "impact": "Vendor is a customer-facing field and a required attribute in Google Shopping and most marketplace feeds. These products are advertising a database key as their brand.",
       "fix": "Find the app writing this — the value shape suggests a related-products integration reusing the field — and reset the affected products to the correct vendor. Worth checking what else that integration touches.",
       "evidence": [
@@ -692,7 +692,7 @@
     {
       "id": "taxonomy",
       "severity": "medium",
-      "title": "A fifth of the catalog has no product type",
+      "title": "A fifth of the catalogue has no product type",
       "count": 107,
       "unit": "products",
       "summary": "89 products have an empty product_type and a further 18 use the literal string \"Hidden\" as their type.",
