@@ -19,6 +19,10 @@ concurrency:
 jobs:
   monitor:
     runs-on: ubuntu-latest
+    env:
+      # Declared at job level so the guard on the Slack step can actually read it -
+      # a step's own `env:` is not visible to its `if:` condition.
+      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
     steps:
       - uses: actions/checkout@v4
 
@@ -70,8 +74,6 @@ jobs:
 
       - name: Alert Slack
         if: steps.run.outputs.alerts != '0' && env.SLACK_WEBHOOK != ''
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         run: |
           node -e "
             const r = require('./data/monitor.json').runs[0];
