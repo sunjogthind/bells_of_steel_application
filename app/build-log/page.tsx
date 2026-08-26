@@ -91,9 +91,9 @@ export default function Page() {
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel">Build log</p>
         <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">How this was built</h1>
         <p className="mt-4 leading-relaxed text-muted">
-          Five tools, one shared data layer, built with Claude Code in the terminal against a snapshot of
-          your storefront feed taken {SNAPSHOT_DATE}. The interesting part was not the building. It was the
-          seven times I was wrong.
+          Five tools and one shared data layer, built with Claude Code in the terminal against a snapshot
+          of your storefront feed taken {SNAPSHOT_DATE}, plus a skill built in Cowork. The interesting part
+          was not the building. It was the eight times I was wrong.
         </p>
 
         <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4">
