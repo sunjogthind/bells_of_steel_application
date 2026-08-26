@@ -24,6 +24,11 @@ This is enforced structurally, not by good intentions:
 If you are adding a feature and find yourself filling a gap with a reasonable-sounding
 default, stop. The gap is the finding.
 
+Spotter has two further refusals that are load-bearing, not decoration: any mention of pain
+stops program generation and routes to a human, and a retrieval score below the grounding
+threshold produces "I don't know" rather than an improvised answer. Do not soften either to
+make a demo flow better.
+
 ## Verify before you claim
 
 Findings in the audit are assertions about a real company's live store. Before adding one:
@@ -46,6 +51,10 @@ scripts/          Build-time pipeline. Order matters; each writes to data/.
   copilot         Retrieval index + IDF table -> data/copilot.json
   monitor         Fingerprints, diffs against the last run, appends history
                   -> data/snapshots/<iso>.json, data/monitor.json, data/timeseries.csv
+  spotter         RAG index over corpus/ + the real catalog -> data/spotter.json
+
+corpus/           Spotter's exercise library and coaching notes. OURS, not theirs.
+                  Never present this content as Bells of Steel's methodology.
 
 lib/              Pure logic, no I/O. Runs identically on server and client.
   fit.ts          Fit engine + the hgb_ compatibility graph

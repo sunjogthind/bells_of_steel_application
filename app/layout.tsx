@@ -23,6 +23,7 @@ const NAV = [
   { href: '/audit', label: 'Catalog Audit' },
   { href: '/monitor', label: 'Monitor' },
   { href: '/copilot', label: 'CS Copilot' },
+  { href: '/spotter', label: 'Spotter' },
   { href: '/build-log', label: 'Build Log' },
 ];
 

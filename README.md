@@ -1,6 +1,6 @@
 # Bells of Steel — Internal Tools Portfolio
 
-Four working internal tools built on the live Bells of Steel product catalog, for the
+Five working tools built on the live Bells of Steel product catalog, for the
 **AI & Internal Tools Developer** application.
 
 **Live:** https://bells-of-steel-portfolio-rana-thind.vercel.app
@@ -10,13 +10,14 @@ Four working internal tools built on the live Bells of Steel product catalog, fo
 > property of Bells of Steel Inc. Product data is a read-only snapshot of the public
 > storefront catalog taken 25 August 2026.
 
-## The four tools
+## The five tools
 
 | | Tool | What it does |
 |---|---|---|
 | 01 | **Gym Builder** | Answers "will it fit in my basement" against 20 real rack models, drawn to scale, then shows only the attachments their own `hgb_` compatibility tags say will bolt on. |
 | 02 | **Catalog Audit** | Twelve data-health rules against the real feed. Found 16 rack models listed twice at two different prices, a corrupted vendor field, and 29 freight items shipping with no weight. |
 | 03 | **Catalog Monitor** | A scheduled job that re-pulls the feed every morning, diffs it against the previous run, and reports only what moved. Runs unattended in GitHub Actions and commits each snapshot, so the drift history is real. Emits a BigQuery-shaped time series. |
+| 05 | **Spotter** | A retrieval-grounded training coach. Reads a signup profile written in plain language, extracts structured slots, and synthesises a program constrained to the equipment you actually own — resolving any gap to a real product. Refuses to train around an injury. |
 | 04 | **CS Copilot** | Drafts grounded replies with citations, and escalates to a human when the catalog cannot support an answer. Sits on a flattened index of all 68 spare parts. No language model at runtime — deliberately. |
 
 ## Notable findings
@@ -48,7 +49,13 @@ npm run dev            # http://localhost:3111
 npm run refresh-catalog # re-pull the feed and re-derive everything
 ```
 
-No API keys. No runtime services. The deployed site is fully static.
+No API keys. No runtime services. The deployed site is fully static — including Spotter,
+whose retrieval, slot extraction and program synthesis all run in the browser.
+
+`corpus/` holds Spotter's exercise library and coaching notes. **These are written by us**,
+not Bells of Steel's — their programming is not public, and reconstructing it would be the
+exact failure this project argues against. The equipment half of the corpus is their real
+catalog. Swapping in their library is a data change, not a code change.
 
 The monitor also runs on a daily cron in GitHub Actions
 ([`.github/workflows/catalog-monitor.yml`](./.github/workflows/catalog-monitor.yml)), re-pulling the
@@ -57,7 +64,7 @@ Two polite requests per day with an identifying User-Agent.
 
 ## How it is put together
 
-`scripts/` is a six-step build-time pipeline that turns the raw storefront feed into small
+`scripts/` is a seven-step build-time pipeline that turns the raw storefront feed into small
 derived datasets. `lib/` is pure logic shared by server and client. `app/` is one route per
 tool, with server components trimming data before it reaches the browser — the 4.4 MB raw
 feed never ships.

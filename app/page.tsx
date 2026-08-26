@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { catalogStats, SNAPSHOT_DATE } from '@/lib/catalog';
 
-const DEMOS = [
+const DEMOS = ([
   {
     href: '/builder',
     n: '01',
@@ -27,6 +27,14 @@ const DEMOS = [
     highlight: 'Runs unattended in GitHub Actions. The history is real, not seeded.',
   },
   {
+    href: '/spotter',
+    n: '05',
+    title: 'Spotter',
+    blurb: 'A coach that reads your signup profile in plain language and writes a program using only the equipment you actually own. Retrieval-grounded, and it refuses to train around an injury.',
+    tag: 'Product concept · RAG',
+    highlight: 'Their Program Quiz, after it learns to listen.',
+  },
+  {
     href: '/copilot',
     n: '04',
     title: 'CS Copilot',
@@ -34,7 +42,7 @@ const DEMOS = [
     tag: 'Internal · AI with guardrails',
     highlight: 'Retrieval runs live. Nothing is invented.',
   },
-];
+] as const).slice().sort((a, b) => a.n.localeCompare(b.n));
 
 export default function Home() {
   const s = catalogStats();
@@ -51,7 +59,7 @@ export default function Home() {
         <p className="eyebrow text-steelDim">Job application portfolio</p>
 
         <h1 className="mt-5 max-w-4xl text-[clamp(40px,6vw,72px)] font-extrabold">
-          I built four internal tools on the{' '}
+          I built five internal tools on the{' '}
           <em className="not-italic text-steelDim">real Bells of Steel catalog</em>{' '}
           instead of writing a cover letter.
         </h1>
@@ -113,7 +121,7 @@ export default function Home() {
 
       <section className="mx-auto max-w-[1280px] px-6 pb-24">
         <div className="rounded-lg border border-line bg-panel p-8">
-          <h2 className="text-2xl font-extrabold">Why these four</h2>
+          <h2 className="text-2xl font-extrabold">Why these five</h2>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted">
             The job description says you build internal applications, AI-powered tools, automations and
             dashboards for every department, and that you sit with the person who has the problem before
@@ -121,10 +129,10 @@ export default function Home() {
             I read the catalog feed closely enough to find the problems from the outside.
           </p>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted">
-            The Gym Builder is the one a customer would touch. The other three are the unglamorous internal
-            kind — the merch-ops dashboard, the job that runs at 7am so nobody has to remember to look, and
-            the copilot that knows when to shut up. That ratio is deliberate; it is roughly the ratio in the
-            job description.
+            The Gym Builder and Spotter are the two a customer would touch. The other three are the
+            unglamorous internal kind — the merch-ops dashboard, the job that runs at 7am so nobody has to
+            remember to look, and the copilot that knows when to shut up. That ratio is deliberate; it is
+            roughly the ratio in the job description.
           </p>
         </div>
       </section>
