@@ -17,14 +17,6 @@ export default function Page() {
             <IconRack className="h-6 w-6" />
           </span>
           <p className="eyebrow text-steelDim">Demo 01 · Customer-facing</p>
-        <Impact
-          points={[
-            { lead: 'It answers the question that decides the sale.', body: <>&ldquo;Will it fit?&rdquo; is the last thing a rack buyer resolves before they either add to cart or close the tab, and right now they resolve it by guessing.</> },
-            { lead: 'Fit disputes are expensive on freight.', body: <>A rack that arrives and does not fit is a return on an oversize LTL item. Answering it before the order is cheaper than answering it after.</> },
-            { lead: 'Compatibility stops being a support question.', body: <>Which attachments bolt onto which rack is currently a ticket. Here it is a filter, driven by the tags you already maintain.</> },
-          ]}
-          caveat="It cannot verify fit for the Residential line, because no upright height is published for those racks. It says so rather than estimating."
-        />
         </div>
         <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Gym Builder</h1>
         <p className="mt-4 max-w-3xl leading-relaxed text-muted">
@@ -37,6 +29,14 @@ export default function Page() {
           <span className="text-red-600"> not published at all</span>. Where a spec isn&rsquo;t published,
           the tool says so instead of guessing. Snapshot: {SNAPSHOT_DATE}.
         </p>
+        <Impact
+          points={[
+            { lead: 'It answers the question that decides the sale.', body: <>&ldquo;Will it fit?&rdquo; is the last thing a rack buyer resolves before they either add to cart or close the tab, and right now they resolve it by guessing.</> },
+            { lead: 'Fit disputes are expensive on freight.', body: <>A rack that arrives and does not fit is a return on an oversize LTL item. Answering it before the order is cheaper than answering it after.</> },
+            { lead: 'Compatibility stops being a support question.', body: <>Which attachments bolt onto which rack is currently a ticket. Here it is a filter, driven by the tags you already maintain.</> },
+          ]}
+          caveat="It cannot verify fit for the Residential line, because no upright height is published for those racks. It says so rather than estimating."
+        />
       </div>
       <Builder racks={racks} kit={kit} lookup={lookup} />
       <div className="mx-auto max-w-6xl px-5">

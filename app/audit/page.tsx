@@ -39,14 +39,6 @@ export default function Page() {
           of thing that runs nightly and posts to a channel, so nobody has to remember to go looking.
         </p>
 
-        <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4">
-          {(['critical', 'high', 'medium', 'low'] as Sev[]).map((s) => (
-            <div key={s} className="bg-panel px-4 py-4">
-              <div className="flex items-center gap-2">
-                <span className={`h-1.5 w-1.5 rounded-full ${SEV[s].bar}`} />
-                <span className="font-mono text-[10px] uppercase tracking-wider text-muted">{SEV[s].label}</span>
-              </div>
-              <p className="mt-1.5 font-mono text-2xl font-semibold tabular-nums">{bySev(s)}</p>
         <Impact
           points={[
             { lead: 'It asks the same questions of all 476 products.', body: <>Roughly 6,000 checks in a few seconds. Nobody looks at product 300 as carefully as product 3, and this does not get tired.</> },
@@ -55,6 +47,14 @@ export default function Page() {
           ]}
           caveat="It reads your public storefront feed only, no ERP, no inventory, no orders, and it cannot know intent. A finding is a question worth asking, not a verdict."
         />
+        <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4">
+          {(['critical', 'high', 'medium', 'low'] as Sev[]).map((s) => (
+            <div key={s} className="bg-panel px-4 py-4">
+              <div className="flex items-center gap-2">
+                <span className={`h-1.5 w-1.5 rounded-full ${SEV[s].bar}`} />
+                <span className="font-mono text-[10px] uppercase tracking-wider text-muted">{SEV[s].label}</span>
+              </div>
+              <p className="mt-1.5 font-mono text-2xl font-semibold tabular-nums">{bySev(s)}</p>
             </div>
           ))}
         </div>

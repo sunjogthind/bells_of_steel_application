@@ -31,8 +31,6 @@ export default function Page() {
           products and {d.parts.length} spare parts, snapshot {SNAPSHOT_DATE}.
         </p>
 
-        <div className="mt-6 max-w-3xl rounded-lg border border-line bg-panel p-5">
-          <p className="font-mono text-[10px] uppercase tracking-wider text-steel">A deliberate choice</p>
         <Impact
           points={[
             { lead: 'It deflects the tickets that have a factual answer.', body: <>Compatibility, dimensions, price, stock and spare parts are most of the inbox, and all of them are lookups against data you already publish.</> },
@@ -41,6 +39,8 @@ export default function Page() {
           ]}
           caveat="It answers only from the catalogue. Shipping, warranty and returns are policy questions and it routes them to a human rather than inventing terms."
         />
+        <div className="mt-6 max-w-3xl rounded-lg border border-line bg-panel p-5">
+          <p className="font-mono text-[10px] uppercase tracking-wider text-steel">A deliberate choice</p>
           <p className="mt-2 text-sm leading-relaxed text-muted">
             No language model here. Every fact is a lookup against your catalogue, carrying the URL it came
             from, and anything your catalogue cannot support goes to a human.
