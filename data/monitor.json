@@ -1,6 +1,100 @@
 {
-  "generated_at": "2026-08-27T22:39:49.532Z",
+  "generated_at": "2026-08-28T22:45:30.027Z",
   "runs": [
+    {
+      "at": "2026-08-28T22:45:29.664Z",
+      "date": "2026-08-28",
+      "baseline": false,
+      "comparedTo": "2026-08-27T22:39:49.162Z",
+      "productCount": 476,
+      "changeCount": 9,
+      "bySeverity": {
+        "alert": 1,
+        "notable": 0,
+        "good": 4,
+        "info": 4
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Basilisk Stack Loaded Leg Extension / Leg Curl",
+          "handle": "basilisk-stack-loaded-leg-extension-leg-curl",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Basilisk Stack Loaded Leg Extension / Leg Curl",
+          "handle": "basilisk-stack-loaded-leg-extension-leg-curl",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Urethane Bumper Plate Sets",
+          "handle": "urethane-bumper-plate-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Urethane Bumper Plate Sets",
+          "handle": "urethane-bumper-plate-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Rubber Coated Iron Weight Plate Sets",
+          "handle": "rubber-coated-iron-weight-plate-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Rubber Coated Iron Weight Plate Sets",
+          "handle": "rubber-coated-iron-weight-plate-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 57 → 55."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 6,
+        "oos-published": 55,
+        "taxonomy": 107,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-08-27T22:39:49.162Z",
       "date": "2026-08-27",
