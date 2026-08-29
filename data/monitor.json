@@ -1,6 +1,44 @@
 {
-  "generated_at": "2026-08-28T22:45:30.027Z",
+  "generated_at": "2026-08-29T16:54:11.994Z",
   "runs": [
+    {
+      "at": "2026-08-29T16:54:11.622Z",
+      "date": "2026-08-29",
+      "baseline": false,
+      "comparedTo": "2026-08-28T22:45:29.664Z",
+      "productCount": 476,
+      "changeCount": 1,
+      "bySeverity": {
+        "alert": 0,
+        "notable": 0,
+        "good": 0,
+        "info": 1
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Lever Arms Rack Attachment",
+          "handle": "lever-arms-handles",
+          "detail": "$87.96 → $124.99 (+$37.03)"
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 6,
+        "oos-published": 55,
+        "taxonomy": 107,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-08-28T22:45:29.664Z",
       "date": "2026-08-28",
