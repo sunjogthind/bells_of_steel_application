@@ -1,6 +1,51 @@
 {
-  "generated_at": "2026-08-30T17:01:09.692Z",
+  "generated_at": "2026-08-31T19:16:47.266Z",
   "runs": [
+    {
+      "at": "2026-08-31T19:16:46.966Z",
+      "date": "2026-08-31",
+      "baseline": false,
+      "comparedTo": "2026-08-30T17:01:09.310Z",
+      "productCount": 476,
+      "changeCount": 2,
+      "bySeverity": {
+        "alert": 0,
+        "notable": 1,
+        "good": 0,
+        "info": 1
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Sit Up Mat",
+          "handle": "ab-mat",
+          "detail": "$25.96 → $29.99 (+$4.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Light Commercial Power Rack (2.3\" x 2.3\", ⅝\" HOLES)",
+          "handle": "light-commercial-rack",
+          "detail": "$839.99 → $629.97 ($210.02 cheaper)"
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 6,
+        "oos-published": 55,
+        "taxonomy": 107,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-08-30T17:01:09.310Z",
       "date": "2026-08-30",
