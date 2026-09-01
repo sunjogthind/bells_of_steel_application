@@ -1,6 +1,79 @@
 {
-  "generated_at": "2026-08-31T19:16:47.266Z",
+  "generated_at": "2026-09-01T17:01:03.244Z",
   "runs": [
+    {
+      "at": "2026-09-01T17:01:02.969Z",
+      "date": "2026-09-01",
+      "baseline": false,
+      "comparedTo": "2026-08-31T19:16:46.966Z",
+      "productCount": 476,
+      "changeCount": 6,
+      "bySeverity": {
+        "alert": 5,
+        "notable": 0,
+        "good": 0,
+        "info": 1
+      },
+      "changes": [
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Vertical Uprights",
+          "handle": "manticore-uprights-hidden-1",
+          "detail": "New data issue: type_placeholder."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Vertical Uprights",
+          "handle": "hydra-vertical-upright-hidden-1",
+          "detail": "New data issue: type_placeholder."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Utility Shackle Rack Attachment",
+          "handle": "utility-shackle-rack-attachment",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Utility Shackle Rack Attachment",
+          "handle": "utility-shackle-rack-attachment",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 55 → 56."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "taxonomy",
+          "handle": null,
+          "detail": "Audit rule \"taxonomy\" moved 107 → 109."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 6,
+        "oos-published": 56,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-08-31T19:16:46.966Z",
       "date": "2026-08-31",

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-31T19:16:47.188Z",
-  "snapshot": "2026-08-31T19:16:46.966Z",
+  "generated_at": "2026-09-01T17:01:03.164Z",
+  "snapshot": "2026-09-01T17:01:02.969Z",
   "scanned": 476,
   "variants": 1640,
   "findings": [
@@ -601,9 +601,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 55,
+      "count": 56,
       "unit": "products",
-      "summary": "55 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "56 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
@@ -693,9 +693,9 @@
       "id": "taxonomy",
       "severity": "medium",
       "title": "A fifth of the catalogue has no product type",
-      "count": 107,
+      "count": 109,
       "unit": "products",
-      "summary": "89 products have an empty product_type and a further 18 use the literal string \"Hidden\" as their type.",
+      "summary": "89 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
       "impact": "product_type is what your automated collections, storefront filters and any BigQuery or Looker grouping key off. Every product without one is invisible to that machinery, and \"Hidden\" is a visibility flag wearing a taxonomy field’s clothes.",
       "fix": "Most are inferable from the title alone; the classifier in this demo types 60 of them with a dozen rules. Backfill, then make type required at publish.",
       "evidence": [
