@@ -1,6 +1,205 @@
 {
-  "generated_at": "2026-09-01T17:01:03.244Z",
+  "generated_at": "2026-09-02T16:53:39.948Z",
   "runs": [
+    {
+      "at": "2026-09-02T16:53:39.552Z",
+      "date": "2026-09-02",
+      "baseline": false,
+      "comparedTo": "2026-09-01T17:01:02.969Z",
+      "productCount": 476,
+      "changeCount": 24,
+      "bySeverity": {
+        "alert": 2,
+        "notable": 0,
+        "good": 7,
+        "info": 15
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Pandemonium Squat – 3-in-1 Pendulum Squat / Calf Press / Viking Press Machine",
+          "handle": "pandemonium-squat",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Pandemonium Squat – 3-in-1 Pendulum Squat / Calf Press / Viking Press Machine",
+          "handle": "pandemonium-squat",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Dip Belt",
+          "handle": "dip-belt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Dip Belt",
+          "handle": "dip-belt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "All-Black Bumper Plate Sets",
+          "handle": "all-black-bumper-plate-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "All-Black Bumper Plate Sets",
+          "handle": "all-black-bumper-plate-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Dead Bounce Conflict Bumper Plate Sets",
+          "handle": "conflict-bouncers-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Dead Bounce Conflict Bumper Plate Sets",
+          "handle": "conflict-bouncers-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Calibrated Powerlifting Plates - LB Sets",
+          "handle": "calibrated-powerlifiting-plates-lb-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Calibrated Powerlifting Plates - LB Sets",
+          "handle": "calibrated-powerlifiting-plates-lb-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Crumb Bumper Plate Sets",
+          "handle": "crumb-bumper-plate-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Crumb Bumper Plate Sets",
+          "handle": "crumb-bumper-plate-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Tibialis Trainer Machine",
+          "handle": "tibialis-trainer-machine",
+          "detail": "$169.96 → $199.99 (+$30.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Powerlifting Bar",
+          "handle": "powerlifting-bar",
+          "detail": "$220.96 → $259.99 (+$39.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Cable Crossover Machine",
+          "handle": "cable-crossover-machine",
+          "detail": "$189.99 → $151.97 ($38.02 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Hydra Seven Ring Bar",
+          "handle": "hydra-seven-ring-bar",
+          "detail": "$237.96 → $247.96 (+$10.00)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Fat Bar - Single D Handle",
+          "handle": "fat-bar-single-d-handle",
+          "detail": "$35.96 → $41.99 (+$6.03)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Residential Air Bike with Wind Guard",
+          "handle": "residential-air-bike",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Residential Air Bike with Wind Guard",
+          "handle": "residential-air-bike",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Sandwich J-Cups",
+          "handle": "sandwich-j-cups",
+          "detail": "$80.96 → $94.99 (+$14.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Split Squat Leg Roller Rack Attachment",
+          "handle": "split-squat-leg-roller-attachment",
+          "detail": "$67.96 → $79.99 (+$12.03)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Premium Rubber Flooring 4' x 6'",
+          "handle": "4-x-6-rubber-floot-mats",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Premium Rubber Flooring 4' x 6'",
+          "handle": "4-x-6-rubber-floot-mats",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 56 → 52."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 6,
+        "oos-published": 52,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-01T17:01:02.969Z",
       "date": "2026-09-01",

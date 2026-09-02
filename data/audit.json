@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-01T17:01:03.164Z",
-  "snapshot": "2026-09-01T17:01:02.969Z",
+  "generated_at": "2026-09-02T16:53:39.828Z",
+  "snapshot": "2026-09-02T16:53:39.552Z",
   "scanned": 476,
   "variants": 1640,
   "findings": [
@@ -601,9 +601,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 56,
+      "count": 52,
       "unit": "products",
-      "summary": "56 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "52 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
@@ -664,6 +664,14 @@
           ]
         },
         {
+          "label": "Pandemonium Squat – 3-in-1 Pendulum Squat / Calf Press / Viking Press Machine",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/pandemonium-squat"
+          ]
+        },
+        {
           "label": "48KG Extension Kit for Adjustable Kettlebell - Wildman Poison Pill",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
@@ -677,14 +685,6 @@
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/strongarm-combo-rack"
-          ]
-        },
-        {
-          "label": "Rubber Flooring Gym Mat 24\" x 24\" (Set of 2)",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/rubber-flooring-24"
           ]
         }
       ]

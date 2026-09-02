@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T17:01:03.105Z",
+  "generated_at": "2026-09-02T16:53:39.741Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -438,7 +438,7 @@
       "ref": null,
       "sku": "SP-BTZBK-MONI",
       "priceCents": 4199,
-      "available": false,
+      "available": true,
       "machine": "Air Bike",
       "parentTitle": "Air Bike Spare Parts",
       "url": "https://bellsofsteel.com/products/air-bike-spare-parts"
