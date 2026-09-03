@@ -1,6 +1,170 @@
 {
-  "generated_at": "2026-09-02T16:53:39.948Z",
+  "generated_at": "2026-09-03T16:43:35.917Z",
   "runs": [
+    {
+      "at": "2026-09-03T16:43:35.552Z",
+      "date": "2026-09-03",
+      "baseline": false,
+      "comparedTo": "2026-09-02T16:53:39.552Z",
+      "productCount": 476,
+      "changeCount": 19,
+      "bySeverity": {
+        "alert": 3,
+        "notable": 1,
+        "good": 2,
+        "info": 13
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Roc Foldable 2 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-two-post-cage-prebuilt",
+          "detail": "$719.95 → $695.92 ($24.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Rubber Flooring Puzzle Gym Mat 24\" x 24\" (Set of 8)",
+          "handle": "puzzle-mat-set",
+          "detail": "$136.99 → $95.96 ($41.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "1 Layer Band Peg - Deadlift Platform",
+          "handle": "1-layer-band-peg-deadlift-platform",
+          "detail": "$69.99 → $48.96 ($21.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Deadlift Platform Rubber Tile",
+          "handle": "deadlift-platform-rubber-tile",
+          "detail": "$69.99 → $48.96 ($21.03 cheaper)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Fat Bar - Tricep Pressdown",
+          "handle": "fat-bar-tricep-pressdown",
+          "detail": "$56.99 → $39.96 ($17.03 cheaper)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Four Fold Mat",
+          "handle": "four-fold-mat",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Four Fold Mat",
+          "handle": "four-fold-mat",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Residential Air Bike with Wind Guard",
+          "handle": "residential-air-bike",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Residential Air Bike with Wind Guard",
+          "handle": "residential-air-bike",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Powder Coated Kettlebells",
+          "handle": "powder-coated-kettlebells",
+          "detail": "$29.99 → $17.96 ($12.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Olympic Weightlifting Barbell",
+          "handle": "olympic-weightlifting-barbell",
+          "detail": "$309.99 → $263.96 ($46.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "NÜOBELL Adjustable Dumbbells",
+          "handle": "nuobell-adjustable-dumbbells",
+          "detail": "$629.96 → $489.96 ($140.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Massage Balls",
+          "handle": "massage-balls",
+          "detail": "$8.99 → $5.97 ($3.02 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Machined Iron Olympic Weight Plates",
+          "handle": "machined-plates",
+          "detail": "$21.99 → $14.96 ($7.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Premium Rubber Flooring 4' x 6'",
+          "handle": "4-x-6-rubber-floot-mats",
+          "detail": "$84.99 → $63.97 ($21.02 cheaper)"
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "fake-sale",
+          "handle": null,
+          "detail": "Audit rule \"fake-sale\" moved 6 → 5."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 52 → 53."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 5,
+        "oos-published": 53,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-02T16:53:39.552Z",
       "date": "2026-09-02",

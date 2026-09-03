@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-02T16:53:39.828Z",
-  "snapshot": "2026-09-02T16:53:39.552Z",
+  "generated_at": "2026-09-03T16:43:35.807Z",
+  "snapshot": "2026-09-03T16:43:35.552Z",
   "scanned": 476,
   "variants": 1640,
   "findings": [
@@ -11,7 +11,7 @@
       "count": 16,
       "unit": "of 16 duplicated listings",
       "summary": "Every prebuilt rack exists as two live product pages: one plain handle, one ending \"-hgb\" (your Home Gym Builder copy). All 16 charge different prices, and both pages are purchasable. 5 further duplicates were excluded as not comparable.",
-      "impact": "The two pages carry different SKUs (the plain handle adds a \"-BNDL\" suffix), but 16 of 16 pairs are identical in shipping weight, product copy and images, so a customer is choosing between two listings for the same rack with nothing on the page to tell them apart. The widest gap is $162.84. The cheaper page is usually running a small discount, but that is not the cause: the pre-discount list prices differ on 16 of 16 pairs, and on 6 the gap is actually wider before the discount is applied.",
+      "impact": "The two pages carry different SKUs (the plain handle adds a \"-BNDL\" suffix), but 16 of 16 pairs are identical in shipping weight, product copy and images, so a customer is choosing between two listings for the same rack with nothing on the page to tell them apart. The widest gap is $162.84. The cheaper page is usually running a small discount, but that is not the cause: the pre-discount list prices differ on 16 of 16 pairs, and on 7 the gap is actually wider before the discount is applied.",
       "fix": "Pick one canonical page per rack and point the other at it. The -hgb copies are already tagged SEARCHANISE_IGNORE, so they are meant to be reached only through the builder, but they are publicly reachable and in the feed.",
       "evidence": [
         {
@@ -131,7 +131,7 @@
       "title": "Products priced at $0.00 or $0.01 are exposed in the public feed",
       "count": 33,
       "unit": "products",
-      "summary": "40 purchasable variants across 33 products carry a price of $1.00 or less. 16 of them are recognisably deliberate, \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
+      "summary": "39 purchasable variants across 33 products carry a price of $1.00 or less. 16 of them are recognisably deliberate, \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
       "impact": "Nothing in the feed distinguishes these from real products, so anything reading products.json inherits them: shopping feeds, analytics, price monitoring, any internal tool. Spotter recommended one as the cheapest fix for an equipment gap until I filtered them out.",
       "fix": "Move builder scaffolding to a dedicated product type or unpublish it from the online-store channel so it stops appearing in the feed at all.",
       "evidence": [
@@ -541,20 +541,12 @@
       "id": "fake-sale",
       "severity": "medium",
       "title": "Compare-at price equals the selling price",
-      "count": 6,
+      "count": 5,
       "unit": "variants",
-      "summary": "6 variants set a compare-at price identical to what the customer actually pays.",
+      "summary": "5 variants set a compare-at price identical to what the customer actually pays.",
       "impact": "Shopify renders compare-at as a struck-through \"was\" price. A struck-through number that matches the real one is a discount claim with no discount behind it, which is both a conversion problem and the kind of thing consumer-protection rules care about.",
       "fix": "Clear compare_at_price wherever it is less than or equal to price, and add it to the same publish-time validation as the weight check.",
       "evidence": [
-        {
-          "label": "Roc Foldable 2 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
-          "detail": "price $719.95 · compare-at $719.95",
-          "delta": "no actual discount",
-          "links": [
-            "https://bellsofsteel.com/products/roc-foldable-two-post-cage-prebuilt"
-          ]
-        },
         {
           "label": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
           "detail": "price $934.95 · compare-at $934.95",
@@ -601,9 +593,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 52,
+      "count": 53,
       "unit": "products",
-      "summary": "52 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "53 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
