@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T16:43:35.725Z",
+  "generated_at": "2026-09-04T16:38:16.301Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -878,6 +878,12 @@
       "type": "Bench",
       "priceCents": 99999,
       "url": "https://bellsofsteel.com/products/hydra-four-post-converter-bench"
+    },
+    {
+      "title": "Blitz Ski Trainer",
+      "type": "Cardio Machine",
+      "priceCents": 99999,
+      "url": "https://bellsofsteel.com/products/blitz-ski-trainer"
     },
     {
       "title": "Lat Pulldown Low Row Machine",

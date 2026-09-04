@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-03T16:43:35.807Z",
-  "snapshot": "2026-09-03T16:43:35.552Z",
+  "generated_at": "2026-09-04T16:38:16.381Z",
+  "snapshot": "2026-09-04T16:38:16.126Z",
   "scanned": 476,
   "variants": 1640,
   "findings": [
@@ -449,9 +449,9 @@
       "id": "parts-coverage",
       "severity": "high",
       "title": "Expensive machines have no spare parts published",
-      "count": 15,
+      "count": 16,
       "unit": "machines over $500",
-      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 15 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $5000.",
+      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 16 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $5000.",
       "impact": "A treadmill that fails in year two has nothing to sell the customer and nothing for support to point at, a warranty conversation with no good ending, on your highest-ticket items. Spare parts are also a margin-rich line being left on the table.",
       "fix": "Work down this list by price. Every machine over $1,000 should have at least its wear parts - pads, cables, bushings - published before the next warranty season.",
       "evidence": [
@@ -593,9 +593,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 53,
+      "count": 51,
       "unit": "products",
-      "summary": "53 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "51 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [

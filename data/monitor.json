@@ -1,6 +1,86 @@
 {
-  "generated_at": "2026-09-03T16:43:35.917Z",
+  "generated_at": "2026-09-04T16:38:16.495Z",
   "runs": [
+    {
+      "at": "2026-09-04T16:38:16.126Z",
+      "date": "2026-09-04",
+      "baseline": false,
+      "comparedTo": "2026-09-03T16:43:35.552Z",
+      "productCount": 476,
+      "changeCount": 7,
+      "bySeverity": {
+        "alert": 1,
+        "notable": 1,
+        "good": 3,
+        "info": 2
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Blitz Ski Trainer",
+          "handle": "blitz-ski-trainer",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Blitz Ski Trainer",
+          "handle": "blitz-ski-trainer",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Trifold Mat",
+          "handle": "trifold-mat",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Trifold Mat",
+          "handle": "trifold-mat",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Flat / Incline / Decline Weight Bench - Commercial",
+          "handle": "commercial-weight-bench",
+          "detail": "$356.96 → $419.99 (+$63.03)"
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "parts-coverage",
+          "handle": null,
+          "detail": "Audit rule \"parts-coverage\" moved 15 → 16."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 53 → 51."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 5,
+        "oos-published": 51,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-03T16:43:35.552Z",
       "date": "2026-09-03",
