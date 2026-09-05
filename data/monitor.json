@@ -1,6 +1,79 @@
 {
-  "generated_at": "2026-09-04T16:38:16.495Z",
+  "generated_at": "2026-09-05T15:40:34.295Z",
   "runs": [
+    {
+      "at": "2026-09-05T15:40:33.924Z",
+      "date": "2026-09-05",
+      "baseline": false,
+      "comparedTo": "2026-09-04T16:38:16.126Z",
+      "productCount": 476,
+      "changeCount": 6,
+      "bySeverity": {
+        "alert": 3,
+        "notable": 0,
+        "good": 0,
+        "info": 3
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Urethane Bumper Plate Sets",
+          "handle": "urethane-bumper-plate-sets",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Urethane Bumper Plate Sets",
+          "handle": "urethane-bumper-plate-sets",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Mighty Grip Medicine Balls",
+          "handle": "mighty-grip-medicine-balls",
+          "detail": "$34.99 → $27.97 ($7.02 cheaper)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Lat Pulldown Bar",
+          "handle": "lat-pulldown-bar",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Lat Pulldown Bar",
+          "handle": "lat-pulldown-bar",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 51 → 53."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 5,
+        "oos-published": 53,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-04T16:38:16.126Z",
       "date": "2026-09-04",
