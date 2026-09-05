@@ -306,7 +306,7 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
               <Room3D
                 roomW={room.widthIn} roomD={room.depthIn} ceiling={room.ceilingIn}
                 rackW={rack.width.value} rackD={rack.depth.value} rackH={rack.height.value}
-                tubing={tubingIn} usesBarbell={room.usesBarbell} personH={personH} verdict={verdict}
+                tubing={tubingIn} frame={rack.frame} usesBarbell={room.usesBarbell} personH={personH} verdict={verdict}
               />
             </div>
             <p className="mt-2 text-[12px] leading-relaxed text-muted">

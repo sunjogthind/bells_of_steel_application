@@ -25,6 +25,7 @@ type Props = {
   roomW: number; roomD: number; ceiling: number;
   rackW: number | null; rackD: number | null; rackH: number | null;
   tubing: number;
+  frame: string | null;
   usesBarbell: boolean;
   personH: number;
   verdict: Verdict;
@@ -111,8 +112,19 @@ function Scene(p: Props) {
     if (p.rackW == null || p.rackH == null) return null;
     const w = p.rackW, d = p.rackD ?? 48, h = p.rackH;
     const x = w / 2 - t / 2, z = d / 2 - t / 2;
-    return { w, d, h, posts: [[-x, -z], [x, -z], [-x, z], [x, z]] as [number, number][] };
-  }, [p.rackW, p.rackD, p.rackH, t]);
+
+    /* Post count follows the frame. A squat stand has two uprights and a six-post
+       rack has six; drawing four for all of them invents a footprint, which is the
+       one thing this view is not allowed to do. */
+    const twoPost = p.frame === 'squatstand' || p.frame === 'folding_2post';
+    const sixPost = p.frame === '6post';
+    const posts: [number, number][] = twoPost
+      ? [[-x, 0], [x, 0]]
+      : sixPost
+      ? [[-x, -z], [x, -z], [-x, 0], [x, 0], [-x, z], [x, z]]
+      : [[-x, -z], [x, -z], [-x, z], [x, z]];
+    return { w, d: twoPost ? t : d, h, posts, twoPost };
+  }, [p.rackW, p.rackD, p.rackH, p.frame, t]);
 
   return (
     <>
@@ -154,19 +166,19 @@ function Scene(p: Props) {
             <Upright key={i} x={x} z={z} h={rack.h} t={t} colour={colour} />
           ))}
           {/* pull-up bar across the front top */}
-          <mesh position={[0, rack.h - t / 2, -(rack.d / 2 - t / 2)]} rotation={[0, 0, Math.PI / 2]} castShadow>
+          <mesh position={[0, rack.h - t / 2, rack.twoPost ? 0 : -(rack.d / 2 - t / 2)]} rotation={[0, 0, Math.PI / 2]} castShadow>
             <cylinderGeometry args={[t * 0.32, t * 0.32, rack.w - t, 16]} />
             <meshStandardMaterial color={colour} roughness={0.4} metalness={0.3} />
           </mesh>
           {/* top crossmembers */}
-          {[-1, 1].map((s) => (
+          {(rack.twoPost ? [0] : [-1, 1]).map((s) => (
             <mesh key={s} position={[0, rack.h - t / 2, s * (rack.d / 2 - t / 2)]} castShadow>
               <boxGeometry args={[rack.w - t, t * 0.7, t * 0.7]} />
               <meshStandardMaterial color={colour} roughness={0.55} metalness={0.15} />
             </mesh>
           ))}
           {/* safeties at working height */}
-          {[-1, 1].map((s) => (
+          {(rack.twoPost ? [0] : [-1, 1]).map((s) => (
             <mesh key={s} position={[0, rack.h * 0.42, s * (rack.d / 2 - t / 2)]} castShadow>
               <boxGeometry args={[rack.w - t, t * 0.45, t * 0.45]} />
               <meshStandardMaterial color={colour} roughness={0.6} transparent opacity={0.85} />
@@ -176,11 +188,19 @@ function Scene(p: Props) {
       )}
 
       {p.usesBarbell && (
-        <group position={[0, 44, rack ? (rack.d / 2 + 14) : 20]}>
+        <group position={[0, 40, rack ? rack.d / 2 + 16 : 20]}>
+          {/* 86in shaft with loading sleeves. Standard bar geometry, stated as an
+              assumption in the caption - Bells of Steel do not publish bar dimensions. */}
           <mesh rotation={[0, 0, Math.PI / 2]} castShadow>
-            <cylinderGeometry args={[0.6, 0.6, BAR_LEN, 12]} />
-            <meshStandardMaterial color="#d63a1f" roughness={0.35} metalness={0.5} />
+            <cylinderGeometry args={[0.55, 0.55, BAR_LEN - 34, 14]} />
+            <meshStandardMaterial color="#8d949b" roughness={0.3} metalness={0.75} />
           </mesh>
+          {[-1, 1].map((sgn) => (
+            <mesh key={sgn} position={[sgn * ((BAR_LEN - 17) / 2), 0, 0]} rotation={[0, 0, Math.PI / 2]} castShadow>
+              <cylinderGeometry args={[1.0, 1.0, 17, 14]} />
+              <meshStandardMaterial color="#d63a1f" roughness={0.4} metalness={0.5} />
+            </mesh>
+          ))}
         </group>
       )}
 
