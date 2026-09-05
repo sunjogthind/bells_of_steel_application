@@ -302,6 +302,24 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
           <RoomPlanWrap rack={rack} room={room} verdict={verdict} />
         ) : (
           <div className="mt-3">
+            {rack.height.value == null || rack.width.value == null ? (
+              /* Drawing a rack whose dimensions are not published would mean inventing
+                 the geometry. An empty room reads as a broken view, so say why instead. */
+              <div className="rounded-lg border border-amber-500/35 bg-amber-50 p-6">
+                <p className="text-[15px] font-bold text-amber-900">This rack cannot be drawn to scale.</p>
+                <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-amber-900">
+                  {rack.height.value == null
+                    ? 'No upright height is published for it, and height is the dimension the whole view turns on.'
+                    : 'No crossmember width is published for it, so its footprint is unknown.'}{' '}
+                  Rather than model a rack from assumed dimensions, the view stops here. The whole
+                  Residential line is in this position, which is itself one of the audit findings.
+                </p>
+                <p className="mt-2 text-[13px] text-amber-700">
+                  Plan &amp; elevation says the same thing, and the fit checks above show which
+                  measurements are missing.
+                </p>
+              </div>
+            ) : (
             <div className="h-[420px] overflow-hidden rounded-lg border border-line">
               <Room3D
                 roomW={room.widthIn} roomD={room.depthIn} ceiling={room.ceilingIn}
@@ -309,11 +327,14 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
                 tubing={tubingIn} frame={rack.frame} usesBarbell={room.usesBarbell} personH={personH} verdict={verdict}
               />
             </div>
+            )}
+            {rack.height.value != null && rack.width.value != null && (
             <p className="mt-2 text-[12px] leading-relaxed text-muted">
               Drag to orbit, scroll to zoom. Drawn to scale in inches. Upright height, crossmember width and
               tubing size come from the product page; the depth is our estimate and the figure is a scale
               reference at the height you set. This is a volume study, not a picture of the rack.
             </p>
+            )}
           </div>
         )}
 

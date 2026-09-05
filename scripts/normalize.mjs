@@ -17,7 +17,8 @@ function extractSpecs(text, title) {
   const all = `${title} ${text}`;
   let m;
   if ((m = all.match(/(\d(?:\.\d+)?)\s*["”]?\s*x\s*(\d(?:\.\d+)?)\s*["”]/i))) s.tubing = `${m[1]}" x ${m[2]}"`;
-  if ((m = all.match(/([⅛-⅞¼-¾]|\d\/\d)\s*["”]\s*holes?/i))) s.holeSize = m[1].replace('⅝', '5/8').replace('½', '1/2');
+  // Whole-number hole sizes were missed: Hydra states ⅝" but Manticore states 1".
+  if ((m = all.match(/([⅛-⅞¼-¾]|\d\/\d|\d+)\s*["”]\s*holes?/i))) s.holeSize = m[1].replace('⅝', '5/8').replace('½', '1/2');
   const uprights = [...all.matchAll(/(\d{2,3})\s*["”]\s*upright/gi)].map((x) => +x[1]);
   if (uprights.length) s.uprightHeightIn = Math.max(...uprights);
   const cross = [...all.matchAll(/(\d{2,3})\s*["”]\s*(?:crossmember|pull.?up bar|safety strap)/gi)].map((x) => +x[1]);
