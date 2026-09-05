@@ -1,9 +1,21 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import dynamic from 'next/dynamic';
 import { checkFit, type Room, type Verdict, type Check } from '@/lib/fit';
 import type { RackPayload, Slim } from '@/lib/builder-data';
 import RoomPlan from './RoomPlan';
+
+// The 3D view pulls in three.js, so it is only fetched when someone opens it.
+// The page itself stays light for everyone who never does.
+const Room3D = dynamic(() => import('./Room3D'), {
+  ssr: false,
+  loading: () => (
+    <div className="grid h-[420px] place-items-center rounded-lg border border-line bg-panel text-[13px] text-muted">
+      Loading the 3D view…
+    </div>
+  ),
+});
 
 const money = (c: number | null) =>
   c == null ? ', ' : `$${(c / 100).toLocaleString('en-CA', { maximumFractionDigits: 0 })}`;
@@ -231,8 +243,23 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
   cart: number[]; toggle: (id: number) => void; cartTotal: number; budget: number; overBudget: boolean;
 }) {
   const { rack, checks, verdict } = e;
+  const [view, setView] = useState<'2d' | '3d'>('2d');
+  const [personH, setPersonH] = useState(70);
+
+  /* R3F sizes its canvas from a measurement taken when it mounts. Revealing it
+     from a toggle means the container never changes size afterwards, so no
+     resize is observed and the canvas stays at its 300x150 default. Its own
+     window listener does work, so nudging once from out here - outside the
+     canvas tree, where this is guaranteed to run - is what actually lands. */
+  useEffect(() => {
+    if (view !== '3d') return;
+    const nudge = () => window.dispatchEvent(new Event('resize'));
+    const timers = [80, 400, 1200].map((ms) => setTimeout(nudge, ms));
+    return () => timers.forEach(clearTimeout);
+  }, [view]);
   const att = Object.values(rack.attachments).flat()
     .map((id) => lookup[id]).filter(Boolean);
+  const tubingIn = parseFloat(rack.tubing?.match(/^([\d.]+)/)?.[1] ?? '3') || 3;
 
   return (
     <div className="space-y-5">
@@ -250,7 +277,45 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
           </a>
         </div>
 
-        <RoomPlanWrap rack={rack} room={room} verdict={verdict} />
+        <div className="mt-5 flex flex-wrap items-center gap-2">
+          {(['2d', '3d'] as const).map((v) => (
+            <button key={v} onClick={() => setView(v)}
+                    className={`rounded border px-3 py-1.5 text-xs font-semibold transition-colors ${
+                      view === v ? 'border-steel bg-steelSoft text-steelDim' : 'border-line text-muted hover:border-muted'
+                    }`}>
+              {v === '2d' ? 'Plan & elevation' : '3D room'}
+            </button>
+          ))}
+          {view === '3d' && (
+            <label className="ml-auto flex items-center gap-2 text-xs text-muted">
+              Your height
+              <input type="range" min={58} max={84} value={personH}
+                     onChange={(ev) => setPersonH(+ev.target.value)} className="w-28 accent-steel" />
+              <span className="w-12 font-mono tabular-nums text-bright">
+                {Math.floor(personH / 12)}&rsquo;{personH % 12}&Prime;
+              </span>
+            </label>
+          )}
+        </div>
+
+        {view === '2d' ? (
+          <RoomPlanWrap rack={rack} room={room} verdict={verdict} />
+        ) : (
+          <div className="mt-3">
+            <div className="h-[420px] overflow-hidden rounded-lg border border-line">
+              <Room3D
+                roomW={room.widthIn} roomD={room.depthIn} ceiling={room.ceilingIn}
+                rackW={rack.width.value} rackD={rack.depth.value} rackH={rack.height.value}
+                tubing={tubingIn} usesBarbell={room.usesBarbell} personH={personH} verdict={verdict}
+              />
+            </div>
+            <p className="mt-2 text-[12px] leading-relaxed text-muted">
+              Drag to orbit, scroll to zoom. Drawn to scale in inches. Upright height, crossmember width and
+              tubing size come from the product page; the depth is our estimate and the figure is a scale
+              reference at the height you set. This is a volume study, not a picture of the rack.
+            </p>
+          </div>
+        )}
 
         <ul className="mt-5 space-y-2">
           {checks.map((c) => {
