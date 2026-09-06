@@ -1,6 +1,79 @@
 {
-  "generated_at": "2026-09-05T15:40:34.295Z",
+  "generated_at": "2026-09-06T15:51:47.344Z",
   "runs": [
+    {
+      "at": "2026-09-06T15:51:46.984Z",
+      "date": "2026-09-06",
+      "baseline": false,
+      "comparedTo": "2026-09-05T15:40:33.924Z",
+      "productCount": 476,
+      "changeCount": 6,
+      "bySeverity": {
+        "alert": 3,
+        "notable": 1,
+        "good": 0,
+        "info": 2
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Gray Mighty Grip Olympic Weight Plate Sets",
+          "handle": "mighty-grip-plate-sets",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Gray Mighty Grip Olympic Weight Plate Sets",
+          "handle": "mighty-grip-plate-sets",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Kraken Rack Attachment for 6 Post Hydra Racks (Single Side)",
+          "handle": "kraken-6-post-hydra",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Kraken Rack Attachment for 6 Post Hydra Racks (Single Side)",
+          "handle": "kraken-6-post-hydra",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Folding Rack 2.3\" x 2.3\" (5/8\" Holes)",
+          "handle": "folding-rack",
+          "detail": "$416.96 → $489.99 (+$73.03)"
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 53 → 55."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 5,
+        "oos-published": 55,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-05T15:40:33.924Z",
       "date": "2026-09-05",
