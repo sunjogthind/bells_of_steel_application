@@ -357,6 +357,12 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
               reference at the height you set. This is a volume study, not a picture of the rack.
             </p>
             )}
+            {rack.height.value != null && rack.width.value != null && (
+            <p className="mt-1 text-[11px] leading-relaxed text-muted">
+              Scale figure: &ldquo;Human Silhouette&rdquo;, used under{' '}
+              <a className="underline" href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener" target="_blank">CC BY-SA 4.0</a>.
+            </p>
+            )}
           </div>
         )}
 

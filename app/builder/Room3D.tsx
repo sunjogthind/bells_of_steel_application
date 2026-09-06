@@ -43,92 +43,41 @@ function Upright({ x, z, h, t, colour }: { x: number; z: number; h: number; t: n
   );
 }
 
-/* Scale figure, drawn as a flat silhouette that always faces the camera - the
-   technique architectural renderings use, and the reason they use it: a single
-   dark shape reads as a person instantly, where shaded 3D primitives just read as
-   a pile of capsules with visible joins.
-   Painted into a canvas at real anthropometric fractions of stature (shoulder
-   0.805H, hip 0.53H, knee 0.285H), so it stays an honest scale reference. No
-   asset is fetched; the texture is generated at runtime. */
-const SKIN = '#4a5057';
+/* public/figure.svg is a CC BY-SA human silhouette. Its artwork fills its own
+   canvas edge to edge, so the plane's height is the person's height with no
+   transparent padding to inflate it. Measured back at a 70in stature it puts
+   the shoulder line at 58.7in, i.e. head and neck are 11.3in of the total.
 
-/* One continuous outline rather than overlapping strokes. Stacking capsules leaves
-   notches where limbs meet the trunk and spikes at the shoulders, which is what made
-   the first two attempts read as a toy. Points are half a body, mirrored, and smoothed
-   through their midpoints. Positions are fractions of stature: shoulder 0.805, waist
-   0.615, hip 0.53, knee 0.29, so it stays a true scale reference. */
-type Pt = [number, number]; // [x offset in px, height as fraction of stature]
+   It is rasterised into a canvas here rather than handed to TextureLoader as
+   an <img>: uploading an SVG-backed image straight to WebGL depends on the
+   browser resolving an intrinsic size, and this file declares no viewBox. */
+const FIGURE_RASTER_H = 1024;
 
-const HALF_BODY: Pt[] = [
-  [-14, 0.858], [-35, 0.828], [-58, 0.810], [-70, 0.786],   // neck, trap, shoulder, deltoid
-  [-75, 0.718], [-74, 0.645], [-68, 0.558], [-63, 0.490],   // arm outer edge to wrist
-  [-61, 0.450], [-48, 0.458],                                // hand
-  [-47, 0.550], [-48, 0.648], [-46, 0.735], [-40, 0.775],   // arm inner edge up to armpit
-  [-40, 0.700], [-33, 0.612],                                // lat sweep into the waist
-  [-42, 0.545], [-48, 0.498],                                // hip
-  [-47, 0.400], [-39, 0.292], [-38, 0.190], [-27, 0.068],   // thigh, knee, calf, ankle
-  [-38, 0.014], [-8, 0.014],                                 // foot
-  [-12, 0.068], [-15, 0.195], [-13, 0.292], [-8, 0.400],    // inner leg back up
-  [-2, 0.478],                                               // crotch
-];
-
-function useFigureTexture() {
-  return useMemo(() => {
-    const W = 220, H = 560, cx = W / 2;
-    const cv = document.createElement('canvas');
-    cv.width = W; cv.height = H;
-    const c = cv.getContext('2d');
-    if (!c) return null;
-
-    const pt = ([dx, f]: Pt, mirror = false): Pt => [cx + (mirror ? -dx : dx), H * (1 - f)];
-    const outline = [...HALF_BODY.map((q) => pt(q)), ...[...HALF_BODY].reverse().map((q) => pt(q, true))];
-
-    c.fillStyle = SKIN;
-    c.beginPath();
-    c.moveTo(outline[0][0], outline[0][1]);
-    for (let i = 1; i < outline.length - 1; i++) {
-      const [x1, y1] = outline[i];
-      const [x2, y2] = outline[i + 1];
-      c.quadraticCurveTo(x1, y1, (x1 + x2) / 2, (y1 + y2) / 2);
-    }
-    c.closePath();
-    c.fill();
-
-    // neck bridging the trunk and the head, drawn under both so no seam shows
-    c.beginPath();
-    c.ellipse(cx, H * (1 - 0.868), 16, 26, 0, 0, Math.PI * 2);
-    c.fill();
-    // head: crown lands at full stature
-    c.beginPath();
-    c.ellipse(cx, H * (1 - 0.947), 22, 28, 0, 0, Math.PI * 2);
-    c.fill();
-
-    const tex = new THREE.CanvasTexture(cv);
-    tex.anisotropy = 4;
-    return tex;
-  }, []);
-}
-
-/* public/figure.png is an anatomical scale figure, pre-cropped to its own
-   bounding box so the plane's height is the person's height. It ships with a
-   real alpha channel, so no background keying is needed here. Falls back to the
-   drawn silhouette if the file is missing or fails to decode. */
-function useFigureImage(): THREE.Texture | null {
+function useFigureTexture(): THREE.Texture | null {
   const [tex, setTex] = useState<THREE.Texture | null>(null);
 
   useEffect(() => {
     let cancelled = false;
-    new THREE.TextureLoader().load(
-      '/figure.png',
-      (t) => {
-        if (cancelled) { t.dispose(); return; }
-        t.anisotropy = 8;
-        t.colorSpace = THREE.SRGBColorSpace;
-        setTex(t);
-      },
-      undefined,
-      () => { /* no figure.png - the drawn silhouette is used instead */ },
-    );
+    const img = new Image();
+
+    img.onload = () => {
+      if (cancelled) return;
+      const h = FIGURE_RASTER_H;
+      const w = Math.max(1, Math.round((img.naturalWidth / img.naturalHeight) * h));
+      const cv = document.createElement('canvas');
+      cv.width = w; cv.height = h;
+      const c = cv.getContext('2d');
+      if (!c) return;
+      c.drawImage(img, 0, 0, w, h);
+
+      const t = new THREE.CanvasTexture(cv);
+      t.anisotropy = 8;
+      t.colorSpace = THREE.SRGBColorSpace;
+      setTex(t);
+    };
+    img.onerror = () => { /* no figure: the room still reads, just without scale */ };
+    img.src = '/figure.svg';
+
     return () => { cancelled = true; };
   }, []);
 
@@ -136,9 +85,7 @@ function useFigureImage(): THREE.Texture | null {
 }
 
 function Person({ h, x, z }: { h: number; x: number; z: number }) {
-  const drawn = useFigureTexture();
-  const photo = useFigureImage();
-  const tex = photo ?? drawn;
+  const tex = useFigureTexture();
   if (!tex) return null;
 
   const src = tex.image as { width?: number; height?: number } | undefined;
