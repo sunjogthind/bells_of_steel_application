@@ -15,7 +15,7 @@
 import { Canvas, useThree } from '@react-three/fiber';
 import { OrbitControls, Grid, Billboard } from '@react-three/drei';
 import * as THREE from 'three';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { Verdict } from '@/lib/fit';
 
 const COLOUR: Record<Verdict, string> = {
@@ -109,17 +109,47 @@ function useFigureTexture() {
   }, []);
 }
 
+/* public/figure.png is an anatomical scale figure, pre-cropped to its own
+   bounding box so the plane's height is the person's height. It ships with a
+   real alpha channel, so no background keying is needed here. Falls back to the
+   drawn silhouette if the file is missing or fails to decode. */
+function useFigureImage(): THREE.Texture | null {
+  const [tex, setTex] = useState<THREE.Texture | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    new THREE.TextureLoader().load(
+      '/figure.png',
+      (t) => {
+        if (cancelled) { t.dispose(); return; }
+        t.anisotropy = 8;
+        t.colorSpace = THREE.SRGBColorSpace;
+        setTex(t);
+      },
+      undefined,
+      () => { /* no figure.png - the drawn silhouette is used instead */ },
+    );
+    return () => { cancelled = true; };
+  }, []);
+
+  return tex;
+}
+
 function Person({ h, x, z }: { h: number; x: number; z: number }) {
-  const tex = useFigureTexture();
+  const drawn = useFigureTexture();
+  const photo = useFigureImage();
+  const tex = photo ?? drawn;
   if (!tex) return null;
-  // Canvas is 220x560; the figure occupies the full height, so the plane is
-  // h tall and h * (220/560) wide.
-  const w = h * (220 / 560);
+
+  const src = tex.image as { width?: number; height?: number } | undefined;
+  const aspect = src?.width && src?.height ? src.width / src.height : 220 / 560;
+  const w = h * aspect;
+
   return (
     <Billboard position={[x, h / 2, z]} follow lockX={false} lockY={false} lockZ>
       <mesh castShadow>
         <planeGeometry args={[w, h]} />
-        <meshBasicMaterial map={tex} transparent alphaTest={0.4} toneMapped={false} />
+        <meshBasicMaterial map={tex} transparent alphaTest={0.35} toneMapped={false} />
       </mesh>
     </Billboard>
   );
