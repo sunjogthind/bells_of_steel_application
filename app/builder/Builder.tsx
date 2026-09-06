@@ -320,7 +320,29 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
                 </p>
               </div>
             ) : (
-            <div className="h-[420px] overflow-hidden rounded-lg border border-line">
+            <div className="relative h-[420px] overflow-hidden rounded-lg border border-line">
+              {/* The render is correct - a too-tall rack does pierce the ceiling plane - but
+                  through a translucent ceiling that reads almost the same as clearing it.
+                  State the verdict and the checks behind it rather than leaving it to the eye. */}
+              <div className="pointer-events-none absolute left-3 top-3 z-10 max-w-[15rem] rounded-lg border border-line bg-ink/90 p-3 backdrop-blur">
+                <p className={`inline-block rounded border px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${VERDICT_UI[verdict].cls}`}>
+                  {VERDICT_UI[verdict].label}
+                </p>
+                <ul className="mt-2 space-y-1">
+                  {checks.filter((c) => c.verdict !== 'fits').map((c) => (
+                    <li key={c.label} className="flex items-start gap-1.5 text-[11px] leading-snug">
+                      <span className={`mt-[5px] h-1 w-1 shrink-0 rounded-full ${VERDICT_UI[c.verdict].dot}`} />
+                      <span className="text-muted">
+                        <span className="font-semibold text-bright">{c.label}</span>{' '}
+                        need {c.need}, have {c.have}
+                      </span>
+                    </li>
+                  ))}
+                  {checks.every((c) => c.verdict === 'fits') && (
+                    <li className="text-[11px] leading-snug text-muted">Every check clears.</li>
+                  )}
+                </ul>
+              </div>
               <Room3D
                 roomW={room.widthIn} roomD={room.depthIn} ceiling={room.ceilingIn}
                 rackW={rack.width.value} rackD={rack.depth.value} rackH={rack.height.value}

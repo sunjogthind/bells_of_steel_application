@@ -103,6 +103,8 @@ function Resizer() {
 function Scene(p: Props) {
   const colour = COLOUR[p.verdict];
   const t = p.tubing;
+  // 2in of hardware sits above the uprights, matching the fit engine's rule.
+  const breachesCeiling = p.rackH != null && p.rackH + 2 > p.ceiling;
   const halfW = p.roomW / 2, halfD = p.roomD / 2;
 
   // Rack frame: four uprights at the published crossmember span, plus the
@@ -154,10 +156,18 @@ function Scene(p: Props) {
         <meshStandardMaterial color="#d3d9dd" roughness={1} />
       </mesh>
 
-      {/* ceiling plane, the constraint the whole tool is about */}
+      {/* Ceiling plane, the constraint the whole tool is about. When the uprights do
+          not clear it, tint it: through a translucent ceiling, "poking through" and
+          "just under" otherwise look almost identical. */}
       <mesh rotation={[Math.PI / 2, 0, 0]} position={[0, p.ceiling, 0]}>
         <planeGeometry args={[p.roomW, p.roomD]} />
-        <meshStandardMaterial color="#9aa3aa" roughness={1} transparent opacity={0.35} side={2} />
+        <meshStandardMaterial
+          color={breachesCeiling ? '#dc2626' : '#9aa3aa'}
+          roughness={1}
+          transparent
+          opacity={breachesCeiling ? 0.3 : 0.35}
+          side={2}
+        />
       </mesh>
 
       {rack && (
