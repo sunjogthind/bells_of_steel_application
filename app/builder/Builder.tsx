@@ -243,7 +243,7 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
   cart: number[]; toggle: (id: number) => void; cartTotal: number; budget: number; overBudget: boolean;
 }) {
   const { rack, checks, verdict } = e;
-  const [view, setView] = useState<'2d' | '3d'>('2d');
+  const [view, setView] = useState<'2d' | '3d'>('3d');
   const [personH, setPersonH] = useState(70);
 
   /* R3F sizes its canvas from a measurement taken when it mounts. Revealing it
@@ -280,10 +280,18 @@ function RackDetail({ e, room, lookup, kit, cart, toggle, cartTotal, budget, ove
         <div className="mt-5 flex flex-wrap items-center gap-2">
           {(['2d', '3d'] as const).map((v) => (
             <button key={v} onClick={() => setView(v)}
-                    className={`rounded border px-3 py-1.5 text-xs font-semibold transition-colors ${
+                    className={`relative rounded border px-3 py-1.5 text-xs font-semibold transition-colors ${
                       view === v ? 'border-steel bg-steelSoft text-steelDim' : 'border-line text-muted hover:border-muted'
                     }`}>
               {v === '2d' ? 'Plan & elevation' : '3D room'}
+              {/* The 3D view is the newest thing here and the least settled, so it
+                  says so rather than letting someone assume it is finished. */}
+              {v === '3d' && (
+                <span aria-label="Beta"
+                      className="pointer-events-none absolute -right-2 -top-2 rounded-full bg-steel px-1.5 py-px text-[9px] font-bold uppercase leading-[1.4] tracking-wide text-white shadow-glow">
+                  Beta
+                </span>
+              )}
             </button>
           ))}
           {view === '3d' && (
