@@ -13,7 +13,8 @@
  * Units: 1 three.js unit = 1 inch.
  * ------------------------------------------------------------------ */
 import { Canvas, useThree } from '@react-three/fiber';
-import { OrbitControls, Grid } from '@react-three/drei';
+import { OrbitControls, Grid, Billboard } from '@react-three/drei';
+import * as THREE from 'three';
 import { useEffect, useMemo } from 'react';
 import type { Verdict } from '@/lib/fit';
 
@@ -42,82 +43,85 @@ function Upright({ x, z, h, t, colour }: { x: number; z: number; h: number; t: n
   );
 }
 
-/* Standing figure, built from primitives at real anthropometric proportions so it
-   stays a scale reference rather than a character. Every dimension is a fraction of
-   the height the viewer sets, so it rescales correctly: head 0.13H, shoulder line
-   0.82H, hip 0.53H, knee 0.285H. The build is deliberately athletic - broader
-   shoulders than waist - because a stick figure reads as a toy next to a rack. */
-const SKIN = '#5b6167';
+/* Scale figure, drawn as a flat silhouette that always faces the camera - the
+   technique architectural renderings use, and the reason they use it: a single
+   dark shape reads as a person instantly, where shaded 3D primitives just read as
+   a pile of capsules with visible joins.
+   Painted into a canvas at real anthropometric fractions of stature (shoulder
+   0.805H, hip 0.53H, knee 0.285H), so it stays an honest scale reference. No
+   asset is fetched; the texture is generated at runtime. */
+const SKIN = '#4a5057';
 
-function Limb({
-  x, yTop, yBot, r, tilt = 0,
-}: { x: number; yTop: number; yBot: number; r: number; tilt?: number }) {
-  const len = yTop - yBot;
-  return (
-    <mesh position={[x, (yTop + yBot) / 2, 0]} rotation={[0, 0, tilt]} castShadow>
-      <capsuleGeometry args={[r, Math.max(len - r * 2, 0.01), 4, 10]} />
-      <meshStandardMaterial color={SKIN} roughness={0.85} />
-    </mesh>
-  );
+/* One continuous outline rather than overlapping strokes. Stacking capsules leaves
+   notches where limbs meet the trunk and spikes at the shoulders, which is what made
+   the first two attempts read as a toy. Points are half a body, mirrored, and smoothed
+   through their midpoints. Positions are fractions of stature: shoulder 0.805, waist
+   0.615, hip 0.53, knee 0.29, so it stays a true scale reference. */
+type Pt = [number, number]; // [x offset in px, height as fraction of stature]
+
+const HALF_BODY: Pt[] = [
+  [-14, 0.858], [-35, 0.828], [-58, 0.810], [-70, 0.786],   // neck, trap, shoulder, deltoid
+  [-75, 0.718], [-74, 0.645], [-68, 0.558], [-63, 0.490],   // arm outer edge to wrist
+  [-61, 0.450], [-48, 0.458],                                // hand
+  [-47, 0.550], [-48, 0.648], [-46, 0.735], [-40, 0.775],   // arm inner edge up to armpit
+  [-40, 0.700], [-33, 0.612],                                // lat sweep into the waist
+  [-42, 0.545], [-48, 0.498],                                // hip
+  [-47, 0.400], [-39, 0.292], [-38, 0.190], [-27, 0.068],   // thigh, knee, calf, ankle
+  [-38, 0.014], [-8, 0.014],                                 // foot
+  [-12, 0.068], [-15, 0.195], [-13, 0.292], [-8, 0.400],    // inner leg back up
+  [-2, 0.478],                                               // crotch
+];
+
+function useFigureTexture() {
+  return useMemo(() => {
+    const W = 220, H = 560, cx = W / 2;
+    const cv = document.createElement('canvas');
+    cv.width = W; cv.height = H;
+    const c = cv.getContext('2d');
+    if (!c) return null;
+
+    const pt = ([dx, f]: Pt, mirror = false): Pt => [cx + (mirror ? -dx : dx), H * (1 - f)];
+    const outline = [...HALF_BODY.map((q) => pt(q)), ...[...HALF_BODY].reverse().map((q) => pt(q, true))];
+
+    c.fillStyle = SKIN;
+    c.beginPath();
+    c.moveTo(outline[0][0], outline[0][1]);
+    for (let i = 1; i < outline.length - 1; i++) {
+      const [x1, y1] = outline[i];
+      const [x2, y2] = outline[i + 1];
+      c.quadraticCurveTo(x1, y1, (x1 + x2) / 2, (y1 + y2) / 2);
+    }
+    c.closePath();
+    c.fill();
+
+    // neck bridging the trunk and the head, drawn under both so no seam shows
+    c.beginPath();
+    c.ellipse(cx, H * (1 - 0.868), 16, 26, 0, 0, Math.PI * 2);
+    c.fill();
+    // head: crown lands at full stature
+    c.beginPath();
+    c.ellipse(cx, H * (1 - 0.947), 22, 28, 0, 0, Math.PI * 2);
+    c.fill();
+
+    const tex = new THREE.CanvasTexture(cv);
+    tex.anisotropy = 4;
+    return tex;
+  }, []);
 }
 
 function Person({ h, x, z }: { h: number; x: number; z: number }) {
-  const S = (f: number) => f * h;
+  const tex = useFigureTexture();
+  if (!tex) return null;
+  // Canvas is 220x560; the figure occupies the full height, so the plane is
+  // h tall and h * (220/560) wide.
+  const w = h * (220 / 560);
   return (
-    <group position={[x, 0, z]}>
-      {/* head, slightly taller than wide */}
-      <mesh position={[0, S(0.952), 0]} scale={[0.88, 1, 0.92]} castShadow>
-        <sphereGeometry args={[S(0.048), 18, 18]} />
-        <meshStandardMaterial color={SKIN} roughness={0.85} />
+    <Billboard position={[x, h / 2, z]} follow lockX={false} lockY={false} lockZ>
+      <mesh castShadow>
+        <planeGeometry args={[w, h]} />
+        <meshBasicMaterial map={tex} transparent alphaTest={0.4} toneMapped={false} />
       </mesh>
-      {/* neck */}
-      <mesh position={[0, S(0.862), 0]} castShadow>
-        <cylinderGeometry args={[S(0.026), S(0.03), S(0.05), 12]} />
-        <meshStandardMaterial color={SKIN} roughness={0.85} />
-      </mesh>
-
-      {/* torso: wide at the shoulders, narrow at the waist, flattened front to back */}
-      <mesh position={[0, S(0.70), 0]} scale={[1.30, 1, 0.72]} castShadow>
-        <cylinderGeometry args={[S(0.093), S(0.068), S(0.24), 20]} />
-        <meshStandardMaterial color={SKIN} roughness={0.85} />
-      </mesh>
-      {/* deltoids */}
-      {[-1, 1].map((sgn) => (
-        <mesh key={sgn} position={[sgn * S(0.088), S(0.805), 0]} castShadow>
-          <sphereGeometry args={[S(0.045), 14, 14]} />
-          <meshStandardMaterial color={SKIN} roughness={0.85} />
-        </mesh>
-      ))}
-      {/* pelvis */}
-      <mesh position={[0, S(0.545), 0]} scale={[1.22, 1, 0.78]} castShadow>
-        <cylinderGeometry args={[S(0.072), S(0.078), S(0.1), 16]} />
-        <meshStandardMaterial color={SKIN} roughness={0.85} />
-      </mesh>
-
-      {/* arms, hanging just clear of the torso */}
-      {[-1, 1].map((sgn) => (
-        <group key={sgn}>
-          <Limb x={sgn * S(0.098)} yTop={S(0.80)} yBot={S(0.632)} r={S(0.036)} tilt={sgn * 0.04} />
-          <Limb x={sgn * S(0.105)} yTop={S(0.632)} yBot={S(0.487)} r={S(0.029)} />
-          <mesh position={[sgn * S(0.105), S(0.462), 0]} castShadow>
-            <sphereGeometry args={[S(0.028), 12, 12]} />
-            <meshStandardMaterial color={SKIN} roughness={0.85} />
-          </mesh>
-        </group>
-      ))}
-
-      {/* legs */}
-      {[-1, 1].map((sgn) => (
-        <group key={sgn}>
-          <Limb x={sgn * S(0.052)} yTop={S(0.53)} yBot={S(0.285)} r={S(0.055)} />
-          <Limb x={sgn * S(0.052)} yTop={S(0.285)} yBot={S(0.038)} r={S(0.042)} />
-          <mesh position={[sgn * S(0.052), S(0.018), S(0.02)]} castShadow>
-            <boxGeometry args={[S(0.07), S(0.036), S(0.13)]} />
-            <meshStandardMaterial color={SKIN} roughness={0.9} />
-          </mesh>
-        </group>
-      ))}
-    </group>
+    </Billboard>
   );
 }
 
