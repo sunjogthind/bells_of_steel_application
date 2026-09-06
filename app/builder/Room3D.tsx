@@ -42,27 +42,84 @@ function Upright({ x, z, h, t, colour }: { x: number; z: number; h: number; t: n
   );
 }
 
-/** A simple standing figure. Purely a scale reference at a height the user sets. */
-function Person({ h, x, z }: { h: number; x: number; z: number }) {
-  const head = h * 0.13, torso = h * 0.35, legs = h * 0.47;
+/* Standing figure, built from primitives at real anthropometric proportions so it
+   stays a scale reference rather than a character. Every dimension is a fraction of
+   the height the viewer sets, so it rescales correctly: head 0.13H, shoulder line
+   0.82H, hip 0.53H, knee 0.285H. The build is deliberately athletic - broader
+   shoulders than waist - because a stick figure reads as a toy next to a rack. */
+const SKIN = '#5b6167';
+
+function Limb({
+  x, yTop, yBot, r, tilt = 0,
+}: { x: number; yTop: number; yBot: number; r: number; tilt?: number }) {
+  const len = yTop - yBot;
   return (
-    <group position={[x, 0, z]}>
-      <mesh position={[0, legs / 2, 0]} castShadow>
-        <capsuleGeometry args={[h * 0.055, legs * 0.75, 4, 8]} />
-        <meshStandardMaterial color="#5b6167" roughness={0.9} />
-      </mesh>
-      <mesh position={[0, legs + torso / 2, 0]} castShadow>
-        <capsuleGeometry args={[h * 0.075, torso * 0.7, 4, 8]} />
-        <meshStandardMaterial color="#5b6167" roughness={0.9} />
-      </mesh>
-      <mesh position={[0, legs + torso + head / 2, 0]} castShadow>
-        <sphereGeometry args={[head / 2, 16, 16]} />
-        <meshStandardMaterial color="#5b6167" roughness={0.9} />
-      </mesh>
-    </group>
+    <mesh position={[x, (yTop + yBot) / 2, 0]} rotation={[0, 0, tilt]} castShadow>
+      <capsuleGeometry args={[r, Math.max(len - r * 2, 0.01), 4, 10]} />
+      <meshStandardMaterial color={SKIN} roughness={0.85} />
+    </mesh>
   );
 }
 
+function Person({ h, x, z }: { h: number; x: number; z: number }) {
+  const S = (f: number) => f * h;
+  return (
+    <group position={[x, 0, z]}>
+      {/* head, slightly taller than wide */}
+      <mesh position={[0, S(0.952), 0]} scale={[0.88, 1, 0.92]} castShadow>
+        <sphereGeometry args={[S(0.048), 18, 18]} />
+        <meshStandardMaterial color={SKIN} roughness={0.85} />
+      </mesh>
+      {/* neck */}
+      <mesh position={[0, S(0.862), 0]} castShadow>
+        <cylinderGeometry args={[S(0.026), S(0.03), S(0.05), 12]} />
+        <meshStandardMaterial color={SKIN} roughness={0.85} />
+      </mesh>
+
+      {/* torso: wide at the shoulders, narrow at the waist, flattened front to back */}
+      <mesh position={[0, S(0.70), 0]} scale={[1.30, 1, 0.72]} castShadow>
+        <cylinderGeometry args={[S(0.093), S(0.068), S(0.24), 20]} />
+        <meshStandardMaterial color={SKIN} roughness={0.85} />
+      </mesh>
+      {/* deltoids */}
+      {[-1, 1].map((sgn) => (
+        <mesh key={sgn} position={[sgn * S(0.088), S(0.805), 0]} castShadow>
+          <sphereGeometry args={[S(0.045), 14, 14]} />
+          <meshStandardMaterial color={SKIN} roughness={0.85} />
+        </mesh>
+      ))}
+      {/* pelvis */}
+      <mesh position={[0, S(0.545), 0]} scale={[1.22, 1, 0.78]} castShadow>
+        <cylinderGeometry args={[S(0.072), S(0.078), S(0.1), 16]} />
+        <meshStandardMaterial color={SKIN} roughness={0.85} />
+      </mesh>
+
+      {/* arms, hanging just clear of the torso */}
+      {[-1, 1].map((sgn) => (
+        <group key={sgn}>
+          <Limb x={sgn * S(0.098)} yTop={S(0.80)} yBot={S(0.632)} r={S(0.036)} tilt={sgn * 0.04} />
+          <Limb x={sgn * S(0.105)} yTop={S(0.632)} yBot={S(0.487)} r={S(0.029)} />
+          <mesh position={[sgn * S(0.105), S(0.462), 0]} castShadow>
+            <sphereGeometry args={[S(0.028), 12, 12]} />
+            <meshStandardMaterial color={SKIN} roughness={0.85} />
+          </mesh>
+        </group>
+      ))}
+
+      {/* legs */}
+      {[-1, 1].map((sgn) => (
+        <group key={sgn}>
+          <Limb x={sgn * S(0.052)} yTop={S(0.53)} yBot={S(0.285)} r={S(0.055)} />
+          <Limb x={sgn * S(0.052)} yTop={S(0.285)} yBot={S(0.038)} r={S(0.042)} />
+          <mesh position={[sgn * S(0.052), S(0.018), S(0.02)]} castShadow>
+            <boxGeometry args={[S(0.07), S(0.036), S(0.13)]} />
+            <meshStandardMaterial color={SKIN} roughness={0.9} />
+          </mesh>
+        </group>
+      ))}
+    </group>
+  );
+}
 
 /* R3F measures its container once on mount. When the canvas is revealed by a
    toggle, the container is already at its final size, so nothing changes and no
