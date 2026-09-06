@@ -146,7 +146,10 @@ function Person({ h, x, z }: { h: number; x: number; z: number }) {
   const w = h * aspect;
 
   return (
-    <Billboard position={[x, h / 2, z]} follow lockX={false} lockY={false} lockZ>
+    /* Yaw only: the figure turns to face the camera as you orbit around the
+       room, but stays upright. Leaving the X rotation free tipped it backwards
+       whenever the camera looked down, which read as a person lying over. */
+    <Billboard position={[x, h / 2, z]} follow lockX lockY={false} lockZ>
       <mesh castShadow>
         <planeGeometry args={[w, h]} />
         <meshBasicMaterial map={tex} transparent alphaTest={0.35} toneMapped={false} />
