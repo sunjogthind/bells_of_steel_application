@@ -1,6 +1,86 @@
 {
-  "generated_at": "2026-09-06T15:51:47.344Z",
+  "generated_at": "2026-09-07T17:57:59.961Z",
   "runs": [
+    {
+      "at": "2026-09-07T17:57:59.559Z",
+      "date": "2026-09-07",
+      "baseline": false,
+      "comparedTo": "2026-09-06T15:51:46.984Z",
+      "productCount": 476,
+      "changeCount": 7,
+      "bySeverity": {
+        "alert": 4,
+        "notable": 0,
+        "good": 0,
+        "info": 3
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Basilisk Stack Loaded Leg Extension / Leg Curl",
+          "handle": "basilisk-stack-loaded-leg-extension-leg-curl",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Basilisk Stack Loaded Leg Extension / Leg Curl",
+          "handle": "basilisk-stack-loaded-leg-extension-leg-curl",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Calibrated Powerlifting Plates - LB Sets",
+          "handle": "calibrated-powerlifiting-plates-lb-sets",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Calibrated Powerlifting Plates - LB Sets",
+          "handle": "calibrated-powerlifiting-plates-lb-sets",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Trifold Mat",
+          "handle": "trifold-mat",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Trifold Mat",
+          "handle": "trifold-mat",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 55 → 58."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 5,
+        "oos-published": 58,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-06T15:51:46.984Z",
       "date": "2026-09-06",
