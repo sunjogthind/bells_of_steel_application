@@ -1,6 +1,177 @@
 {
-  "generated_at": "2026-09-07T17:57:59.961Z",
+  "generated_at": "2026-09-08T16:53:04.916Z",
   "runs": [
+    {
+      "at": "2026-09-08T16:53:04.629Z",
+      "date": "2026-09-08",
+      "baseline": false,
+      "comparedTo": "2026-09-07T17:57:59.559Z",
+      "productCount": 476,
+      "changeCount": 20,
+      "bySeverity": {
+        "alert": 7,
+        "notable": 1,
+        "good": 3,
+        "info": 9
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Kraken Rack Attachment for 6 Post Hydra Racks (Single Side)",
+          "handle": "kraken-6-post-hydra",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Kraken Rack Attachment for 6 Post Hydra Racks (Single Side)",
+          "handle": "kraken-6-post-hydra",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Kraken Weight Stack Shroud (Single Side)",
+          "handle": "kraken-stack-shroud",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Kraken Weight Stack Shroud (Single Side)",
+          "handle": "kraken-stack-shroud",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Dumbbell/Kettlebell Shelf",
+          "handle": "dumbbell-kettlebell-shelf",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Dumbbell/Kettlebell Shelf",
+          "handle": "dumbbell-kettlebell-shelf",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Strength Circuit Starter Kits",
+          "handle": "strength-circuit-starter-kits",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Strength Circuit Starter Kits",
+          "handle": "strength-circuit-starter-kits",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "NÜOBELL Adjustable Dumbbells",
+          "handle": "nuobell-adjustable-dumbbells",
+          "detail": "$489.96 → $629.96 (+$140.00)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Lat Pulldown Bar",
+          "handle": "lat-pulldown-bar",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Lat Pulldown Bar",
+          "handle": "lat-pulldown-bar",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 58 → 61."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 5,
+        "oos-published": 61,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-07T17:57:59.559Z",
       "date": "2026-09-07",
