@@ -218,3 +218,16 @@ run_date,rule_id,finding_count
 2026-09-08,missing-sku,11
 2026-09-08,thin-description,36
 2026-09-08,no-images,2
+2026-09-09,duplicate-pricing,16
+2026-09-09,zero-price,33
+2026-09-09,zero-weight,29
+2026-09-09,vendor-corrupt,9
+2026-09-09,compat-graph,5
+2026-09-09,parts-coverage,16
+2026-09-09,fake-sale,6
+2026-09-09,oos-published,61
+2026-09-09,taxonomy,109
+2026-09-09,specs-hidden,90
+2026-09-09,missing-sku,11
+2026-09-09,thin-description,36
+2026-09-09,no-images,2

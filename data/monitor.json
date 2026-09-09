@@ -1,6 +1,121 @@
 {
-  "generated_at": "2026-09-08T16:53:04.916Z",
+  "generated_at": "2026-09-09T16:55:17.091Z",
   "runs": [
+    {
+      "at": "2026-09-09T16:55:16.718Z",
+      "date": "2026-09-09",
+      "baseline": false,
+      "comparedTo": "2026-09-08T16:53:04.629Z",
+      "productCount": 476,
+      "changeCount": 12,
+      "bySeverity": {
+        "alert": 3,
+        "notable": 0,
+        "good": 2,
+        "info": 7
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Roc Foldable 2 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-two-post-cage-prebuilt",
+          "detail": "$695.92 → $719.95 (+$24.03)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Kraken Weight Stack Shroud (Single Side)",
+          "handle": "kraken-stack-shroud",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Kraken Weight Stack Shroud (Single Side)",
+          "handle": "kraken-stack-shroud",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Powerlifting Bar",
+          "handle": "powerlifting-bar",
+          "detail": "$259.99 → $249.99 ($10.00 cheaper)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra 2-Sided Rack",
+          "handle": "hydra-2-sided-rack-builder",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra 2-Sided Rack",
+          "handle": "hydra-2-sided-rack-builder",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Trifold Mat",
+          "handle": "trifold-mat",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Trifold Mat",
+          "handle": "trifold-mat",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Residential Air Bike with Wind Guard",
+          "handle": "residential-air-bike",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Residential Air Bike with Wind Guard",
+          "handle": "residential-air-bike",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Mighty Grip Medicine Balls",
+          "handle": "mighty-grip-medicine-balls",
+          "detail": "$27.97 → $16.97 ($11.00 cheaper)"
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "fake-sale",
+          "handle": null,
+          "detail": "Audit rule \"fake-sale\" moved 5 → 6."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 6,
+        "oos-published": 61,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-08T16:53:04.629Z",
       "date": "2026-09-08",
