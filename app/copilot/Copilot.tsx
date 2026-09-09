@@ -13,6 +13,8 @@ export default function Copilot({ ix, tickets }: { ix: Index; tickets: { q: stri
   const [q, setQ] = useState(tickets[0].q);
   const [submitted, setSubmitted] = useState(tickets[0].q);
 
+  const canDraft = q.trim().length > 0 && q !== submitted;
+
   const result = useMemo(() => (submitted.trim() ? answer(submitted, ix) : null), [submitted, ix]);
 
   return (
@@ -29,8 +31,12 @@ export default function Copilot({ ix, tickets }: { ix: Index; tickets: { q: stri
             placeholder="Paste a customer question…"
             className="flex-1 resize-none rounded border border-line bg-ink px-3.5 py-2.5 text-sm outline-none transition-colors placeholder:text-muted focus:border-steel"
           />
-          <button type="submit"
-                  className="h-fit rounded bg-steel px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-steelDim">
+          {/* The page loads with the first ticket already answered, so pressing this
+              on an unedited question re-renders an identical reply and reads as a
+              dead button. Disabling it says why nothing happens. */}
+          <button type="submit" disabled={!canDraft}
+                  title={canDraft ? undefined : 'Edit the question, or pick another ticket below'}
+                  className="h-fit rounded bg-steel px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-steelDim disabled:cursor-not-allowed disabled:bg-line disabled:text-muted disabled:hover:bg-line">
             Draft reply
           </button>
         </form>
