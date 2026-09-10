@@ -1,6 +1,142 @@
 {
-  "generated_at": "2026-09-09T16:55:17.091Z",
+  "generated_at": "2026-09-10T16:43:11.488Z",
   "runs": [
+    {
+      "at": "2026-09-10T16:43:11.254Z",
+      "date": "2026-09-10",
+      "baseline": false,
+      "comparedTo": "2026-09-09T16:55:16.718Z",
+      "productCount": 476,
+      "changeCount": 15,
+      "bySeverity": {
+        "alert": 1,
+        "notable": 0,
+        "good": 7,
+        "info": 7
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Basilisk Stack Loaded Leg Extension / Leg Curl",
+          "handle": "basilisk-stack-loaded-leg-extension-leg-curl",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Basilisk Stack Loaded Leg Extension / Leg Curl",
+          "handle": "basilisk-stack-loaded-leg-extension-leg-curl",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Strength Circuit Starter Kits",
+          "handle": "strength-circuit-starter-kits",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Strength Circuit Starter Kits",
+          "handle": "strength-circuit-starter-kits",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Lat Pulldown Bar",
+          "handle": "lat-pulldown-bar",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Lat Pulldown Bar",
+          "handle": "lat-pulldown-bar",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 61 → 56."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 6,
+        "oos-published": 56,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-09T16:55:16.718Z",
       "date": "2026-09-09",

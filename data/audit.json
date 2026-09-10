@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-09T16:55:16.975Z",
-  "snapshot": "2026-09-09T16:55:16.718Z",
+  "generated_at": "2026-09-10T16:43:11.415Z",
+  "snapshot": "2026-09-10T16:43:11.254Z",
   "scanned": 476,
   "variants": 1640,
   "findings": [
@@ -601,20 +601,12 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 61,
+      "count": 56,
       "unit": "products",
-      "summary": "61 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "56 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
-        {
-          "label": "Basilisk Stack Loaded Leg Extension / Leg Curl",
-          "detail": "3 variants, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/basilisk-stack-loaded-leg-extension-leg-curl"
-          ]
-        },
         {
           "label": "Fat Bar - Lat Pulldown Bar",
           "detail": "1 variant, none available",
@@ -685,6 +677,14 @@
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/wildman-poison-pill"
+          ]
+        },
+        {
+          "label": "StrongArm Combo Rack - Squat Stand & Bench Press",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/strongarm-combo-rack"
           ]
         }
       ]
