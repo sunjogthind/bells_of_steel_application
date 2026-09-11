@@ -1,6 +1,79 @@
 {
-  "generated_at": "2026-09-10T16:43:11.488Z",
+  "generated_at": "2026-09-11T16:48:01.914Z",
   "runs": [
+    {
+      "at": "2026-09-11T16:48:01.586Z",
+      "date": "2026-09-11",
+      "baseline": false,
+      "comparedTo": "2026-09-10T16:43:11.254Z",
+      "productCount": 476,
+      "changeCount": 6,
+      "bySeverity": {
+        "alert": 1,
+        "notable": 0,
+        "good": 1,
+        "info": 4
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Kraken Weight Stack Shroud (Single Side)",
+          "handle": "kraken-stack-shroud",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Kraken Weight Stack Shroud (Single Side)",
+          "handle": "kraken-stack-shroud",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Foam Roller",
+          "handle": "foam-roller",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Foam Roller",
+          "handle": "foam-roller",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Triple Stitched Medicine Balls",
+          "handle": "triple-stitched-medicine-balls",
+          "detail": "$41.96 → $59.99 (+$18.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Manticore Flat Foot Components",
+          "handle": "manticore-flat-foot-components",
+          "detail": "$95.96 → $119.99 (+$24.03)"
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 6,
+        "oos-published": 56,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-10T16:43:11.254Z",
       "date": "2026-09-10",
