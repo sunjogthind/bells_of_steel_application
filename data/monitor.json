@@ -1,6 +1,65 @@
 {
-  "generated_at": "2026-09-11T16:48:01.914Z",
+  "generated_at": "2026-09-12T15:54:03.904Z",
   "runs": [
+    {
+      "at": "2026-09-12T15:54:03.544Z",
+      "date": "2026-09-12",
+      "baseline": false,
+      "comparedTo": "2026-09-11T16:48:01.586Z",
+      "productCount": 476,
+      "changeCount": 4,
+      "bySeverity": {
+        "alert": 1,
+        "notable": 0,
+        "good": 1,
+        "info": 2
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Kraken Rack Attachment for 6 Post Hydra Racks (Single Side)",
+          "handle": "kraken-6-post-hydra",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Kraken Rack Attachment for 6 Post Hydra Racks (Single Side)",
+          "handle": "kraken-6-post-hydra",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Alex Leonidas Onyx Bar",
+          "handle": "alex-leonidas-onyx-bar",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Alex Leonidas Onyx Bar",
+          "handle": "alex-leonidas-onyx-bar",
+          "detail": "Resolved: all_variants_oos."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 6,
+        "oos-published": 56,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-11T16:48:01.586Z",
       "date": "2026-09-11",
