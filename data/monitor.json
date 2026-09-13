@@ -1,6 +1,44 @@
 {
-  "generated_at": "2026-09-12T15:54:03.904Z",
+  "generated_at": "2026-09-13T16:41:17.016Z",
   "runs": [
+    {
+      "at": "2026-09-13T16:41:16.650Z",
+      "date": "2026-09-13",
+      "baseline": false,
+      "comparedTo": "2026-09-12T15:54:03.544Z",
+      "productCount": 476,
+      "changeCount": 1,
+      "bySeverity": {
+        "alert": 0,
+        "notable": 0,
+        "good": 0,
+        "info": 1
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Olympic Weightlifting Barbell",
+          "handle": "olympic-weightlifting-barbell",
+          "detail": "$263.96 → $309.99 (+$46.03)"
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 6,
+        "oos-published": 56,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-12T15:54:03.544Z",
       "date": "2026-09-12",
