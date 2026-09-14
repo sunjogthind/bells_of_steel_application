@@ -1,6 +1,100 @@
 {
-  "generated_at": "2026-09-13T16:41:17.016Z",
+  "generated_at": "2026-09-14T18:14:05.298Z",
   "runs": [
+    {
+      "at": "2026-09-14T18:14:04.935Z",
+      "date": "2026-09-14",
+      "baseline": false,
+      "comparedTo": "2026-09-13T16:41:16.650Z",
+      "productCount": 476,
+      "changeCount": 9,
+      "bySeverity": {
+        "alert": 4,
+        "notable": 0,
+        "good": 1,
+        "info": 4
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Calibrated Powerlifting Plates - KG Sets",
+          "handle": "calibrated-powerlifiting-plates-kg-sets",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Calibrated Powerlifting Plates - KG Sets",
+          "handle": "calibrated-powerlifiting-plates-kg-sets",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Blitz Max Air Bike",
+          "handle": "blitz-max-air-bike",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Blitz Max Air Bike",
+          "handle": "blitz-max-air-bike",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Blitz Ski Trainer",
+          "handle": "blitz-ski-trainer",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Blitz Ski Trainer",
+          "handle": "blitz-ski-trainer",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Machined Iron Olympic Weight Plates",
+          "handle": "machined-plates",
+          "detail": "$14.96 → $21.99 (+$7.03)"
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "parts-coverage",
+          "handle": null,
+          "detail": "Audit rule \"parts-coverage\" moved 16 → 15."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 56 → 59."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 6,
+        "oos-published": 59,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-13T16:41:16.650Z",
       "date": "2026-09-13",
