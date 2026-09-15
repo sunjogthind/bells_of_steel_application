@@ -1,6 +1,142 @@
 {
-  "generated_at": "2026-09-14T18:14:05.298Z",
+  "generated_at": "2026-09-15T17:20:30.981Z",
   "runs": [
+    {
+      "at": "2026-09-15T17:20:30.748Z",
+      "date": "2026-09-15",
+      "baseline": false,
+      "comparedTo": "2026-09-14T18:14:04.935Z",
+      "productCount": 476,
+      "changeCount": 15,
+      "bySeverity": {
+        "alert": 2,
+        "notable": 0,
+        "good": 6,
+        "info": 7
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hero Pad Spare Parts",
+          "handle": "hero-pad-spare-parts",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hero Pad Spare Parts",
+          "handle": "hero-pad-spare-parts",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Lat Pulldown Bar",
+          "handle": "fat-bar-lat-pulldown-bar",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Fat Bar - Lat Pulldown Bar",
+          "handle": "fat-bar-lat-pulldown-bar",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Olympic Curl Bar Cable Attachment",
+          "handle": "fat-bar-olympic-curl-bar-cable-attachment",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Fat Bar - Olympic Curl Bar Cable Attachment",
+          "handle": "fat-bar-olympic-curl-bar-cable-attachment",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Roll of Gym Turf",
+          "handle": "turf-roll",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Roll of Gym Turf",
+          "handle": "turf-roll",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Four Fold Mat",
+          "handle": "four-fold-mat",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Four Fold Mat",
+          "handle": "four-fold-mat",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Lat Pulldown Bar",
+          "handle": "lat-pulldown-bar",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Lat Pulldown Bar",
+          "handle": "lat-pulldown-bar",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 59 → 56."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 6,
+        "oos-published": 56,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-14T18:14:04.935Z",
       "date": "2026-09-14",

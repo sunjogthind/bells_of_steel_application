@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T18:14:05.111Z",
+  "generated_at": "2026-09-15T17:20:30.862Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -86,7 +86,7 @@
       "ref": null,
       "sku": "SP-HERO-BEN-PAD",
       "priceCents": 9899,
-      "available": true,
+      "available": false,
       "machine": "Hero Pad",
       "parentTitle": "Hero Pad Spare Parts",
       "url": "https://bellsofsteel.com/products/hero-pad-spare-parts"
@@ -536,7 +536,7 @@
       "name": "Weight Stack All-in-One Trainer 2.0 Cables #44, #45, #46",
       "ref": null,
       "sku": "SP-SEL-SS-FCT2-CBL",
-      "priceCents": 1999,
+      "priceCents": 2599,
       "available": true,
       "machine": "All-in-One Trainer 2.0",
       "parentTitle": "All-in-One Trainer 2.0 Spare Parts",
@@ -547,7 +547,7 @@
       "name": "Plate Loaded All-in-One Trainer 2.0 Cables #43, #45, #46",
       "ref": null,
       "sku": "SP-SS-FCT2-CBL",
-      "priceCents": 1999,
+      "priceCents": 2599,
       "available": true,
       "machine": "All-in-One Trainer 2.0",
       "parentTitle": "All-in-One Trainer 2.0 Spare Parts",
@@ -558,7 +558,7 @@
       "name": "All-in-One Trainer 2.0 Common Cables #47, #48",
       "ref": null,
       "sku": "SP-SS-FCT2-CMN-CBL",
-      "priceCents": 3099,
+      "priceCents": 3599,
       "available": true,
       "machine": "All-in-One Trainer 2.0",
       "parentTitle": "All-in-One Trainer 2.0 Spare Parts",
