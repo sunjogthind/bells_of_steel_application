@@ -1,6 +1,65 @@
 {
-  "generated_at": "2026-09-15T17:20:30.981Z",
+  "generated_at": "2026-09-16T17:19:58.840Z",
   "runs": [
+    {
+      "at": "2026-09-16T17:19:58.439Z",
+      "date": "2026-09-16",
+      "baseline": false,
+      "comparedTo": "2026-09-15T17:20:30.748Z",
+      "productCount": 476,
+      "changeCount": 4,
+      "bySeverity": {
+        "alert": 2,
+        "notable": 0,
+        "good": 0,
+        "info": 2
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Kraken Weight Stack Shroud (Single Side)",
+          "handle": "kraken-stack-shroud",
+          "detail": "$179.99 → $143.96 ($36.03 cheaper)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Viking Press Attachment",
+          "handle": "viking-press",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Viking Press Attachment",
+          "handle": "viking-press",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 56 → 57."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 6,
+        "oos-published": 57,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-15T17:20:30.748Z",
       "date": "2026-09-15",

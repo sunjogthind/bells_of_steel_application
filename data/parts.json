@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T17:20:30.862Z",
+  "generated_at": "2026-09-16T17:19:58.633Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -140,7 +140,7 @@
       "name": "Cables for New Version Weight Stack Cable Tower STK-PULT4-MA",
       "ref": null,
       "sku": "SP-STK-PULT4-CBL-TPU",
-      "priceCents": 2099,
+      "priceCents": 2699,
       "available": true,
       "machine": "Cable Tower",
       "parentTitle": "Cable Tower Spare Parts (STK-PULT4-MA / PULT5-MA)",
@@ -151,7 +151,7 @@
       "name": "Cables for New Version Plate Loaded Cable Tower PULT5-MA",
       "ref": null,
       "sku": "SP-PULT5-CBL-TPU",
-      "priceCents": 2099,
+      "priceCents": 2899,
       "available": true,
       "machine": "Cable Tower",
       "parentTitle": "Cable Tower Spare Parts (STK-PULT4-MA / PULT5-MA)",
