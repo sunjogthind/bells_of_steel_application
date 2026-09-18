@@ -1,6 +1,79 @@
 {
-  "generated_at": "2026-09-17T17:19:42.257Z",
+  "generated_at": "2026-09-18T16:45:42.927Z",
   "runs": [
+    {
+      "at": "2026-09-18T16:45:42.593Z",
+      "date": "2026-09-18",
+      "baseline": false,
+      "comparedTo": "2026-09-17T17:19:41.875Z",
+      "productCount": 476,
+      "changeCount": 6,
+      "bySeverity": {
+        "alert": 1,
+        "notable": 0,
+        "good": 1,
+        "info": 4
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Powerlifting Bar",
+          "handle": "powerlifting-bar",
+          "detail": "$249.99 → $229.99 ($20.00 cheaper)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra 2-Sided Rack",
+          "handle": "hydra-2-sided-rack-builder",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra 2-Sided Rack",
+          "handle": "hydra-2-sided-rack-builder",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Utility Hook",
+          "handle": "utility-hook",
+          "detail": "$8.96 → $10.99 (+$2.03)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 6,
+        "oos-published": 54,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-17T17:19:41.875Z",
       "date": "2026-09-17",
