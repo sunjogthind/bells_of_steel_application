@@ -1,6 +1,128 @@
 {
-  "generated_at": "2026-09-18T16:45:42.927Z",
+  "generated_at": "2026-09-19T16:07:45.525Z",
   "runs": [
+    {
+      "at": "2026-09-19T16:07:45.131Z",
+      "date": "2026-09-19",
+      "baseline": false,
+      "comparedTo": "2026-09-18T16:45:42.593Z",
+      "productCount": 476,
+      "changeCount": 13,
+      "bySeverity": {
+        "alert": 3,
+        "notable": 1,
+        "good": 0,
+        "info": 9
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+          "detail": "$1291.86 → $1309.89 (+$18.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt",
+          "detail": "$2432.76 → $2450.79 (+$18.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt",
+          "detail": "$1626.86 → $1644.89 (+$18.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt",
+          "detail": "$1482.84 → $1500.87 (+$18.03)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Alex Leonidas Onyx Bar",
+          "handle": "alex-leonidas-onyx-bar",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Alex Leonidas Onyx Bar",
+          "handle": "alex-leonidas-onyx-bar",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Safety Strap Connectors",
+          "handle": "safety-strap-connectors",
+          "detail": "$67.96 → $84.99 (+$17.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Soft Glute Bench",
+          "handle": "soft-glute-bench",
+          "detail": "$14.96 → $21.99 (+$7.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Wrist Roller and Rack Attachment",
+          "handle": "wrist-roller",
+          "detail": "$38.96 → $44.99 (+$6.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "NÜOBELL Adjustable Dumbbells",
+          "handle": "nuobell-adjustable-dumbbells",
+          "detail": "$629.96 → $699.99 (+$70.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Change Plate Storage Pegs",
+          "handle": "change-plate-pegs",
+          "detail": "$54.96 → $64.99 (+$10.03)"
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "fake-sale",
+          "handle": null,
+          "detail": "Audit rule \"fake-sale\" moved 6 → 8."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 54 → 55."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 8,
+        "oos-published": 55,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-18T16:45:42.593Z",
       "date": "2026-09-18",
