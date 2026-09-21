@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-09-20T16:33:08.667Z",
+  "generated_at": "2026-09-21T18:21:06.530Z",
   "runs": [
+    {
+      "at": "2026-09-21T18:21:06.147Z",
+      "date": "2026-09-21",
+      "baseline": false,
+      "comparedTo": "2026-09-20T16:33:08.307Z",
+      "productCount": 476,
+      "changeCount": 0,
+      "bySeverity": {
+        "alert": 0,
+        "notable": 0,
+        "good": 0,
+        "info": 0
+      },
+      "changes": [],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 8,
+        "oos-published": 55,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-20T16:33:08.307Z",
       "date": "2026-09-20",
