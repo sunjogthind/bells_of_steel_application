@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-21T18:21:06.414Z",
-  "snapshot": "2026-09-21T18:21:06.147Z",
+  "generated_at": "2026-09-22T17:23:07.043Z",
+  "snapshot": "2026-09-22T17:23:06.812Z",
   "scanned": 476,
   "variants": 1640,
   "findings": [
@@ -617,9 +617,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 55,
+      "count": 53,
       "unit": "products",
-      "summary": "55 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "53 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
@@ -688,19 +688,19 @@
           ]
         },
         {
-          "label": "StrongArm Combo Rack - Squat Stand & Bench Press",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/strongarm-combo-rack"
-          ]
-        },
-        {
           "label": "Rubber Flooring Gym Mat 24\" x 24\" (Set of 2)",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/rubber-flooring-24"
+          ]
+        },
+        {
+          "label": "Out of Spec KG Competition Bumper Plates",
+          "detail": "4 variants, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/oos-kg-competition-bumper-plates"
           ]
         }
       ]

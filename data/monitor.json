@@ -1,6 +1,79 @@
 {
-  "generated_at": "2026-09-21T18:21:06.530Z",
+  "generated_at": "2026-09-22T17:23:07.134Z",
   "runs": [
+    {
+      "at": "2026-09-22T17:23:06.812Z",
+      "date": "2026-09-22",
+      "baseline": false,
+      "comparedTo": "2026-09-21T18:21:06.147Z",
+      "productCount": 476,
+      "changeCount": 6,
+      "bySeverity": {
+        "alert": 0,
+        "notable": 0,
+        "good": 3,
+        "info": 3
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "StrongArm Combo Rack - Squat Stand & Bench Press",
+          "handle": "strongarm-combo-rack",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "StrongArm Combo Rack - Squat Stand & Bench Press",
+          "handle": "strongarm-combo-rack",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Weightlifting Chain Sets",
+          "handle": "weightlifting-chain-sets",
+          "detail": "$95.96 → $109.99 (+$14.03)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Alex Leonidas Onyx Bar",
+          "handle": "alex-leonidas-onyx-bar",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Alex Leonidas Onyx Bar",
+          "handle": "alex-leonidas-onyx-bar",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 55 → 53."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 8,
+        "oos-published": 53,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-21T18:21:06.147Z",
       "date": "2026-09-21",
@@ -2467,35 +2540,6 @@
       "date": "2026-08-25",
       "baseline": false,
       "comparedTo": "2026-08-25T22:29:34.728Z",
-      "productCount": 476,
-      "changeCount": 0,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 0,
-        "good": 0,
-        "info": 0
-      },
-      "changes": [],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 29,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "fake-sale": 8,
-        "oos-published": 56,
-        "taxonomy": 107,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-08-25T22:29:34.728Z",
-      "date": "2026-08-25",
-      "baseline": true,
-      "comparedTo": null,
       "productCount": 476,
       "changeCount": 0,
       "bySeverity": {
