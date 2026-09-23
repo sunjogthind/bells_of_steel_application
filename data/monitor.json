@@ -1,6 +1,93 @@
 {
-  "generated_at": "2026-09-22T17:23:07.134Z",
+  "generated_at": "2026-09-23T17:31:28.123Z",
   "runs": [
+    {
+      "at": "2026-09-23T17:31:27.725Z",
+      "date": "2026-09-23",
+      "baseline": false,
+      "comparedTo": "2026-09-22T17:23:06.812Z",
+      "productCount": 476,
+      "changeCount": 8,
+      "bySeverity": {
+        "alert": 0,
+        "notable": 0,
+        "good": 3,
+        "info": 5
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Weightlifting Platform",
+          "handle": "weightlifting-platform",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Weightlifting Platform",
+          "handle": "weightlifting-platform",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Deadlift Platform Bamboo Insert (Left)",
+          "handle": "deadlift-platform-bamboo-insert-left",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Deadlift Platform Bamboo Insert (Left)",
+          "handle": "deadlift-platform-bamboo-insert-left",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Powerlifting Bar",
+          "handle": "powerlifting-bar",
+          "detail": "$229.99 → $259.99 (+$30.00)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Leg Curl / Leg Extension Rack Attachment",
+          "handle": "leg-extension-curl-rack-attachment",
+          "detail": "$239.96 → $251.96 (+$12.00)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Flip-Down Safeties",
+          "handle": "flip-down-safeties",
+          "detail": "$149.96 → $153.96 (+$4.00)"
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 53 → 51."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 29,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 8,
+        "oos-published": 51,
+        "taxonomy": 109,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-22T17:23:06.812Z",
       "date": "2026-09-22",
@@ -2526,35 +2613,6 @@
         "vendor-corrupt": 9,
         "compat-graph": 5,
         "parts-coverage": 15,
-        "fake-sale": 8,
-        "oos-published": 56,
-        "taxonomy": 107,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-08-25T23:44:53.578Z",
-      "date": "2026-08-25",
-      "baseline": false,
-      "comparedTo": "2026-08-25T22:29:34.728Z",
-      "productCount": 476,
-      "changeCount": 0,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 0,
-        "good": 0,
-        "info": 0
-      },
-      "changes": [],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 29,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
         "fake-sale": 8,
         "oos-published": 56,
         "taxonomy": 107,
