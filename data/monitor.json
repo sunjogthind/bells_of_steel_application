@@ -1,6 +1,100 @@
 {
-  "generated_at": "2026-09-23T17:31:28.123Z",
+  "generated_at": "2026-09-24T17:36:45.550Z",
   "runs": [
+    {
+      "at": "2026-09-24T17:36:45.181Z",
+      "date": "2026-09-24",
+      "baseline": false,
+      "comparedTo": "2026-09-23T17:31:27.725Z",
+      "productCount": 477,
+      "changeCount": 9,
+      "bySeverity": {
+        "alert": 3,
+        "notable": 0,
+        "good": 2,
+        "info": 4
+      },
+      "changes": [
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Agility Ladder and Leg Cord Bundle",
+          "detail": "New product in the feed at $99.99.",
+          "handle": "human-trainer-agility-ladder-and-leg-cord-bundle"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Blitz Max Air Bike",
+          "handle": "blitz-max-air-bike",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Blitz Max Air Bike",
+          "handle": "blitz-max-air-bike",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Viking Press Attachment",
+          "handle": "viking-press",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Viking Press Attachment",
+          "handle": "viking-press",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Belt Squat / Lever Arms Rack Attachment",
+          "handle": "belt-squat-lever-arms-attachment",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Belt Squat / Lever Arms Rack Attachment",
+          "handle": "belt-squat-lever-arms-attachment",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "zero-weight",
+          "handle": null,
+          "detail": "Audit rule \"zero-weight\" moved 29 → 30."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "taxonomy",
+          "handle": null,
+          "detail": "Audit rule \"taxonomy\" moved 109 → 110."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 30,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 8,
+        "oos-published": 51,
+        "taxonomy": 110,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-23T17:31:27.725Z",
       "date": "2026-09-23",
@@ -2585,36 +2679,6 @@
         "parts-coverage": 15,
         "fake-sale": 6,
         "oos-published": 58,
-        "taxonomy": 107,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-08-26T00:11:16.704Z",
-      "date": "2026-08-26",
-      "baseline": false,
-      "comparedTo": "2026-08-25T23:44:53.578Z",
-      "productCount": 476,
-      "changeCount": 0,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 0,
-        "good": 0,
-        "info": 0
-      },
-      "changes": [],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 29,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 8,
-        "oos-published": 56,
         "taxonomy": 107,
         "specs-hidden": 90,
         "missing-sku": 11,

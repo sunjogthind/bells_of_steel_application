@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-23T17:31:28.002Z",
-  "snapshot": "2026-09-23T17:31:27.725Z",
-  "scanned": 476,
-  "variants": 1640,
+  "generated_at": "2026-09-24T17:36:45.439Z",
+  "snapshot": "2026-09-24T17:36:45.181Z",
+  "scanned": 477,
+  "variants": 1643,
   "findings": [
     {
       "id": "duplicate-pricing",
@@ -221,9 +221,9 @@
       "id": "zero-weight",
       "severity": "high",
       "title": "Physical products ship with no weight recorded",
-      "count": 29,
+      "count": 30,
       "unit": "products",
-      "summary": "279 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
+      "summary": "280 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
       "impact": "You move squat racks and plate sets on LTL freight, and weight is the input to the rate. A zero there means the carrier calculation is running on a default, and the gap between the quoted rate and the real one is absorbed on every one of these orders.",
       "fix": "Backfill weights from your packing data, then add a Shopify validation that refuses to publish a shipped product with a zero weight.",
       "evidence": [
@@ -624,6 +624,14 @@
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
         {
+          "label": "Agility Ladder and Leg Cord Bundle",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/human-trainer-agility-ladder-and-leg-cord-bundle"
+          ]
+        },
+        {
           "label": "Hero Pad Spare Parts",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
@@ -694,14 +702,6 @@
           "links": [
             "https://bellsofsteel.com/products/rubber-flooring-24"
           ]
-        },
-        {
-          "label": "Out of Spec KG Competition Bumper Plates",
-          "detail": "4 variants, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/oos-kg-competition-bumper-plates"
-          ]
         }
       ]
     },
@@ -709,12 +709,20 @@
       "id": "taxonomy",
       "severity": "medium",
       "title": "A fifth of the catalogue has no product type",
-      "count": 109,
+      "count": 110,
       "unit": "products",
-      "summary": "89 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
+      "summary": "90 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
       "impact": "product_type is what your automated collections, storefront filters and any BigQuery or Looker grouping key off. Every product without one is invisible to that machinery, and \"Hidden\" is a visibility flag wearing a taxonomy field’s clothes.",
       "fix": "Most are inferable from the title alone; the classifier in this demo types 60 of them with a dozen rules. Backfill, then make type required at publish.",
       "evidence": [
+        {
+          "label": "Agility Ladder and Leg Cord Bundle",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/human-trainer-agility-ladder-and-leg-cord-bundle"
+          ]
+        },
         {
           "label": "Oblivyon Tower - 3x3\" Cable Tower - Back Upright",
           "detail": "product_type is empty",
@@ -769,14 +777,6 @@
           "delta": "untyped",
           "links": [
             "https://bellsofsteel.com/products/human-trainer-bodyweight-suspension-system"
-          ]
-        },
-        {
-          "label": "Leg Cords",
-          "detail": "product_type is empty",
-          "delta": "untyped",
-          "links": [
-            "https://bellsofsteel.com/products/leg-cords"
           ]
         }
       ]
@@ -969,7 +969,7 @@
   "clean": [
     {
       "label": "No SKU collisions",
-      "detail": "1379 SKUs checked, 0 reused across different products."
+      "detail": "1382 SKUs checked, 0 reused across different products."
     },
     {
       "label": "Discontinued products are genuinely unbuyable",
@@ -977,7 +977,7 @@
     },
     {
       "label": "Vendor is consistent everywhere else",
-      "detail": "460 products correctly attributed."
+      "detail": "461 products correctly attributed."
     }
   ]
 }
