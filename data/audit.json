@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-24T17:36:45.439Z",
-  "snapshot": "2026-09-24T17:36:45.181Z",
-  "scanned": 477,
-  "variants": 1643,
+  "generated_at": "2026-09-25T17:36:08.406Z",
+  "snapshot": "2026-09-25T17:36:08.138Z",
+  "scanned": 481,
+  "variants": 1647,
   "findings": [
     {
       "id": "duplicate-pricing",
@@ -221,9 +221,9 @@
       "id": "zero-weight",
       "severity": "high",
       "title": "Physical products ship with no weight recorded",
-      "count": 30,
+      "count": 31,
       "unit": "products",
-      "summary": "280 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
+      "summary": "281 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
       "impact": "You move squat racks and plate sets on LTL freight, and weight is the input to the rate. A zero there means the carrier calculation is running on a default, and the gap between the quoted rate and the real one is absorbed on every one of these orders.",
       "fix": "Backfill weights from your packing data, then add a Shopify validation that refuses to publish a shipped product with a zero weight.",
       "evidence": [
@@ -617,18 +617,34 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 51,
+      "count": 53,
       "unit": "products",
-      "summary": "51 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "53 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
         {
-          "label": "Agility Ladder and Leg Cord Bundle",
+          "label": "Selfie Sentinel - Magnetic Rack Phone Holder",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
           "links": [
-            "https://bellsofsteel.com/products/human-trainer-agility-ladder-and-leg-cord-bundle"
+            "https://bellsofsteel.com/products/selfie-sentinel"
+          ]
+        },
+        {
+          "label": "Kettlebell Wrap",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/kettlebell-wrap"
+          ]
+        },
+        {
+          "label": "Rotational Pulley",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/human-trainer-rotational-pulley-kit"
           ]
         },
         {
@@ -686,22 +702,6 @@
           "links": [
             "https://bellsofsteel.com/products/footplate-for-cable-tower"
           ]
-        },
-        {
-          "label": "Pandemonium Squat – 3-in-1 Pendulum Squat / Calf Press / Viking Press Machine",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/pandemonium-squat"
-          ]
-        },
-        {
-          "label": "Rubber Flooring Gym Mat 24\" x 24\" (Set of 2)",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/rubber-flooring-24"
-          ]
         }
       ]
     },
@@ -709,12 +709,44 @@
       "id": "taxonomy",
       "severity": "medium",
       "title": "A fifth of the catalogue has no product type",
-      "count": 110,
+      "count": 114,
       "unit": "products",
-      "summary": "90 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
+      "summary": "94 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
       "impact": "product_type is what your automated collections, storefront filters and any BigQuery or Looker grouping key off. Every product without one is invisible to that machinery, and \"Hidden\" is a visibility flag wearing a taxonomy field’s clothes.",
       "fix": "Most are inferable from the title alone; the classifier in this demo types 60 of them with a dozen rules. Backfill, then make type required at publish.",
       "evidence": [
+        {
+          "label": "Selfie Sentinel - Magnetic Rack Phone Holder",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/selfie-sentinel"
+          ]
+        },
+        {
+          "label": "Human Trainer - Ceiling Mounts",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/human-trainer-ceiling-mounts"
+          ]
+        },
+        {
+          "label": "Kettlebell Wrap",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/kettlebell-wrap"
+          ]
+        },
+        {
+          "label": "Rotational Pulley",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/human-trainer-rotational-pulley-kit"
+          ]
+        },
         {
           "label": "Agility Ladder and Leg Cord Bundle",
           "detail": "product_type is empty",
@@ -745,38 +777,6 @@
           "delta": "untyped",
           "links": [
             "https://bellsofsteel.com/products/fid-bench-spare-parts"
-          ]
-        },
-        {
-          "label": "Hero Pad Spare Parts",
-          "detail": "product_type is empty",
-          "delta": "untyped",
-          "links": [
-            "https://bellsofsteel.com/products/hero-pad-spare-parts"
-          ]
-        },
-        {
-          "label": "Pandemonium Squat Machine Spare Parts",
-          "detail": "product_type is empty",
-          "delta": "untyped",
-          "links": [
-            "https://bellsofsteel.com/products/pandemonium-squat-machine-spare-parts"
-          ]
-        },
-        {
-          "label": "Ripcords Premium Resistance Bands",
-          "detail": "product_type is empty",
-          "delta": "untyped",
-          "links": [
-            "https://bellsofsteel.com/products/ripcords-premium-resistance-bands"
-          ]
-        },
-        {
-          "label": "Human Trainer Bodyweight Suspension System",
-          "detail": "product_type is empty",
-          "delta": "untyped",
-          "links": [
-            "https://bellsofsteel.com/products/human-trainer-bodyweight-suspension-system"
           ]
         }
       ]
@@ -969,7 +969,7 @@
   "clean": [
     {
       "label": "No SKU collisions",
-      "detail": "1382 SKUs checked, 0 reused across different products."
+      "detail": "1386 SKUs checked, 0 reused across different products."
     },
     {
       "label": "Discontinued products are genuinely unbuyable",
@@ -977,7 +977,7 @@
     },
     {
       "label": "Vendor is consistent everywhere else",
-      "detail": "461 products correctly attributed."
+      "detail": "465 products correctly attributed."
     }
   ]
 }
