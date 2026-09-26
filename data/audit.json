@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-25T17:36:08.406Z",
-  "snapshot": "2026-09-25T17:36:08.138Z",
+  "generated_at": "2026-09-26T16:48:15.803Z",
+  "snapshot": "2026-09-26T16:48:15.533Z",
   "scanned": 481,
   "variants": 1647,
   "findings": [
@@ -617,9 +617,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 53,
+      "count": 56,
       "unit": "products",
-      "summary": "53 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "56 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
@@ -640,19 +640,27 @@
           ]
         },
         {
-          "label": "Rotational Pulley",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/human-trainer-rotational-pulley-kit"
-          ]
-        },
-        {
           "label": "Hero Pad Spare Parts",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/hero-pad-spare-parts"
+          ]
+        },
+        {
+          "label": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/manctiore-folding-power-rack-prebuilt"
+          ]
+        },
+        {
+          "label": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-folding-half-rack-prebuilt"
           ]
         },
         {
@@ -693,14 +701,6 @@
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/flat-iron-tricep-press-cable-attachment"
-          ]
-        },
-        {
-          "label": "Footplate for Cable Tower/All In One Trainer",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/footplate-for-cable-tower"
           ]
         }
       ]
