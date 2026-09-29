@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-28T19:52:33.312Z",
-  "snapshot": "2026-09-28T19:52:33.073Z",
+  "generated_at": "2026-09-29T18:21:06.952Z",
+  "snapshot": "2026-09-29T18:21:06.694Z",
   "scanned": 481,
   "variants": 1647,
   "findings": [
@@ -648,14 +648,6 @@
           ]
         },
         {
-          "label": "Manticore Two Post Converter Bench",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/manticore-two-post-converter-bench"
-          ]
-        },
-        {
           "label": "Specialty Bar Bundle",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
@@ -701,6 +693,14 @@
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/pandemonium-squat"
+          ]
+        },
+        {
+          "label": "Rubber Flooring Gym Mat 24\" x 24\" (Set of 2)",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/rubber-flooring-24"
           ]
         }
       ]

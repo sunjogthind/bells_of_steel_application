@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T19:52:33.233Z",
+  "generated_at": "2026-09-29T18:21:06.875Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -874,16 +874,16 @@
       "url": "https://bellsofsteel.com/products/blitz-air-rower"
     },
     {
+      "title": "Manticore Two Post Converter Bench",
+      "type": "Bench",
+      "priceCents": 102999,
+      "url": "https://bellsofsteel.com/products/manticore-two-post-converter-bench"
+    },
+    {
       "title": "Hydra Four Post Converter Bench",
       "type": "Bench",
       "priceCents": 99999,
       "url": "https://bellsofsteel.com/products/hydra-four-post-converter-bench"
-    },
-    {
-      "title": "Blitz Ski Trainer",
-      "type": "Cardio Machine",
-      "priceCents": 99999,
-      "url": "https://bellsofsteel.com/products/blitz-ski-trainer"
     },
     {
       "title": "Lat Pulldown Low Row Machine",
