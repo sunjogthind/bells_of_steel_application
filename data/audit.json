@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-29T18:21:06.952Z",
-  "snapshot": "2026-09-29T18:21:06.694Z",
-  "scanned": 481,
-  "variants": 1647,
+  "generated_at": "2026-09-30T18:10:25.015Z",
+  "snapshot": "2026-09-30T18:10:24.753Z",
+  "scanned": 482,
+  "variants": 1648,
   "findings": [
     {
       "id": "duplicate-pricing",
@@ -632,14 +632,6 @@
           ]
         },
         {
-          "label": "Kettlebell Wrap",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/kettlebell-wrap"
-          ]
-        },
-        {
           "label": "Hero Pad Spare Parts",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
@@ -696,6 +688,14 @@
           ]
         },
         {
+          "label": "48KG Extension Kit for Adjustable Kettlebell - Wildman Poison Pill",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/wildman-poison-pill"
+          ]
+        },
+        {
           "label": "Rubber Flooring Gym Mat 24\" x 24\" (Set of 2)",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
@@ -709,12 +709,20 @@
       "id": "taxonomy",
       "severity": "medium",
       "title": "A fifth of the catalogue has no product type",
-      "count": 114,
+      "count": 115,
       "unit": "products",
-      "summary": "94 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
+      "summary": "95 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
       "impact": "product_type is what your automated collections, storefront filters and any BigQuery or Looker grouping key off. Every product without one is invisible to that machinery, and \"Hidden\" is a visibility flag wearing a taxonomy field’s clothes.",
       "fix": "Most are inferable from the title alone; the classifier in this demo types 60 of them with a dozen rules. Backfill, then make type required at publish.",
       "evidence": [
+        {
+          "label": "Anvil Handles",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/anvil-handles"
+          ]
+        },
         {
           "label": "Selfie Sentinel - Magnetic Rack Phone Holder",
           "detail": "product_type is empty",
@@ -769,14 +777,6 @@
           "delta": "untyped",
           "links": [
             "https://bellsofsteel.com/products/blitz-indoor-cycling-bike-spare-parts"
-          ]
-        },
-        {
-          "label": "FID Bench Spare Parts",
-          "detail": "product_type is empty",
-          "delta": "untyped",
-          "links": [
-            "https://bellsofsteel.com/products/fid-bench-spare-parts"
           ]
         }
       ]
@@ -969,7 +969,7 @@
   "clean": [
     {
       "label": "No SKU collisions",
-      "detail": "1386 SKUs checked, 0 reused across different products."
+      "detail": "1387 SKUs checked, 0 reused across different products."
     },
     {
       "label": "Discontinued products are genuinely unbuyable",
@@ -977,7 +977,7 @@
     },
     {
       "label": "Vendor is consistent everywhere else",
-      "detail": "465 products correctly attributed."
+      "detail": "466 products correctly attributed."
     }
   ]
 }

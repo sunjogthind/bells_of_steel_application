@@ -1,6 +1,79 @@
 {
-  "generated_at": "2026-09-29T18:21:07.059Z",
+  "generated_at": "2026-09-30T18:10:25.127Z",
   "runs": [
+    {
+      "at": "2026-09-30T18:10:24.753Z",
+      "date": "2026-09-30",
+      "baseline": false,
+      "comparedTo": "2026-09-29T18:21:06.694Z",
+      "productCount": 482,
+      "changeCount": 6,
+      "bySeverity": {
+        "alert": 2,
+        "notable": 0,
+        "good": 1,
+        "info": 3
+      },
+      "changes": [
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Anvil Handles",
+          "detail": "New product in the feed at $179.99.",
+          "handle": "anvil-handles"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Kettlebell Wrap",
+          "handle": "kettlebell-wrap",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Kettlebell Wrap",
+          "handle": "kettlebell-wrap",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "48KG Extension Kit for Adjustable Kettlebell - Wildman Poison Pill",
+          "handle": "wildman-poison-pill",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "48KG Extension Kit for Adjustable Kettlebell - Wildman Poison Pill",
+          "handle": "wildman-poison-pill",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "taxonomy",
+          "handle": null,
+          "detail": "Audit rule \"taxonomy\" moved 114 → 115."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 33,
+        "zero-weight": 31,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 8,
+        "oos-published": 54,
+        "taxonomy": 115,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-09-29T18:21:06.694Z",
       "date": "2026-09-29",
@@ -2663,51 +2736,6 @@
         "fake-sale": 6,
         "oos-published": 56,
         "taxonomy": 109,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-08-31T19:16:46.966Z",
-      "date": "2026-08-31",
-      "baseline": false,
-      "comparedTo": "2026-08-30T17:01:09.310Z",
-      "productCount": 476,
-      "changeCount": 2,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 1,
-        "good": 0,
-        "info": 1
-      },
-      "changes": [
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Sit Up Mat",
-          "handle": "ab-mat",
-          "detail": "$25.96 → $29.99 (+$4.03)"
-        },
-        {
-          "kind": "price",
-          "severity": "notable",
-          "title": "Light Commercial Power Rack (2.3\" x 2.3\", ⅝\" HOLES)",
-          "handle": "light-commercial-rack",
-          "detail": "$839.99 → $629.97 ($210.02 cheaper)"
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 29,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 6,
-        "oos-published": 55,
-        "taxonomy": 107,
         "specs-hidden": 90,
         "missing-sku": 11,
         "thin-description": 36,
