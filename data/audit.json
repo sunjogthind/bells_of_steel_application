@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-03T16:49:10.659Z",
-  "snapshot": "2026-10-03T16:49:10.445Z",
+  "generated_at": "2026-10-04T17:07:35.088Z",
+  "snapshot": "2026-10-04T17:07:34.781Z",
   "scanned": 482,
   "variants": 1648,
   "findings": [
@@ -129,9 +129,9 @@
       "id": "zero-price",
       "severity": "high",
       "title": "Products priced at $0.00 or $0.01 are exposed in the public feed",
-      "count": 33,
+      "count": 32,
       "unit": "products",
-      "summary": "38 purchasable variants across 33 products carry a price of $1.00 or less. 16 of them are recognisably deliberate, \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
+      "summary": "37 purchasable variants across 32 products carry a price of $1.00 or less. 16 of them are recognisably deliberate, \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
       "impact": "Nothing in the feed distinguishes these from real products, so anything reading products.json inherits them: shopping feeds, analytics, price monitoring, any internal tool. Spotter recommended one as the cheapest fix for an equipment gap until I filtered them out.",
       "fix": "Move builder scaffolding to a dedicated product type or unpublish it from the online-store channel so it stops appearing in the feed at all.",
       "evidence": [
@@ -617,9 +617,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 58,
+      "count": 59,
       "unit": "products",
-      "summary": "58 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "59 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
