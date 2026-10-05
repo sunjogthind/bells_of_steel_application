@@ -1,6 +1,72 @@
 {
-  "generated_at": "2026-10-04T17:07:35.310Z",
+  "generated_at": "2026-10-05T20:56:26.252Z",
   "runs": [
+    {
+      "at": "2026-10-05T20:56:25.885Z",
+      "date": "2026-10-05",
+      "baseline": false,
+      "comparedTo": "2026-10-04T17:07:34.781Z",
+      "productCount": 482,
+      "changeCount": 5,
+      "bySeverity": {
+        "alert": 2,
+        "notable": 0,
+        "good": 2,
+        "info": 1
+      },
+      "changes": [
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Agility Ladder and Leg Cord Bundle",
+          "handle": "human-trainer-agility-ladder-and-leg-cord-bundle",
+          "detail": "Resolved: zero_shipping_weight."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "zero-weight",
+          "handle": null,
+          "detail": "Audit rule \"zero-weight\" moved 31 → 30."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 59 → 60."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 32,
+        "zero-weight": 30,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 8,
+        "oos-published": 60,
+        "taxonomy": 115,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-10-04T17:07:34.781Z",
       "date": "2026-10-04",
@@ -2493,79 +2559,6 @@
         "parts-coverage": 16,
         "fake-sale": 5,
         "oos-published": 55,
-        "taxonomy": 109,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-09-05T15:40:33.924Z",
-      "date": "2026-09-05",
-      "baseline": false,
-      "comparedTo": "2026-09-04T16:38:16.126Z",
-      "productCount": 476,
-      "changeCount": 6,
-      "bySeverity": {
-        "alert": 3,
-        "notable": 0,
-        "good": 0,
-        "info": 3
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Urethane Bumper Plate Sets",
-          "handle": "urethane-bumper-plate-sets",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Urethane Bumper Plate Sets",
-          "handle": "urethane-bumper-plate-sets",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Mighty Grip Medicine Balls",
-          "handle": "mighty-grip-medicine-balls",
-          "detail": "$34.99 → $27.97 ($7.02 cheaper)"
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Lat Pulldown Bar",
-          "handle": "lat-pulldown-bar",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Lat Pulldown Bar",
-          "handle": "lat-pulldown-bar",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 51 → 53."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 29,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 16,
-        "fake-sale": 5,
-        "oos-published": 53,
         "taxonomy": 109,
         "specs-hidden": 90,
         "missing-sku": 11,

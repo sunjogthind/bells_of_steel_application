@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-04T17:07:35.088Z",
-  "snapshot": "2026-10-04T17:07:34.781Z",
+  "generated_at": "2026-10-05T20:56:26.141Z",
+  "snapshot": "2026-10-05T20:56:25.885Z",
   "scanned": 482,
   "variants": 1648,
   "findings": [
@@ -221,9 +221,9 @@
       "id": "zero-weight",
       "severity": "high",
       "title": "Physical products ship with no weight recorded",
-      "count": 31,
+      "count": 30,
       "unit": "products",
-      "summary": "281 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
+      "summary": "280 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
       "impact": "You move squat racks and plate sets on LTL freight, and weight is the input to the rate. A zero there means the carrier calculation is running on a default, and the gap between the quoted rate and the real one is absorbed on every one of these orders.",
       "fix": "Backfill weights from your packing data, then add a Shopify validation that refuses to publish a shipped product with a zero weight.",
       "evidence": [
@@ -617,9 +617,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 59,
+      "count": 60,
       "unit": "products",
-      "summary": "59 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "60 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
