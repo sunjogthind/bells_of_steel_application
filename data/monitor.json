@@ -1,6 +1,268 @@
 {
-  "generated_at": "2026-10-05T20:56:26.252Z",
+  "generated_at": "2026-10-06T18:40:12.253Z",
   "runs": [
+    {
+      "at": "2026-10-06T18:40:11.929Z",
+      "date": "2026-10-06",
+      "baseline": false,
+      "comparedTo": "2026-10-05T20:56:25.885Z",
+      "productCount": 482,
+      "changeCount": 33,
+      "bySeverity": {
+        "alert": 4,
+        "notable": 2,
+        "good": 10,
+        "info": 17
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Rotational Pulley",
+          "handle": "human-trainer-rotational-pulley-kit",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Rotational Pulley",
+          "handle": "human-trainer-rotational-pulley-kit",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Agility Ladder and Leg Cord Bundle",
+          "handle": "human-trainer-agility-ladder-and-leg-cord-bundle",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Agility Ladder and Leg Cord Bundle",
+          "handle": "human-trainer-agility-ladder-and-leg-cord-bundle",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "StrongArm Combo Rack - Squat Stand & Bench Press",
+          "handle": "strongarm-combo-rack",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "StrongArm Combo Rack - Squat Stand & Bench Press",
+          "handle": "strongarm-combo-rack",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra 2-Sided Rack",
+          "handle": "hydra-2-sided-rack-builder",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra 2-Sided Rack",
+          "handle": "hydra-2-sided-rack-builder",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Luxury Sit Up Mat",
+          "handle": "luxury-sit-up-mat",
+          "detail": "$29.99 → $20.96 ($9.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Oly Lifting Needle Bearing Bar - Women's",
+          "handle": "womens-barbell-olympic",
+          "detail": "$259.99 → $181.96 ($78.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Short Utility Barbell",
+          "handle": "short-barbell",
+          "detail": "$249.99 → $174.96 ($75.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Glute Ham Slider",
+          "handle": "glute-ham-slider",
+          "detail": "$49.99 → $29.96 ($20.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "3 in 1 Anti-Slip Wood Plyo Boxes",
+          "handle": "wood-plyo-boxes",
+          "detail": "$79.99 → $55.96 ($24.03 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Bamboo T-Shirt",
+          "handle": "bamboo-tshirt",
+          "detail": "$19.97 → $20.96 (+$0.99)"
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 60 → 55."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 32,
+        "zero-weight": 30,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 8,
+        "oos-published": 55,
+        "taxonomy": 115,
+        "specs-hidden": 90,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-10-05T20:56:25.885Z",
       "date": "2026-10-05",
@@ -2486,79 +2748,6 @@
         "parts-coverage": 16,
         "fake-sale": 5,
         "oos-published": 58,
-        "taxonomy": 109,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-09-06T15:51:46.984Z",
-      "date": "2026-09-06",
-      "baseline": false,
-      "comparedTo": "2026-09-05T15:40:33.924Z",
-      "productCount": 476,
-      "changeCount": 6,
-      "bySeverity": {
-        "alert": 3,
-        "notable": 1,
-        "good": 0,
-        "info": 2
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Gray Mighty Grip Olympic Weight Plate Sets",
-          "handle": "mighty-grip-plate-sets",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Gray Mighty Grip Olympic Weight Plate Sets",
-          "handle": "mighty-grip-plate-sets",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Kraken Rack Attachment for 6 Post Hydra Racks (Single Side)",
-          "handle": "kraken-6-post-hydra",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Kraken Rack Attachment for 6 Post Hydra Racks (Single Side)",
-          "handle": "kraken-6-post-hydra",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "price",
-          "severity": "notable",
-          "title": "Folding Rack 2.3\" x 2.3\" (5/8\" Holes)",
-          "handle": "folding-rack",
-          "detail": "$416.96 → $489.99 (+$73.03)"
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 53 → 55."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 29,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 16,
-        "fake-sale": 5,
-        "oos-published": 55,
         "taxonomy": 109,
         "specs-hidden": 90,
         "missing-sku": 11,
