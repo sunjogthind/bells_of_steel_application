@@ -1,6 +1,177 @@
 {
-  "generated_at": "2026-10-06T18:40:12.253Z",
+  "generated_at": "2026-10-07T19:06:34.460Z",
   "runs": [
+    {
+      "at": "2026-10-07T19:06:34.086Z",
+      "date": "2026-10-07",
+      "baseline": false,
+      "comparedTo": "2026-10-06T18:40:11.929Z",
+      "productCount": 493,
+      "changeCount": 20,
+      "bySeverity": {
+        "alert": 6,
+        "notable": 0,
+        "good": 0,
+        "info": 14
+      },
+      "changes": [
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Lever Arms Rack Attachment",
+          "detail": "New product in the feed at $199.99.",
+          "handle": "lever-arms-handle"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Lat Pulldown Bar",
+          "detail": "New product in the feed at $20.97.",
+          "handle": "lat-pulldown-bars"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Multi-Purpose Olympic Barbell – The Utility Bar",
+          "detail": "New product in the feed at $249.99.",
+          "handle": "multi-purpose-barbell-utility-bar"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Ergo Rubber Hex Dumbbell Sets",
+          "detail": "New product in the feed at $0.00.",
+          "handle": "ergo-rubber-hex-dumbbell-kg-sets"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Dead Bounce Conflict Bumper Plate Sets",
+          "detail": "New product in the feed at $0.00.",
+          "handle": "dead-bounce-conflict-bumper-plate-kg-sets"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Dead Bounce Conflict Bumper Plates",
+          "detail": "New product in the feed at $0.00.",
+          "handle": "dead-bounce-conflict-bumper-plates-kg"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "NÜOBELL Replacement Handle - SINGLE",
+          "detail": "New product in the feed at $0.00.",
+          "handle": "nuobell-replacement-handles"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Functional Trainer - Weight Stack",
+          "detail": "New product in the feed at $1649.99.",
+          "handle": "functional-trainer-weight-stack"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "NÜOBELL-S Adjustable Dumbbells",
+          "detail": "New product in the feed at $0.00.",
+          "handle": "nuobell-s-adjustable-dumbbells-kg"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "NÜOBELL Adjustable Dumbbells",
+          "detail": "New product in the feed at $699.99.",
+          "handle": "nuobell-adjustable-dumbbells-kg"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Open Trap Bar / Hex Bar",
+          "detail": "New product in the feed at $299.99.",
+          "handle": "open-trap-hex-bar"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Hydra Vertical Bar Holder for Flat Foot",
+          "handle": "hydra-vertical-bar-holder-for-flat-foot",
+          "detail": "$18.96 → $20.99 (+$2.03)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Olympic Curl Bar Cable Attachment",
+          "handle": "fat-bar-olympic-curl-bar-cable-attachment",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Fat Bar - Olympic Curl Bar Cable Attachment",
+          "handle": "fat-bar-olympic-curl-bar-cable-attachment",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Recycled Tire Rubber Crumb Filler (40lb Bag)",
+          "handle": "rubber-crumb",
+          "detail": "New data issue: type_missing."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Flags",
+          "handle": "flags",
+          "detail": "$10.99 → $29.99 (+$19.00)"
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "zero-weight",
+          "handle": null,
+          "detail": "Audit rule \"zero-weight\" moved 30 → 31."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 55 → 65."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "taxonomy",
+          "handle": null,
+          "detail": "Audit rule \"taxonomy\" moved 115 → 118."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "specs-hidden",
+          "handle": null,
+          "detail": "Audit rule \"specs-hidden\" moved 90 → 92."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 32,
+        "zero-weight": 31,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 16,
+        "fake-sale": 8,
+        "oos-published": 65,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-10-06T18:40:11.929Z",
       "date": "2026-10-06",
@@ -2668,86 +2839,6 @@
         "parts-coverage": 16,
         "fake-sale": 5,
         "oos-published": 61,
-        "taxonomy": 109,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-09-07T17:57:59.559Z",
-      "date": "2026-09-07",
-      "baseline": false,
-      "comparedTo": "2026-09-06T15:51:46.984Z",
-      "productCount": 476,
-      "changeCount": 7,
-      "bySeverity": {
-        "alert": 4,
-        "notable": 0,
-        "good": 0,
-        "info": 3
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Basilisk Stack Loaded Leg Extension / Leg Curl",
-          "handle": "basilisk-stack-loaded-leg-extension-leg-curl",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Basilisk Stack Loaded Leg Extension / Leg Curl",
-          "handle": "basilisk-stack-loaded-leg-extension-leg-curl",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Calibrated Powerlifting Plates - LB Sets",
-          "handle": "calibrated-powerlifiting-plates-lb-sets",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Calibrated Powerlifting Plates - LB Sets",
-          "handle": "calibrated-powerlifiting-plates-lb-sets",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Trifold Mat",
-          "handle": "trifold-mat",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Trifold Mat",
-          "handle": "trifold-mat",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 55 → 58."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 29,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 16,
-        "fake-sale": 5,
-        "oos-published": 58,
         "taxonomy": 109,
         "specs-hidden": 90,
         "missing-sku": 11,
