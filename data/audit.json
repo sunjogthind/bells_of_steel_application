@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-07T19:06:34.348Z",
-  "snapshot": "2026-10-07T19:06:34.086Z",
+  "generated_at": "2026-10-08T19:03:27.491Z",
+  "snapshot": "2026-10-08T19:03:27.237Z",
   "scanned": 493,
   "variants": 1627,
   "findings": [
@@ -285,7 +285,7 @@
         },
         {
           "label": "All-in-One Trainer",
-          "detail": "$1349.99, Plate Loaded v2 (with Footplate)",
+          "detail": "$1349.99, Plate Loaded (with Footplate)",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/all-in-one-trainer"
@@ -617,9 +617,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 65,
+      "count": 63,
       "unit": "products",
-      "summary": "65 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "63 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
@@ -629,22 +629,6 @@
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/selfie-sentinel"
-          ]
-        },
-        {
-          "label": "Rotational Pulley",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/human-trainer-rotational-pulley-kit"
-          ]
-        },
-        {
-          "label": "Agility Ladder and Leg Cord Bundle",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/human-trainer-agility-ladder-and-leg-cord-bundle"
           ]
         },
         {
@@ -661,6 +645,14 @@
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/hero-pad-spare-parts"
+          ]
+        },
+        {
+          "label": "All-in-One Trainer - OLD Version on Clearance",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/all-in-one-trainer-old"
           ]
         },
         {
@@ -701,6 +693,14 @@
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/footplate-for-cable-tower"
+          ]
+        },
+        {
+          "label": "Pandemonium Squat – 3-in-1 Pendulum Squat / Calf Press / Viking Press Machine",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/pandemonium-squat"
           ]
         }
       ]
