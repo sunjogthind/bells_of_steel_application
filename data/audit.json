@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-10T17:29:58.956Z",
-  "snapshot": "2026-10-10T17:29:58.676Z",
+  "generated_at": "2026-10-11T17:49:35.782Z",
+  "snapshot": "2026-10-11T17:49:35.304Z",
   "scanned": 493,
   "variants": 1627,
   "findings": [
@@ -617,9 +617,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 59,
+      "count": 61,
       "unit": "products",
-      "summary": "59 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "61 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
@@ -664,6 +664,14 @@
           ]
         },
         {
+          "label": "Deadlift Bar",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/deadlift-bar"
+          ]
+        },
+        {
           "label": "Rack Junctions - 3\" x 3\"",
           "detail": "2 variants, none available",
           "delta": "unbuyable",
@@ -693,14 +701,6 @@
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/footplate-for-cable-tower"
-          ]
-        },
-        {
-          "label": "Pandemonium Squat – 3-in-1 Pendulum Squat / Calf Press / Viking Press Machine",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/pandemonium-squat"
           ]
         }
       ]
