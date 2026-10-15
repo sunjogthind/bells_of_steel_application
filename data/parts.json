@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T17:39:20.482Z",
+  "generated_at": "2026-10-15T17:25:19.221Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -854,12 +854,6 @@
       "type": "Strength Machine",
       "priceCents": 114999,
       "url": "https://bellsofsteel.com/products/belt-squat-machine"
-    },
-    {
-      "title": "Manticore Four Post Converter Bench",
-      "type": "Bench",
-      "priceCents": 109999,
-      "url": "https://bellsofsteel.com/products/manticore-four-post-converter-bench"
     },
     {
       "title": "Blitz Air Rower",
