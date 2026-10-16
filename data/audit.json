@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-15T17:25:19.367Z",
-  "snapshot": "2026-10-15T17:25:18.975Z",
+  "generated_at": "2026-10-16T17:01:41.207Z",
+  "snapshot": "2026-10-16T17:01:40.942Z",
   "scanned": 493,
   "variants": 1627,
   "findings": [
@@ -617,9 +617,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 61,
+      "count": 62,
       "unit": "products",
-      "summary": "61 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "62 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
