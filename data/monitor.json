@@ -1,6 +1,58 @@
 {
-  "generated_at": "2026-10-16T17:01:41.321Z",
+  "generated_at": "2026-10-17T16:00:20.624Z",
   "runs": [
+    {
+      "at": "2026-10-17T16:00:20.224Z",
+      "date": "2026-10-17",
+      "baseline": false,
+      "comparedTo": "2026-10-16T17:01:40.942Z",
+      "productCount": 493,
+      "changeCount": 3,
+      "bySeverity": {
+        "alert": 2,
+        "notable": 0,
+        "good": 0,
+        "info": 1
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Utility Shackle Rack Attachment",
+          "handle": "utility-shackle-rack-attachment",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Utility Shackle Rack Attachment",
+          "handle": "utility-shackle-rack-attachment",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 62 → 63."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 32,
+        "zero-weight": 31,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 14,
+        "fake-sale": 8,
+        "oos-published": 63,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-10-16T17:01:40.942Z",
       "date": "2026-10-16",
@@ -2649,86 +2701,6 @@
           "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
           "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
           "detail": "New data issue: all_variants_oos."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 29,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 6,
-        "oos-published": 54,
-        "taxonomy": 109,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-09-17T17:19:41.875Z",
-      "date": "2026-09-17",
-      "baseline": false,
-      "comparedTo": "2026-09-16T17:19:58.439Z",
-      "productCount": 476,
-      "changeCount": 7,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 0,
-        "good": 4,
-        "info": 3
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "48KG Extension Kit for Adjustable Kettlebell - Wildman Poison Pill",
-          "handle": "wildman-poison-pill",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "48KG Extension Kit for Adjustable Kettlebell - Wildman Poison Pill",
-          "handle": "wildman-poison-pill",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Foam Roller",
-          "handle": "foam-roller",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Foam Roller",
-          "handle": "foam-roller",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Belt Squat / Lever Arms Rack Attachment",
-          "handle": "belt-squat-lever-arms-attachment",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Belt Squat / Lever Arms Rack Attachment",
-          "handle": "belt-squat-lever-arms-attachment",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "good",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 57 → 54."
         }
       ],
       "rules": {
