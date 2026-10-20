@@ -1,6 +1,72 @@
 {
-  "generated_at": "2026-10-19T18:52:19.295Z",
+  "generated_at": "2026-10-20T17:35:51.786Z",
   "runs": [
+    {
+      "at": "2026-10-20T17:35:51.397Z",
+      "date": "2026-10-20",
+      "baseline": false,
+      "comparedTo": "2026-10-19T18:52:18.928Z",
+      "productCount": 493,
+      "changeCount": 5,
+      "bySeverity": {
+        "alert": 1,
+        "notable": 0,
+        "good": 2,
+        "info": 2
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt",
+          "detail": "$1692.82 → $1670.82 ($22.00 cheaper)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Blitz Mountain Climber Treadmill",
+          "handle": "blitz-mountain-climber-treadmill",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Blitz Mountain Climber Treadmill",
+          "handle": "blitz-mountain-climber-treadmill",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "parts-coverage",
+          "handle": null,
+          "detail": "Audit rule \"parts-coverage\" moved 14 → 15."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 64 → 63."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 32,
+        "zero-weight": 31,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 8,
+        "oos-published": 63,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-10-19T18:52:18.928Z",
       "date": "2026-10-19",
@@ -2551,36 +2617,6 @@
       "date": "2026-09-21",
       "baseline": false,
       "comparedTo": "2026-09-20T16:33:08.307Z",
-      "productCount": 476,
-      "changeCount": 0,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 0,
-        "good": 0,
-        "info": 0
-      },
-      "changes": [],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 29,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 8,
-        "oos-published": 55,
-        "taxonomy": 109,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-09-20T16:33:08.307Z",
-      "date": "2026-09-20",
-      "baseline": false,
-      "comparedTo": "2026-09-19T16:07:45.131Z",
       "productCount": 476,
       "changeCount": 0,
       "bySeverity": {

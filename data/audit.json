@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-19T18:52:19.185Z",
-  "snapshot": "2026-10-19T18:52:18.928Z",
+  "generated_at": "2026-10-20T17:35:51.658Z",
+  "snapshot": "2026-10-20T17:35:51.397Z",
   "scanned": 493,
-  "variants": 1627,
+  "variants": 1634,
   "findings": [
     {
       "id": "duplicate-pricing",
@@ -11,7 +11,7 @@
       "count": 16,
       "unit": "of 17 duplicated listings",
       "summary": "Every prebuilt rack exists as two live product pages: one plain handle, one ending \"-hgb\" (your Home Gym Builder copy). 16 of 17 charge different prices, and both pages are purchasable. 12 further duplicates were excluded as not comparable.",
-      "impact": "The two pages carry different SKUs (the plain handle adds a \"-BNDL\" suffix), but 16 of 16 pairs are identical in shipping weight, product copy and images, so a customer is choosing between two listings for the same rack with nothing on the page to tell them apart. The widest gap is $162.84. The cheaper page is usually running a small discount, but that is not the cause: the pre-discount list prices differ on 16 of 16 pairs, and on 7 the gap is actually wider before the discount is applied.",
+      "impact": "The two pages carry different SKUs (the plain handle adds a \"-BNDL\" suffix), but 16 of 16 pairs are identical in shipping weight, product copy and images, so a customer is choosing between two listings for the same rack with nothing on the page to tell them apart. The widest gap is $162.84. The cheaper page is usually running a small discount, but that is not the cause: the pre-discount list prices differ on 16 of 16 pairs, and on 6 the gap is actually wider before the discount is applied.",
       "fix": "Pick one canonical page per rack and point the other at it. The -hgb copies are already tagged SEARCHANISE_IGNORE, so they are meant to be reached only through the builder, but they are publicly reachable and in the feed.",
       "evidence": [
         {
@@ -87,6 +87,15 @@
           ]
         },
         {
+          "label": "Manticore Collegiate Power Rack - Prebuilt",
+          "detail": "$1670.82 (was $1724.87), /manticore-collegiate-power-rack-prebuilt   vs   $1699.99, /manticore-collegiate-power-rack-prebuilt-hgb",
+          "delta": "$29.17 apart, $24.88 before discounts",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-collegiate-power-rack-prebuilt",
+            "https://bellsofsteel.com/products/manticore-collegiate-power-rack-prebuilt-hgb"
+          ]
+        },
+        {
           "label": "Manticore Squat Stand - Prebuilt",
           "detail": "$874.94, /manticore-squat-stand-prebuilt   vs   $849.99, /manticore-squat-stand-prebuilt-hgb",
           "delta": "$24.95 apart, $24.95 before discounts",
@@ -111,15 +120,6 @@
           "links": [
             "https://bellsofsteel.com/products/hydra-collegiate-power-rack-prebuilt",
             "https://bellsofsteel.com/products/hydra-collegiate-power-rack-prebuilt-hgb"
-          ]
-        },
-        {
-          "label": "Hydra Flat Foot Power Rack - Prebuilt",
-          "detail": "$1309.89, /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt   vs   $1329.99, /hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
-          "delta": "$20.10 apart, $20.10 before discounts",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
-            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb"
           ]
         }
       ],
@@ -449,9 +449,9 @@
       "id": "parts-coverage",
       "severity": "high",
       "title": "Expensive machines have no spare parts published",
-      "count": 14,
+      "count": 15,
       "unit": "machines over $500",
-      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 14 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $5000.",
+      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 15 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $5000.",
       "impact": "A treadmill that fails in year two has nothing to sell the customer and nothing for support to point at, a warranty conversation with no good ending, on your highest-ticket items. Spare parts are also a margin-rich line being left on the table.",
       "fix": "Work down this list by price. Every machine over $1,000 should have at least its wear parts - pads, cables, bushings - published before the next warranty season.",
       "evidence": [
@@ -461,6 +461,14 @@
           "delta": "$5000",
           "links": [
             "https://bellsofsteel.com/products/blitz-manual-treadmill"
+          ]
+        },
+        {
+          "label": "Blitz Mountain Climber Treadmill",
+          "detail": "Cardio Machine",
+          "delta": "$2560",
+          "links": [
+            "https://bellsofsteel.com/products/blitz-mountain-climber-treadmill"
           ]
         },
         {
@@ -525,14 +533,6 @@
           "delta": "$1100",
           "links": [
             "https://bellsofsteel.com/products/blitz-air-rower"
-          ]
-        },
-        {
-          "label": "Manticore Two Post Converter Bench",
-          "detail": "Bench",
-          "delta": "$1030",
-          "links": [
-            "https://bellsofsteel.com/products/manticore-two-post-converter-bench"
           ]
         }
       ]
@@ -617,9 +617,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 64,
+      "count": 63,
       "unit": "products",
-      "summary": "64 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "63 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
@@ -969,7 +969,7 @@
   "clean": [
     {
       "label": "No SKU collisions",
-      "detail": "1365 SKUs checked, 1 reused across different products."
+      "detail": "1372 SKUs checked, 1 reused across different products."
     },
     {
       "label": "Discontinued products are genuinely unbuyable",

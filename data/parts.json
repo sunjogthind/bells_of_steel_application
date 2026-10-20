@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T18:52:19.104Z",
+  "generated_at": "2026-10-20T17:35:51.572Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -812,6 +812,12 @@
       "type": "Cardio Machine",
       "priceCents": 499999,
       "url": "https://bellsofsteel.com/products/blitz-manual-treadmill"
+    },
+    {
+      "title": "Blitz Mountain Climber Treadmill",
+      "type": "Cardio Machine",
+      "priceCents": 255997,
+      "url": "https://bellsofsteel.com/products/blitz-mountain-climber-treadmill"
     },
     {
       "title": "Sisyphean Stepper - Manual Stair Climber",
