@@ -1,6 +1,65 @@
 {
-  "generated_at": "2026-10-20T17:35:51.786Z",
+  "generated_at": "2026-10-21T17:43:04.126Z",
   "runs": [
+    {
+      "at": "2026-10-21T17:43:03.755Z",
+      "date": "2026-10-21",
+      "baseline": false,
+      "comparedTo": "2026-10-20T17:35:51.397Z",
+      "productCount": 493,
+      "changeCount": 4,
+      "bySeverity": {
+        "alert": 0,
+        "notable": 2,
+        "good": 0,
+        "info": 2
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Omni Bar",
+          "handle": "omni-bar",
+          "detail": "$191.97 → $99.97 ($92.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Bumper Plate Pins Shelf",
+          "handle": "bumper-plate-pins-shelf",
+          "detail": "$71.96 → $79.96 (+$8.00)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Glute Ham Slider",
+          "handle": "glute-ham-slider",
+          "detail": "$29.96 → $49.99 (+$20.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Foam Roller Storage",
+          "handle": "foam-roller-storage",
+          "detail": "$83.96 → $139.99 (+$56.03)"
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 32,
+        "zero-weight": 31,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 8,
+        "oos-published": 63,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-10-20T17:35:51.397Z",
       "date": "2026-10-20",
@@ -2605,36 +2664,6 @@
         "parts-coverage": 15,
         "fake-sale": 8,
         "oos-published": 53,
-        "taxonomy": 109,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-09-21T18:21:06.147Z",
-      "date": "2026-09-21",
-      "baseline": false,
-      "comparedTo": "2026-09-20T16:33:08.307Z",
-      "productCount": 476,
-      "changeCount": 0,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 0,
-        "good": 0,
-        "info": 0
-      },
-      "changes": [],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 29,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 8,
-        "oos-published": 55,
         "taxonomy": 109,
         "specs-hidden": 90,
         "missing-sku": 11,
