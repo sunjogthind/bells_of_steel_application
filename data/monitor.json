@@ -1,6 +1,457 @@
 {
-  "generated_at": "2026-10-21T17:43:04.126Z",
+  "generated_at": "2026-10-22T17:41:34.200Z",
   "runs": [
+    {
+      "at": "2026-10-22T17:41:33.945Z",
+      "date": "2026-10-22",
+      "baseline": false,
+      "comparedTo": "2026-10-21T17:43:03.755Z",
+      "productCount": 493,
+      "changeCount": 100,
+      "bySeverity": {
+        "alert": 2,
+        "notable": 13,
+        "good": 1,
+        "info": 84
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Roc Foldable 4 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-four-post-cage-prebuilt",
+          "detail": "$1265.87 → $1284.90 (+$19.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt",
+          "detail": "$1670.82 → $1679.85 (+$9.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Hydra Four Post Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-four-post-power-rack-prebuilt",
+          "detail": "$1301.86 → $1317.89 (+$16.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt",
+          "detail": "$2450.79 → $2459.82 (+$9.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt",
+          "detail": "$1500.87 → $1509.90 (+$9.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt",
+          "detail": "$952.89 → $958.92 (+$6.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt",
+          "detail": "$1787.83 → $1799.86 (+$12.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Hydra Six Post Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-six-post-power-rack-prebuilt",
+          "detail": "$2176.79 → $2192.82 (+$16.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "3x3 Cable Tower to Rack Connection Kit",
+          "handle": "3x3-cable-tower-to-rack-connection-kit",
+          "detail": "$77.96 → $129.99 (+$52.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Safety Straps for Hydra & Manticore Racks",
+          "handle": "safety-straps",
+          "detail": "$21.96 → $36.99 (+$15.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Adjustable Macebell",
+          "handle": "adjustable-macebell",
+          "detail": "$131.96 → $219.99 (+$88.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Swivel Shackles",
+          "handle": "swivel-shackles",
+          "detail": "$20.96 → $29.99 (+$9.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Utility Arm",
+          "handle": "utility-arm",
+          "detail": "$134.96 → $149.99 (+$15.03)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Omni Bar",
+          "handle": "omni-bar",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Omni Bar",
+          "handle": "omni-bar",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Single Bolt Casters",
+          "handle": "single-bolt-casters",
+          "detail": "$45.96 → $64.99 (+$19.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Rubber Flooring Puzzle Gym Mat 24\" x 24\" (Set of 8)",
+          "handle": "puzzle-mat-set",
+          "detail": "$95.96 → $136.99 (+$41.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "3 Layer Band Peg - Deadlift Platform",
+          "handle": "3-layer-band-peg-deadlift-platform",
+          "detail": "$55.96 → $69.99 (+$14.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "1 Layer Band Peg - Deadlift Platform",
+          "handle": "1-layer-band-peg-deadlift-platform",
+          "detail": "$48.96 → $69.99 (+$21.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Kraken Weight Stack Shroud (Single Side)",
+          "handle": "kraken-stack-shroud",
+          "detail": "$143.96 → $179.99 (+$36.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "1 Layer Deadlift Platform Hardware (Corners, Ground Tabs & Fasteners)",
+          "handle": "1-layer-deadlift-platform-hardware-corners-ground-tabs-fasteners",
+          "detail": "$52.96 → $74.99 (+$22.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "3 Layer Deadlift Platform Hardware (Corners,Ground Tabs & Fasteners)",
+          "handle": "3-layer-deadlift-platform-hardware-corners-ground-tabs-fasteners",
+          "detail": "$63.96 → $79.99 (+$16.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Deadlift Platform 125cm (49) Tube (4 pieces)",
+          "handle": "deadlift-platform-125cm-49-tube-4-pieces",
+          "detail": "$170.96 → $189.99 (+$19.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Deadlift Platform Rubber Tile",
+          "handle": "deadlift-platform-rubber-tile",
+          "detail": "$48.96 → $69.99 (+$21.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Deadlift Platform 95 (38) cm tube (4 pieces)",
+          "handle": "deadlift-platform-95-38-cm-tube-4-pieces",
+          "detail": "$135.96 → $169.99 (+$34.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Deadlift Platform Three Layer Centre Connection + hardware",
+          "handle": "deadlift-platform-three-layer-centre-connection-hardware",
+          "detail": "$15.96 → $19.99 (+$4.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Deadlift Platform Drop Pad Pair",
+          "handle": "deadlift-platform-drop-pad-pair",
+          "detail": "$129.96 → $184.99 (+$55.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Bamboo Hoodie",
+          "handle": "bamboo-hoodie",
+          "detail": "$29.96 → $49.99 (+$20.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Gymnastics Rings",
+          "handle": "gymnastics-rings",
+          "detail": "$44.96 → $49.99 (+$5.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Hydra Crossmember for Plate Tree",
+          "handle": "hydra-crossmember-plate-tree",
+          "detail": "$47.96 → $59.99 (+$12.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Hydra Bumper Plate Tree Reinforcement Plates",
+          "handle": "hydra-bumper-plate-tree-reinforcement-plates",
+          "detail": "$21.96 → $27.99 (+$6.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Utility Seat for Hydra/Manticore",
+          "handle": "utility-seat-for-hydra-manticore",
+          "detail": "$71.96 → $89.99 (+$18.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Casters for Hydra Upright (Set of 4)",
+          "handle": "hydra-upright-casters",
+          "detail": "$67.96 → $84.99 (+$17.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Bumper Plate Pins Shelf",
+          "handle": "bumper-plate-pins-shelf",
+          "detail": "$79.96 → $99.99 (+$20.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Commercial Interchangeable Weight Rack - Components Only",
+          "handle": "commercial-dumbbell-kettlebell-rackk",
+          "detail": "$59.96 → $89.99 (+$30.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Barbell Cleaning Microfiber Towel",
+          "handle": "barbell-cleaning-microfiber-towel",
+          "detail": "$5.96 → $6.99 (+$1.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Hydra Seven Ring Bar",
+          "handle": "hydra-seven-ring-bar",
+          "detail": "$247.96 → $279.99 (+$32.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Adjustable Length Aluminum Handles - Pair",
+          "handle": "aluminum-handles",
+          "detail": "$28.96 → $31.99 (+$3.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Safety Straps for 2.3\" x 2.3\" Racks",
+          "handle": "safety-straps-2-3x2-3",
+          "detail": "$22.96 → $29.99 (+$7.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Fat Bar - Tricep Pressdown",
+          "handle": "fat-bar-tricep-pressdown",
+          "detail": "$39.96 → $56.99 (+$17.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Luxury Sit Up Mat",
+          "handle": "luxury-sit-up-mat",
+          "detail": "$20.96 → $29.99 (+$9.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Double Landmine Pin for 5/8\" Holes",
+          "handle": "hydra-double-landmine-pin",
+          "detail": "$13.96 → $16.99 (+$3.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Oly Lifting Needle Bearing Bar - Women's",
+          "handle": "womens-barbell-olympic",
+          "detail": "$181.96 → $259.99 (+$78.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Tricep Pressdown With Ergo Handgrips",
+          "handle": "tricep-pressdown",
+          "detail": "$23.96 → $26.99 (+$3.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Blitz Indoor Cycling Bike",
+          "handle": "blitz-spin-bike",
+          "detail": "$419.96 → $599.99 (+$180.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Tricep Pulldown Rope – Single",
+          "handle": "tricep-press-down-rope",
+          "detail": "$11.96 → $12.99 (+$1.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Single D Handle Cable Attachment",
+          "handle": "single-d-rubber-handle",
+          "detail": "$13.96 → $15.99 (+$2.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Short Utility Barbell",
+          "handle": "short-barbell",
+          "detail": "$174.96 → $249.99 (+$75.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Straight Bar Cable Attachment (20\")",
+          "handle": "revolving-cable-bar",
+          "detail": "$18.96 → $31.99 (+$13.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Black Puzzle Mat",
+          "handle": "puzzle-mat",
+          "detail": "$44.96 → $49.99 (+$5.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Pro-Style Lat Bar Cable Attachment 38 Inches",
+          "handle": "parallel-lat-bar",
+          "detail": "$43.96 → $54.99 (+$11.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Weight Stack Pin",
+          "handle": "weight-stack-ping",
+          "detail": "$15.96 → $22.99 (+$7.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Nylon Adjustable Length Single Handle Cable Attachment",
+          "handle": "nylon-single-handle",
+          "detail": "$7.96 → $8.99 (+$1.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "MULTI-PURPOSE V STYLE BAR",
+          "handle": "v-style-bar",
+          "detail": "$29.96 → $36.99 (+$7.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Glute Loop",
+          "handle": "glute-loop",
+          "detail": "$10.96 → $13.99 (+$3.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Fixed Barbell Rack",
+          "handle": "fixed-barbell-rack",
+          "detail": "$271.96 → $339.99 (+$68.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Multi Purpose Close Grip Cable Attachment",
+          "handle": "close-grip-cable-attachment",
+          "detail": "$22.96 → $37.99 (+$15.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Camber Bar Attachment - Pair",
+          "handle": "camber-bar-attachment-set",
+          "detail": "$111.96 → $159.99 (+$48.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Lifting Straps",
+          "handle": "weightlifting-straps",
+          "detail": "$17.96 → $22.99 (+$5.03)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Accessory Holder (Wall or Rack Mounted)",
+          "handle": "accessory-holder",
+          "detail": "$40.96 → $44.99 (+$4.03)"
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 32,
+        "zero-weight": 31,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 15,
+        "oos-published": 63,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-10-21T17:43:03.755Z",
       "date": "2026-10-21",
@@ -2591,79 +3042,6 @@
         "parts-coverage": 15,
         "fake-sale": 8,
         "oos-published": 51,
-        "taxonomy": 109,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-09-22T17:23:06.812Z",
-      "date": "2026-09-22",
-      "baseline": false,
-      "comparedTo": "2026-09-21T18:21:06.147Z",
-      "productCount": 476,
-      "changeCount": 6,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 0,
-        "good": 3,
-        "info": 3
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "StrongArm Combo Rack - Squat Stand & Bench Press",
-          "handle": "strongarm-combo-rack",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "StrongArm Combo Rack - Squat Stand & Bench Press",
-          "handle": "strongarm-combo-rack",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Weightlifting Chain Sets",
-          "handle": "weightlifting-chain-sets",
-          "detail": "$95.96 → $109.99 (+$14.03)"
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Alex Leonidas Onyx Bar",
-          "handle": "alex-leonidas-onyx-bar",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Alex Leonidas Onyx Bar",
-          "handle": "alex-leonidas-onyx-bar",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "good",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 55 → 53."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 29,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 8,
-        "oos-published": 53,
         "taxonomy": 109,
         "specs-hidden": 90,
         "missing-sku": 11,
