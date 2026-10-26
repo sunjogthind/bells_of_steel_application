@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T16:53:09.635Z",
+  "generated_at": "2026-10-26T18:54:29.910Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -702,7 +702,7 @@
       "ref": null,
       "sku": "SP-L-SS4-PAD",
       "priceCents": 4899,
-      "available": true,
+      "available": false,
       "machine": "Pad for Safety Squat Bar",
       "parentTitle": "Pad for Safety Squat Bar",
       "url": "https://bellsofsteel.com/products/pad-for-safety-squat-bar"
