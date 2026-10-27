@@ -1,6 +1,128 @@
 {
-  "generated_at": "2026-10-26T18:54:30.104Z",
+  "generated_at": "2026-10-27T18:24:56.940Z",
   "runs": [
+    {
+      "at": "2026-10-27T18:24:56.546Z",
+      "date": "2026-10-27",
+      "baseline": false,
+      "comparedTo": "2026-10-26T18:54:29.738Z",
+      "productCount": 493,
+      "changeCount": 13,
+      "bySeverity": {
+        "alert": 6,
+        "notable": 1,
+        "good": 0,
+        "info": 6
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Ripcords Premium Resistance Bands",
+          "handle": "ripcords-premium-resistance-bands",
+          "detail": "$9.99 → $15.99 (+$6.00)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Functional Trainer",
+          "handle": "functional-trainer",
+          "detail": "$1099.99 → $769.97 ($330.02 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Barbell Pads with Straps",
+          "handle": "barbell-pads",
+          "detail": "$15.97 → $9.97 ($6.00 cheaper)"
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "fake-sale",
+          "handle": null,
+          "detail": "Audit rule \"fake-sale\" moved 16 → 17."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 66 → 70."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 32,
+        "zero-weight": 31,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 17,
+        "oos-published": 70,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-10-26T18:54:29.738Z",
       "date": "2026-10-26",
@@ -2843,58 +2965,6 @@
         "parts-coverage": 16,
         "fake-sale": 8,
         "oos-published": 54,
-        "taxonomy": 114,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-09-27T17:20:12.096Z",
-      "date": "2026-09-27",
-      "baseline": false,
-      "comparedTo": "2026-09-26T16:48:15.533Z",
-      "productCount": 481,
-      "changeCount": 3,
-      "bySeverity": {
-        "alert": 2,
-        "notable": 0,
-        "good": 0,
-        "info": 1
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Alex Leonidas Onyx Bar",
-          "handle": "alex-leonidas-onyx-bar",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Alex Leonidas Onyx Bar",
-          "handle": "alex-leonidas-onyx-bar",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 56 → 57."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 8,
-        "oos-published": 57,
         "taxonomy": 114,
         "specs-hidden": 90,
         "missing-sku": 11,
