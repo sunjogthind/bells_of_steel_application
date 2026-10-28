@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-10-27T18:24:56.940Z",
+  "generated_at": "2026-10-28T18:32:43.158Z",
   "runs": [
+    {
+      "at": "2026-10-28T18:32:42.731Z",
+      "date": "2026-10-28",
+      "baseline": false,
+      "comparedTo": "2026-10-27T18:24:56.546Z",
+      "productCount": 493,
+      "changeCount": 0,
+      "bySeverity": {
+        "alert": 0,
+        "notable": 0,
+        "good": 0,
+        "info": 0
+      },
+      "changes": [],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 32,
+        "zero-weight": 31,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 17,
+        "oos-published": 70,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-10-27T18:24:56.546Z",
       "date": "2026-10-27",
@@ -2811,149 +2841,6 @@
           "title": "Blitz Ski Trainer",
           "handle": "blitz-ski-trainer",
           "detail": "New data issue: all_variants_oos."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 16,
-        "fake-sale": 8,
-        "oos-published": 54,
-        "taxonomy": 114,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-09-28T19:52:33.073Z",
-      "date": "2026-09-28",
-      "baseline": false,
-      "comparedTo": "2026-09-27T17:20:12.096Z",
-      "productCount": 481,
-      "changeCount": 16,
-      "bySeverity": {
-        "alert": 3,
-        "notable": 0,
-        "good": 6,
-        "info": 7
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manctiore-folding-power-rack-prebuilt",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manctiore-folding-power-rack-prebuilt",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-folding-half-rack-prebuilt",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-folding-half-rack-prebuilt",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Kraken Rack Attachment for 6 Post Hydra Racks (Single Side)",
-          "handle": "kraken-6-post-hydra",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Kraken Rack Attachment for 6 Post Hydra Racks (Single Side)",
-          "handle": "kraken-6-post-hydra",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-folding-half-rack-prebuilt-hgb",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-folding-half-rack-prebuilt-hgb",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Blitz Max Air Bike",
-          "handle": "blitz-max-air-bike",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Blitz Max Air Bike",
-          "handle": "blitz-max-air-bike",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Blitz Ski Trainer",
-          "handle": "blitz-ski-trainer",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Blitz Ski Trainer",
-          "handle": "blitz-ski-trainer",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Roll of Gym Turf",
-          "handle": "turf-roll",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Roll of Gym Turf",
-          "handle": "turf-roll",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "parts-coverage",
-          "handle": null,
-          "detail": "Audit rule \"parts-coverage\" moved 15 → 16."
-        },
-        {
-          "kind": "rule",
-          "severity": "good",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 57 → 54."
         }
       ],
       "rules": {
