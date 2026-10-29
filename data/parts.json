@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T18:32:42.927Z",
+  "generated_at": "2026-10-29T18:41:44.559Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -394,7 +394,7 @@
       "ref": null,
       "sku": "SP-84LA-RA-HDR-CBL",
       "priceCents": 2199,
-      "available": false,
+      "available": true,
       "machine": "Lat Pulldown / Row Rack Attachment",
       "parentTitle": "Lat Pulldown / Row Rack Attachment Spare Parts",
       "url": "https://bellsofsteel.com/products/lat-pulldown-row-rack-attachment-spare-parts"

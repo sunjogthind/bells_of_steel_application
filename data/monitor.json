@@ -1,6 +1,58 @@
 {
-  "generated_at": "2026-10-28T18:32:43.158Z",
+  "generated_at": "2026-10-29T18:41:44.707Z",
   "runs": [
+    {
+      "at": "2026-10-29T18:41:44.426Z",
+      "date": "2026-10-29",
+      "baseline": false,
+      "comparedTo": "2026-10-28T18:32:42.731Z",
+      "productCount": 493,
+      "changeCount": 3,
+      "bySeverity": {
+        "alert": 2,
+        "notable": 0,
+        "good": 0,
+        "info": 1
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fixed Barbells - Straight Handle",
+          "handle": "fixed-barbells-straight-handle",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Fixed Barbells - Straight Handle",
+          "handle": "fixed-barbells-straight-handle",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 70 → 71."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 32,
+        "zero-weight": 31,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 17,
+        "oos-published": 71,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-10-28T18:32:42.731Z",
       "date": "2026-10-28",
@@ -2794,65 +2846,6 @@
         "fake-sale": 8,
         "oos-published": 54,
         "taxonomy": 115,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-09-29T18:21:06.694Z",
-      "date": "2026-09-29",
-      "baseline": false,
-      "comparedTo": "2026-09-28T19:52:33.073Z",
-      "productCount": 481,
-      "changeCount": 4,
-      "bySeverity": {
-        "alert": 1,
-        "notable": 0,
-        "good": 1,
-        "info": 2
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Two Post Converter Bench",
-          "handle": "manticore-two-post-converter-bench",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Manticore Two Post Converter Bench",
-          "handle": "manticore-two-post-converter-bench",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Blitz Ski Trainer",
-          "handle": "blitz-ski-trainer",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Blitz Ski Trainer",
-          "handle": "blitz-ski-trainer",
-          "detail": "New data issue: all_variants_oos."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 16,
-        "fake-sale": 8,
-        "oos-published": 54,
-        "taxonomy": 114,
         "specs-hidden": 90,
         "missing-sku": 11,
         "thin-description": 36,
