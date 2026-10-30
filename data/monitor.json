@@ -1,6 +1,86 @@
 {
-  "generated_at": "2026-10-29T18:41:44.707Z",
+  "generated_at": "2026-10-30T18:17:43.260Z",
   "runs": [
+    {
+      "at": "2026-10-30T18:17:42.866Z",
+      "date": "2026-10-30",
+      "baseline": false,
+      "comparedTo": "2026-10-29T18:41:44.426Z",
+      "productCount": 493,
+      "changeCount": 7,
+      "bySeverity": {
+        "alert": 1,
+        "notable": 0,
+        "good": 3,
+        "info": 3
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "ABsyidyan Stainless Steel Ab Roller",
+          "handle": "absyidyan-stainless-steel-ab-roller",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "ABsyidyan Stainless Steel Ab Roller",
+          "handle": "absyidyan-stainless-steel-ab-roller",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Flat-Iron Tricep Press Cable Attachment",
+          "handle": "flat-iron-tricep-press-cable-attachment",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Flat-Iron Tricep Press Cable Attachment",
+          "handle": "flat-iron-tricep-press-cable-attachment",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Footplate for Cable Tower/All In One Trainer",
+          "handle": "footplate-for-cable-tower",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Footplate for Cable Tower/All In One Trainer",
+          "handle": "footplate-for-cable-tower",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 71 → 70."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 32,
+        "zero-weight": 31,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 17,
+        "oos-published": 70,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-10-29T18:41:44.426Z",
       "date": "2026-10-29",
@@ -2772,79 +2852,6 @@
         "parts-coverage": 15,
         "fake-sale": 8,
         "oos-published": 53,
-        "taxonomy": 115,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-09-30T18:10:24.753Z",
-      "date": "2026-09-30",
-      "baseline": false,
-      "comparedTo": "2026-09-29T18:21:06.694Z",
-      "productCount": 482,
-      "changeCount": 6,
-      "bySeverity": {
-        "alert": 2,
-        "notable": 0,
-        "good": 1,
-        "info": 3
-      },
-      "changes": [
-        {
-          "kind": "added",
-          "severity": "info",
-          "title": "Anvil Handles",
-          "detail": "New product in the feed at $179.99.",
-          "handle": "anvil-handles"
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Kettlebell Wrap",
-          "handle": "kettlebell-wrap",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Kettlebell Wrap",
-          "handle": "kettlebell-wrap",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "48KG Extension Kit for Adjustable Kettlebell - Wildman Poison Pill",
-          "handle": "wildman-poison-pill",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "48KG Extension Kit for Adjustable Kettlebell - Wildman Poison Pill",
-          "handle": "wildman-poison-pill",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "taxonomy",
-          "handle": null,
-          "detail": "Audit rule \"taxonomy\" moved 114 → 115."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 16,
-        "fake-sale": 8,
-        "oos-published": 54,
         "taxonomy": 115,
         "specs-hidden": 90,
         "missing-sku": 11,
