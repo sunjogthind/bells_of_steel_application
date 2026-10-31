@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-30T18:17:43.146Z",
-  "snapshot": "2026-10-30T18:17:42.866Z",
+  "generated_at": "2026-10-31T17:24:23.596Z",
+  "snapshot": "2026-10-31T17:24:23.317Z",
   "scanned": 493,
   "variants": 1634,
   "findings": [
@@ -129,9 +129,9 @@
       "id": "zero-price",
       "severity": "high",
       "title": "Products priced at $0.00 or $0.01 are exposed in the public feed",
-      "count": 32,
+      "count": 17,
       "unit": "products",
-      "summary": "37 purchasable variants across 32 products carry a price of $1.00 or less. 16 of them are recognisably deliberate, \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
+      "summary": "22 purchasable variants across 17 products carry a price of $1.00 or less. 16 of them are recognisably deliberate, \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
       "impact": "Nothing in the feed distinguishes these from real products, so anything reading products.json inherits them: shopping feeds, analytics, price monitoring, any internal tool. Spotter recommended one as the cheapest fix for an equipment gap until I filtered them out.",
       "fix": "Move builder scaffolding to a dedicated product type or unpublish it from the online-store channel so it stops appearing in the feed at all.",
       "evidence": [
@@ -141,14 +141,6 @@
           "delta": "worth checking",
           "links": [
             "https://bellsofsteel.com/products/hydra-storage-builder"
-          ]
-        },
-        {
-          "label": "Manticore Folding Power Rack Builder (3\" x 3\", 1\" Holes)",
-          "detail": "$0.00, variant \"Default Title\"",
-          "delta": "worth checking",
-          "links": [
-            "https://bellsofsteel.com/products/manctiore-folding-power-rack-builder"
           ]
         },
         {
@@ -214,6 +206,14 @@
           "links": [
             "https://bellsofsteel.com/products/commercial-interchangeable-weight-rack"
           ]
+        },
+        {
+          "label": "Barbell And Plate Custom Set",
+          "detail": "$0.01, variant \"Variant for price 0.01\"",
+          "delta": "likely intentional",
+          "links": [
+            "https://bellsofsteel.com/products/barbell-and-plate-custom-set-1"
+          ]
         }
       ]
     },
@@ -221,9 +221,9 @@
       "id": "zero-weight",
       "severity": "high",
       "title": "Physical products ship with no weight recorded",
-      "count": 31,
+      "count": 46,
       "unit": "products",
-      "summary": "281 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
+      "summary": "296 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
       "impact": "You move squat racks and plate sets on LTL freight, and weight is the input to the rate. A zero there means the carrier calculation is running on a default, and the gap between the quoted rate and the real one is absorbed on every one of these orders.",
       "fix": "Backfill weights from your packing data, then add a Shopify validation that refuses to publish a shipped product with a zero weight.",
       "evidence": [
@@ -284,27 +284,27 @@
           ]
         },
         {
+          "label": "Manticore Six Post Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "detail": "$1484.91, Default Title",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-six-post-power-rack-builder"
+          ]
+        },
+        {
+          "label": "Manticore Flat Foot Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "detail": "$1379.90, Default Title",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-builder"
+          ]
+        },
+        {
           "label": "All-in-One Trainer",
           "detail": "$1349.99, Plate Loaded (with Footplate)",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/all-in-one-trainer"
-          ]
-        },
-        {
-          "label": "Hydra Storage Builder",
-          "detail": "$1319.93, Variant for price 1319.93",
-          "delta": "0 g",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-storage-builder-1"
-          ]
-        },
-        {
-          "label": "Hydra Storage Builder",
-          "detail": "$1309.94, Variant for price 1309.94",
-          "delta": "0 g",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-storage-builder-1"
           ]
         }
       ]

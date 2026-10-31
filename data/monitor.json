@@ -1,6 +1,191 @@
 {
-  "generated_at": "2026-10-30T18:17:43.260Z",
+  "generated_at": "2026-10-31T17:24:23.709Z",
   "runs": [
+    {
+      "at": "2026-10-31T17:24:23.317Z",
+      "date": "2026-10-31",
+      "baseline": false,
+      "comparedTo": "2026-10-30T18:17:42.866Z",
+      "productCount": 493,
+      "changeCount": 22,
+      "bySeverity": {
+        "alert": 2,
+        "notable": 16,
+        "good": 2,
+        "info": 2
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Folding Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-builder",
+          "detail": "$0.00 → $1324.92 (+$1324.92)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Flat Foot Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-builder",
+          "detail": "$0.00 → $1379.90 (+$1379.90)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Collegiate Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-builder",
+          "detail": "$0.00 → $1299.90 (+$1299.90)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Half Rack Builder (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-builder",
+          "detail": "$0.00 → $1334.91 (+$1334.91)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Squat Stand Builder (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-builder",
+          "detail": "$0.00 → $794.94 (+$794.94)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Four Post Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-builder",
+          "detail": "$0.00 → $1024.93 (+$1024.93)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Folding Half Rack Builder (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-builder",
+          "detail": "$0.00 → $854.95 (+$854.95)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Six Post Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-builder",
+          "detail": "$0.00 → $1484.91 (+$1484.91)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Collegiate Power Rack Builder (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-collegiate-power-rack-builder",
+          "detail": "$0.00 → $1119.90 (+$1119.90)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Squat Stand Builder (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-squat-stand-builder",
+          "detail": "$0.00 → $574.95 (+$574.95)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Half Rack Builder (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-builder",
+          "detail": "$0.00 → $989.92 (+$989.92)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Four Post Power Rack Builder (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-four-post-power-rack-builder",
+          "detail": "$1199.91 → $869.93 ($329.98 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Roc Foldable 2 Post Cage Builder (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-two-post-cage-builder",
+          "detail": "$0.00 → $669.95 (+$669.95)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Roc Foldable 4 Post Cage Builder (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-four-post-cage-builder",
+          "detail": "$0.00 → $1074.92 (+$1074.92)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Six Post Power Rack Builder (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-six-post-power-rack-builder",
+          "detail": "$0.00 → $1261.91 (+$1261.91)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Flat Foot Power Rack Builder (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack",
+          "detail": "$0.00 → $1019.91 (+$1019.91)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fixed Barbells - Straight Handle",
+          "handle": "fixed-barbells-straight-handle",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Fixed Barbells - Straight Handle",
+          "handle": "fixed-barbells-straight-handle",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Belt Squat / Lever Arms Rack Attachment",
+          "handle": "belt-squat-lever-arms-attachment",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Belt Squat / Lever Arms Rack Attachment",
+          "handle": "belt-squat-lever-arms-attachment",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "zero-price",
+          "handle": null,
+          "detail": "Audit rule \"zero-price\" moved 32 → 17."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "zero-weight",
+          "handle": null,
+          "detail": "Audit rule \"zero-weight\" moved 31 → 46."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 17,
+        "zero-weight": 46,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 17,
+        "oos-published": 70,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-10-30T18:17:42.866Z",
       "date": "2026-10-30",
@@ -2765,93 +2950,6 @@
         "parts-coverage": 16,
         "fake-sale": 8,
         "oos-published": 58,
-        "taxonomy": 115,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-01T18:36:13.155Z",
-      "date": "2026-10-01",
-      "baseline": false,
-      "comparedTo": "2026-09-30T18:10:24.753Z",
-      "productCount": 482,
-      "changeCount": 8,
-      "bySeverity": {
-        "alert": 1,
-        "notable": 0,
-        "good": 4,
-        "info": 3
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Two Post Converter Bench",
-          "handle": "manticore-two-post-converter-bench",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Manticore Two Post Converter Bench",
-          "handle": "manticore-two-post-converter-bench",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-half-rack-prebuilt-hgb",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-half-rack-prebuilt-hgb",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Blitz Max Air Bike",
-          "handle": "blitz-max-air-bike",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Blitz Max Air Bike",
-          "handle": "blitz-max-air-bike",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "good",
-          "title": "parts-coverage",
-          "handle": null,
-          "detail": "Audit rule \"parts-coverage\" moved 16 → 15."
-        },
-        {
-          "kind": "rule",
-          "severity": "good",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 54 → 53."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 8,
-        "oos-published": 53,
         "taxonomy": 115,
         "specs-hidden": 90,
         "missing-sku": 11,
