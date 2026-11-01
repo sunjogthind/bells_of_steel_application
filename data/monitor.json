@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-10-31T17:24:23.709Z",
+  "generated_at": "2026-11-01T18:09:53.180Z",
   "runs": [
+    {
+      "at": "2026-11-01T18:09:52.780Z",
+      "date": "2026-11-01",
+      "baseline": false,
+      "comparedTo": "2026-10-31T17:24:23.317Z",
+      "productCount": 493,
+      "changeCount": 0,
+      "bySeverity": {
+        "alert": 0,
+        "notable": 0,
+        "good": 0,
+        "info": 0
+      },
+      "changes": [],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 17,
+        "zero-weight": 46,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 17,
+        "oos-published": 70,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-10-31T17:24:23.317Z",
       "date": "2026-10-31",
@@ -2770,177 +2800,6 @@
         "info": 0
       },
       "changes": [],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 16,
-        "fake-sale": 8,
-        "oos-published": 58,
-        "taxonomy": 115,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-02T18:05:38.582Z",
-      "date": "2026-10-02",
-      "baseline": false,
-      "comparedTo": "2026-10-01T18:36:13.155Z",
-      "productCount": 482,
-      "changeCount": 20,
-      "bySeverity": {
-        "alert": 9,
-        "notable": 0,
-        "good": 2,
-        "info": 9
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-squat-stand-prebuilt",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-squat-stand-prebuilt",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-half-rack-prebuilt",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-half-rack-prebuilt",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Two Post Converter Bench",
-          "handle": "manticore-two-post-converter-bench",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Manticore Two Post Converter Bench",
-          "handle": "manticore-two-post-converter-bench",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Specialty Bar Bundle",
-          "handle": "specialty-bar-bundle",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Specialty Bar Bundle",
-          "handle": "specialty-bar-bundle",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-squat-stand-prebuilt-hgb",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-squat-stand-prebuilt-hgb",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-half-rack-prebuilt-hgb",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-half-rack-prebuilt-hgb",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-four-post-power-rack-prebuilt-hgb",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-four-post-power-rack-prebuilt-hgb",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-flat-foot-power-rack-prebuilt-hgb",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-flat-foot-power-rack-prebuilt-hgb",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "parts-coverage",
-          "handle": null,
-          "detail": "Audit rule \"parts-coverage\" moved 15 → 16."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 53 → 58."
-        }
-      ],
       "rules": {
         "duplicate-pricing": 16,
         "zero-price": 33,
