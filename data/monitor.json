@@ -1,6 +1,149 @@
 {
-  "generated_at": "2026-11-01T18:09:53.180Z",
+  "generated_at": "2026-11-02T21:58:21.441Z",
   "runs": [
+    {
+      "at": "2026-11-02T21:58:21.055Z",
+      "date": "2026-11-02",
+      "baseline": false,
+      "comparedTo": "2026-11-01T18:09:52.780Z",
+      "productCount": 493,
+      "changeCount": 16,
+      "bySeverity": {
+        "alert": 1,
+        "notable": 0,
+        "good": 8,
+        "info": 7
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Four Post Converter Bench",
+          "handle": "hydra-four-post-converter-bench",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Four Post Converter Bench",
+          "handle": "hydra-four-post-converter-bench",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Dip Belt",
+          "handle": "dip-belt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Dip Belt",
+          "handle": "dip-belt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Aluminum Technique Barbell",
+          "handle": "technique-ball",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Aluminum Technique Barbell",
+          "handle": "technique-ball",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "parts-coverage",
+          "handle": null,
+          "detail": "Audit rule \"parts-coverage\" moved 15 → 14."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 70 → 65."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 17,
+        "zero-weight": 46,
+        "vendor-corrupt": 9,
+        "compat-graph": 5,
+        "parts-coverage": 14,
+        "fake-sale": 17,
+        "oos-published": 65,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 11,
+        "thin-description": 36,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-01T18:09:52.780Z",
       "date": "2026-11-01",
@@ -2779,36 +2922,6 @@
         "parts-coverage": 16,
         "fake-sale": 8,
         "oos-published": 59,
-        "taxonomy": 115,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-03T16:49:10.445Z",
-      "date": "2026-10-03",
-      "baseline": false,
-      "comparedTo": "2026-10-02T18:05:38.582Z",
-      "productCount": 482,
-      "changeCount": 0,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 0,
-        "good": 0,
-        "info": 0
-      },
-      "changes": [],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 33,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 16,
-        "fake-sale": 8,
-        "oos-published": 58,
         "taxonomy": 115,
         "specs-hidden": 90,
         "missing-sku": 11,

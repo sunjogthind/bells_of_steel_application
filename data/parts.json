@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T18:09:52.971Z",
+  "generated_at": "2026-11-02T21:58:21.242Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -872,12 +872,6 @@
       "type": "Bench",
       "priceCents": 102999,
       "url": "https://bellsofsteel.com/products/manticore-two-post-converter-bench"
-    },
-    {
-      "title": "Hydra Four Post Converter Bench",
-      "type": "Bench",
-      "priceCents": 99999,
-      "url": "https://bellsofsteel.com/products/hydra-four-post-converter-bench"
     },
     {
       "title": "Lat Pulldown Low Row Machine",
