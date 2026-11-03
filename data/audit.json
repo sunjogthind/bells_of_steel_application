@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-02T21:58:21.327Z",
-  "snapshot": "2026-11-02T21:58:21.055Z",
-  "scanned": 493,
-  "variants": 1615,
+  "generated_at": "2026-11-03T19:52:11.752Z",
+  "snapshot": "2026-11-03T19:52:11.508Z",
+  "scanned": 492,
+  "variants": 1595,
   "findings": [
     {
       "id": "duplicate-pricing",
@@ -129,9 +129,9 @@
       "id": "zero-price",
       "severity": "high",
       "title": "Products priced at $0.00 or $0.01 are exposed in the public feed",
-      "count": 17,
+      "count": 16,
       "unit": "products",
-      "summary": "22 purchasable variants across 17 products carry a price of $1.00 or less. 16 of them are recognisably deliberate, \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
+      "summary": "21 purchasable variants across 16 products carry a price of $1.00 or less. 15 of them are recognisably deliberate, \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
       "impact": "Nothing in the feed distinguishes these from real products, so anything reading products.json inherits them: shopping feeds, analytics, price monitoring, any internal tool. Spotter recommended one as the cheapest fix for an equipment gap until I filtered them out.",
       "fix": "Move builder scaffolding to a dedicated product type or unpublish it from the online-store channel so it stops appearing in the feed at all.",
       "evidence": [
@@ -140,7 +140,7 @@
           "detail": "$0.00, variant \"Default Title\"",
           "delta": "worth checking",
           "links": [
-            "https://bellsofsteel.com/products/hydra-storage-builder"
+            "https://bellsofsteel.com/products/gym-storage-builder"
           ]
         },
         {
@@ -157,14 +157,6 @@
           "delta": "worth checking",
           "links": [
             "https://bellsofsteel.com/products/hydra-bumper-plate-tree-builder"
-          ]
-        },
-        {
-          "label": "Hydra Storage Builder",
-          "detail": "$0.00, variant \"Variant for price 0\"",
-          "delta": "likely intentional",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-storage-builder-1"
           ]
         },
         {
@@ -214,6 +206,14 @@
           "links": [
             "https://bellsofsteel.com/products/barbell-and-plate-custom-set-1"
           ]
+        },
+        {
+          "label": "Hydra Trident Station",
+          "detail": "$0.00, variant \"Variant for price 0\"",
+          "delta": "likely intentional",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-trident-station-1"
+          ]
         }
       ]
     },
@@ -221,9 +221,9 @@
       "id": "zero-weight",
       "severity": "high",
       "title": "Physical products ship with no weight recorded",
-      "count": 46,
+      "count": 45,
       "unit": "products",
-      "summary": "296 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
+      "summary": "277 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
       "impact": "You move squat racks and plate sets on LTL freight, and weight is the input to the rate. A zero there means the carrier calculation is running on a default, and the gap between the quoted rate and the real one is absorbed on every one of these orders.",
       "fix": "Backfill weights from your packing data, then add a Shopify validation that refuses to publish a shipped product with a zero weight.",
       "evidence": [
@@ -268,22 +268,6 @@
           ]
         },
         {
-          "label": "Hydra Storage Builder",
-          "detail": "$1549.91, Variant for price 1549.91",
-          "delta": "0 g",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-storage-builder-1"
-          ]
-        },
-        {
-          "label": "Hydra Storage Builder",
-          "detail": "$1499.94, Variant for price 1499.94",
-          "delta": "0 g",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-storage-builder-1"
-          ]
-        },
-        {
           "label": "Manticore Six Post Power Rack Builder (3\" x 3\", 1\" Holes)",
           "detail": "$1484.91, Default Title",
           "delta": "0 g",
@@ -306,6 +290,22 @@
           "links": [
             "https://bellsofsteel.com/products/all-in-one-trainer"
           ]
+        },
+        {
+          "label": "Manticore Half Rack Builder (3\" x 3\", 1\" Holes)",
+          "detail": "$1334.91, Default Title",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-half-rack-builder"
+          ]
+        },
+        {
+          "label": "Manticore Folding Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "detail": "$1324.92, Default Title",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/manctiore-folding-power-rack-builder"
+          ]
         }
       ]
     },
@@ -313,9 +313,9 @@
       "id": "vendor-corrupt",
       "severity": "high",
       "title": "A broken sync is writing product IDs into the vendor field",
-      "count": 9,
+      "count": 8,
       "unit": "products",
-      "summary": "9 products have a vendor of \"related_to_<numeric id>\" instead of a brand name. The rest of the catalogue correctly reads \"Bells of Steel\".",
+      "summary": "8 products have a vendor of \"related_to_<numeric id>\" instead of a brand name. The rest of the catalogue correctly reads \"Bells of Steel\".",
       "impact": "Vendor is a customer-facing field and a required attribute in Google Shopping and most marketplace feeds. These products are advertising a database key as their brand.",
       "fix": "Find the app writing this (the value shape suggests a related-products integration reusing the field) and reset the affected products to the correct vendor. Worth checking what else that integration touches.",
       "evidence": [
@@ -325,14 +325,6 @@
           "delta": "corrupt",
           "links": [
             "https://bellsofsteel.com/products/kraken-cable-tower-rack-attachment-1"
-          ]
-        },
-        {
-          "label": "Hydra Storage Builder",
-          "detail": "vendor = \"related_to_7562480451636\"",
-          "delta": "corrupt",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-storage-builder-1"
           ]
         },
         {
@@ -449,9 +441,9 @@
       "id": "parts-coverage",
       "severity": "high",
       "title": "Expensive machines have no spare parts published",
-      "count": 14,
+      "count": 15,
       "unit": "machines over $500",
-      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 14 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $5000.",
+      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 15 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $5000.",
       "impact": "A treadmill that fails in year two has nothing to sell the customer and nothing for support to point at, a warranty conversation with no good ending, on your highest-ticket items. Spare parts are also a margin-rich line being left on the table.",
       "fix": "Work down this list by price. Every machine over $1,000 should have at least its wear parts - pads, cables, bushings - published before the next warranty season.",
       "evidence": [
@@ -528,11 +520,11 @@
           ]
         },
         {
-          "label": "Blitz Air Rower",
-          "detail": "Cardio Machine",
+          "label": "Manticore Four Post Converter Bench",
+          "detail": "Bench",
           "delta": "$1100",
           "links": [
-            "https://bellsofsteel.com/products/blitz-air-rower"
+            "https://bellsofsteel.com/products/manticore-four-post-converter-bench"
           ]
         }
       ]
@@ -541,9 +533,9 @@
       "id": "fake-sale",
       "severity": "medium",
       "title": "Compare-at price equals the selling price",
-      "count": 17,
+      "count": 18,
       "unit": "variants",
-      "summary": "17 variants set a compare-at price identical to what the customer actually pays.",
+      "summary": "18 variants set a compare-at price identical to what the customer actually pays.",
       "impact": "Shopify renders compare-at as a struck-through \"was\" price. A struck-through number that matches the real one is a discount claim with no discount behind it, which is both a conversion problem and the kind of thing consumer-protection rules care about.",
       "fix": "Clear compare_at_price wherever it is less than or equal to price, and add it to the same publish-time validation as the weight check.",
       "evidence": [
@@ -633,20 +625,12 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 65,
+      "count": 62,
       "unit": "products",
-      "summary": "65 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "62 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
-        {
-          "label": "Selfie Sentinel - Magnetic Rack Phone Holder",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/selfie-sentinel"
-          ]
-        },
         {
           "label": "Lat Pulldown Bar",
           "detail": "1 variant, none available",
@@ -688,14 +672,6 @@
           ]
         },
         {
-          "label": "Manticore Four Post Converter Bench",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/manticore-four-post-converter-bench"
-          ]
-        },
-        {
           "label": "Hydra Four Post Converter Bench",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
@@ -717,6 +693,22 @@
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/rack-junctions-3-x-3"
+          ]
+        },
+        {
+          "label": "Die-Cut Sticker Upgrade / Sticker Pack",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/die-cut-sticker-upgrade-sticker-pack"
+          ]
+        },
+        {
+          "label": "Pandemonium Squat – 3-in-1 Pendulum Squat / Calf Press / Viking Press Machine",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/pandemonium-squat"
           ]
         }
       ]
@@ -837,9 +829,9 @@
       "id": "missing-sku",
       "severity": "low",
       "title": "Variants with no SKU",
-      "count": 11,
+      "count": 10,
       "unit": "products",
-      "summary": "11 products have at least one variant with an empty SKU.",
+      "summary": "10 products have at least one variant with an empty SKU.",
       "impact": "SKU is the join key between Shopify, your warehouse and any reporting built on top. A blank one breaks the join silently.",
       "fix": "Assign SKUs and make the field required.",
       "evidence": [
@@ -857,14 +849,6 @@
           "delta": "",
           "links": [
             "https://bellsofsteel.com/products/kraken-cable-tower-rack-attachment-1"
-          ]
-        },
-        {
-          "label": "Hydra Storage Builder",
-          "detail": "variant missing SKU",
-          "delta": "",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-storage-builder-1"
           ]
         },
         {
@@ -890,6 +874,14 @@
           "links": [
             "https://bellsofsteel.com/products/hydra-trident-station-1"
           ]
+        },
+        {
+          "label": "Hydra Trident Station",
+          "detail": "variant missing SKU",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-trident-station"
+          ]
         }
       ]
     },
@@ -897,9 +889,9 @@
       "id": "thin-description",
       "severity": "low",
       "title": "Thin or empty product descriptions",
-      "count": 36,
+      "count": 35,
       "unit": "products",
-      "summary": "36 products have under 120 characters of description.",
+      "summary": "35 products have under 120 characters of description.",
       "impact": "Weak organic ranking, and nothing for a support rep or an AI assistant to ground an answer in.",
       "fix": "Prioritise the ones that are actually in stock and getting traffic.",
       "evidence": [
@@ -985,7 +977,7 @@
   "clean": [
     {
       "label": "No SKU collisions",
-      "detail": "1353 SKUs checked, 2 reused across different products."
+      "detail": "1353 SKUs checked, 1 reused across different products."
     },
     {
       "label": "Discontinued products are genuinely unbuyable",

@@ -1,6 +1,149 @@
 {
-  "generated_at": "2026-11-02T21:58:21.441Z",
+  "generated_at": "2026-11-03T19:52:11.851Z",
   "runs": [
+    {
+      "at": "2026-11-03T19:52:11.508Z",
+      "date": "2026-11-03",
+      "baseline": false,
+      "comparedTo": "2026-11-02T21:58:21.055Z",
+      "productCount": 492,
+      "changeCount": 16,
+      "bySeverity": {
+        "alert": 2,
+        "notable": 1,
+        "good": 9,
+        "info": 4
+      },
+      "changes": [
+        {
+          "kind": "removed",
+          "severity": "info",
+          "title": "Hydra Storage Builder",
+          "detail": "No longer present in the storefront feed.",
+          "handle": "hydra-storage-builder-1"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Selfie Sentinel - Magnetic Rack Phone Holder",
+          "handle": "selfie-sentinel",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Selfie Sentinel - Magnetic Rack Phone Holder",
+          "handle": "selfie-sentinel",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Four Post Converter Bench",
+          "handle": "manticore-four-post-converter-bench",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Four Post Converter Bench",
+          "handle": "manticore-four-post-converter-bench",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Olympic Curl Bar Cable Attachment",
+          "handle": "fat-bar-olympic-curl-bar-cable-attachment",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Fat Bar - Olympic Curl Bar Cable Attachment",
+          "handle": "fat-bar-olympic-curl-bar-cable-attachment",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Functional Trainer",
+          "handle": "functional-trainer",
+          "detail": "$769.97 → $1099.99 (+$330.02)"
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "zero-price",
+          "handle": null,
+          "detail": "Audit rule \"zero-price\" moved 17 → 16."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "zero-weight",
+          "handle": null,
+          "detail": "Audit rule \"zero-weight\" moved 46 → 45."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "vendor-corrupt",
+          "handle": null,
+          "detail": "Audit rule \"vendor-corrupt\" moved 9 → 8."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "parts-coverage",
+          "handle": null,
+          "detail": "Audit rule \"parts-coverage\" moved 14 → 15."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "fake-sale",
+          "handle": null,
+          "detail": "Audit rule \"fake-sale\" moved 17 → 18."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 65 → 62."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "missing-sku",
+          "handle": null,
+          "detail": "Audit rule \"missing-sku\" moved 11 → 10."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "thin-description",
+          "handle": null,
+          "detail": "Audit rule \"thin-description\" moved 36 → 35."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 16,
+        "zero-weight": 45,
+        "vendor-corrupt": 8,
+        "compat-graph": 5,
+        "parts-coverage": 15,
+        "fake-sale": 18,
+        "oos-published": 62,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 10,
+        "thin-description": 35,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-02T21:58:21.055Z",
       "date": "2026-11-02",
@@ -2863,65 +3006,6 @@
         "parts-coverage": 16,
         "fake-sale": 8,
         "oos-published": 60,
-        "taxonomy": 115,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-04T17:07:34.781Z",
-      "date": "2026-10-04",
-      "baseline": false,
-      "comparedTo": "2026-10-03T16:49:10.445Z",
-      "productCount": 482,
-      "changeCount": 4,
-      "bySeverity": {
-        "alert": 2,
-        "notable": 0,
-        "good": 1,
-        "info": 1
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Stickers",
-          "handle": "stickers",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Stickers",
-          "handle": "stickers",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "good",
-          "title": "zero-price",
-          "handle": null,
-          "detail": "Audit rule \"zero-price\" moved 33 → 32."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 58 → 59."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 16,
-        "fake-sale": 8,
-        "oos-published": 59,
         "taxonomy": 115,
         "specs-hidden": 90,
         "missing-sku": 11,
