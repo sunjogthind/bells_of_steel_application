@@ -1,6 +1,457 @@
 {
-  "generated_at": "2026-11-03T19:52:11.851Z",
+  "generated_at": "2026-11-04T20:06:29.370Z",
   "runs": [
+    {
+      "at": "2026-11-04T20:06:28.983Z",
+      "date": "2026-11-04",
+      "baseline": false,
+      "comparedTo": "2026-11-03T19:52:11.508Z",
+      "productCount": 492,
+      "changeCount": 360,
+      "bySeverity": {
+        "alert": 4,
+        "notable": 131,
+        "good": 3,
+        "info": 222
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Anvil Handles",
+          "handle": "anvil-handles",
+          "detail": "$179.99 → $161.99 ($18.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Human Trainer - Ceiling Mounts",
+          "handle": "human-trainer-ceiling-mounts",
+          "detail": "$24.99 → $19.99 ($5.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Rotational Pulley",
+          "handle": "human-trainer-rotational-pulley-kit",
+          "detail": "$99.99 → $89.99 ($10.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Agility Ladder and Leg Cord Bundle",
+          "handle": "human-trainer-agility-ladder-and-leg-cord-bundle",
+          "detail": "$99.99 → $89.99 ($10.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Oblivyon Tower - 3x3\" Cable Tower - Back Upright",
+          "handle": "oblivyon-tower-3x3-cable-tower-back-upright",
+          "detail": "$199.99 → $179.99 ($20.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Lever Arms Rack Attachment",
+          "handle": "lever-arms-handle",
+          "detail": "$199.99 → $169.99 ($30.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Lat Pulldown Bar",
+          "handle": "lat-pulldown-bars",
+          "detail": "$20.97 → $39.99 (+$19.02)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Ripcords Premium Resistance Bands",
+          "handle": "ripcords-premium-resistance-bands",
+          "detail": "$15.99 → $13.99 ($2.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Human Trainer Bodyweight Suspension System",
+          "handle": "human-trainer-bodyweight-suspension-system",
+          "detail": "$99.99 → $89.99 ($10.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Leg Cords",
+          "handle": "leg-cords",
+          "detail": "$29.99 → $26.99 ($3.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "ABsyidyan Stainless Steel Ab Roller",
+          "handle": "absyidyan-stainless-steel-ab-roller",
+          "detail": "$99.99 → $89.99 ($10.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Roc Foldable 4 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-four-post-cage-prebuilt",
+          "detail": "$1284.90 → $1088.65 ($196.25 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Roc Foldable 2 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-two-post-cage-prebuilt",
+          "detail": "$719.95 → $611.45 ($108.50 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt",
+          "detail": "$1679.85 → $1446.87 ($232.98 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt",
+          "detail": "$1474.92 → $1248.92 ($226.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt",
+          "detail": "$934.95 → $787.95 ($147.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+          "detail": "$1309.89 → $1101.89 ($208.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Four Post Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-four-post-power-rack-prebuilt",
+          "detail": "$1317.89 → $1113.89 ($204.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-prebuilt",
+          "detail": "$874.94 → $732.95 ($141.99 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt",
+          "detail": "$2459.82 → $2070.82 ($389.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt",
+          "detail": "$1644.89 → $1382.89 ($262.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt",
+          "detail": "$1509.90 → $1272.90 ($237.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Squat Stand - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-squat-stand-prebuilt",
+          "detail": "$639.95 → $541.45 ($98.50 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt",
+          "detail": "$958.92 → $811.42 ($147.50 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt",
+          "detail": "$1799.86 → $1509.87 ($289.99 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Collegiate Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-collegiate-power-rack-prebuilt",
+          "detail": "$1421.86 → $1223.88 ($197.98 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Basilisk Stack Loaded Leg Extension / Leg Curl",
+          "handle": "basilisk-stack-loaded-leg-extension-leg-curl",
+          "detail": "$499.99 → $424.99 ($75.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Six Post Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-six-post-power-rack-prebuilt",
+          "detail": "$2192.82 → $1852.32 ($340.50 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Fat Bar - Lat Pulldown Bar",
+          "handle": "fat-bar-lat-pulldown-bar",
+          "detail": "$99.99 → $84.99 ($15.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Multi-Purpose Olympic Barbell – The Utility Bar",
+          "handle": "multi-purpose-barbell",
+          "detail": "$249.99 → $224.99 ($25.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Multi-Purpose Olympic Barbell – The Utility Bar",
+          "handle": "multi-purpose-barbell-utility-bar",
+          "detail": "$249.99 → $224.99 ($25.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Four Post Converter Bench",
+          "handle": "manticore-four-post-converter-bench",
+          "detail": "$1099.99 → $989.99 ($110.00 cheaper)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Four Post Converter Bench",
+          "handle": "manticore-four-post-converter-bench",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Four Post Converter Bench",
+          "handle": "manticore-four-post-converter-bench",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Manticore Two Post Converter Bench",
+          "handle": "manticore-two-post-converter-bench",
+          "detail": "$1029.99 → $926.99 ($103.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Four Post Converter Bench",
+          "handle": "hydra-four-post-converter-bench",
+          "detail": "$999.99 → $899.99 ($100.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Hydra Two Post Converter Bench",
+          "handle": "hydra-two-post-converter-bench",
+          "detail": "$799.99 → $719.99 ($80.00 cheaper)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Two Post Converter Bench",
+          "handle": "hydra-two-post-converter-bench",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Two Post Converter Bench",
+          "handle": "hydra-two-post-converter-bench",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Half Rack Conversion Kits",
+          "handle": "half-rack-conversion-kits",
+          "detail": "$374.99 → $314.99 ($60.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Crossmember For Converter Bench - 43\"",
+          "handle": "crossmember-for-converter-bench-43",
+          "detail": "$129.99 → $116.99 ($13.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Converter Bench - Flat Bench",
+          "handle": "converter-bench-flat-drop-in",
+          "detail": "$259.99 → $233.99 ($26.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Kolossyem Rack",
+          "handle": "kolossyem-rack",
+          "detail": "$5299.99 → $4499.99 ($800.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Cable Tower Squat Stands",
+          "handle": "cable-tower-squat-stands",
+          "detail": "$895.99 → $749.99 ($146.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Cable Tower",
+          "handle": "cable-tower",
+          "detail": "$419.99 → $349.99 ($70.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Deadlift Bar",
+          "handle": "deadlift-bar",
+          "detail": "$269.99 → $239.99 ($30.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Gym Storage Builder",
+          "handle": "gym-storage-builder",
+          "detail": "$0.00 → $257.99 (+$257.99)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Open Trap Bar / Hex Bar",
+          "handle": "open-trap-bar-hex-bar",
+          "detail": "$299.99 → $199.99 ($100.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "108\" Manticore Vertical Uprights",
+          "handle": "manticore-uprights-hidden-1",
+          "detail": "$379.98 → $299.99 ($79.99 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "108\" Hydra Vertical Uprights",
+          "handle": "hydra-vertical-upright-hidden-1",
+          "detail": "$319.99 → $271.99 ($48.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Storage Shelves",
+          "handle": "storage-shelves",
+          "detail": "$99.99 → $84.99 ($15.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Divider for Bumper Plate Shelf (Pack of 3)",
+          "handle": "divider-for-bumper-plate-shelf",
+          "detail": "$79.99 → $67.99 ($12.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Flat-Iron Tricep Press Cable Attachment",
+          "handle": "flat-iron-tricep-press-cable-attachment",
+          "detail": "$39.99 → $35.99 ($4.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Footplate for Cable Tower/All In One Trainer",
+          "handle": "footplate-for-cable-tower",
+          "detail": "$89.99 → $69.99 ($20.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Legacy Leg Extension / Hamstring Curl Machine - Plate Loaded",
+          "handle": "leg-extension-and-curl-machine",
+          "detail": "$199.99 → $169.99 ($30.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Pandemonium Squat – 3-in-1 Pendulum Squat / Calf Press / Viking Press Machine",
+          "handle": "pandemonium-squat",
+          "detail": "$1599.99 → $1359.99 ($240.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "48KG Extension Kit for Adjustable Kettlebell - Wildman Poison Pill",
+          "handle": "wildman-poison-pill",
+          "detail": "$249.99 → $224.99 ($25.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "3x3 Cable Tower to Rack Connection Kit",
+          "handle": "3x3-cable-tower-to-rack-connection-kit",
+          "detail": "$129.99 → $116.99 ($13.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Arch Nemesis Tricep Bar",
+          "handle": "arch-nemesis-tricep-bar",
+          "detail": "$99.99 → $89.99 ($10.00 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "LB Competition Bumper Plate Sets",
+          "handle": "lb-competition-bumper-plate-sets",
+          "detail": "$1169.99 → $1099.99 ($70.00 cheaper)"
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 15,
+        "zero-weight": 45,
+        "vendor-corrupt": 8,
+        "compat-graph": 5,
+        "parts-coverage": 12,
+        "fake-sale": 3,
+        "oos-published": 65,
+        "taxonomy": 118,
+        "specs-hidden": 92,
+        "missing-sku": 10,
+        "thin-description": 35,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-03T19:52:11.508Z",
       "date": "2026-11-03",
@@ -2940,72 +3391,6 @@
         "parts-coverage": 16,
         "fake-sale": 8,
         "oos-published": 55,
-        "taxonomy": 115,
-        "specs-hidden": 90,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-05T20:56:25.885Z",
-      "date": "2026-10-05",
-      "baseline": false,
-      "comparedTo": "2026-10-04T17:07:34.781Z",
-      "productCount": 482,
-      "changeCount": 5,
-      "bySeverity": {
-        "alert": 2,
-        "notable": 0,
-        "good": 2,
-        "info": 1
-      },
-      "changes": [
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Agility Ladder and Leg Cord Bundle",
-          "handle": "human-trainer-agility-ladder-and-leg-cord-bundle",
-          "detail": "Resolved: zero_shipping_weight."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-folding-half-rack-prebuilt-hgb",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-folding-half-rack-prebuilt-hgb",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "good",
-          "title": "zero-weight",
-          "handle": null,
-          "detail": "Audit rule \"zero-weight\" moved 31 → 30."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 59 → 60."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 30,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 16,
-        "fake-sale": 8,
-        "oos-published": 60,
         "taxonomy": 115,
         "specs-hidden": 90,
         "missing-sku": 11,

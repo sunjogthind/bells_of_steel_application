@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T19:52:11.680Z",
+  "generated_at": "2026-11-04T20:06:29.170Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -810,44 +810,32 @@
     {
       "title": "Blitz Magnetic Resistance Manual Treadmill",
       "type": "Cardio Machine",
-      "priceCents": 499999,
+      "priceCents": 474999,
       "url": "https://bellsofsteel.com/products/blitz-manual-treadmill"
     },
     {
       "title": "Blitz Mountain Climber Treadmill",
       "type": "Cardio Machine",
-      "priceCents": 255997,
+      "priceCents": 255999,
       "url": "https://bellsofsteel.com/products/blitz-mountain-climber-treadmill"
     },
     {
       "title": "Sisyphean Stepper - Manual Stair Climber",
       "type": "Cardio Machine",
-      "priceCents": 239997,
+      "priceCents": 239999,
       "url": "https://bellsofsteel.com/products/sisyphean-stepper"
     },
     {
       "title": "Wooden Residential Manual Treadmill",
       "type": "Cardio Machine",
-      "priceCents": 219999,
+      "priceCents": 189999,
       "url": "https://bellsofsteel.com/products/residential-manual-treadmill"
     },
     {
       "title": "The Dreadmill",
       "type": "Cardio Machine",
-      "priceCents": 199999,
+      "priceCents": 157499,
       "url": "https://bellsofsteel.com/products/the-dreadmill"
-    },
-    {
-      "title": "Leg Press Hack Squat Machine",
-      "type": "Strength Machine",
-      "priceCents": 189999,
-      "url": "https://bellsofsteel.com/products/leg-press-hack-squat-set"
-    },
-    {
-      "title": "Blitz Stepper",
-      "type": "Cardio Machine",
-      "priceCents": 149999,
-      "url": "https://bellsofsteel.com/products/blitz-stepper"
     },
     {
       "title": "Reverse Hammer 2 In 1 GHD And Reverse Back Extension",
@@ -856,46 +844,40 @@
       "url": "https://bellsofsteel.com/products/reverse-hammer"
     },
     {
-      "title": "Belt Squat Machine",
+      "title": "Leg Press Hack Squat Machine",
       "type": "Strength Machine",
-      "priceCents": 114999,
-      "url": "https://bellsofsteel.com/products/belt-squat-machine"
+      "priceCents": 132999,
+      "url": "https://bellsofsteel.com/products/leg-press-hack-squat-set"
     },
     {
-      "title": "Manticore Four Post Converter Bench",
-      "type": "Bench",
-      "priceCents": 109999,
-      "url": "https://bellsofsteel.com/products/manticore-four-post-converter-bench"
+      "title": "Blitz Stepper",
+      "type": "Cardio Machine",
+      "priceCents": 129999,
+      "url": "https://bellsofsteel.com/products/blitz-stepper"
     },
     {
       "title": "Blitz Air Rower",
       "type": "Cardio Machine",
-      "priceCents": 109999,
+      "priceCents": 98999,
       "url": "https://bellsofsteel.com/products/blitz-air-rower"
     },
     {
       "title": "Manticore Two Post Converter Bench",
       "type": "Bench",
-      "priceCents": 102999,
+      "priceCents": 92699,
       "url": "https://bellsofsteel.com/products/manticore-two-post-converter-bench"
+    },
+    {
+      "title": "Belt Squat Machine",
+      "type": "Strength Machine",
+      "priceCents": 89999,
+      "url": "https://bellsofsteel.com/products/belt-squat-machine"
     },
     {
       "title": "Lat Pulldown Low Row Machine",
       "type": "Cable Machine",
-      "priceCents": 99999,
+      "priceCents": 74999,
       "url": "https://bellsofsteel.com/products/lat-pulldown-low-row-machine"
-    },
-    {
-      "title": "Hydra Two Post Converter Bench",
-      "type": "Bench",
-      "priceCents": 79999,
-      "url": "https://bellsofsteel.com/products/hydra-two-post-converter-bench"
-    },
-    {
-      "title": "Buzz-Saw Heavy-Duty Adjustable Bench",
-      "type": "Bench",
-      "priceCents": 55999,
-      "url": "https://bellsofsteel.com/products/buzz-saw-bench"
     }
   ],
   "symptoms": [
