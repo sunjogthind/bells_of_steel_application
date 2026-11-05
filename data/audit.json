@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-04T20:06:29.255Z",
-  "snapshot": "2026-11-04T20:06:28.983Z",
-  "scanned": 492,
-  "variants": 1580,
+  "generated_at": "2026-11-05T20:21:36.402Z",
+  "snapshot": "2026-11-05T20:21:36.080Z",
+  "scanned": 493,
+  "variants": 1583,
   "findings": [
     {
       "id": "duplicate-pricing",
@@ -441,9 +441,9 @@
       "id": "parts-coverage",
       "severity": "high",
       "title": "Expensive machines have no spare parts published",
-      "count": 12,
+      "count": 14,
       "unit": "machines over $500",
-      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 12 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $4750.",
+      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 14 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $4750.",
       "impact": "A treadmill that fails in year two has nothing to sell the customer and nothing for support to point at, a warranty conversation with no good ending, on your highest-ticket items. Spare parts are also a margin-rich line being left on the table.",
       "fix": "Work down this list by price. Every machine over $1,000 should have at least its wear parts - pads, cables, bushings - published before the next warranty season.",
       "evidence": [
@@ -569,12 +569,20 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 65,
+      "count": 70,
       "unit": "products",
-      "summary": "65 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "70 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
+        {
+          "label": "T-Bar Row Platform & Bench Spotter Platform",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/bench-spotter-deck-t-bar-row-platform"
+          ]
+        },
         {
           "label": "Lat Pulldown Bar",
           "detail": "1 variant, none available",
@@ -597,6 +605,14 @@
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/absyidyan-stainless-steel-ab-roller"
+          ]
+        },
+        {
+          "label": "Fat Bar - Lat Pulldown Bar",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/fat-bar-lat-pulldown-bar"
           ]
         },
         {
@@ -624,22 +640,6 @@
           ]
         },
         {
-          "label": "Hydra Four Post Converter Bench",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-four-post-converter-bench"
-          ]
-        },
-        {
-          "label": "Hydra Two Post Converter Bench",
-          "detail": "2 variants, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-two-post-converter-bench"
-          ]
-        },
-        {
           "label": "Deadlift Bar",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
@@ -661,12 +661,20 @@
       "id": "taxonomy",
       "severity": "medium",
       "title": "A fifth of the catalogue has no product type",
-      "count": 118,
+      "count": 119,
       "unit": "products",
-      "summary": "98 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
+      "summary": "99 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
       "impact": "product_type is what your automated collections, storefront filters and any BigQuery or Looker grouping key off. Every product without one is invisible to that machinery, and \"Hidden\" is a visibility flag wearing a taxonomy field’s clothes.",
       "fix": "Most are inferable from the title alone; the classifier in this demo types 60 of them with a dozen rules. Backfill, then make type required at publish.",
       "evidence": [
+        {
+          "label": "T-Bar Row Platform & Bench Spotter Platform",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/bench-spotter-deck-t-bar-row-platform"
+          ]
+        },
         {
           "label": "Anvil Handles",
           "detail": "product_type is empty",
@@ -721,14 +729,6 @@
           "delta": "untyped",
           "links": [
             "https://bellsofsteel.com/products/oblivyon-tower-3x3-cable-tower-back-upright"
-          ]
-        },
-        {
-          "label": "Blitz Indoor Cycling Bike Spare Parts",
-          "detail": "product_type is empty",
-          "delta": "untyped",
-          "links": [
-            "https://bellsofsteel.com/products/blitz-indoor-cycling-bike-spare-parts"
           ]
         }
       ]
@@ -921,7 +921,7 @@
   "clean": [
     {
       "label": "No SKU collisions",
-      "detail": "1338 SKUs checked, 1 reused across different products."
+      "detail": "1341 SKUs checked, 1 reused across different products."
     },
     {
       "label": "Discontinued products are genuinely unbuyable",
@@ -929,7 +929,7 @@
     },
     {
       "label": "Vendor is consistent everywhere else",
-      "detail": "475 products correctly attributed."
+      "detail": "476 products correctly attributed."
     }
   ]
 }
