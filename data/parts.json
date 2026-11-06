@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T20:21:36.314Z",
+  "generated_at": "2026-11-06T19:44:21.106Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -866,12 +866,6 @@
       "type": "Bench",
       "priceCents": 92699,
       "url": "https://bellsofsteel.com/products/manticore-two-post-converter-bench"
-    },
-    {
-      "title": "Hydra Four Post Converter Bench",
-      "type": "Bench",
-      "priceCents": 89999,
-      "url": "https://bellsofsteel.com/products/hydra-four-post-converter-bench"
     },
     {
       "title": "Belt Squat Machine",
