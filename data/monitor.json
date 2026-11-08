@@ -1,6 +1,65 @@
 {
-  "generated_at": "2026-11-07T17:53:30.013Z",
+  "generated_at": "2026-11-08T18:07:50.543Z",
   "runs": [
+    {
+      "at": "2026-11-08T18:07:50.161Z",
+      "date": "2026-11-08",
+      "baseline": false,
+      "comparedTo": "2026-11-07T17:53:29.626Z",
+      "productCount": 493,
+      "changeCount": 4,
+      "bySeverity": {
+        "alert": 1,
+        "notable": 0,
+        "good": 1,
+        "info": 2
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Specialty Bar Bundle",
+          "handle": "specialty-bar-bundle",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Specialty Bar Bundle",
+          "handle": "specialty-bar-bundle",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Rubber Coated Iron Weight Plate Sets",
+          "handle": "rubber-coated-iron-weight-plate-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Rubber Coated Iron Weight Plate Sets",
+          "handle": "rubber-coated-iron-weight-plate-sets",
+          "detail": "Resolved: all_variants_oos."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 15,
+        "zero-weight": 45,
+        "vendor-corrupt": 8,
+        "compat-graph": 5,
+        "parts-coverage": 13,
+        "fake-sale": 3,
+        "oos-published": 72,
+        "taxonomy": 119,
+        "specs-hidden": 92,
+        "missing-sku": 10,
+        "thin-description": 35,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-07T17:53:29.626Z",
       "date": "2026-11-07",
@@ -3029,212 +3088,6 @@
         "info": 0
       },
       "changes": [],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 16,
-        "fake-sale": 8,
-        "oos-published": 59,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-09T18:33:35.997Z",
-      "date": "2026-10-09",
-      "baseline": false,
-      "comparedTo": "2026-10-08T19:03:27.237Z",
-      "productCount": 493,
-      "changeCount": 25,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 1,
-        "good": 5,
-        "info": 19
-      },
-      "changes": [
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Hydra Squat Stand - Prebuilt (3\" x 3\", ⅝\" Holes)",
-          "handle": "hydra-squat-stand-prebuilt",
-          "detail": "$634.95 → $639.95 (+$5.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Hydra Two Post Converter Bench",
-          "handle": "hydra-two-post-converter-bench",
-          "detail": "$809.99 → $799.99 ($10.00 cheaper)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Kolossyem Rack",
-          "handle": "kolossyem-rack",
-          "detail": "$5314.99 → $5299.99 ($15.00 cheaper)"
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
-          "handle": "hydra-half-rack-prebuilt-hgb",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
-          "handle": "hydra-half-rack-prebuilt-hgb",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Smith Machine Rack With Lat Pulldown - Hydra (3\" x 3\", ⅝\" Holes)",
-          "handle": "hydra-4-post-smith-machine-prebuilt",
-          "detail": "$3034.99 → $2999.99 ($35.00 cheaper)"
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Smith Machine Rack With Lat Pulldown - Hydra (3\" x 3\", ⅝\" Holes)",
-          "handle": "hydra-4-post-smith-machine-prebuilt",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Smith Machine Rack With Lat Pulldown - Hydra (3\" x 3\", ⅝\" Holes)",
-          "handle": "hydra-4-post-smith-machine-prebuilt",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Ergo Rubber Hex Dumbbell Sets",
-          "handle": "rubber-hex-dumbbell-sets",
-          "detail": "$1049.99 → $1080.99 (+$31.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Gray Mighty Grip Olympic Weight Plate Sets",
-          "handle": "mighty-grip-plate-sets",
-          "detail": "$509.99 → $532.99 (+$23.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Urethane Bumper Plate Sets",
-          "handle": "urethane-bumper-plate-sets",
-          "detail": "$989.99 → $999.99 (+$10.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Black Mighty Grip Olympic Weight Plate Sets",
-          "handle": "black-mighty-grip-iron-plate-sets",
-          "detail": "$509.99 → $532.99 (+$23.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Crumb Bumper Plate Sets",
-          "handle": "crumb-bumper-plate-sets",
-          "detail": "$364.99 → $385.99 (+$21.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Rubber Coated Iron Weight Plate Sets",
-          "handle": "rubber-coated-iron-weight-plate-sets",
-          "detail": "$564.99 → $579.99 (+$15.00)"
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Hydra / Manticore Lat Pulldown Plate Loaded to Selectorized Upgrade Kit",
-          "handle": "hydra-manticore-lat-pulldown-plate-loaded-to-selectorized-upgrade-kit",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Hydra / Manticore Lat Pulldown Plate Loaded to Selectorized Upgrade Kit",
-          "handle": "hydra-manticore-lat-pulldown-plate-loaded-to-selectorized-upgrade-kit",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "price",
-          "severity": "notable",
-          "title": "THE KOLOSSOS - Smith Functional Trainer",
-          "handle": "kolossos",
-          "detail": "$4899.99 → $4999.99 (+$100.00)"
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Hydra 2-Sided Rack",
-          "handle": "hydra-2-sided-rack-builder",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Hydra 2-Sided Rack",
-          "handle": "hydra-2-sided-rack-builder",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Rubber Coated Iron Weight Plates",
-          "handle": "rubber-coated-iron-weight-plates",
-          "detail": "$16.99 → $17.99 (+$1.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
-          "detail": "$1709.99 → $1699.99 ($10.00 cheaper)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Folding Rack 2.3\" x 2.3\" (5/8\" Holes)",
-          "handle": "folding-rack",
-          "detail": "$489.99 → $499.99 (+$10.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Crumb Bumper Plates",
-          "handle": "crumb-bumper-plates",
-          "detail": "$62.99 → $64.99 (+$2.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Straight Handle Rubber Hex Dumbbell Sets",
-          "handle": "straight-handle-rubber-hex-dumbbells",
-          "detail": "$1049.99 → $1080.99 (+$31.00)"
-        },
-        {
-          "kind": "rule",
-          "severity": "good",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 63 → 59."
-        }
-      ],
       "rules": {
         "duplicate-pricing": 16,
         "zero-price": 32,
