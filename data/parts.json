@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T18:07:50.344Z",
+  "generated_at": "2026-11-09T22:45:27.389Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -878,12 +878,6 @@
       "type": "Cable Machine",
       "priceCents": 74999,
       "url": "https://bellsofsteel.com/products/lat-pulldown-low-row-machine"
-    },
-    {
-      "title": "Hydra Two Post Converter Bench",
-      "type": "Bench",
-      "priceCents": 71999,
-      "url": "https://bellsofsteel.com/products/hydra-two-post-converter-bench"
     }
   ],
   "symptoms": [

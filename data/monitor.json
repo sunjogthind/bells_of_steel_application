@@ -1,6 +1,170 @@
 {
-  "generated_at": "2026-11-08T18:07:50.543Z",
+  "generated_at": "2026-11-09T22:45:27.589Z",
   "runs": [
+    {
+      "at": "2026-11-09T22:45:27.203Z",
+      "date": "2026-11-09",
+      "baseline": false,
+      "comparedTo": "2026-11-08T18:07:50.161Z",
+      "productCount": 493,
+      "changeCount": 19,
+      "bySeverity": {
+        "alert": 9,
+        "notable": 0,
+        "good": 1,
+        "info": 9
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Two Post Converter Bench",
+          "handle": "hydra-two-post-converter-bench",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Two Post Converter Bench",
+          "handle": "hydra-two-post-converter-bench",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Fitness Sandbag Sets",
+          "handle": "sandbag-sets",
+          "detail": "$186.99 → $188.99 (+$2.00)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Gray Mighty Grip Olympic Weight Plate Sets",
+          "handle": "mighty-grip-plate-sets",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Gray Mighty Grip Olympic Weight Plate Sets",
+          "handle": "mighty-grip-plate-sets",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "NÜOBELL 50 to 80 LB Expansion Kit - Standard (Chrome)",
+          "handle": "nuobell-adjustable-dumbbell-expansion-kit",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "NÜOBELL 50 to 80 LB Expansion Kit - Standard (Chrome)",
+          "handle": "nuobell-adjustable-dumbbell-expansion-kit",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Straight Handle Bar",
+          "handle": "fat-bar-straight-handle-bar",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Fat Bar - Straight Handle Bar",
+          "handle": "fat-bar-straight-handle-bar",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "parts-coverage",
+          "handle": null,
+          "detail": "Audit rule \"parts-coverage\" moved 13 → 12."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 72 → 80."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 15,
+        "zero-weight": 45,
+        "vendor-corrupt": 8,
+        "compat-graph": 5,
+        "parts-coverage": 12,
+        "fake-sale": 3,
+        "oos-published": 80,
+        "taxonomy": 119,
+        "specs-hidden": 92,
+        "missing-sku": 10,
+        "thin-description": 35,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-08T18:07:50.161Z",
       "date": "2026-11-08",
@@ -3067,36 +3231,6 @@
         "parts-coverage": 16,
         "fake-sale": 8,
         "oos-published": 61,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-10T17:29:58.676Z",
-      "date": "2026-10-10",
-      "baseline": false,
-      "comparedTo": "2026-10-09T18:33:35.997Z",
-      "productCount": 493,
-      "changeCount": 0,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 0,
-        "good": 0,
-        "info": 0
-      },
-      "changes": [],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 16,
-        "fake-sale": 8,
-        "oos-published": 59,
         "taxonomy": 118,
         "specs-hidden": 92,
         "missing-sku": 11,
