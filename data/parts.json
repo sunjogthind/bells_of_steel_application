@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T22:45:27.389Z",
+  "generated_at": "2026-11-10T20:03:53.796Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -438,7 +438,7 @@
       "ref": null,
       "sku": "SP-BTZBK-MONI",
       "priceCents": 4199,
-      "available": true,
+      "available": false,
       "machine": "Air Bike",
       "parentTitle": "Air Bike Spare Parts",
       "url": "https://bellsofsteel.com/products/air-bike-spare-parts"
@@ -854,6 +854,12 @@
       "type": "Cardio Machine",
       "priceCents": 129999,
       "url": "https://bellsofsteel.com/products/blitz-stepper"
+    },
+    {
+      "title": "Manticore Four Post Converter Bench",
+      "type": "Bench",
+      "priceCents": 98999,
+      "url": "https://bellsofsteel.com/products/manticore-four-post-converter-bench"
     },
     {
       "title": "Blitz Air Rower",
