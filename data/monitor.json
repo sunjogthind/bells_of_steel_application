@@ -1,6 +1,219 @@
 {
-  "generated_at": "2026-11-10T20:03:53.994Z",
+  "generated_at": "2026-11-11T19:54:07.315Z",
   "runs": [
+    {
+      "at": "2026-11-11T19:54:07.045Z",
+      "date": "2026-11-11",
+      "baseline": false,
+      "comparedTo": "2026-11-10T20:03:53.609Z",
+      "productCount": 493,
+      "changeCount": 26,
+      "bySeverity": {
+        "alert": 13,
+        "notable": 0,
+        "good": 1,
+        "info": 12
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Four Post Converter Bench",
+          "handle": "manticore-four-post-converter-bench",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Four Post Converter Bench",
+          "handle": "manticore-four-post-converter-bench",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Smith Machine Rack - 6-Post with Kraken - Manticore (3\" x 3\", 1\" Holes)",
+          "handle": "kraken-manticore-6-post-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Smith Machine Rack - 6-Post with Kraken - Manticore (3\" x 3\", 1\" Holes)",
+          "handle": "kraken-manticore-6-post-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Residential Bumper Plate Tree",
+          "handle": "residential-bumper-plate-tree",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Residential Bumper Plate Tree",
+          "handle": "residential-bumper-plate-tree",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Black Mighty Grip Olympic Weight Plate Sets",
+          "handle": "black-mighty-grip-iron-plate-sets",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Black Mighty Grip Olympic Weight Plate Sets",
+          "handle": "black-mighty-grip-iron-plate-sets",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "parts-coverage",
+          "handle": null,
+          "detail": "Audit rule \"parts-coverage\" moved 13 → 12."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 76 → 88."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 15,
+        "zero-weight": 45,
+        "vendor-corrupt": 8,
+        "compat-graph": 5,
+        "parts-coverage": 12,
+        "fake-sale": 3,
+        "oos-published": 88,
+        "taxonomy": 119,
+        "specs-hidden": 92,
+        "missing-sku": 10,
+        "thin-description": 35,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-10T20:03:53.609Z",
       "date": "2026-11-10",
@@ -3228,72 +3441,6 @@
         "parts-coverage": 15,
         "fake-sale": 8,
         "oos-published": 63,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-12T21:26:24.455Z",
-      "date": "2026-10-12",
-      "baseline": false,
-      "comparedTo": "2026-10-11T17:49:35.304Z",
-      "productCount": 493,
-      "changeCount": 5,
-      "bySeverity": {
-        "alert": 2,
-        "notable": 0,
-        "good": 1,
-        "info": 2
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Blitz Mountain Climber Treadmill",
-          "handle": "blitz-mountain-climber-treadmill",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Blitz Mountain Climber Treadmill",
-          "handle": "blitz-mountain-climber-treadmill",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Mighty Grip Workout Chalk",
-          "handle": "workout-chalk",
-          "detail": "$12.96 → $20.99 (+$8.03)"
-        },
-        {
-          "kind": "rule",
-          "severity": "good",
-          "title": "parts-coverage",
-          "handle": null,
-          "detail": "Audit rule \"parts-coverage\" moved 16 → 15."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 61 → 62."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 8,
-        "oos-published": 62,
         "taxonomy": 118,
         "specs-hidden": 92,
         "missing-sku": 11,
