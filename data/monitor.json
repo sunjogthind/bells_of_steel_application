@@ -1,6 +1,170 @@
 {
-  "generated_at": "2026-11-11T19:54:07.315Z",
+  "generated_at": "2026-11-12T20:30:40.311Z",
   "runs": [
+    {
+      "at": "2026-11-12T20:30:39.952Z",
+      "date": "2026-11-12",
+      "baseline": false,
+      "comparedTo": "2026-11-11T19:54:07.045Z",
+      "productCount": 493,
+      "changeCount": 19,
+      "bySeverity": {
+        "alert": 7,
+        "notable": 0,
+        "good": 3,
+        "info": 9
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Roc Foldable 4 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-four-post-cage-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Roc Foldable 4 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-four-post-cage-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Roc Foldable 2 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-two-post-cage-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Roc Foldable 2 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-two-post-cage-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Specialty Bar Bundle",
+          "handle": "specialty-bar-bundle",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Specialty Bar Bundle",
+          "handle": "specialty-bar-bundle",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Machined Iron Olympic Weight Plate Sets",
+          "handle": "machined-plate-sets",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Machined Iron Olympic Weight Plate Sets",
+          "handle": "machined-plate-sets",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Residential Bumper Plate Tree",
+          "handle": "residential-bumper-plate-tree",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Residential Bumper Plate Tree",
+          "handle": "residential-bumper-plate-tree",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Rubber Coated Iron Weight Plate Sets",
+          "handle": "rubber-coated-iron-weight-plate-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Rubber Coated Iron Weight Plate Sets",
+          "handle": "rubber-coated-iron-weight-plate-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Foam Soft Plyo Box (16 x 18 x 20)",
+          "handle": "small-foam-plyo-box",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Foam Soft Plyo Box (16 x 18 x 20)",
+          "handle": "small-foam-plyo-box",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Roc Foldable 4 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-four-post-cage-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Roc Foldable 4 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-four-post-cage-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Roc Foldable 2 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-two-post-cage-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Roc Foldable 2 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-two-post-cage-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 88 → 91."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 15,
+        "zero-weight": 45,
+        "vendor-corrupt": 8,
+        "compat-graph": 5,
+        "parts-coverage": 12,
+        "fake-sale": 3,
+        "oos-published": 91,
+        "taxonomy": 119,
+        "specs-hidden": 92,
+        "missing-sku": 10,
+        "thin-description": 35,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-11T19:54:07.045Z",
       "date": "2026-11-11",
@@ -3389,58 +3553,6 @@
         "parts-coverage": 15,
         "fake-sale": 8,
         "oos-published": 60,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-13T19:35:42.869Z",
-      "date": "2026-10-13",
-      "baseline": false,
-      "comparedTo": "2026-10-12T21:26:24.455Z",
-      "productCount": 493,
-      "changeCount": 3,
-      "bySeverity": {
-        "alert": 2,
-        "notable": 0,
-        "good": 0,
-        "info": 1
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Machined Iron Olympic Weight Plate Sets",
-          "handle": "machined-plate-sets",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Machined Iron Olympic Weight Plate Sets",
-          "handle": "machined-plate-sets",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 62 → 63."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 8,
-        "oos-published": 63,
         "taxonomy": 118,
         "specs-hidden": 92,
         "missing-sku": 11,
