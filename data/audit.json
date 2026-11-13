@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-12T20:30:40.205Z",
-  "snapshot": "2026-11-12T20:30:39.952Z",
+  "generated_at": "2026-11-13T20:07:29.625Z",
+  "snapshot": "2026-11-13T20:07:29.352Z",
   "scanned": 493,
   "variants": 1583,
   "findings": [
@@ -569,9 +569,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 91,
+      "count": 87,
       "unit": "products",
-      "summary": "91 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "87 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
@@ -648,11 +648,11 @@
           ]
         },
         {
-          "label": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "label": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
           "links": [
-            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt"
+            "https://bellsofsteel.com/products/manticore-six-post-power-rack-prebuilt"
           ]
         }
       ]

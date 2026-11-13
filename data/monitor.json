@@ -1,6 +1,128 @@
 {
-  "generated_at": "2026-11-12T20:30:40.311Z",
+  "generated_at": "2026-11-13T20:07:29.742Z",
   "runs": [
+    {
+      "at": "2026-11-13T20:07:29.352Z",
+      "date": "2026-11-13",
+      "baseline": false,
+      "comparedTo": "2026-11-12T20:30:39.952Z",
+      "productCount": 493,
+      "changeCount": 13,
+      "bySeverity": {
+        "alert": 1,
+        "notable": 0,
+        "good": 6,
+        "info": 6
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Weightlifting Chain Sets",
+          "handle": "weightlifting-chain-sets",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Weightlifting Chain Sets",
+          "handle": "weightlifting-chain-sets",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Straight Handle Bar",
+          "handle": "fat-bar-straight-handle-bar",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Fat Bar - Straight Handle Bar",
+          "handle": "fat-bar-straight-handle-bar",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 91 → 87."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 15,
+        "zero-weight": 45,
+        "vendor-corrupt": 8,
+        "compat-graph": 5,
+        "parts-coverage": 12,
+        "fake-sale": 3,
+        "oos-published": 87,
+        "taxonomy": 119,
+        "specs-hidden": 92,
+        "missing-sku": 10,
+        "thin-description": 35,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-12T20:30:39.952Z",
       "date": "2026-11-12",
@@ -3459,100 +3581,6 @@
         "parts-coverage": 14,
         "fake-sale": 8,
         "oos-published": 61,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-14T17:39:20.304Z",
-      "date": "2026-10-14",
-      "baseline": false,
-      "comparedTo": "2026-10-13T19:35:42.869Z",
-      "productCount": 493,
-      "changeCount": 9,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 0,
-        "good": 4,
-        "info": 5
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Machined Iron Olympic Weight Plate Sets",
-          "handle": "machined-plate-sets",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Machined Iron Olympic Weight Plate Sets",
-          "handle": "machined-plate-sets",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Gray Mighty Grip Olympic Weight Plate Sets",
-          "handle": "mighty-grip-plate-sets",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Gray Mighty Grip Olympic Weight Plate Sets",
-          "handle": "mighty-grip-plate-sets",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Manticore Hardware",
-          "handle": "manticore-hardware",
-          "detail": "$9.99 → $7.97 ($2.02 cheaper)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Hydra Hardware",
-          "handle": "hydra-hardware",
-          "detail": "$5.96 → $6.97 (+$1.01)"
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Belt Squat / Lever Arms Rack Attachment",
-          "handle": "belt-squat-lever-arms-attachment",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Belt Squat / Lever Arms Rack Attachment",
-          "handle": "belt-squat-lever-arms-attachment",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "good",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 63 → 60."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 8,
-        "oos-published": 60,
         "taxonomy": 118,
         "specs-hidden": 92,
         "missing-sku": 11,
