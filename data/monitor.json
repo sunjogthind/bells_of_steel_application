@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-11-14T18:33:07.282Z",
+  "generated_at": "2026-11-15T19:09:23.813Z",
   "runs": [
+    {
+      "at": "2026-11-15T19:09:23.557Z",
+      "date": "2026-11-15",
+      "baseline": false,
+      "comparedTo": "2026-11-14T18:33:06.866Z",
+      "productCount": 493,
+      "changeCount": 0,
+      "bySeverity": {
+        "alert": 0,
+        "notable": 0,
+        "good": 0,
+        "info": 0
+      },
+      "changes": [],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 15,
+        "zero-weight": 45,
+        "vendor-corrupt": 8,
+        "compat-graph": 5,
+        "parts-coverage": 12,
+        "fake-sale": 3,
+        "oos-published": 91,
+        "taxonomy": 119,
+        "specs-hidden": 92,
+        "missing-sku": 10,
+        "thin-description": 35,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-14T18:33:06.866Z",
       "date": "2026-11-14",
@@ -3564,58 +3594,6 @@
         "parts-coverage": 14,
         "fake-sale": 8,
         "oos-published": 63,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-16T17:01:40.942Z",
-      "date": "2026-10-16",
-      "baseline": false,
-      "comparedTo": "2026-10-15T17:25:18.975Z",
-      "productCount": 493,
-      "changeCount": 3,
-      "bySeverity": {
-        "alert": 2,
-        "notable": 0,
-        "good": 0,
-        "info": 1
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Belt Squat / Lever Arms Rack Attachment",
-          "handle": "belt-squat-lever-arms-attachment",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Belt Squat / Lever Arms Rack Attachment",
-          "handle": "belt-squat-lever-arms-attachment",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 61 → 62."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 14,
-        "fake-sale": 8,
-        "oos-published": 62,
         "taxonomy": 118,
         "specs-hidden": 92,
         "missing-sku": 11,
