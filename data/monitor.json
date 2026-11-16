@@ -1,6 +1,58 @@
 {
-  "generated_at": "2026-11-15T19:09:23.813Z",
+  "generated_at": "2026-11-16T22:35:27.817Z",
   "runs": [
+    {
+      "at": "2026-11-16T22:35:27.405Z",
+      "date": "2026-11-16",
+      "baseline": false,
+      "comparedTo": "2026-11-15T19:09:23.557Z",
+      "productCount": 493,
+      "changeCount": 3,
+      "bySeverity": {
+        "alert": 2,
+        "notable": 0,
+        "good": 0,
+        "info": 1
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Straight Handle Bar",
+          "handle": "fat-bar-straight-handle-bar",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Fat Bar - Straight Handle Bar",
+          "handle": "fat-bar-straight-handle-bar",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 91 → 92."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 15,
+        "zero-weight": 45,
+        "vendor-corrupt": 8,
+        "compat-graph": 5,
+        "parts-coverage": 12,
+        "fake-sale": 3,
+        "oos-published": 92,
+        "taxonomy": 119,
+        "specs-hidden": 92,
+        "missing-sku": 10,
+        "thin-description": 35,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-15T19:09:23.557Z",
       "date": "2026-11-15",
@@ -3533,58 +3585,6 @@
         "info": 0
       },
       "changes": [],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 14,
-        "fake-sale": 8,
-        "oos-published": 63,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-17T16:00:20.224Z",
-      "date": "2026-10-17",
-      "baseline": false,
-      "comparedTo": "2026-10-16T17:01:40.942Z",
-      "productCount": 493,
-      "changeCount": 3,
-      "bySeverity": {
-        "alert": 2,
-        "notable": 0,
-        "good": 0,
-        "info": 1
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Utility Shackle Rack Attachment",
-          "handle": "utility-shackle-rack-attachment",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Utility Shackle Rack Attachment",
-          "handle": "utility-shackle-rack-attachment",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 62 → 63."
-        }
-      ],
       "rules": {
         "duplicate-pricing": 16,
         "zero-price": 32,
