@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-16T22:35:27.694Z",
-  "snapshot": "2026-11-16T22:35:27.405Z",
-  "scanned": 493,
-  "variants": 1583,
+  "generated_at": "2026-11-17T21:24:28.618Z",
+  "snapshot": "2026-11-17T21:24:28.420Z",
+  "scanned": 494,
+  "variants": 1588,
   "findings": [
     {
       "id": "duplicate-pricing",
@@ -221,9 +221,9 @@
       "id": "zero-weight",
       "severity": "high",
       "title": "Physical products ship with no weight recorded",
-      "count": 45,
+      "count": 46,
       "unit": "products",
-      "summary": "277 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
+      "summary": "282 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
       "impact": "You move squat racks and plate sets on LTL freight, and weight is the input to the rate. A zero there means the carrier calculation is running on a default, and the gap between the quoted rate and the real one is absorbed on every one of these orders.",
       "fix": "Backfill weights from your packing data, then add a Shopify validation that refuses to publish a shipped product with a zero weight.",
       "evidence": [
@@ -252,11 +252,43 @@
           ]
         },
         {
+          "label": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
+          "detail": "$2349.99, Complete 3-in-1",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/reverse-inverse-hammer"
+          ]
+        },
+        {
+          "label": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
+          "detail": "$2149.99, GHD + Assist Arm",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/reverse-inverse-hammer"
+          ]
+        },
+        {
           "label": "All-in-One Trainer - OLD Version on Clearance",
           "detail": "$1999.99, Default Title",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/all-in-one-trainer-old"
+          ]
+        },
+        {
+          "label": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
+          "detail": "$1799.99, Reverse Hammer 2-in-1",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/reverse-inverse-hammer"
+          ]
+        },
+        {
+          "label": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
+          "detail": "$1649.99, GHD Only",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/reverse-inverse-hammer"
           ]
         },
         {
@@ -273,38 +305,6 @@
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/manticore-six-post-power-rack-builder"
-          ]
-        },
-        {
-          "label": "Dumbbell Bench Combo",
-          "detail": "$1187.49, Variant for price 1187.49",
-          "delta": "0 g",
-          "links": [
-            "https://bellsofsteel.com/products/dumbbell-bench-combo-1"
-          ]
-        },
-        {
-          "label": "Manticore Flat Foot Power Rack Builder (3\" x 3\", 1\" Holes)",
-          "detail": "$1172.99, Default Title",
-          "delta": "0 g",
-          "links": [
-            "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-builder"
-          ]
-        },
-        {
-          "label": "Specialty Bar Bundle",
-          "detail": "$1149.99, Default Title",
-          "delta": "0 g",
-          "links": [
-            "https://bellsofsteel.com/products/specialty-bar-bundle"
-          ]
-        },
-        {
-          "label": "Manticore Half Rack Builder (3\" x 3\", 1\" Holes)",
-          "detail": "$1134.99, Default Title",
-          "delta": "0 g",
-          "links": [
-            "https://bellsofsteel.com/products/manticore-half-rack-builder"
           ]
         }
       ]
@@ -441,9 +441,9 @@
       "id": "parts-coverage",
       "severity": "high",
       "title": "Expensive machines have no spare parts published",
-      "count": 12,
+      "count": 14,
       "unit": "machines over $500",
-      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 12 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $4750.",
+      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 14 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $4750.",
       "impact": "A treadmill that fails in year two has nothing to sell the customer and nothing for support to point at, a warranty conversation with no good ending, on your highest-ticket items. Spare parts are also a margin-rich line being left on the table.",
       "fix": "Work down this list by price. Every machine over $1,000 should have at least its wear parts - pads, cables, bushings - published before the next warranty season.",
       "evidence": [
@@ -569,12 +569,20 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 92,
+      "count": 86,
       "unit": "products",
-      "summary": "92 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "86 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
+        {
+          "label": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
+          "detail": "5 variants, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/reverse-inverse-hammer"
+          ]
+        },
         {
           "label": "Lat Pulldown Bar",
           "detail": "1 variant, none available",
@@ -646,14 +654,6 @@
           "links": [
             "https://bellsofsteel.com/products/manticore-folding-half-rack-prebuilt"
           ]
-        },
-        {
-          "label": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt"
-          ]
         }
       ]
     },
@@ -661,12 +661,20 @@
       "id": "taxonomy",
       "severity": "medium",
       "title": "A fifth of the catalogue has no product type",
-      "count": 119,
+      "count": 120,
       "unit": "products",
-      "summary": "99 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
+      "summary": "100 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
       "impact": "product_type is what your automated collections, storefront filters and any BigQuery or Looker grouping key off. Every product without one is invisible to that machinery, and \"Hidden\" is a visibility flag wearing a taxonomy field’s clothes.",
       "fix": "Most are inferable from the title alone; the classifier in this demo types 60 of them with a dozen rules. Backfill, then make type required at publish.",
       "evidence": [
+        {
+          "label": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/reverse-inverse-hammer"
+          ]
+        },
         {
           "label": "T-Bar Row Platform & Bench Spotter Platform",
           "detail": "product_type is empty",
@@ -721,14 +729,6 @@
           "delta": "untyped",
           "links": [
             "https://bellsofsteel.com/products/human-trainer-agility-ladder-and-leg-cord-bundle"
-          ]
-        },
-        {
-          "label": "Oblivyon Tower - 3x3\" Cable Tower - Back Upright",
-          "detail": "product_type is empty",
-          "delta": "untyped",
-          "links": [
-            "https://bellsofsteel.com/products/oblivyon-tower-3x3-cable-tower-back-upright"
           ]
         }
       ]
@@ -921,7 +921,7 @@
   "clean": [
     {
       "label": "No SKU collisions",
-      "detail": "1341 SKUs checked, 1 reused across different products."
+      "detail": "1346 SKUs checked, 1 reused across different products."
     },
     {
       "label": "Discontinued products are genuinely unbuyable",
@@ -929,7 +929,7 @@
     },
     {
       "label": "Vendor is consistent everywhere else",
-      "detail": "476 products correctly attributed."
+      "detail": "477 products correctly attributed."
     }
   ]
 }

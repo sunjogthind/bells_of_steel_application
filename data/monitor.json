@@ -1,6 +1,170 @@
 {
-  "generated_at": "2026-11-16T22:35:27.817Z",
+  "generated_at": "2026-11-17T21:24:28.698Z",
   "runs": [
+    {
+      "at": "2026-11-17T21:24:28.420Z",
+      "date": "2026-11-17",
+      "baseline": false,
+      "comparedTo": "2026-11-16T22:35:27.405Z",
+      "productCount": 494,
+      "changeCount": 19,
+      "bySeverity": {
+        "alert": 3,
+        "notable": 0,
+        "good": 8,
+        "info": 8
+      },
+      "changes": [
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
+          "detail": "New product in the feed at $1049.99.",
+          "handle": "reverse-inverse-hammer"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Four Post Converter Bench",
+          "handle": "hydra-four-post-converter-bench",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Four Post Converter Bench",
+          "handle": "hydra-four-post-converter-bench",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Two Post Converter Bench",
+          "handle": "hydra-two-post-converter-bench",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Two Post Converter Bench",
+          "handle": "hydra-two-post-converter-bench",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "KG Competition Bumper Plate Sets",
+          "handle": "kg-competition-bumper-plate-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "KG Competition Bumper Plate Sets",
+          "handle": "kg-competition-bumper-plate-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "zero-weight",
+          "handle": null,
+          "detail": "Audit rule \"zero-weight\" moved 45 → 46."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "parts-coverage",
+          "handle": null,
+          "detail": "Audit rule \"parts-coverage\" moved 12 → 14."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 92 → 86."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "taxonomy",
+          "handle": null,
+          "detail": "Audit rule \"taxonomy\" moved 119 → 120."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 15,
+        "zero-weight": 46,
+        "vendor-corrupt": 8,
+        "compat-graph": 5,
+        "parts-coverage": 14,
+        "fake-sale": 3,
+        "oos-published": 86,
+        "taxonomy": 120,
+        "specs-hidden": 92,
+        "missing-sku": 10,
+        "thin-description": 35,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-16T22:35:27.405Z",
       "date": "2026-11-16",
@@ -3564,36 +3728,6 @@
         "parts-coverage": 14,
         "fake-sale": 8,
         "oos-published": 64,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-18T16:10:53.892Z",
-      "date": "2026-10-18",
-      "baseline": false,
-      "comparedTo": "2026-10-17T16:00:20.224Z",
-      "productCount": 493,
-      "changeCount": 0,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 0,
-        "good": 0,
-        "info": 0
-      },
-      "changes": [],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 14,
-        "fake-sale": 8,
-        "oos-published": 63,
         "taxonomy": 118,
         "specs-hidden": 92,
         "missing-sku": 11,
