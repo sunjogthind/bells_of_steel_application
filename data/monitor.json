@@ -1,6 +1,156 @@
 {
-  "generated_at": "2026-11-17T21:24:28.698Z",
+  "generated_at": "2026-11-18T20:56:53.390Z",
   "runs": [
+    {
+      "at": "2026-11-18T20:56:52.963Z",
+      "date": "2026-11-18",
+      "baseline": false,
+      "comparedTo": "2026-11-17T21:24:28.420Z",
+      "productCount": 494,
+      "changeCount": 17,
+      "bySeverity": {
+        "alert": 5,
+        "notable": 0,
+        "good": 4,
+        "info": 8
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Agility Ladder and Leg Cord Bundle",
+          "handle": "human-trainer-agility-ladder-and-leg-cord-bundle",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Agility Ladder and Leg Cord Bundle",
+          "handle": "human-trainer-agility-ladder-and-leg-cord-bundle",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "All-in-One Trainer - OLD Version on Clearance",
+          "handle": "all-in-one-trainer-old",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "All-in-One Trainer - OLD Version on Clearance",
+          "handle": "all-in-one-trainer-old",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Four Post Converter Bench",
+          "handle": "hydra-four-post-converter-bench",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Four Post Converter Bench",
+          "handle": "hydra-four-post-converter-bench",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "KG Competition Bumper Plate Sets",
+          "handle": "kg-competition-bumper-plate-sets",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "KG Competition Bumper Plate Sets",
+          "handle": "kg-competition-bumper-plate-sets",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Foam Soft Plyo Box (16 x 18 x 20)",
+          "handle": "small-foam-plyo-box",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Foam Soft Plyo Box (16 x 18 x 20)",
+          "handle": "small-foam-plyo-box",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Roll of Gym Turf",
+          "handle": "turf-roll",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Roll of Gym Turf",
+          "handle": "turf-roll",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Multi Grip Curl Bar Cable Attachment",
+          "handle": "multi-grip-curl-bar",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Multi Grip Curl Bar Cable Attachment",
+          "handle": "multi-grip-curl-bar",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Spring Collars",
+          "handle": "spring-collars",
+          "detail": "$10.99 → $9.89 ($1.10 cheaper)"
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "parts-coverage",
+          "handle": null,
+          "detail": "Audit rule \"parts-coverage\" moved 14 → 13."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 86 → 87."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 15,
+        "zero-weight": 46,
+        "vendor-corrupt": 8,
+        "compat-graph": 5,
+        "parts-coverage": 13,
+        "fake-sale": 3,
+        "oos-published": 87,
+        "taxonomy": 120,
+        "specs-hidden": 92,
+        "missing-sku": 10,
+        "thin-description": 35,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-17T21:24:28.420Z",
       "date": "2026-11-17",
@@ -3676,58 +3826,6 @@
         "parts-coverage": 15,
         "fake-sale": 8,
         "oos-published": 63,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-19T18:52:18.928Z",
-      "date": "2026-10-19",
-      "baseline": false,
-      "comparedTo": "2026-10-18T16:10:53.892Z",
-      "productCount": 493,
-      "changeCount": 3,
-      "bySeverity": {
-        "alert": 2,
-        "notable": 0,
-        "good": 0,
-        "info": 1
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Aluminum Technique Barbell",
-          "handle": "technique-ball",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Aluminum Technique Barbell",
-          "handle": "technique-ball",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 63 → 64."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 14,
-        "fake-sale": 8,
-        "oos-published": 64,
         "taxonomy": 118,
         "specs-hidden": 92,
         "missing-sku": 11,
