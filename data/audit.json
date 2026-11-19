@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-18T20:56:53.267Z",
-  "snapshot": "2026-11-18T20:56:52.963Z",
+  "generated_at": "2026-11-19T21:02:20.207Z",
+  "snapshot": "2026-11-19T21:02:20.003Z",
   "scanned": 494,
   "variants": 1588,
   "findings": [
@@ -221,9 +221,9 @@
       "id": "zero-weight",
       "severity": "high",
       "title": "Physical products ship with no weight recorded",
-      "count": 46,
+      "count": 45,
       "unit": "products",
-      "summary": "282 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
+      "summary": "277 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
       "impact": "You move squat racks and plate sets on LTL freight, and weight is the input to the rate. A zero there means the carrier calculation is running on a default, and the gap between the quoted rate and the real one is absorbed on every one of these orders.",
       "fix": "Backfill weights from your packing data, then add a Shopify validation that refuses to publish a shipped product with a zero weight.",
       "evidence": [
@@ -252,43 +252,11 @@
           ]
         },
         {
-          "label": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
-          "detail": "$2349.99, Complete 3-in-1",
-          "delta": "0 g",
-          "links": [
-            "https://bellsofsteel.com/products/reverse-inverse-hammer"
-          ]
-        },
-        {
-          "label": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
-          "detail": "$2149.99, GHD + Assist Arm",
-          "delta": "0 g",
-          "links": [
-            "https://bellsofsteel.com/products/reverse-inverse-hammer"
-          ]
-        },
-        {
           "label": "All-in-One Trainer - OLD Version on Clearance",
           "detail": "$1999.99, Default Title",
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/all-in-one-trainer-old"
-          ]
-        },
-        {
-          "label": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
-          "detail": "$1799.99, Reverse Hammer 2-in-1",
-          "delta": "0 g",
-          "links": [
-            "https://bellsofsteel.com/products/reverse-inverse-hammer"
-          ]
-        },
-        {
-          "label": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
-          "detail": "$1649.99, GHD Only",
-          "delta": "0 g",
-          "links": [
-            "https://bellsofsteel.com/products/reverse-inverse-hammer"
           ]
         },
         {
@@ -305,6 +273,38 @@
           "delta": "0 g",
           "links": [
             "https://bellsofsteel.com/products/manticore-six-post-power-rack-builder"
+          ]
+        },
+        {
+          "label": "Dumbbell Bench Combo",
+          "detail": "$1187.49, Variant for price 1187.49",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/dumbbell-bench-combo-1"
+          ]
+        },
+        {
+          "label": "Manticore Flat Foot Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "detail": "$1172.99, Default Title",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-flat-foot-power-rack-builder"
+          ]
+        },
+        {
+          "label": "Specialty Bar Bundle",
+          "detail": "$1149.99, Default Title",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/specialty-bar-bundle"
+          ]
+        },
+        {
+          "label": "Manticore Half Rack Builder (3\" x 3\", 1\" Holes)",
+          "detail": "$1134.99, Default Title",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-half-rack-builder"
           ]
         }
       ]
@@ -533,9 +533,9 @@
       "id": "fake-sale",
       "severity": "medium",
       "title": "Compare-at price equals the selling price",
-      "count": 3,
+      "count": 4,
       "unit": "variants",
-      "summary": "3 variants set a compare-at price identical to what the customer actually pays.",
+      "summary": "4 variants set a compare-at price identical to what the customer actually pays.",
       "impact": "Shopify renders compare-at as a struck-through \"was\" price. A struck-through number that matches the real one is a discount claim with no discount behind it, which is both a conversion problem and the kind of thing consumer-protection rules care about.",
       "fix": "Clear compare_at_price wherever it is less than or equal to price, and add it to the same publish-time validation as the weight check.",
       "evidence": [
@@ -553,6 +553,14 @@
           "delta": "no actual discount",
           "links": [
             "https://bellsofsteel.com/products/mark-wildman-adjustable-kettlebells"
+          ]
+        },
+        {
+          "label": "Spring Collars",
+          "detail": "price $10.99 · compare-at $10.99",
+          "delta": "no actual discount",
+          "links": [
+            "https://bellsofsteel.com/products/spring-collars"
           ]
         },
         {
@@ -575,14 +583,6 @@
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
-        {
-          "label": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
-          "detail": "5 variants, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/reverse-inverse-hammer"
-          ]
-        },
         {
           "label": "Agility Ladder and Leg Cord Bundle",
           "detail": "1 variant, none available",
@@ -654,6 +654,14 @@
           "links": [
             "https://bellsofsteel.com/products/manctiore-folding-power-rack-prebuilt"
           ]
+        },
+        {
+          "label": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-folding-half-rack-prebuilt"
+          ]
         }
       ]
     },
@@ -661,9 +669,9 @@
       "id": "taxonomy",
       "severity": "medium",
       "title": "A fifth of the catalogue has no product type",
-      "count": 120,
+      "count": 110,
       "unit": "products",
-      "summary": "100 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
+      "summary": "90 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
       "impact": "product_type is what your automated collections, storefront filters and any BigQuery or Looker grouping key off. Every product without one is invisible to that machinery, and \"Hidden\" is a visibility flag wearing a taxonomy field’s clothes.",
       "fix": "Most are inferable from the title alone; the classifier in this demo types 60 of them with a dozen rules. Backfill, then make type required at publish.",
       "evidence": [

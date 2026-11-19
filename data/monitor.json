@@ -1,6 +1,254 @@
 {
-  "generated_at": "2026-11-18T20:56:53.390Z",
+  "generated_at": "2026-11-19T21:02:20.290Z",
   "runs": [
+    {
+      "at": "2026-11-19T21:02:20.003Z",
+      "date": "2026-11-19",
+      "baseline": false,
+      "comparedTo": "2026-11-18T20:56:52.963Z",
+      "productCount": 494,
+      "changeCount": 31,
+      "bySeverity": {
+        "alert": 5,
+        "notable": 1,
+        "good": 16,
+        "info": 9
+      },
+      "changes": [
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
+          "handle": "reverse-inverse-hammer",
+          "detail": "$1049.99 → $944.99 ($105.00 cheaper)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
+          "handle": "reverse-inverse-hammer",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
+          "handle": "reverse-inverse-hammer",
+          "detail": "Resolved: all_variants_oos, zero_shipping_weight."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Basilisk Stack Loaded Leg Extension / Leg Curl",
+          "handle": "basilisk-stack-loaded-leg-extension-leg-curl",
+          "detail": "Resolved: type_missing."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Kolossyem Rack",
+          "handle": "kolossyem-rack",
+          "detail": "Resolved: type_missing."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Legacy Leg Extension / Hamstring Curl Machine - Plate Loaded",
+          "handle": "leg-extension-and-curl-machine",
+          "detail": "Resolved: type_missing_inferable."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Pandemonium Squat – 3-in-1 Pendulum Squat / Calf Press / Viking Press Machine",
+          "handle": "pandemonium-squat",
+          "detail": "Resolved: type_missing."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-half-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "NÜOBELL-S Adjustable Dumbbells",
+          "handle": "nuobell-s-adjustable-dumbbells",
+          "detail": "Resolved: type_missing_inferable."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Smith Machine - Hydra (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-squat-stand-smith-machine-prebuilt",
+          "detail": "Resolved: type_missing."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Smith Machine Rack With Lat Pulldown - Hydra (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-4-post-smith-machine-prebuilt",
+          "detail": "Resolved: type_missing."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Tibialis Trainer Machine",
+          "handle": "tibialis-trainer-machine",
+          "detail": "Resolved: type_missing."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "THE KOLOSSOS - Smith Functional Trainer",
+          "handle": "kolossos",
+          "detail": "Resolved: type_missing."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Mark Wildman Adjustable Kettlebell",
+          "handle": "mark-wildman-adjustable-kettlebells",
+          "detail": "Resolved: type_missing_inferable."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Spring Collars",
+          "handle": "spring-collars",
+          "detail": "$9.89 → $10.99 (+$1.10)"
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "zero-weight",
+          "handle": null,
+          "detail": "Audit rule \"zero-weight\" moved 46 → 45."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "fake-sale",
+          "handle": null,
+          "detail": "Audit rule \"fake-sale\" moved 3 → 4."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "taxonomy",
+          "handle": null,
+          "detail": "Audit rule \"taxonomy\" moved 120 → 110."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 15,
+        "zero-weight": 45,
+        "vendor-corrupt": 8,
+        "compat-graph": 5,
+        "parts-coverage": 13,
+        "fake-sale": 4,
+        "oos-published": 87,
+        "taxonomy": 110,
+        "specs-hidden": 92,
+        "missing-sku": 10,
+        "thin-description": 35,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-18T20:56:52.963Z",
       "date": "2026-11-18",
@@ -3749,72 +3997,6 @@
           "title": "Foam Roller Storage",
           "handle": "foam-roller-storage",
           "detail": "$83.96 → $139.99 (+$56.03)"
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 8,
-        "oos-published": 63,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-20T17:35:51.397Z",
-      "date": "2026-10-20",
-      "baseline": false,
-      "comparedTo": "2026-10-19T18:52:18.928Z",
-      "productCount": 493,
-      "changeCount": 5,
-      "bySeverity": {
-        "alert": 1,
-        "notable": 0,
-        "good": 2,
-        "info": 2
-      },
-      "changes": [
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manticore-collegiate-power-rack-prebuilt",
-          "detail": "$1692.82 → $1670.82 ($22.00 cheaper)"
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Blitz Mountain Climber Treadmill",
-          "handle": "blitz-mountain-climber-treadmill",
-          "detail": "Back in stock."
-        },
-        {
-          "kind": "fixed",
-          "severity": "good",
-          "title": "Blitz Mountain Climber Treadmill",
-          "handle": "blitz-mountain-climber-treadmill",
-          "detail": "Resolved: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "parts-coverage",
-          "handle": null,
-          "detail": "Audit rule \"parts-coverage\" moved 14 → 15."
-        },
-        {
-          "kind": "rule",
-          "severity": "good",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 64 → 63."
         }
       ],
       "rules": {
