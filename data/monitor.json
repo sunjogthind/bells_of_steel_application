@@ -1,6 +1,177 @@
 {
-  "generated_at": "2026-11-19T21:02:20.290Z",
+  "generated_at": "2026-11-20T20:48:35.902Z",
   "runs": [
+    {
+      "at": "2026-11-20T20:48:35.570Z",
+      "date": "2026-11-20",
+      "baseline": false,
+      "comparedTo": "2026-11-19T21:02:20.003Z",
+      "productCount": 494,
+      "changeCount": 20,
+      "bySeverity": {
+        "alert": 1,
+        "notable": 0,
+        "good": 10,
+        "info": 9
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Agility Ladder and Leg Cord Bundle",
+          "handle": "human-trainer-agility-ladder-and-leg-cord-bundle",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Agility Ladder and Leg Cord Bundle",
+          "handle": "human-trainer-agility-ladder-and-leg-cord-bundle",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Four Post Converter Bench",
+          "handle": "manticore-four-post-converter-bench",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Four Post Converter Bench",
+          "handle": "manticore-four-post-converter-bench",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Functional Trainer - Weight Stack",
+          "handle": "functional-trainer-weight-stack",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Functional Trainer - Weight Stack",
+          "handle": "functional-trainer-weight-stack",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Smith Machine Rack - 6-Post with Kraken - Manticore (3\" x 3\", 1\" Holes)",
+          "handle": "kraken-manticore-6-post-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Smith Machine Rack - 6-Post with Kraken - Manticore (3\" x 3\", 1\" Holes)",
+          "handle": "kraken-manticore-6-post-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Calibrated Powerlifting Plates - LB Sets",
+          "handle": "calibrated-powerlifiting-plates-lb-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Calibrated Powerlifting Plates - LB Sets",
+          "handle": "calibrated-powerlifiting-plates-lb-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Black Mighty Grip Olympic Weight Plate Sets",
+          "handle": "black-mighty-grip-iron-plate-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Black Mighty Grip Olympic Weight Plate Sets",
+          "handle": "black-mighty-grip-iron-plate-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "parts-coverage",
+          "handle": null,
+          "detail": "Audit rule \"parts-coverage\" moved 13 → 14."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 87 → 78."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 15,
+        "zero-weight": 45,
+        "vendor-corrupt": 8,
+        "compat-graph": 5,
+        "parts-coverage": 14,
+        "fake-sale": 4,
+        "oos-published": 78,
+        "taxonomy": 110,
+        "specs-hidden": 92,
+        "missing-sku": 10,
+        "thin-description": 35,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-19T21:02:20.003Z",
       "date": "2026-11-19",
@@ -3948,65 +4119,6 @@
         "compat-graph": 5,
         "parts-coverage": 15,
         "fake-sale": 15,
-        "oos-published": 63,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-21T17:43:03.755Z",
-      "date": "2026-10-21",
-      "baseline": false,
-      "comparedTo": "2026-10-20T17:35:51.397Z",
-      "productCount": 493,
-      "changeCount": 4,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 2,
-        "good": 0,
-        "info": 2
-      },
-      "changes": [
-        {
-          "kind": "price",
-          "severity": "notable",
-          "title": "Omni Bar",
-          "handle": "omni-bar",
-          "detail": "$191.97 → $99.97 ($92.00 cheaper)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Bumper Plate Pins Shelf",
-          "handle": "bumper-plate-pins-shelf",
-          "detail": "$71.96 → $79.96 (+$8.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Glute Ham Slider",
-          "handle": "glute-ham-slider",
-          "detail": "$29.96 → $49.99 (+$20.03)"
-        },
-        {
-          "kind": "price",
-          "severity": "notable",
-          "title": "Foam Roller Storage",
-          "handle": "foam-roller-storage",
-          "detail": "$83.96 → $139.99 (+$56.03)"
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 8,
         "oos-published": 63,
         "taxonomy": 118,
         "specs-hidden": 92,

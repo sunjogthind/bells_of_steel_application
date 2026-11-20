@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T21:02:20.143Z",
+  "generated_at": "2026-11-20T20:48:35.731Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -854,6 +854,12 @@
       "type": "Cardio Machine",
       "priceCents": 129999,
       "url": "https://bellsofsteel.com/products/blitz-stepper"
+    },
+    {
+      "title": "Manticore Four Post Converter Bench",
+      "type": "Bench",
+      "priceCents": 98999,
+      "url": "https://bellsofsteel.com/products/manticore-four-post-converter-bench"
     },
     {
       "title": "Blitz Air Rower",
