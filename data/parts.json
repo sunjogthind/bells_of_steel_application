@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T20:48:35.731Z",
+  "generated_at": "2026-11-21T19:51:30.559Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -814,12 +814,6 @@
       "url": "https://bellsofsteel.com/products/blitz-manual-treadmill"
     },
     {
-      "title": "Blitz Mountain Climber Treadmill",
-      "type": "Cardio Machine",
-      "priceCents": 255999,
-      "url": "https://bellsofsteel.com/products/blitz-mountain-climber-treadmill"
-    },
-    {
       "title": "Sisyphean Stepper - Manual Stair Climber",
       "type": "Cardio Machine",
       "priceCents": 239999,
@@ -884,12 +878,6 @@
       "type": "Cable Machine",
       "priceCents": 74999,
       "url": "https://bellsofsteel.com/products/lat-pulldown-low-row-machine"
-    },
-    {
-      "title": "Hydra Two Post Converter Bench",
-      "type": "Bench",
-      "priceCents": 71999,
-      "url": "https://bellsofsteel.com/products/hydra-two-post-converter-bench"
     }
   ],
   "symptoms": [
