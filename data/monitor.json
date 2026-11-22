@@ -1,6 +1,86 @@
 {
-  "generated_at": "2026-11-21T19:51:30.762Z",
+  "generated_at": "2026-11-22T20:00:11.935Z",
   "runs": [
+    {
+      "at": "2026-11-22T20:00:11.579Z",
+      "date": "2026-11-22",
+      "baseline": false,
+      "comparedTo": "2026-11-21T19:51:30.370Z",
+      "productCount": 493,
+      "changeCount": 7,
+      "bySeverity": {
+        "alert": 4,
+        "notable": 0,
+        "good": 0,
+        "info": 3
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Shoulder Boulder/Chest Fly Attachment",
+          "handle": "shoulder-boulder-chest-fly-attachment",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Shoulder Boulder/Chest Fly Attachment",
+          "handle": "shoulder-boulder-chest-fly-attachment",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Aluminum Technique Barbell",
+          "handle": "technique-ball",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Aluminum Technique Barbell",
+          "handle": "technique-ball",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Foam Roller",
+          "handle": "foam-roller",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Foam Roller",
+          "handle": "foam-roller",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 80 → 83."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 13,
+        "zero-weight": 44,
+        "vendor-corrupt": 7,
+        "compat-graph": 5,
+        "parts-coverage": 12,
+        "fake-sale": 4,
+        "oos-published": 83,
+        "taxonomy": 110,
+        "specs-hidden": 92,
+        "missing-sku": 9,
+        "thin-description": 34,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-21T19:51:30.370Z",
       "date": "2026-11-21",
@@ -3994,51 +4074,6 @@
           "title": "Massage Balls",
           "handle": "massage-balls",
           "detail": "$5.97 → $4.97 ($1.00 cheaper)"
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 16,
-        "oos-published": 63,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-23T17:32:07.966Z",
-      "date": "2026-10-23",
-      "baseline": false,
-      "comparedTo": "2026-10-22T17:41:33.945Z",
-      "productCount": 493,
-      "changeCount": 2,
-      "bySeverity": {
-        "alert": 1,
-        "notable": 0,
-        "good": 0,
-        "info": 1
-      },
-      "changes": [
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "handle": "manctiore-folding-power-rack-prebuilt",
-          "detail": "$1441.89 → $1474.92 (+$33.03)"
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "fake-sale",
-          "handle": null,
-          "detail": "Audit rule \"fake-sale\" moved 15 → 16."
         }
       ],
       "rules": {
