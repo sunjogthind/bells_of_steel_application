@@ -1,6 +1,457 @@
 {
-  "generated_at": "2026-11-22T20:00:11.935Z",
+  "generated_at": "2026-11-24T00:26:29.976Z",
   "runs": [
+    {
+      "at": "2026-11-24T00:26:29.580Z",
+      "date": "2026-11-24",
+      "baseline": false,
+      "comparedTo": "2026-11-22T20:00:11.579Z",
+      "productCount": 486,
+      "changeCount": 62,
+      "bySeverity": {
+        "alert": 24,
+        "notable": 1,
+        "good": 6,
+        "info": 31
+      },
+      "changes": [
+        {
+          "kind": "removed",
+          "severity": "info",
+          "title": "Kraken Cable Tower Rack Attachment",
+          "detail": "No longer present in the storefront feed.",
+          "handle": "kraken-cable-tower-rack-attachment-1"
+        },
+        {
+          "kind": "removed",
+          "severity": "info",
+          "title": "Commercial Interchangeable Weight Rack",
+          "detail": "No longer present in the storefront feed.",
+          "handle": "commercial-interchangeable-weight-rack"
+        },
+        {
+          "kind": "removed",
+          "severity": "info",
+          "title": "Barbell And Plate Custom Set",
+          "detail": "No longer present in the storefront feed.",
+          "handle": "barbell-and-plate-custom-set-1"
+        },
+        {
+          "kind": "removed",
+          "severity": "info",
+          "title": "Dumbbell Bench Combo",
+          "detail": "No longer present in the storefront feed.",
+          "handle": "dumbbell-bench-combo-1"
+        },
+        {
+          "kind": "removed",
+          "severity": "info",
+          "title": "3 Packs Of Bars",
+          "detail": "No longer present in the storefront feed.",
+          "handle": "3-packs-of-bars-1"
+        },
+        {
+          "kind": "removed",
+          "severity": "info",
+          "title": "Partner Bar Bumper Set",
+          "detail": "No longer present in the storefront feed.",
+          "handle": "partner-bar-bumper-set-1"
+        },
+        {
+          "kind": "removed",
+          "severity": "info",
+          "title": "Apartment Gym Combo",
+          "detail": "No longer present in the storefront feed.",
+          "handle": "apartment-gym-combo-2"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Agility Ladder and Leg Cord Bundle",
+          "handle": "human-trainer-agility-ladder-and-leg-cord-bundle",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Agility Ladder and Leg Cord Bundle",
+          "handle": "human-trainer-agility-ladder-and-leg-cord-bundle",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Squat Stand - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-squat-stand-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Squat Stand - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-squat-stand-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Gym Storage Builder",
+          "handle": "gym-storage-builder",
+          "detail": "New data issue: type_missing."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Smith Machine Rack - 6-Post with Kraken - Manticore (3\" x 3\", 1\" Holes)",
+          "handle": "kraken-manticore-6-post-prebuilt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Smith Machine Rack - 6-Post with Kraken - Manticore (3\" x 3\", 1\" Holes)",
+          "handle": "kraken-manticore-6-post-prebuilt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Foam Soft Plyo Box (16 x 18 x 20)",
+          "handle": "small-foam-plyo-box",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Foam Soft Plyo Box (16 x 18 x 20)",
+          "handle": "small-foam-plyo-box",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "notable",
+          "title": "Blitz Mountain Climber Treadmill",
+          "handle": "blitz-mountain-climber-treadmill",
+          "detail": "$1272.97 → $2559.99 (+$1287.02)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore BOS Logo Tag (FREE FOR BUILDERS)",
+          "handle": "manticore-logo-tag-free",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore BOS Logo Tag (FREE FOR BUILDERS)",
+          "handle": "manticore-logo-tag-free",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Squat Stand - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-squat-stand-prebuilt-hgb",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Hydra Squat Stand - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-squat-stand-prebuilt-hgb",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Olympic Curl Bar Cable Attachment",
+          "handle": "fat-bar-olympic-curl-bar-cable-attachment",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Fat Bar - Olympic Curl Bar Cable Attachment",
+          "handle": "fat-bar-olympic-curl-bar-cable-attachment",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Adjustable Wall Or Ceiling Mounted Pull Up Bar",
+          "handle": "adjustable-mounted-pull-up-bar",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Adjustable Wall Or Ceiling Mounted Pull Up Bar",
+          "handle": "adjustable-mounted-pull-up-bar",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Belt Squat Belt",
+          "handle": "belt-squat-belt",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Belt Squat Belt",
+          "handle": "belt-squat-belt",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Residential Power Rack (2.3\" x 2.3\", ⅝\" HOLES)",
+          "handle": "residential-power-rack",
+          "detail": "$259.97 → $262.97 (+$3.00)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Belt Squat / Lever Arms Rack Attachment",
+          "handle": "belt-squat-lever-arms-attachment",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Belt Squat / Lever Arms Rack Attachment",
+          "handle": "belt-squat-lever-arms-attachment",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Premium Rubber Flooring 4' x 6'",
+          "handle": "4-x-6-rubber-floot-mats",
+          "detail": "$48.97 → $63.97 (+$15.00)"
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "zero-price",
+          "handle": null,
+          "detail": "Audit rule \"zero-price\" moved 13 → 5."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "zero-weight",
+          "handle": null,
+          "detail": "Audit rule \"zero-weight\" moved 44 → 41."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "vendor-corrupt",
+          "handle": null,
+          "detail": "Audit rule \"vendor-corrupt\" moved 7 → 0."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 83 → 103."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "taxonomy",
+          "handle": null,
+          "detail": "Audit rule \"taxonomy\" moved 110 → 111."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 5,
+        "zero-weight": 41,
+        "vendor-corrupt": 0,
+        "compat-graph": 5,
+        "parts-coverage": 12,
+        "fake-sale": 4,
+        "oos-published": 103,
+        "taxonomy": 111,
+        "specs-hidden": 92,
+        "missing-sku": 2,
+        "thin-description": 28,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-22T20:00:11.579Z",
       "date": "2026-11-22",
@@ -4047,44 +4498,6 @@
         "parts-coverage": 15,
         "fake-sale": 16,
         "oos-published": 64,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-24T16:18:43.212Z",
-      "date": "2026-10-24",
-      "baseline": false,
-      "comparedTo": "2026-10-23T17:32:07.966Z",
-      "productCount": 493,
-      "changeCount": 1,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 0,
-        "good": 0,
-        "info": 1
-      },
-      "changes": [
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Massage Balls",
-          "handle": "massage-balls",
-          "detail": "$5.97 → $4.97 ($1.00 cheaper)"
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 16,
-        "oos-published": 63,
         "taxonomy": 118,
         "specs-hidden": 92,
         "missing-sku": 11,

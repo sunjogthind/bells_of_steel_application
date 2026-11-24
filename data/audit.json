@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-22T20:00:11.839Z",
-  "snapshot": "2026-11-22T20:00:11.579Z",
-  "scanned": 493,
-  "variants": 1585,
+  "generated_at": "2026-11-24T00:26:29.863Z",
+  "snapshot": "2026-11-24T00:26:29.580Z",
+  "scanned": 486,
+  "variants": 1558,
   "findings": [
     {
       "id": "duplicate-pricing",
@@ -10,7 +10,7 @@
       "title": "The same product is listed twice, at two different prices",
       "count": 16,
       "unit": "of 17 duplicated listings",
-      "summary": "Every prebuilt rack exists as two live product pages: one plain handle, one ending \"-hgb\" (your Home Gym Builder copy). 16 of 17 charge different prices, and both pages are purchasable. 10 further duplicates were excluded as not comparable.",
+      "summary": "Every prebuilt rack exists as two live product pages: one plain handle, one ending \"-hgb\" (your Home Gym Builder copy). 16 of 17 charge different prices, and both pages are purchasable. 9 further duplicates were excluded as not comparable.",
       "impact": "The two pages carry different SKUs (the plain handle adds a \"-BNDL\" suffix), but 16 of 16 pairs are identical in shipping weight, product copy and images, so a customer is choosing between two listings for the same rack with nothing on the page to tell them apart. The widest gap is $129.88. The cheaper page is usually running a small discount, but that is not the cause: the pre-discount list prices differ on 16 of 16 pairs, and on 13 the gap is actually wider before the discount is applied.",
       "fix": "Pick one canonical page per rack and point the other at it. The -hgb copies are already tagged SEARCHANISE_IGNORE, so they are meant to be reached only through the builder, but they are publicly reachable and in the feed.",
       "evidence": [
@@ -129,20 +129,12 @@
       "id": "zero-price",
       "severity": "high",
       "title": "Products priced at $0.00 or $0.01 are exposed in the public feed",
-      "count": 13,
+      "count": 5,
       "unit": "products",
-      "summary": "17 purchasable variants across 13 products carry a price of $1.00 or less. 13 of them are recognisably deliberate, \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
+      "summary": "5 purchasable variants across 5 products carry a price of $1.00 or less. 2 of them are recognisably deliberate, \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
       "impact": "Nothing in the feed distinguishes these from real products, so anything reading products.json inherits them: shopping feeds, analytics, price monitoring, any internal tool. Spotter recommended one as the cheapest fix for an equipment gap until I filtered them out.",
       "fix": "Move builder scaffolding to a dedicated product type or unpublish it from the online-store channel so it stops appearing in the feed at all.",
       "evidence": [
-        {
-          "label": "Kraken Cable Tower Rack Attachment",
-          "detail": "$0.00, variant \"Variant for price 0\"",
-          "delta": "likely intentional",
-          "links": [
-            "https://bellsofsteel.com/products/kraken-cable-tower-rack-attachment-1"
-          ]
-        },
         {
           "label": "Hydra Bumper Plate Tree Builder",
           "detail": "$0.00, variant \"Default Title\"",
@@ -160,51 +152,11 @@
           ]
         },
         {
-          "label": "Manticore BOS Logo Tag (FREE FOR BUILDERS)",
-          "detail": "$0.00, variant \"Default Title\"",
-          "delta": "likely intentional",
-          "links": [
-            "https://bellsofsteel.com/products/manticore-logo-tag-free"
-          ]
-        },
-        {
           "label": "Hydra BOS Logo Tag - FREE FOR BUILDERS",
           "detail": "$0.00, variant \"Default Title\"",
           "delta": "likely intentional",
           "links": [
             "https://bellsofsteel.com/products/hydra-logo-tag-free"
-          ]
-        },
-        {
-          "label": "Commercial Interchangeable Weight Rack",
-          "detail": "$0.01, variant \"Default Title\"",
-          "delta": "worth checking",
-          "links": [
-            "https://bellsofsteel.com/products/commercial-interchangeable-weight-rack"
-          ]
-        },
-        {
-          "label": "Commercial Interchangeable Weight Rack",
-          "detail": "$0.00, variant \"Variant for price 0\"",
-          "delta": "likely intentional",
-          "links": [
-            "https://bellsofsteel.com/products/commercial-interchangeable-weight-rack"
-          ]
-        },
-        {
-          "label": "Barbell And Plate Custom Set",
-          "detail": "$0.01, variant \"Variant for price 0.01\"",
-          "delta": "likely intentional",
-          "links": [
-            "https://bellsofsteel.com/products/barbell-and-plate-custom-set-1"
-          ]
-        },
-        {
-          "label": "Dumbbell Bench Combo",
-          "detail": "$0.01, variant \"Variant for price 0.01\"",
-          "delta": "likely intentional",
-          "links": [
-            "https://bellsofsteel.com/products/dumbbell-bench-combo-1"
           ]
         },
         {
@@ -214,6 +166,14 @@
           "links": [
             "https://bellsofsteel.com/products/home-gym-builder"
           ]
+        },
+        {
+          "label": "Commercial Interchangeable Weight Rack",
+          "detail": "$0.00, variant \"Default Title\"",
+          "delta": "worth checking",
+          "links": [
+            "https://bellsofsteel.com/products/commercial-dumbbell-kettlebell-racks"
+          ]
         }
       ]
     },
@@ -221,9 +181,9 @@
       "id": "zero-weight",
       "severity": "high",
       "title": "Physical products ship with no weight recorded",
-      "count": 44,
+      "count": 41,
       "unit": "products",
-      "summary": "276 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
+      "summary": "261 variants over $50 are flagged as requiring shipping but carry a weight of 0 g.",
       "impact": "You move squat racks and plate sets on LTL freight, and weight is the input to the rate. A zero there means the carrier calculation is running on a default, and the gap between the quoted rate and the real one is absorbed on every one of these orders.",
       "fix": "Backfill weights from your packing data, then add a Shopify validation that refuses to publish a shipped product with a zero weight.",
       "evidence": [
@@ -276,14 +236,6 @@
           ]
         },
         {
-          "label": "Dumbbell Bench Combo",
-          "detail": "$1187.49, Variant for price 1187.49",
-          "delta": "0 g",
-          "links": [
-            "https://bellsofsteel.com/products/dumbbell-bench-combo-1"
-          ]
-        },
-        {
           "label": "Manticore Flat Foot Power Rack Builder (3\" x 3\", 1\" Holes)",
           "detail": "$1172.99, Default Title",
           "delta": "0 g",
@@ -306,6 +258,14 @@
           "links": [
             "https://bellsofsteel.com/products/manticore-half-rack-builder"
           ]
+        },
+        {
+          "label": "Manticore Folding Power Rack Builder (3\" x 3\", 1\" Holes)",
+          "detail": "$1126.99, Default Title",
+          "delta": "0 g",
+          "links": [
+            "https://bellsofsteel.com/products/manctiore-folding-power-rack-builder"
+          ]
         }
       ]
     },
@@ -313,69 +273,12 @@
       "id": "vendor-corrupt",
       "severity": "high",
       "title": "A broken sync is writing product IDs into the vendor field",
-      "count": 7,
+      "count": 0,
       "unit": "products",
-      "summary": "7 products have a vendor of \"related_to_<numeric id>\" instead of a brand name. The rest of the catalogue correctly reads \"Bells of Steel\".",
+      "summary": "0 products have a vendor of \"related_to_<numeric id>\" instead of a brand name. The rest of the catalogue correctly reads \"Bells of Steel\".",
       "impact": "Vendor is a customer-facing field and a required attribute in Google Shopping and most marketplace feeds. These products are advertising a database key as their brand.",
       "fix": "Find the app writing this (the value shape suggests a related-products integration reusing the field) and reset the affected products to the correct vendor. Worth checking what else that integration touches.",
-      "evidence": [
-        {
-          "label": "Kraken Cable Tower Rack Attachment",
-          "detail": "vendor = \"related_to_7678798430260\"",
-          "delta": "corrupt",
-          "links": [
-            "https://bellsofsteel.com/products/kraken-cable-tower-rack-attachment-1"
-          ]
-        },
-        {
-          "label": "Commercial Interchangeable Weight Rack",
-          "detail": "vendor = \"related_to_7412175011892\"",
-          "delta": "corrupt",
-          "links": [
-            "https://bellsofsteel.com/products/commercial-interchangeable-weight-rack"
-          ]
-        },
-        {
-          "label": "Barbell And Plate Custom Set",
-          "detail": "vendor = \"related_to_7425783726132\"",
-          "delta": "corrupt",
-          "links": [
-            "https://bellsofsteel.com/products/barbell-and-plate-custom-set-1"
-          ]
-        },
-        {
-          "label": "Dumbbell Bench Combo",
-          "detail": "vendor = \"related_to_7424043286580\"",
-          "delta": "corrupt",
-          "links": [
-            "https://bellsofsteel.com/products/dumbbell-bench-combo-1"
-          ]
-        },
-        {
-          "label": "3 Packs Of Bars",
-          "detail": "vendor = \"related_to_7422453186612\"",
-          "delta": "corrupt",
-          "links": [
-            "https://bellsofsteel.com/products/3-packs-of-bars-1"
-          ]
-        },
-        {
-          "label": "Partner Bar Bumper Set",
-          "detail": "vendor = \"related_to_7422084743220\"",
-          "delta": "corrupt",
-          "links": [
-            "https://bellsofsteel.com/products/partner-bar-bumper-set-1"
-          ]
-        },
-        {
-          "label": "Apartment Gym Combo",
-          "detail": "vendor = \"related_to_7422040277044\"",
-          "delta": "corrupt",
-          "links": [
-            "https://bellsofsteel.com/products/apartment-gym-combo-2"
-          ]
-        }
-      ]
+      "evidence": []
     },
     {
       "id": "compat-graph",
@@ -383,7 +286,7 @@
       "title": "The compatibility tags contradict the product titles",
       "count": 5,
       "unit": "products",
-      "summary": "153 products carry the hgb_ tags that drive Home Gym Builder compatibility. 1 says in its own title that it fits both rack families while carrying tags for only one; 4 more name both families and carry no tags at all.",
+      "summary": "152 products carry the hgb_ tags that drive Home Gym Builder compatibility. 1 says in its own title that it fits both rack families while carrying tags for only one; 4 more name both families and carry no tags at all.",
       "impact": "These attachments are invisible to your builder for the family they were left out of. A customer configuring that rack is never offered a part that physically fits it, and the title they can read says otherwise.",
       "fix": "Reconcile the hgb_ tags against product titles as a scheduled check. The comparison is cheap and it is exactly the sort of drift nobody notices by hand.",
       "evidence": [
@@ -569,12 +472,20 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 83,
+      "count": 103,
       "unit": "products",
-      "summary": "83 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "103 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
+        {
+          "label": "Agility Ladder and Leg Cord Bundle",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/human-trainer-agility-ladder-and-leg-cord-bundle"
+          ]
+        },
         {
           "label": "Lat Pulldown Bar",
           "detail": "1 variant, none available",
@@ -624,6 +535,14 @@
           ]
         },
         {
+          "label": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-collegiate-power-rack-prebuilt"
+          ]
+        },
+        {
           "label": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
@@ -638,22 +557,6 @@
           "links": [
             "https://bellsofsteel.com/products/manticore-folding-half-rack-prebuilt"
           ]
-        },
-        {
-          "label": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt"
-          ]
-        },
-        {
-          "label": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-half-rack-prebuilt"
-          ]
         }
       ]
     },
@@ -661,9 +564,9 @@
       "id": "taxonomy",
       "severity": "medium",
       "title": "A fifth of the catalogue has no product type",
-      "count": 110,
+      "count": 111,
       "unit": "products",
-      "summary": "90 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
+      "summary": "91 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
       "impact": "product_type is what your automated collections, storefront filters and any BigQuery or Looker grouping key off. Every product without one is invisible to that machinery, and \"Hidden\" is a visibility flag wearing a taxonomy field’s clothes.",
       "fix": "Most are inferable from the title alone; the classifier in this demo types 60 of them with a dozen rules. Backfill, then make type required at publish.",
       "evidence": [
@@ -773,9 +676,9 @@
       "id": "missing-sku",
       "severity": "low",
       "title": "Variants with no SKU",
-      "count": 9,
+      "count": 2,
       "unit": "products",
-      "summary": "9 products have at least one variant with an empty SKU.",
+      "summary": "2 products have at least one variant with an empty SKU.",
       "impact": "SKU is the join key between Shopify, your warehouse and any reporting built on top. A blank one breaks the join silently.",
       "fix": "Assign SKUs and make the field required.",
       "evidence": [
@@ -794,38 +697,6 @@
           "links": [
             "https://bellsofsteel.com/products/ultimate-backyard-gym-bundle"
           ]
-        },
-        {
-          "label": "Kraken Cable Tower Rack Attachment",
-          "detail": "variant missing SKU",
-          "delta": "",
-          "links": [
-            "https://bellsofsteel.com/products/kraken-cable-tower-rack-attachment-1"
-          ]
-        },
-        {
-          "label": "Commercial Interchangeable Weight Rack",
-          "detail": "variant missing SKU",
-          "delta": "",
-          "links": [
-            "https://bellsofsteel.com/products/commercial-interchangeable-weight-rack"
-          ]
-        },
-        {
-          "label": "Barbell And Plate Custom Set",
-          "detail": "variant missing SKU",
-          "delta": "",
-          "links": [
-            "https://bellsofsteel.com/products/barbell-and-plate-custom-set-1"
-          ]
-        },
-        {
-          "label": "Dumbbell Bench Combo",
-          "detail": "variant missing SKU",
-          "delta": "",
-          "links": [
-            "https://bellsofsteel.com/products/dumbbell-bench-combo-1"
-          ]
         }
       ]
     },
@@ -833,9 +704,9 @@
       "id": "thin-description",
       "severity": "low",
       "title": "Thin or empty product descriptions",
-      "count": 34,
+      "count": 28,
       "unit": "products",
-      "summary": "34 products have under 120 characters of description.",
+      "summary": "28 products have under 120 characters of description.",
       "impact": "Weak organic ranking, and nothing for a support rep or an AI assistant to ground an answer in.",
       "fix": "Prioritise the ones that are actually in stock and getting traffic.",
       "evidence": [
