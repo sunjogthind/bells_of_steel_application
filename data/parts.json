@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T00:26:29.775Z",
+  "generated_at": "2026-11-24T22:48:36.143Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -86,7 +86,7 @@
       "ref": null,
       "sku": "SP-HERO-BEN-PAD",
       "priceCents": 9899,
-      "available": false,
+      "available": true,
       "machine": "Hero Pad",
       "parentTitle": "Hero Pad Spare Parts",
       "url": "https://bellsofsteel.com/products/hero-pad-spare-parts"
@@ -394,7 +394,7 @@
       "ref": null,
       "sku": "SP-84LA-RA-HDR-CBL",
       "priceCents": 2199,
-      "available": false,
+      "available": true,
       "machine": "Lat Pulldown / Row Rack Attachment",
       "parentTitle": "Lat Pulldown / Row Rack Attachment Spare Parts",
       "url": "https://bellsofsteel.com/products/lat-pulldown-row-rack-attachment-spare-parts"
@@ -702,7 +702,7 @@
       "ref": null,
       "sku": "SP-L-SS4-PAD",
       "priceCents": 4899,
-      "available": false,
+      "available": true,
       "machine": "Pad for Safety Squat Bar",
       "parentTitle": "Pad for Safety Squat Bar",
       "url": "https://bellsofsteel.com/products/pad-for-safety-squat-bar"
@@ -812,6 +812,12 @@
       "type": "Cardio Machine",
       "priceCents": 474999,
       "url": "https://bellsofsteel.com/products/blitz-manual-treadmill"
+    },
+    {
+      "title": "Blitz Mountain Climber Treadmill",
+      "type": "Cardio Machine",
+      "priceCents": 255999,
+      "url": "https://bellsofsteel.com/products/blitz-mountain-climber-treadmill"
     },
     {
       "title": "Sisyphean Stepper - Manual Stair Climber",

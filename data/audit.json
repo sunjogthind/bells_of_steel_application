@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-24T00:26:29.863Z",
-  "snapshot": "2026-11-24T00:26:29.580Z",
-  "scanned": 486,
-  "variants": 1558,
+  "generated_at": "2026-11-24T22:48:36.233Z",
+  "snapshot": "2026-11-24T22:48:35.948Z",
+  "scanned": 492,
+  "variants": 1589,
   "findings": [
     {
       "id": "duplicate-pricing",
@@ -129,50 +129,90 @@
       "id": "zero-price",
       "severity": "high",
       "title": "Products priced at $0.00 or $0.01 are exposed in the public feed",
-      "count": 5,
+      "count": 8,
       "unit": "products",
-      "summary": "5 purchasable variants across 5 products carry a price of $1.00 or less. 2 of them are recognisably deliberate, \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
+      "summary": "32 purchasable variants across 8 products carry a price of $1.00 or less. 3 of them are recognisably deliberate, \"FREE FOR BUILDERS\" hardware and placeholder variants named \"Variant for price 0\" that belong to a bundling app.",
       "impact": "Nothing in the feed distinguishes these from real products, so anything reading products.json inherits them: shopping feeds, analytics, price monitoring, any internal tool. Spotter recommended one as the cheapest fix for an equipment gap until I filtered them out.",
       "fix": "Move builder scaffolding to a dedicated product type or unpublish it from the online-store channel so it stops appearing in the feed at all.",
       "evidence": [
         {
-          "label": "Hydra Bumper Plate Tree Builder",
-          "detail": "$0.00, variant \"Default Title\"",
+          "label": "Bells of Steel UK Digital Gift Card",
+          "detail": "$0.00, variant \"£10.00\"",
           "delta": "worth checking",
           "links": [
-            "https://bellsofsteel.com/products/hydra-bumper-plate-tree-builder"
+            "https://bellsofsteel.com/products/bells-of-steel-uk-digital-gift-card"
           ]
         },
         {
-          "label": "Manticore Pair of M24 130mm Long Bolts (FREE FOR BUILDERS)",
-          "detail": "$0.00, variant \"Default Title\"",
-          "delta": "likely intentional",
-          "links": [
-            "https://bellsofsteel.com/products/manticore-pr-m24-130-free"
-          ]
-        },
-        {
-          "label": "Hydra BOS Logo Tag - FREE FOR BUILDERS",
-          "detail": "$0.00, variant \"Default Title\"",
-          "delta": "likely intentional",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-logo-tag-free"
-          ]
-        },
-        {
-          "label": "Home Gym Builder",
-          "detail": "$0.00, variant \"Default Title\"",
+          "label": "Bells of Steel UK Digital Gift Card",
+          "detail": "$0.00, variant \"£25.00\"",
           "delta": "worth checking",
           "links": [
-            "https://bellsofsteel.com/products/home-gym-builder"
+            "https://bellsofsteel.com/products/bells-of-steel-uk-digital-gift-card"
           ]
         },
         {
-          "label": "Commercial Interchangeable Weight Rack",
-          "detail": "$0.00, variant \"Default Title\"",
+          "label": "Bells of Steel UK Digital Gift Card",
+          "detail": "$0.00, variant \"£50.00\"",
           "delta": "worth checking",
           "links": [
-            "https://bellsofsteel.com/products/commercial-dumbbell-kettlebell-racks"
+            "https://bellsofsteel.com/products/bells-of-steel-uk-digital-gift-card"
+          ]
+        },
+        {
+          "label": "Bells of Steel UK Digital Gift Card",
+          "detail": "$0.00, variant \"£100.00\"",
+          "delta": "worth checking",
+          "links": [
+            "https://bellsofsteel.com/products/bells-of-steel-uk-digital-gift-card"
+          ]
+        },
+        {
+          "label": "Bells of Steel UK Digital Gift Card",
+          "detail": "$0.00, variant \"£150.00\"",
+          "delta": "worth checking",
+          "links": [
+            "https://bellsofsteel.com/products/bells-of-steel-uk-digital-gift-card"
+          ]
+        },
+        {
+          "label": "Bells of Steel UK Digital Gift Card",
+          "detail": "$0.00, variant \"£200.00\"",
+          "delta": "worth checking",
+          "links": [
+            "https://bellsofsteel.com/products/bells-of-steel-uk-digital-gift-card"
+          ]
+        },
+        {
+          "label": "Bells of Steel UK Digital Gift Card",
+          "detail": "$0.00, variant \"£250.00\"",
+          "delta": "worth checking",
+          "links": [
+            "https://bellsofsteel.com/products/bells-of-steel-uk-digital-gift-card"
+          ]
+        },
+        {
+          "label": "Bells of Steel UK Digital Gift Card",
+          "detail": "$0.00, variant \"£300.00\"",
+          "delta": "worth checking",
+          "links": [
+            "https://bellsofsteel.com/products/bells-of-steel-uk-digital-gift-card"
+          ]
+        },
+        {
+          "label": "Bells of Steel UK Digital Gift Card",
+          "detail": "$0.00, variant \"£350.00\"",
+          "delta": "worth checking",
+          "links": [
+            "https://bellsofsteel.com/products/bells-of-steel-uk-digital-gift-card"
+          ]
+        },
+        {
+          "label": "Bells of Steel UK Digital Gift Card",
+          "detail": "$0.00, variant \"£400.00\"",
+          "delta": "worth checking",
+          "links": [
+            "https://bellsofsteel.com/products/bells-of-steel-uk-digital-gift-card"
           ]
         }
       ]
@@ -336,9 +376,9 @@
       "id": "parts-coverage",
       "severity": "high",
       "title": "Expensive machines have no spare parts published",
-      "count": 12,
+      "count": 13,
       "unit": "machines over $500",
-      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 12 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $4750.",
+      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 13 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $4750.",
       "impact": "A treadmill that fails in year two has nothing to sell the customer and nothing for support to point at, a warranty conversation with no good ending, on your highest-ticket items. Spare parts are also a margin-rich line being left on the table.",
       "fix": "Work down this list by price. Every machine over $1,000 should have at least its wear parts - pads, cables, bushings - published before the next warranty season.",
       "evidence": [
@@ -348,6 +388,14 @@
           "delta": "$4750",
           "links": [
             "https://bellsofsteel.com/products/blitz-manual-treadmill"
+          ]
+        },
+        {
+          "label": "Blitz Mountain Climber Treadmill",
+          "detail": "Cardio Machine",
+          "delta": "$2560",
+          "links": [
+            "https://bellsofsteel.com/products/blitz-mountain-climber-treadmill"
           ]
         },
         {
@@ -413,14 +461,6 @@
           "links": [
             "https://bellsofsteel.com/products/blitz-air-rower"
           ]
-        },
-        {
-          "label": "Manticore Two Post Converter Bench",
-          "detail": "Bench",
-          "delta": "$927",
-          "links": [
-            "https://bellsofsteel.com/products/manticore-two-post-converter-bench"
-          ]
         }
       ]
     },
@@ -472,9 +512,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 103,
+      "count": 83,
       "unit": "products",
-      "summary": "103 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "83 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
@@ -492,14 +532,6 @@
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/lat-pulldown-bars"
-          ]
-        },
-        {
-          "label": "Hero Pad Spare Parts",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/hero-pad-spare-parts"
           ]
         },
         {
@@ -535,14 +567,6 @@
           ]
         },
         {
-          "label": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/manticore-collegiate-power-rack-prebuilt"
-          ]
-        },
-        {
           "label": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
@@ -557,6 +581,22 @@
           "links": [
             "https://bellsofsteel.com/products/manticore-folding-half-rack-prebuilt"
           ]
+        },
+        {
+          "label": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt"
+          ]
+        },
+        {
+          "label": "Hydra Squat Stand - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-squat-stand-prebuilt"
+          ]
         }
       ]
     },
@@ -564,12 +604,44 @@
       "id": "taxonomy",
       "severity": "medium",
       "title": "A fifth of the catalogue has no product type",
-      "count": 111,
+      "count": 115,
       "unit": "products",
-      "summary": "91 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
+      "summary": "95 products have an empty product_type and a further 20 use the literal string \"Hidden\" as their type.",
       "impact": "product_type is what your automated collections, storefront filters and any BigQuery or Looker grouping key off. Every product without one is invisible to that machinery, and \"Hidden\" is a visibility flag wearing a taxonomy field’s clothes.",
       "fix": "Most are inferable from the title alone; the classifier in this demo types 60 of them with a dozen rules. Backfill, then make type required at publish.",
       "evidence": [
+        {
+          "label": "Drop-In Belt Squat / Stinger Belt Squat",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/drop-in-belt-squat-stinger-belt-squat"
+          ]
+        },
+        {
+          "label": "Reverse Inverse Hammer GHD Kit",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/reverse-inverse-hammer-ghd-kit"
+          ]
+        },
+        {
+          "label": "Reverse Inverse Hammer Back Extension Kit",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/reverse-inverse-hammer-back-extension-kit"
+          ]
+        },
+        {
+          "label": "Reverse Inverse Hammer Assist Arm Kit",
+          "detail": "product_type is empty",
+          "delta": "untyped",
+          "links": [
+            "https://bellsofsteel.com/products/reverse-inverse-hammer-assist-arm-kit"
+          ]
+        },
         {
           "label": "Reverse Inverse Hammer 3-in-1 GHD & Nordic Curl Machine",
           "detail": "product_type is empty",
@@ -601,38 +673,6 @@
           "links": [
             "https://bellsofsteel.com/products/selfie-sentinel"
           ]
-        },
-        {
-          "label": "Human Trainer - Ceiling Mounts",
-          "detail": "product_type is empty",
-          "delta": "untyped",
-          "links": [
-            "https://bellsofsteel.com/products/human-trainer-ceiling-mounts"
-          ]
-        },
-        {
-          "label": "Kettlebell Wrap",
-          "detail": "product_type is empty",
-          "delta": "untyped",
-          "links": [
-            "https://bellsofsteel.com/products/kettlebell-wrap"
-          ]
-        },
-        {
-          "label": "Rotational Pulley",
-          "detail": "product_type is empty",
-          "delta": "untyped",
-          "links": [
-            "https://bellsofsteel.com/products/human-trainer-rotational-pulley-kit"
-          ]
-        },
-        {
-          "label": "Agility Ladder and Leg Cord Bundle",
-          "detail": "product_type is empty",
-          "delta": "untyped",
-          "links": [
-            "https://bellsofsteel.com/products/human-trainer-agility-ladder-and-leg-cord-bundle"
-          ]
         }
       ]
     },
@@ -640,9 +680,9 @@
       "id": "specs-hidden",
       "severity": "medium",
       "title": "Spec tables are switched off on 90 products, including entry-level racks",
-      "count": 92,
+      "count": 97,
       "unit": "products",
-      "summary": "92 products carry the hide:specs tag. Separately, all 3 Residential racks publish no upright height, the one number that decides whether a rack fits a room.",
+      "summary": "97 products carry the hide:specs tag. Separately, all 3 Residential racks publish no upright height, the one number that decides whether a rack fits a room.",
       "impact": "The Residential racks are your cheapest and most beginner-facing, exactly the buyer working around a low basement ceiling, and the one least able to guess. The Gym Builder cannot verify fit for any of them. Neither can the customer.",
       "fix": "Publish height, width and depth on every rack. It is the highest-volume pre-sales question in this category.",
       "evidence": [
@@ -676,12 +716,28 @@
       "id": "missing-sku",
       "severity": "low",
       "title": "Variants with no SKU",
-      "count": 2,
+      "count": 4,
       "unit": "products",
-      "summary": "2 products have at least one variant with an empty SKU.",
+      "summary": "4 products have at least one variant with an empty SKU.",
       "impact": "SKU is the join key between Shopify, your warehouse and any reporting built on top. A blank one breaks the join silently.",
       "fix": "Assign SKUs and make the field required.",
       "evidence": [
+        {
+          "label": "Bells of Steel UK Digital Gift Card",
+          "detail": "variant missing SKU",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/bells-of-steel-uk-digital-gift-card"
+          ]
+        },
+        {
+          "label": "Bells of Steel Australia Digital Gift Card",
+          "detail": "variant missing SKU",
+          "delta": "",
+          "links": [
+            "https://bellsofsteel.com/products/bells-of-steel-australia-digital-gift-card"
+          ]
+        },
         {
           "label": "Hydra Trident Station",
           "detail": "variant missing SKU",
@@ -792,7 +848,7 @@
   "clean": [
     {
       "label": "No SKU collisions",
-      "detail": "1346 SKUs checked, 1 reused across different products."
+      "detail": "1351 SKUs checked, 1 reused across different products."
     },
     {
       "label": "Discontinued products are genuinely unbuyable",
@@ -800,7 +856,7 @@
     },
     {
       "label": "Vendor is consistent everywhere else",
-      "detail": "477 products correctly attributed."
+      "detail": "483 products correctly attributed."
     }
   ]
 }

@@ -1,6 +1,457 @@
 {
-  "generated_at": "2026-11-24T00:26:29.976Z",
+  "generated_at": "2026-11-24T22:48:36.340Z",
   "runs": [
+    {
+      "at": "2026-11-24T22:48:35.948Z",
+      "date": "2026-11-24",
+      "baseline": false,
+      "comparedTo": "2026-11-24T00:26:29.580Z",
+      "productCount": 492,
+      "changeCount": 72,
+      "bySeverity": {
+        "alert": 10,
+        "notable": 0,
+        "good": 26,
+        "info": 36
+      },
+      "changes": [
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Drop-In Belt Squat / Stinger Belt Squat",
+          "detail": "New product in the feed at $1709.99.",
+          "handle": "drop-in-belt-squat-stinger-belt-squat"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Bells of Steel UK Digital Gift Card",
+          "detail": "New product in the feed at $0.00.",
+          "handle": "bells-of-steel-uk-digital-gift-card"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Bells of Steel Australia Digital Gift Card",
+          "detail": "New product in the feed at $0.00.",
+          "handle": "bells-of-steel-australia-digital-gift-card"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Reverse Inverse Hammer GHD Kit",
+          "detail": "New product in the feed at $799.99.",
+          "handle": "reverse-inverse-hammer-ghd-kit"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Reverse Inverse Hammer Back Extension Kit",
+          "detail": "New product in the feed at $249.99.",
+          "handle": "reverse-inverse-hammer-back-extension-kit"
+        },
+        {
+          "kind": "added",
+          "severity": "info",
+          "title": "Reverse Inverse Hammer Assist Arm Kit",
+          "detail": "New product in the feed at $599.99.",
+          "handle": "reverse-inverse-hammer-assist-arm-kit"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hero Pad Spare Parts",
+          "handle": "hero-pad-spare-parts",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hero Pad Spare Parts",
+          "handle": "hero-pad-spare-parts",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Lat Pulldown Bar",
+          "handle": "fat-bar-lat-pulldown-bar",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Fat Bar - Lat Pulldown Bar",
+          "handle": "fat-bar-lat-pulldown-bar",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "NÜOBELL-S Floor Stand",
+          "handle": "nuobell-s-floor-stand",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "NÜOBELL-S Floor Stand",
+          "handle": "nuobell-s-floor-stand",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Smith Machine Rack - 6-Post with Kraken - Manticore (3\" x 3\", 1\" Holes)",
+          "handle": "kraken-manticore-6-post-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Smith Machine Rack - 6-Post with Kraken - Manticore (3\" x 3\", 1\" Holes)",
+          "handle": "kraken-manticore-6-post-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Machined Iron Olympic Weight Plate Sets",
+          "handle": "machined-plate-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Machined Iron Olympic Weight Plate Sets",
+          "handle": "machined-plate-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Calibrated Powerlifting Plates - KG Sets",
+          "handle": "calibrated-powerlifiting-plates-kg-sets",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Calibrated Powerlifting Plates - KG Sets",
+          "handle": "calibrated-powerlifiting-plates-kg-sets",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Calibrated Powerlifting Plates - LB Sets",
+          "handle": "calibrated-powerlifiting-plates-lb-sets",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Calibrated Powerlifting Plates - LB Sets",
+          "handle": "calibrated-powerlifiting-plates-lb-sets",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Black Mighty Grip Olympic Weight Plate Sets",
+          "handle": "black-mighty-grip-iron-plate-sets",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Black Mighty Grip Olympic Weight Plate Sets",
+          "handle": "black-mighty-grip-iron-plate-sets",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Pad for Safety Squat Bar",
+          "handle": "pad-for-safety-squat-bar",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Pad for Safety Squat Bar",
+          "handle": "pad-for-safety-squat-bar",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Foam Soft Plyo Box (16 x 18 x 20)",
+          "handle": "small-foam-plyo-box",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Foam Soft Plyo Box (16 x 18 x 20)",
+          "handle": "small-foam-plyo-box",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Blitz Mountain Climber Treadmill",
+          "handle": "blitz-mountain-climber-treadmill",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Blitz Mountain Climber Treadmill",
+          "handle": "blitz-mountain-climber-treadmill",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore BOS Logo Tag (FREE FOR BUILDERS)",
+          "handle": "manticore-logo-tag-free",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore BOS Logo Tag (FREE FOR BUILDERS)",
+          "handle": "manticore-logo-tag-free",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Squat Stand - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-squat-stand-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Six Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-six-post-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-half-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Four Post Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-four-post-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Flat Foot Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Collegiate Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-collegiate-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Straight Handle Bar",
+          "handle": "fat-bar-straight-handle-bar",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Fat Bar - Straight Handle Bar",
+          "handle": "fat-bar-straight-handle-bar",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Olympic Curl Bar Cable Attachment",
+          "handle": "fat-bar-olympic-curl-bar-cable-attachment",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Fat Bar - Olympic Curl Bar Cable Attachment",
+          "handle": "fat-bar-olympic-curl-bar-cable-attachment",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Aluminum Technique Barbell",
+          "handle": "technique-ball",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Aluminum Technique Barbell",
+          "handle": "technique-ball",
+          "detail": "Resolved: all_variants_oos."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 8,
+        "zero-weight": 41,
+        "vendor-corrupt": 0,
+        "compat-graph": 5,
+        "parts-coverage": 13,
+        "fake-sale": 4,
+        "oos-published": 83,
+        "taxonomy": 115,
+        "specs-hidden": 97,
+        "missing-sku": 4,
+        "thin-description": 28,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-24T00:26:29.580Z",
       "date": "2026-11-24",
@@ -4446,58 +4897,6 @@
         "parts-coverage": 15,
         "fake-sale": 16,
         "oos-published": 66,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-25T16:53:09.459Z",
-      "date": "2026-10-25",
-      "baseline": false,
-      "comparedTo": "2026-10-24T16:18:43.212Z",
-      "productCount": 493,
-      "changeCount": 3,
-      "bySeverity": {
-        "alert": 2,
-        "notable": 0,
-        "good": 0,
-        "info": 1
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Kettlebell Rack",
-          "handle": "kettlebell-rack",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Kettlebell Rack",
-          "handle": "kettlebell-rack",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 63 → 64."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 16,
-        "oos-published": 64,
         "taxonomy": 118,
         "specs-hidden": 92,
         "missing-sku": 11,
