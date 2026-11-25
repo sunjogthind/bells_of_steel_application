@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-24T22:48:36.233Z",
-  "snapshot": "2026-11-24T22:48:35.948Z",
+  "generated_at": "2026-11-25T22:01:32.447Z",
+  "snapshot": "2026-11-25T22:01:32.261Z",
   "scanned": 492,
   "variants": 1589,
   "findings": [
@@ -376,9 +376,9 @@
       "id": "parts-coverage",
       "severity": "high",
       "title": "Expensive machines have no spare parts published",
-      "count": 13,
+      "count": 11,
       "unit": "machines over $500",
-      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 13 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $4750.",
+      "summary": "Bells of Steel publishes 68 spare parts covering 29 products. 11 serviceable machines priced over $500 are not among them, the most expensive being the Blitz Magnetic Resistance Manual Treadmill at $4750.",
       "impact": "A treadmill that fails in year two has nothing to sell the customer and nothing for support to point at, a warranty conversation with no good ending, on your highest-ticket items. Spare parts are also a margin-rich line being left on the table.",
       "fix": "Work down this list by price. Every machine over $1,000 should have at least its wear parts - pads, cables, bushings - published before the next warranty season.",
       "evidence": [
@@ -388,14 +388,6 @@
           "delta": "$4750",
           "links": [
             "https://bellsofsteel.com/products/blitz-manual-treadmill"
-          ]
-        },
-        {
-          "label": "Blitz Mountain Climber Treadmill",
-          "detail": "Cardio Machine",
-          "delta": "$2560",
-          "links": [
-            "https://bellsofsteel.com/products/blitz-mountain-climber-treadmill"
           ]
         },
         {
@@ -431,14 +423,6 @@
           ]
         },
         {
-          "label": "Leg Press Hack Squat Machine",
-          "detail": "Strength Machine",
-          "delta": "$1330",
-          "links": [
-            "https://bellsofsteel.com/products/leg-press-hack-squat-set"
-          ]
-        },
-        {
           "label": "Blitz Stepper",
           "detail": "Cardio Machine",
           "delta": "$1300",
@@ -460,6 +444,22 @@
           "delta": "$990",
           "links": [
             "https://bellsofsteel.com/products/blitz-air-rower"
+          ]
+        },
+        {
+          "label": "Manticore Two Post Converter Bench",
+          "detail": "Bench",
+          "delta": "$927",
+          "links": [
+            "https://bellsofsteel.com/products/manticore-two-post-converter-bench"
+          ]
+        },
+        {
+          "label": "Belt Squat Machine",
+          "detail": "Strength Machine",
+          "delta": "$900",
+          "links": [
+            "https://bellsofsteel.com/products/belt-squat-machine"
           ]
         }
       ]
@@ -512,9 +512,9 @@
       "id": "oos-published",
       "severity": "medium",
       "title": "Products are published with every variant out of stock",
-      "count": 83,
+      "count": 81,
       "unit": "products",
-      "summary": "83 products have no purchasable variant but remain live in the storefront feed.",
+      "summary": "81 products have no purchasable variant but remain live in the storefront feed.",
       "impact": "These pages still absorb ad clicks, still rank, and still take up crawl budget, and every visit that reaches one converts at zero. They are also the pages most likely to generate a \"when is this back?\" ticket.",
       "fix": "Auto-route sustained zero-inventory products to a back-in-stock capture page rather than leaving a dead add-to-cart button.",
       "evidence": [
@@ -583,19 +583,19 @@
           ]
         },
         {
-          "label": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
-          "detail": "1 variant, none available",
-          "delta": "unbuyable",
-          "links": [
-            "https://bellsofsteel.com/products/hydra-3-x-3-inch-flat-foot-power-rack-prebuilt"
-          ]
-        },
-        {
           "label": "Hydra Squat Stand - Prebuilt (3\" x 3\", ⅝\" Holes)",
           "detail": "1 variant, none available",
           "delta": "unbuyable",
           "links": [
             "https://bellsofsteel.com/products/hydra-squat-stand-prebuilt"
+          ]
+        },
+        {
+          "label": "Hydra Half Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "detail": "1 variant, none available",
+          "delta": "unbuyable",
+          "links": [
+            "https://bellsofsteel.com/products/hydra-half-rack-prebuilt"
           ]
         }
       ]

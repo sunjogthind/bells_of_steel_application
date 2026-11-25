@@ -1,6 +1,226 @@
 {
-  "generated_at": "2026-11-24T22:48:36.340Z",
+  "generated_at": "2026-11-25T22:01:32.526Z",
   "runs": [
+    {
+      "at": "2026-11-25T22:01:32.261Z",
+      "date": "2026-11-25",
+      "baseline": false,
+      "comparedTo": "2026-11-24T22:48:35.948Z",
+      "productCount": 492,
+      "changeCount": 27,
+      "bySeverity": {
+        "alert": 4,
+        "notable": 0,
+        "good": 8,
+        "info": 15
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Lat Pulldown Bar",
+          "handle": "fat-bar-lat-pulldown-bar",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Fat Bar - Lat Pulldown Bar",
+          "handle": "fat-bar-lat-pulldown-bar",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Calibrated Powerlifting Plates - KG Sets",
+          "handle": "calibrated-powerlifiting-plates-kg-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Calibrated Powerlifting Plates - KG Sets",
+          "handle": "calibrated-powerlifiting-plates-kg-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Calibrated Powerlifting Plates - LB Sets",
+          "handle": "calibrated-powerlifiting-plates-lb-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Calibrated Powerlifting Plates - LB Sets",
+          "handle": "calibrated-powerlifiting-plates-lb-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Black Mighty Grip Olympic Weight Plate Sets",
+          "handle": "black-mighty-grip-iron-plate-sets",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Black Mighty Grip Olympic Weight Plate Sets",
+          "handle": "black-mighty-grip-iron-plate-sets",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Blitz Mountain Climber Treadmill",
+          "handle": "blitz-mountain-climber-treadmill",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Blitz Mountain Climber Treadmill",
+          "handle": "blitz-mountain-climber-treadmill",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fat Bar - Straight Handle Bar",
+          "handle": "fat-bar-straight-handle-bar",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Fat Bar - Straight Handle Bar",
+          "handle": "fat-bar-straight-handle-bar",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Leg Press Hack Squat Machine",
+          "handle": "leg-press-hack-squat-set",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Leg Press Hack Squat Machine",
+          "handle": "leg-press-hack-squat-set",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Foam Roller Storage",
+          "handle": "foam-roller-storage",
+          "detail": "$113.99 → $125.99 (+$12.00)"
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Multi Grip Curl Bar Cable Attachment",
+          "handle": "multi-grip-curl-bar",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Multi Grip Curl Bar Cable Attachment",
+          "handle": "multi-grip-curl-bar",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Deadlift Jack with Rollers",
+          "handle": "deadlift-jack",
+          "detail": "$88.99 → $97.99 (+$9.00)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Mighty Wrist Wraps",
+          "handle": "mighty-wrist-wraps",
+          "detail": "$10.99 → $10.97 ($0.02 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Mighty Grip Medicine Balls",
+          "handle": "mighty-grip-medicine-balls",
+          "detail": "$11.99 → $11.97 ($0.02 cheaper)"
+        },
+        {
+          "kind": "price",
+          "severity": "info",
+          "title": "Split Squat Leg Roller Rack Attachment",
+          "handle": "split-squat-leg-roller-attachment",
+          "detail": "$61.99 → $67.99 (+$6.00)"
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "parts-coverage",
+          "handle": null,
+          "detail": "Audit rule \"parts-coverage\" moved 13 → 11."
+        },
+        {
+          "kind": "rule",
+          "severity": "good",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 83 → 81."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 8,
+        "zero-weight": 41,
+        "vendor-corrupt": 0,
+        "compat-graph": 5,
+        "parts-coverage": 11,
+        "fake-sale": 4,
+        "oos-published": 81,
+        "taxonomy": 115,
+        "specs-hidden": 97,
+        "missing-sku": 4,
+        "thin-description": 28,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-24T22:48:35.948Z",
       "date": "2026-11-24",
@@ -4796,107 +5016,6 @@
         "parts-coverage": 15,
         "fake-sale": 17,
         "oos-published": 70,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-26T18:54:29.738Z",
-      "date": "2026-10-26",
-      "baseline": false,
-      "comparedTo": "2026-10-25T16:53:09.459Z",
-      "productCount": 493,
-      "changeCount": 10,
-      "bySeverity": {
-        "alert": 3,
-        "notable": 0,
-        "good": 0,
-        "info": 7
-      },
-      "changes": [
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "KG Competition Bumper Plate Sets",
-          "handle": "kg-competition-bumper-plate-sets",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "KG Competition Bumper Plate Sets",
-          "handle": "kg-competition-bumper-plate-sets",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "stock",
-          "severity": "info",
-          "title": "Pad for Safety Squat Bar",
-          "handle": "pad-for-safety-squat-bar",
-          "detail": "Went out of stock."
-        },
-        {
-          "kind": "regression",
-          "severity": "alert",
-          "title": "Pad for Safety Squat Bar",
-          "handle": "pad-for-safety-squat-bar",
-          "detail": "New data issue: all_variants_oos."
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Single Bolt Casters",
-          "handle": "single-bolt-casters",
-          "detail": "$64.99 → $69.99 (+$5.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Hydra Crossmember for Plate Tree",
-          "handle": "hydra-crossmember-plate-tree",
-          "detail": "$59.99 → $64.99 (+$5.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Hydra Vertical Bar Holder for Flat Foot",
-          "handle": "hydra-vertical-bar-holder-for-flat-foot",
-          "detail": "$20.99 → $22.99 (+$2.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Casters for Hydra Upright (Set of 4)",
-          "handle": "hydra-upright-casters",
-          "detail": "$84.99 → $89.99 (+$5.00)"
-        },
-        {
-          "kind": "price",
-          "severity": "info",
-          "title": "Hydra Vertical Uprights",
-          "handle": "hydra-vertical-upright",
-          "detail": "$94.99 → $99.99 (+$5.00)"
-        },
-        {
-          "kind": "rule",
-          "severity": "alert",
-          "title": "oos-published",
-          "handle": null,
-          "detail": "Audit rule \"oos-published\" moved 64 → 66."
-        }
-      ],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 16,
-        "oos-published": 66,
         "taxonomy": 118,
         "specs-hidden": 92,
         "missing-sku": 11,
