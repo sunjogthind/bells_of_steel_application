@@ -1,6 +1,401 @@
 {
-  "generated_at": "2026-11-26T21:59:43.291Z",
+  "generated_at": "2026-11-27T21:41:51.761Z",
   "runs": [
+    {
+      "at": "2026-11-27T21:41:51.371Z",
+      "date": "2026-11-27",
+      "baseline": false,
+      "comparedTo": "2026-11-26T21:59:42.964Z",
+      "productCount": 492,
+      "changeCount": 52,
+      "bySeverity": {
+        "alert": 16,
+        "notable": 0,
+        "good": 11,
+        "info": 25
+      },
+      "changes": [
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Ultimate Backyard Training Bundle",
+          "handle": "ultimate-backyard-gym-bundle",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Ultimate Backyard Training Bundle",
+          "handle": "ultimate-backyard-gym-bundle",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Squat Stand - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-squat-stand-prebuilt",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Squat Stand - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-squat-stand-prebuilt",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Four Post Converter Bench",
+          "handle": "hydra-four-post-converter-bench",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Four Post Converter Bench",
+          "handle": "hydra-four-post-converter-bench",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Two Post Converter Bench",
+          "handle": "hydra-two-post-converter-bench",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Two Post Converter Bench",
+          "handle": "hydra-two-post-converter-bench",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Divider for Bumper Plate Shelf (Pack of 3)",
+          "handle": "divider-for-bumper-plate-shelf",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Divider for Bumper Plate Shelf (Pack of 3)",
+          "handle": "divider-for-bumper-plate-shelf",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Legacy Leg Extension / Hamstring Curl Machine - Plate Loaded",
+          "handle": "leg-extension-and-curl-machine",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Legacy Leg Extension / Hamstring Curl Machine - Plate Loaded",
+          "handle": "leg-extension-and-curl-machine",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "LB Competition Bumper Plates",
+          "handle": "lb-competition-bumper-plates",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "LB Competition Bumper Plates",
+          "handle": "lb-competition-bumper-plates",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Residential Bumper Plate Tree",
+          "handle": "residential-bumper-plate-tree",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Residential Bumper Plate Tree",
+          "handle": "residential-bumper-plate-tree",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Rubber Coated Iron Weight Plate Sets",
+          "handle": "rubber-coated-iron-weight-plate-sets",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Rubber Coated Iron Weight Plate Sets",
+          "handle": "rubber-coated-iron-weight-plate-sets",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "3 Layer Band Peg - Deadlift Platform",
+          "handle": "3-layer-band-peg-deadlift-platform",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "3 Layer Band Peg - Deadlift Platform",
+          "handle": "3-layer-band-peg-deadlift-platform",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "3 Layer Deadlift Platform Hardware (Corners,Ground Tabs & Fasteners)",
+          "handle": "3-layer-deadlift-platform-hardware-corners-ground-tabs-fasteners",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "3 Layer Deadlift Platform Hardware (Corners,Ground Tabs & Fasteners)",
+          "handle": "3-layer-deadlift-platform-hardware-corners-ground-tabs-fasteners",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Deadlift Platform 95 (38) cm tube (4 pieces)",
+          "handle": "deadlift-platform-95-38-cm-tube-4-pieces",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Deadlift Platform 95 (38) cm tube (4 pieces)",
+          "handle": "deadlift-platform-95-38-cm-tube-4-pieces",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Deadlift Platform Three Layer Centre Connection + hardware",
+          "handle": "deadlift-platform-three-layer-centre-connection-hardware",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Deadlift Platform Three Layer Centre Connection + hardware",
+          "handle": "deadlift-platform-three-layer-centre-connection-hardware",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Tibialis Trainer Bar",
+          "handle": "tibialis-trainer-bar",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Tibialis Trainer Bar",
+          "handle": "tibialis-trainer-bar",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Folding Power Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manctiore-folding-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Manticore Folding Half Rack - Prebuilt (3\" x 3\", 1\" Holes)",
+          "handle": "manticore-folding-half-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Squat Stand - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-squat-stand-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Squat Stand - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-squat-stand-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Roc Foldable 4 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-four-post-cage-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Roc Foldable 4 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-four-post-cage-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Roc Foldable 2 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-two-post-cage-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Roc Foldable 2 Post Cage - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "roc-foldable-two-post-cage-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Hydra Flat Foot Power Rack - Prebuilt (3\" x 3\", ⅝\" Holes)",
+          "handle": "hydra-3-x-3-inch-flat-foot-power-rack-prebuilt-hgb",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Wall-Mounted Plate Storage Rack",
+          "handle": "wall-mounted-plate-storage-rack-set",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Wall-Mounted Plate Storage Rack",
+          "handle": "wall-mounted-plate-storage-rack-set",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Adjustable Wall Or Ceiling Mounted Pull Up Bar",
+          "handle": "adjustable-mounted-pull-up-bar",
+          "detail": "Back in stock."
+        },
+        {
+          "kind": "fixed",
+          "severity": "good",
+          "title": "Adjustable Wall Or Ceiling Mounted Pull Up Bar",
+          "handle": "adjustable-mounted-pull-up-bar",
+          "detail": "Resolved: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Fixed Barbell Rack",
+          "handle": "fixed-barbell-rack",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Fixed Barbell Rack",
+          "handle": "fixed-barbell-rack",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Foam Roller Storage",
+          "handle": "foam-roller-storage",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Foam Roller Storage",
+          "handle": "foam-roller-storage",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "stock",
+          "severity": "info",
+          "title": "Accessory Holder (Wall or Rack Mounted)",
+          "handle": "accessory-holder",
+          "detail": "Went out of stock."
+        },
+        {
+          "kind": "regression",
+          "severity": "alert",
+          "title": "Accessory Holder (Wall or Rack Mounted)",
+          "handle": "accessory-holder",
+          "detail": "New data issue: all_variants_oos."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "parts-coverage",
+          "handle": null,
+          "detail": "Audit rule \"parts-coverage\" moved 11 → 13."
+        },
+        {
+          "kind": "rule",
+          "severity": "alert",
+          "title": "oos-published",
+          "handle": null,
+          "detail": "Audit rule \"oos-published\" moved 84 → 87."
+        }
+      ],
+      "rules": {
+        "duplicate-pricing": 16,
+        "zero-price": 8,
+        "zero-weight": 41,
+        "vendor-corrupt": 0,
+        "compat-graph": 5,
+        "parts-coverage": 13,
+        "fake-sale": 4,
+        "oos-published": 87,
+        "taxonomy": 115,
+        "specs-hidden": 97,
+        "missing-sku": 4,
+        "thin-description": 28,
+        "no-images": 2
+      }
+    },
     {
       "at": "2026-11-26T21:59:42.964Z",
       "date": "2026-11-26",
@@ -4944,36 +5339,6 @@
         "parts-coverage": 15,
         "fake-sale": 17,
         "oos-published": 71,
-        "taxonomy": 118,
-        "specs-hidden": 92,
-        "missing-sku": 11,
-        "thin-description": 36,
-        "no-images": 2
-      }
-    },
-    {
-      "at": "2026-10-28T18:32:42.731Z",
-      "date": "2026-10-28",
-      "baseline": false,
-      "comparedTo": "2026-10-27T18:24:56.546Z",
-      "productCount": 493,
-      "changeCount": 0,
-      "bySeverity": {
-        "alert": 0,
-        "notable": 0,
-        "good": 0,
-        "info": 0
-      },
-      "changes": [],
-      "rules": {
-        "duplicate-pricing": 16,
-        "zero-price": 32,
-        "zero-weight": 31,
-        "vendor-corrupt": 9,
-        "compat-graph": 5,
-        "parts-coverage": 15,
-        "fake-sale": 17,
-        "oos-published": 70,
         "taxonomy": 118,
         "specs-hidden": 92,
         "missing-sku": 11,

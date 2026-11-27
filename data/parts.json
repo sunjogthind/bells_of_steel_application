@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T21:59:43.121Z",
+  "generated_at": "2026-11-27T21:41:51.558Z",
   "productCount": 29,
   "partCount": 68,
   "parts": [
@@ -862,6 +862,12 @@
       "url": "https://bellsofsteel.com/products/manticore-two-post-converter-bench"
     },
     {
+      "title": "Hydra Four Post Converter Bench",
+      "type": "Bench",
+      "priceCents": 89999,
+      "url": "https://bellsofsteel.com/products/hydra-four-post-converter-bench"
+    },
+    {
       "title": "Belt Squat Machine",
       "type": "Strength Machine",
       "priceCents": 89999,
@@ -872,6 +878,12 @@
       "type": "Cable Machine",
       "priceCents": 74999,
       "url": "https://bellsofsteel.com/products/lat-pulldown-low-row-machine"
+    },
+    {
+      "title": "Hydra Two Post Converter Bench",
+      "type": "Bench",
+      "priceCents": 71999,
+      "url": "https://bellsofsteel.com/products/hydra-two-post-converter-bench"
     }
   ],
   "symptoms": [
